@@ -1,6 +1,6 @@
 #include "LZespolona.hh"
 #include <iostream>
-
+#include <cmath>
 
 
 /*!
@@ -65,9 +65,13 @@ LZespolona  operator * (LZespolona  Skl1,  LZespolona  Skl2)
 LZespolona  operator / (LZespolona  Skl1,  LZespolona  Skl2)
 {
   LZespolona  Wynik;
-
-  Wynik.re = Skl1.re*Skl2.re - Skl1.im*Skl2.im;
-  Wynik.im = Skl1.re*Skl2.im + Skl1.im*Skl2.re;
+  if(Skl2.re==0 && Skl2.im==0) 
+  {
+    std::cout<<"Blad nie mozna dzielic przez zero"<<std::endl;
+  } else{
+  Wynik.re = (Skl1.re*Skl2.re + Skl1.im*Skl2.im)/(pow(Skl2.re, 2) + pow(Skl2.im, 2));
+  Wynik.im = (Skl1.re*Skl2.im*(-1) + Skl1.im*Skl2.re)/(pow(Skl2.re, 2) + pow(Skl2.im, 2));
+  }
   return Wynik;
 }
 
@@ -96,7 +100,7 @@ bool WczytajZesp(LZespolona &Zesp, std::istream &rStrmWe)
  * Zwraca:
  *   Wypisuje na standardowym wyjściu liczbe zespoloną.
  */
-void Wyswietl(LZespolona LZesp)
+void WyswietlZesp(LZespolona LZesp)
 {
   std::cout.precision(2);
   std::cout << std::fixed << "(" << LZesp.re << std::showpos << LZesp.im<<std::noshowpos << "i)";

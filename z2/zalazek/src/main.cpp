@@ -1,24 +1,12 @@
+// Wojciech Bukała, zadanie 2, Programowanie obiektowe, AiR 2021/22
+
 #include <iostream>
 #include <fstream>
 #include "WyrazenieZesp.hh"
+#include "LZespolona.hh"
+#include "test_statystyka.hh"
 
 using namespace std;
-
-
-
-
-void WykonajTest(istream &rStrmWej)
-{
-  WyrazenieZesp   WyrZ_PytanieTestowe;
-   
-  while (WczytajWyrazenieZesp(WyrZ_PytanieTestowe, rStrmWej)) {
-    cout << " Czesc rzeczywista pierwszego argumentu: ";
-    cout << WyrZ_PytanieTestowe.Arg1.re << endl;
-  }
-}
-
-
-
 
 
 int main(int argc, char **argv)
@@ -41,13 +29,8 @@ int main(int argc, char **argv)
   cout << endl;
   cout << " Start testu arytmetyki zespolonej: " << argv[1] << endl;
   cout << endl;
-  /**/
-  LZespolona zespolona;
-  WczytajZesp(zespolona, PlikTestu);
-    cout <<"re= " <<zespolona.re << endl;
-    cout <<"im= " <<zespolona.im <<endl;
-  
-  //WykonajTest(PlikTestu);
+
+  WykonajTest(PlikTestu);
   
   PlikTestu.close();
   

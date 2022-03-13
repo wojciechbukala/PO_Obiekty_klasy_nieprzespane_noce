@@ -29,7 +29,7 @@ LZespolona  operator / (LZespolona  Skl1,  LZespolona  Skl2);
 bool WczytajZesp(LZespolona &Zesp, std::istream &rStrmWe);
 
 // Zapowiedź funkcji wyświtalającej liczbę zespoloną 
-void Wyswietl(LZespolona LZesp);
+void WyswietlZesp(LZespolona LZesp);
 
 
 #endif
