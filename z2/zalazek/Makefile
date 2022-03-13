@@ -4,9 +4,9 @@ __start__: ./test_arytm_zesp
 	./test_arytm_zesp test-arytmetyka.txt 
 
 ./test_arytm_zesp: obj obj/main.o obj/LZespolona.o\
-                     obj/WyrazenieZesp.o obj/test_statystyka.o
+                     obj/WyrazenieZesp.o obj/StatystykaTestu.o
 	g++ -o ./test_arytm_zesp obj/main.o obj/LZespolona.o\
-                     obj/WyrazenieZesp.o obj/test_statystyka.o
+                     obj/WyrazenieZesp.o obj/StatystykaTestu.o
 
 obj:
 	mkdir obj
@@ -21,9 +21,9 @@ obj/WyrazenieZesp.o: src/WyrazenieZesp.cpp inc/WyrazenieZesp.hh\
                        inc/LZespolona.hh
 	g++ -c ${FLAGS} -o obj/WyrazenieZesp.o src/WyrazenieZesp.cpp
 
-obj/WyrazenieZesp.o: src/test_statystyka.cpp inc/test_statystyka.hh\
+obj/WyrazenieZesp.o: src/StatystykaTestu.cpp inc/StatystykaTestu.hh\
                        inc/LZespolona.hh
-	g++ -c ${FLAGS} -o obj/test_statystyka.o src/test_statystyka.cpp
+	g++ -c ${FLAGS} -o obj/StatystykaTestu.o src/StatystykaTestu.cpp
 
 
 

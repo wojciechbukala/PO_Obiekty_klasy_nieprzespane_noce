@@ -4,7 +4,7 @@
 #include <fstream>
 #include "WyrazenieZesp.hh"
 #include "LZespolona.hh"
-#include "test_statystyka.hh"
+#include "StatystykaTestu.hh"
 
 using namespace std;
 
