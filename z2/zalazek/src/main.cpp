@@ -31,7 +31,7 @@ int main(int argc, char **argv)
   cout << endl;
 
   WykonajTest(PlikTestu);
-  
+
   PlikTestu.close();
   
   cout << endl;

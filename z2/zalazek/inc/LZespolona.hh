@@ -25,7 +25,10 @@ LZespolona  operator + (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator - (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator * (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator / (LZespolona  Skl1,  LZespolona  Skl2);
+std::istream & operator >> (std::istream &rStrmWe, LZespolona Zesp);
+bool  operator == (LZespolona  Skl1,  LZespolona  Skl2);
 
+// zpowiedż funkcji wczytującej liczbę zepoloną
 bool WczytajZesp(LZespolona &Zesp, std::istream &rStrmWe);
 
 // Zapowiedź funkcji wyświtalającej liczbę zespoloną 

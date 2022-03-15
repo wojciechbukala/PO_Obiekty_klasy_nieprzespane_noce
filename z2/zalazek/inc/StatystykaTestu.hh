@@ -4,7 +4,8 @@
 
 /*
 struct StatystykaTestu {
-
+   int poporawne;
+   int bledne;
 };
 
 void Wyswietl( StatystykaTestu  StatTestu ); */
