@@ -1,7 +1,6 @@
 #include <iostream>
 #include "WyrazenieZesp.hh"
 
-
 /*!
  * Realizuje wczytywanie wyrazenia zespolonego
  * Argumenty:
@@ -81,3 +80,46 @@ LZespolona Oblicz(WyrazenieZesp  WyrZ)
   return wynik;
 }
 
+
+
+std::istream & operator >> (std::istream &rStrmWe, WyrazenieZesp &WyrZ)
+{
+  char Znak;
+  rStrmWe >> WyrZ.Arg1;
+
+  rStrmWe >>Znak;
+  switch(Znak)
+      {
+        case '+' : WyrZ.Op = Op_Dodaj; break;
+
+        case '-' : WyrZ.Op = Op_Odejmij; break;
+
+        case '*' : WyrZ.Op = Op_Mnoz; break;
+
+        case '/' : WyrZ.Op = Op_Dziel; break;
+
+        default: std::cout<< "Nie rozpoznano liczby zespolnej ani znaku dzialania"<<std::endl;
+      }
+
+  rStrmWe >> WyrZ. Arg2;
+  return rStrmWe;
+}
+
+std::ostream & operator << (std::ostream &rStrmWy, WyrazenieZesp &WyrZ)
+{
+  rStrmWy << WyrZ.Arg1;
+  
+  switch(WyrZ.Op)
+      {
+        case Op_Dodaj: rStrmWy << " + "; break;
+
+        case Op_Odejmij: rStrmWy << " - "; break;
+
+        case Op_Mnoz: rStrmWy << " * "; break;
+
+        case Op_Dziel: rStrmWy << " / "; break;
+      }
+
+  rStrmWy << WyrZ.Arg2;
+  return rStrmWy;
+} 

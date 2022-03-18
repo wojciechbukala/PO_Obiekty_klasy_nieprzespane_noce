@@ -3,6 +3,7 @@
 
 
 #include <iostream>
+#include <fstream>
 #include "LZespolona.hh"
 
 
@@ -23,13 +24,10 @@ struct WyrazenieZesp {
 };
 
 
-/*
- * Funkcje ponizej nalezy zdefiniowac w module.
- *
- */
-
 bool WczytajWyrazenieZesp(WyrazenieZesp &rWyrZ, std::istream &rStrmWe);
 void WyswietlWyrazenie(WyrazenieZesp  WyrZ);
 LZespolona Oblicz(WyrazenieZesp  WyrZ);
+std::istream & operator >> (std::istream &rStrmWe, WyrazenieZesp &WyrZ); // Przeciążenie operatora >> do wczytywania wyrażenia zespolonego
+std::ostream & operator << (std::ostream &rStrmWy, WyrazenieZesp &WyrZ); // Przeciążenie operatora << do wypisywania wyrażenia zespolonego
 
 #endif
