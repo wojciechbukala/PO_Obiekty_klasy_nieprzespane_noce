@@ -2,11 +2,39 @@
 
 #include <iostream>
 #include <fstream>
-#include "WyrazenieZesp.hh"
-#include "LZespolona.hh"
 #include "StatystykaTestu.hh"
+#include "WyrazenieZesp.hh"
 
 using namespace std;
+
+
+/*!
+ * Realizuje działanie testu liczb zespolonych
+ * Argumenty:
+ *    &rStrmWe - referencja strumienia wejsciowego
+ */
+void WykonajTest(std::istream &rStrmWej)
+{
+    WyrazenieZesp WyrZ; // zmienna przechowująca wyrażenie zespolone
+    LZespolona Zesp, Wynik; // Zesp- liczba zespolona wczytana od użytkownika, Wynik- rezultat funkcji Oblicz()
+    do
+    {
+        rStrmWej << WyrZ;
+        std::cout<< std::endl<<": ? Podaj wynik operacji: ";
+        cout << WyrZ;
+        std::cout<< std::endl << " Twoja odpowiedz: ";
+        cin >> Zesp;   // Wczytywanie odpowiedzi użytkownika
+        Wynik= Oblicz(WyrZ);
+        if(Zesp==Wynik) std::cout<<":) Odpowiedz poprawna" << std::endl;
+        else 
+        {
+            std::cout<< ":( Blad. Prawidlowym wynikiem jest: ";
+            WyswietlZesp(Wynik);
+        }
+        std::cout << std::endl;
+    } while (rStrmWej.good()); 
+       
+} 
 
 
 int main(int argc, char **argv)
@@ -31,6 +59,8 @@ int main(int argc, char **argv)
   cout << endl;
 
   WykonajTest(PlikTestu);
+
+  
 
   PlikTestu.close();
   
