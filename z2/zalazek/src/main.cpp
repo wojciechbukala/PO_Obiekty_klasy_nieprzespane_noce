@@ -13,7 +13,7 @@ using namespace std;
  * Argumenty:
  *    &rStrmWe - referencja strumienia wejsciowego
  */
-void WykonajTest(std::istream &rStrmWej)
+/*void WykonajTest(std::istream &rStrmWej)
 {
     WyrazenieZesp WyrZ; // zmienna przechowująca wyrażenie zespolone
     LZespolona Zesp, Wynik; // Zesp- liczba zespolona wczytana od użytkownika, Wynik- rezultat funkcji Oblicz()
@@ -34,7 +34,7 @@ void WykonajTest(std::istream &rStrmWej)
         std::cout << std::endl;
     } while (rStrmWej.good()); 
        
-} 
+} */
 
 
 int main(int argc, char **argv)
@@ -58,7 +58,10 @@ int main(int argc, char **argv)
   cout << " Start testu arytmetyki zespolonej: " << argv[1] << endl;
   cout << endl;
 
-  WykonajTest(PlikTestu);
+  //WykonajTest(PlikTestu);
+
+  WyrazenieZesp wyr;
+  cin >> wyr;
 
   
 
