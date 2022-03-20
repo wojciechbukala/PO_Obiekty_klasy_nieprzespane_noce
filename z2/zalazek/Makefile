@@ -17,7 +17,7 @@ obj/main.o: src/main.cpp inc/LZespolona.hh inc/WyrazenieZesp.hh inc/StatystykaTe
 obj/LZespolona.o: src/LZespolona.cpp inc/LZespolona.hh
 	g++ -c ${FLAGS} -o obj/LZespolona.o src/LZespolona.cpp
 
-obj/StatystykaTestu.o: src/StatystykaTestu.cpp inc/StatystykaTestu.hh\
+obj/StatystykaTestu.o: src/StatystykaTestu.cpp inc/StatystykaTestu.hh
 	g++ -c ${FLAGS} -o obj/StatystykaTestu.o src/StatystykaTestu.cpp
 
 obj/WyrazenieZesp.o: src/WyrazenieZesp.cpp inc/WyrazenieZesp.hh\

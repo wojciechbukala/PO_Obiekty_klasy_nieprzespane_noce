@@ -86,8 +86,10 @@ std::istream & operator >> (std::istream &rStrmWe, WyrazenieZesp &WyrZ)
 {
   char Znak;
   rStrmWe >> WyrZ.Arg1;
+  if(rStrmWe.fail()) return rStrmWe;
 
   rStrmWe >>Znak;
+  if(rStrmWe.fail()) return rStrmWe;
   switch(Znak)
       {
         case '+' : WyrZ.Op = Op_Dodaj; break;
@@ -98,14 +100,18 @@ std::istream & operator >> (std::istream &rStrmWe, WyrazenieZesp &WyrZ)
 
         case '/' : WyrZ.Op = Op_Dziel; break;
 
-        default: std::cout<< "Nie rozpoznano liczby zespolnej ani znaku dzialania"<<std::endl;
+        default: {
+          rStrmWe.setstate(std::ios::failbit);
+          return rStrmWe;
+        }
       }
 
   rStrmWe >> WyrZ. Arg2;
+  if(rStrmWe.fail()) return rStrmWe;
   return rStrmWe;
 }
 
-std::ostream & operator << (std::ostream &rStrmWy, WyrazenieZesp &WyrZ)
+std::ostream & operator << (std::ostream &rStrmWy, WyrazenieZesp WyrZ)
 {
   rStrmWy << WyrZ.Arg1;
   
