@@ -39,35 +39,24 @@ void WykonajTest(std::istream &rStrmWej)
         {
         std::cout<< std::endl << " Twoja odpowiedz: ";
         std::cin >> Zesp;   // Wczytywanie odpowiedzi użytkownika
-        while(std::cin.fail())
-        {
-          std::cerr << "Blad wczytywania liczby zespolonej. Wpisz poprawna liczbe!" << std::endl;
-          std::cin.clear();
-          std::cin.ignore(1000, '\n');
-          std::cout<< std::endl << " Twoja odpowiedz: ";
-        std::cin >> Zesp;   // Wczytywanie odpowiedzi użytkownika
+          if(std::cin.fail())
+          {
+           if(i!=2) std::cerr << "Blad wczytywania liczby zespolonej. Wpisz poprawna liczbe!" << std::endl;
+           std::cin.clear();
+           std::cin.ignore(1000, '\n');
+          } else break;
         }
           if(Zesp==Wynik) 
           {
             std::cout<<":) Odpowiedz poprawna" << std::endl;
             poprawne(statystyka);
-            break;
           }
-          else if(i==0 || i==1)
-          {
-            std::cout<< std::endl << "Blad, sprobuj jeszcze raz\n";
+          else 
+          { 
+            std::cout<< ":( Blad. Prawidlowym wynikiem jest: ";
+            std::cout<< Wynik << std::endl;
             bledne(statystyka);
           }
-          else if(i==2)
-          { void WykonajTest(std::istream &rStrmWej);
-            {
-              std::cout<< ":( Blad. Prawidlowym wynikiem jest: ";
-              std::cout<< Wynik;
-              std::cout<< "\nWykorzystano wszystkie szanse." << std::endl;
-              poprawne(statystyka);
-            }
-          }
-        }
         std::cout << std::endl;
         rStrmWej.clear();
         rStrmWej.ignore(1000, '\n');
