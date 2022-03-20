@@ -17,6 +17,8 @@ void WykonajTest(std::istream &rStrmWej)
 {
     WyrazenieZesp WyrZ; // zmienna przechowująca wyrażenie zespolone
     LZespolona Zesp, Wynik; // Zesp- liczba zespolona wczytana od użytkownika, Wynik- rezultat funkcji Oblicz()
+    StatystykaTestu statystyka; // zmienna na statystyke
+    inicjuj_stat(statystyka); // zerujemy statystyke
 
     do
     {
@@ -48,11 +50,13 @@ void WykonajTest(std::istream &rStrmWej)
           if(Zesp==Wynik) 
           {
             std::cout<<":) Odpowiedz poprawna" << std::endl;
+            poprawne(statystyka);
             break;
           }
           else if(i==0 || i==1)
           {
             std::cout<< std::endl << "Blad, sprobuj jeszcze raz\n";
+            bledne(statystyka);
           }
           else if(i==2)
           { void WykonajTest(std::istream &rStrmWej);
@@ -60,14 +64,21 @@ void WykonajTest(std::istream &rStrmWej)
               std::cout<< ":( Blad. Prawidlowym wynikiem jest: ";
               std::cout<< Wynik;
               std::cout<< "\nWykorzystano wszystkie szanse." << std::endl;
+              poprawne(statystyka);
             }
           }
         }
-          std::cout << std::endl;
-          rStrmWej.clear();
-          rStrmWej.ignore(1000, '\n');
+        std::cout << std::endl;
+        rStrmWej.clear();
+        rStrmWej.ignore(1000, '\n');
     } while (!rStrmWej.eof() && rStrmWej.good());
-       
+
+    std::cout << "Koniec testu" << std::endl;
+    std::cout << std::endl;
+
+    Wyswietl(statystyka); 
+
+    std::cout << std::endl;  
 } 
 
 
@@ -93,17 +104,8 @@ int main(int argc, char **argv)
   cout << endl;
 
   WykonajTest(PlikTestu);
- 
-  /*
-  WyrazenieZesp wyr;
-  cin >> wyr;
-  cout << wyr; */
-
-  
 
   PlikTestu.close();
   
-  cout << endl;
-  cout << " Koniec testu" << endl;
-  cout << endl;
+  return 0;
 }
