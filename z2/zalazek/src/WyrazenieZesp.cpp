@@ -81,13 +81,24 @@ LZespolona Oblicz(WyrazenieZesp  WyrZ)
 }
 
 
-
+/*!
+ * Realizuje przeciążenie operatora przesunięcia bitowego wczytującego wyrażenie zespolone
+ * Liczba zespolona powinna być wpisana w nawiasie i zawierać 'i' w części urojonej, dozwolone znaki to + - * /
+ * Argumenty:
+ *    &WyrZ - wyrażenie zespolone do wczytania przekazane przez referencje
+ *    &rStrmWe zmienna strumienia wejsciowego wskazujaca na plik
+ * Zwraca:
+ *   -referencje strumienia wejściowego z wczytanym wyrażeniem lub błędem
+ */ 
 std::istream & operator >> (std::istream &rStrmWe, WyrazenieZesp &WyrZ)
 {
   char Znak;
+
+  // Wczytujemy pierwszą liczbę zespoloną 
   rStrmWe >> WyrZ.Arg1;
   if(rStrmWe.fail()) return rStrmWe;
 
+  // Wczytujemy znak, jeden z dozwolonych + - * /
   rStrmWe >>Znak;
   if(rStrmWe.fail()) return rStrmWe;
   switch(Znak)
@@ -106,15 +117,28 @@ std::istream & operator >> (std::istream &rStrmWe, WyrazenieZesp &WyrZ)
         }
       }
 
+  //Wczytujemy drugą liczbę zespoloną
   rStrmWe >> WyrZ. Arg2;
   if(rStrmWe.fail()) return rStrmWe;
+
+  //Zwracamy strumień wejściowy
   return rStrmWe;
 }
 
+/*!
+ * Realizuje przeciążenie operatora przesunięcia bitowego wypisującego wyrażenie zespolone
+ * Argumenty:
+ *    &Zesp - wyrażenie zespolone do wyświetlenia przekazane przez referencje
+ *    &rStrmWy zmienna strumienia wyjsciowego wskazujaca
+ * Zwraca:
+ *   referencje strumienia wyjściowego z wyrażeniem zespolonym
+ */
 std::ostream & operator << (std::ostream &rStrmWy, WyrazenieZesp WyrZ)
 {
+  // Wyświetlamy pierwszą liczbę zespoloną
   rStrmWy << WyrZ.Arg1;
   
+  // Wyświetlamy znak
   switch(WyrZ.Op)
       {
         case Op_Dodaj: rStrmWy << " + "; break;
@@ -126,6 +150,8 @@ std::ostream & operator << (std::ostream &rStrmWy, WyrazenieZesp WyrZ)
         case Op_Dziel: rStrmWy << " / "; break;
       }
 
+  //Wyświetlamy drugą liczbę zespoloną
   rStrmWy << WyrZ.Arg2;
-  return rStrmWy;
+
+  return rStrmWy; // Zwracamy strumień wyjściowy
 } 

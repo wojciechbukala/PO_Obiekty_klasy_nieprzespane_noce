@@ -39,33 +39,33 @@ void WykonajTest(std::istream &rStrmWej)
         {
         std::cout<< std::endl << " Twoja odpowiedz: ";
         std::cin >> Zesp;   // Wczytywanie odpowiedzi użytkownika
-          if(std::cin.fail())
+          if(std::cin.fail()) // przypadek błędnego wpisania liczby zespolonej
           {
            if(i!=2) std::cerr << "Blad wczytywania liczby zespolonej. Wpisz poprawna liczbe!" << std::endl;
            std::cin.clear();
            std::cin.ignore(1000, '\n');
           } else break;
         }
-          if(Zesp==Wynik) 
+          if(Zesp==Wynik) // w przypadku, gdy odpowiedź jest poprawna
           {
             std::cout<<":) Odpowiedz poprawna" << std::endl;
             poprawne(statystyka);
           }
-          else 
+          else   // w przypadku gdy, odpowiedź jest niepoprawna
           { 
             std::cout<< ":( Blad. Prawidlowym wynikiem jest: ";
             std::cout<< Wynik << std::endl;
             bledne(statystyka);
           }
         std::cout << std::endl;
-        rStrmWej.clear();
-        rStrmWej.ignore(1000, '\n');
-    } while (!rStrmWej.eof() && rStrmWej.good());
+        rStrmWej.clear();  // czyścimy strumień wejściowy
+        rStrmWej.ignore(1000, '\n'); 
+    } while (!rStrmWej.eof() && rStrmWej.good()); // zadajemy pytania do czasu aż plik się nie zakończy i jest poprawny
 
     std::cout << "Koniec testu" << std::endl;
     std::cout << std::endl;
 
-    Wyswietl(statystyka); 
+    Wyswietl(statystyka); // wyświetlamy statystykę testu
 
     std::cout << std::endl;  
 } 

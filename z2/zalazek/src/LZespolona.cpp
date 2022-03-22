@@ -131,7 +131,7 @@ void WczytajTenZnak(std::istream &StrmWej, char Znak){
  * Realizuje przeciążenie operatora przesunięcia bitowego wczytującego
  Liczba zespolona powinna być wpisana w nawiasie i zawierać 'i' w części urojonej
  * Argumenty:
- *    &Zesp - liczba zespolona do wyświtlaenia przekazana przez referencje
+ *    &Zesp - liczba zespolona do wczytania przekazana przez referencje
  *    &rStrmWe zmienna strumienia wejsciowego wskazujaca na plik
  * Zwraca:
  *   -liczbe zespoloną 
@@ -181,7 +181,7 @@ void WyswietlZesp(LZespolona LZesp)
  * Realizuje wczytywanie liczby zespolonej
  Liczba zespolona powinna być wpisana w nawiasie i zawierać 'i' w części urojonej
  * Argumenty:
- *    &Zesp - liczba zespolona do wyświtlaenia przekazana przez referencje
+ *    &Zesp - liczba zespolona do wczytania przekazana przez referencje
  *    &rStrmWe zmienna strumienia wejsciowego wskazujaca na plik
  * Zwraca:
  *   1 gdy poprawnie odczytano
