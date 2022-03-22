@@ -35,6 +35,7 @@ void WykonajTest(std::istream &rStrmWej)
         std::cout << WyrZ;
         Wynik= Oblicz(WyrZ);
 
+        bool pom=false;
         for(int i=0; i<3; ++i) // Trzy próby wpisania poprawnej odpowiedzi
         {
         std::cout<< std::endl << " Twoja odpowiedz: ";
@@ -44,14 +45,15 @@ void WykonajTest(std::istream &rStrmWej)
            if(i!=2) std::cerr << "Blad wczytywania liczby zespolonej. Wpisz poprawna liczbe!" << std::endl;
            std::cin.clear();
            std::cin.ignore(1000, '\n');
-          } else break;
+           if(i==2) pom=true; // jeśli pętala obróci 3 razy ustaw pom na true aby zaliczyć błąd
+          }   else break;
         }
-          if(Zesp==Wynik) // w przypadku, gdy odpowiedź jest poprawna
+          if(Zesp==Wynik && pom!=true) // w przypadku, gdy odpowiedź jest poprawna
           {
             std::cout<<":) Odpowiedz poprawna" << std::endl;
             poprawne(statystyka);
           }
-          else   // w przypadku gdy, odpowiedź jest niepoprawna
+          else   // w przypadku gdy, odpowiedź jest niepoprawna lub 3 razy źle wpisano
           { 
             std::cout<< ":( Blad. Prawidlowym wynikiem jest: ";
             std::cout<< Wynik << std::endl;
