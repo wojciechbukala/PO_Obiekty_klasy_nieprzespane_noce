@@ -67,13 +67,39 @@ LZespolona LZespolona::operator / (LZespolona  Skl2)
   LZespolona  Wynik;
   if(zwrocRe()==0 && Skl2.im==0) 
   {  //Zabezpieczenie przed dzieleniem przez zero.
-    std::cout<<"Blad nie mozna dzielic przez zero"<<std::endl;
+    std::cerr<<"Blad nie mozna dzielic przez zero"<<std::endl;
   } else{
-  Wynik.re = (re*Skl2.re + im*Skl2.im)/(pow(Skl2.re, 2) + pow(Skl2.im, 2));
-  Wynik.im = (re*Skl2.im*(-1) + im*Skl2.re)/(pow(Skl2.re, 2) + pow(Skl2.im, 2));
+  Wynik.re = (re*Skl2.re + im*Skl2.im)/Skl2.kwadrat_modulu();
+  Wynik.im = (re*Skl2.sprzezenie().im + im*Skl2.re)/Skl2.kwadrat_modulu();
   }
   return Wynik;
 }
+
+LZespolona LZespolona::operator / (double liczbaZP)
+{
+  LZespolona Wynik;
+  if(liczbaZP==0) std::cerr<<"Blad nie mozna dzielic przez zero"<<std::endl;
+  else {
+    Wynik.re = re / liczbaZP;
+    Wynik.im = im / liczbaZP;
+  }
+  return Wynik;
+}
+
+/* Metoda realizuje i zwraca sprzężenie liczby zespolonej */
+LZespolona LZespolona::sprzezenie()
+{
+  LZespolona Wynik;
+  Wynik.im= (-1)*im;
+  return Wynik;
+}
+
+/* Metoda realizuje i zwraca kwadrat modułu liczby zespolonej */
+double LZespolona::kwadrat_modulu()
+{
+  return pow(re,2)+pow(im,2);
+}
+
 
 /*!
  * Realizuje porównanie dwóch liczb zespolonych.
