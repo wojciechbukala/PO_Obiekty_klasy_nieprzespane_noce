@@ -15,8 +15,8 @@ LZespolona LZespolona::operator + (LZespolona  Skl2)
 {
   LZespolona  Wynik;
 
-  Wynik.re = re + Skl2.re;
-  Wynik.im = im + Skl2.im;
+  Wynik.re = this->re + Skl2.re;
+  Wynik.im = this->im + Skl2.im;
   return Wynik;
 }
 
@@ -65,7 +65,7 @@ LZespolona LZespolona::operator * (LZespolona  Skl2)
 LZespolona LZespolona::operator / (LZespolona  Skl2)
 {
   LZespolona  Wynik;
-  if(ZwrocRe==0 && Skl2.im==0) 
+  if(zwrocRe()==0 && Skl2.im==0) 
   {  //Zabezpieczenie przed dzieleniem przez zero.
     std::cout<<"Blad nie mozna dzielic przez zero"<<std::endl;
   } else{
@@ -84,7 +84,7 @@ LZespolona LZespolona::operator / (LZespolona  Skl2)
  *    true- jeśli liczby zespolone są równe.
  *    false- jeśli liczby zepolone nie są równe.
  */
-bool LZespola::operator == (LZespoloana Skl2)
+bool LZespolona::operator == (LZespolona Skl2)
 {
   //Liczby zespolone są równe wtedy, gdy ich części rzeczywiste oraz urojone są równe.
   return (re == Skl2.re && im == Skl2.im); // tu było Skl2.im==Skl2.im błąd!
@@ -102,7 +102,7 @@ bool LZespola::operator == (LZespoloana Skl2)
 std::ostream & operator << (std::ostream &rStrmWy, LZespolona  Zesp)
 {
   rStrmWy.precision(2);
-  rSrmWy << std::fixed << "(" << Zesp.zwrocRe() << std::showpos << Zesp.zwrocIm() << std::noshowpos << "i)";
+  rStrmWy << std::fixed << "(" << Zesp.zwrocRe() << std::showpos << Zesp.zwrocIm() << std::noshowpos << "i)";
   return rStrmWy;
    /* 
   std::cout.precision(2) - określia dokładność wypisywanych liczb zmiennoprzecinkowych.
@@ -111,6 +111,22 @@ std::ostream & operator << (std::ostream &rStrmWy, LZespolona  Zesp)
   std::noshowpos - znosi showpos
   */
 }
+
+
+/* Funkcja przypisuje wartość do zmiennych prywatnych re i im
+ * Argumenty:
+ *   rStrmWe - strumień wejściowy
+ *   liczba - część rzeczywista lub urojona do przypisania 
+ *   reim - jeśli 1 to wpisujemy do re, jeśli 0 to do im
+ * Zwraca:
+ *   wpisuje do re lub im wartość
+ */
+ bool LZespolona::wpisz (std::istream &rStrmWe, bool reim)
+ {
+   if (reim==1)rStrmWe>> re; 
+   if (reim==0)rStrmWe>> im;
+   return rStrmWe.fail() == false;
+ }
 
 /*!
  * Realizuje wczytywanie znaków. Używane do ()i w przeciążeniu >>
@@ -143,12 +159,10 @@ std::istream & operator >>(std::istream &rStrmWe, LZespolona &Zesp)
   WczytajTenZnak(rStrmWe, '(');
 
   // Wczytywanie części rzeczywistej
-  rStrmWe>> Zesp.re;
-  if(rStrmWe.fail()) return rStrmWe; 
+  Zesp.wpisz(rStrmWe, 1);
 
   // Wczytywanie części urojonej
-  rStrmWe>> Zesp.im; 
-  if(rStrmWe.fail()) return rStrmWe;
+  Zesp.wpisz(rStrmWe, 0);
 
   // Wczytywanie zanku 'i'
   WczytajTenZnak(rStrmWe, 'i');

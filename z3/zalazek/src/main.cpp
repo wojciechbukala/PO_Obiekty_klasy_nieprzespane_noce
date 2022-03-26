@@ -17,8 +17,8 @@ void WykonajTest(std::istream &rStrmWej)
 {
     WyrazenieZesp WyrZ; // zmienna przechowująca wyrażenie zespolone
     LZespolona Zesp, Wynik; // Zesp- liczba zespolona wczytana od użytkownika, Wynik- rezultat funkcji Oblicz()
-    StatystykaTestu statystyka; // zmienna na statystyke
-    inicjuj_stat(statystyka); // zerujemy statystyke
+    StatystykaTestu statystyka; // obiekt statystyki
+    statystyka.inicjuj_stat(); // zerujemy statystyke
 
     do
     {
@@ -33,7 +33,7 @@ void WykonajTest(std::istream &rStrmWej)
 
         std::cout<< std::endl<<":? Podaj wynik operacji: ";
         std::cout << WyrZ;
-        Wynik= Oblicz(WyrZ);
+        Wynik= WyrZ.Oblicz();
 
         bool pom=false;
         for(int i=0; i<3; ++i) // Trzy próby wpisania poprawnej odpowiedzi
@@ -51,13 +51,13 @@ void WykonajTest(std::istream &rStrmWej)
           if(Zesp==Wynik && pom!=true) // w przypadku, gdy odpowiedź jest poprawna
           {
             std::cout<<":) Odpowiedz poprawna" << std::endl;
-            poprawne(statystyka);
+            statystyka.poprawna_odp();
           }
           else   // w przypadku gdy, odpowiedź jest niepoprawna lub 3 razy źle wpisano
           { 
             std::cout<< ":( Blad. Prawidlowym wynikiem jest: ";
             std::cout<< Wynik << std::endl;
-            bledne(statystyka);
+            statystyka.bledna_odp();
           }
         std::cout << std::endl;
         rStrmWej.clear();  // czyścimy strumień wejściowy
@@ -67,7 +67,7 @@ void WykonajTest(std::istream &rStrmWej)
     std::cout << "Koniec testu" << std::endl;
     std::cout << std::endl;
 
-    Wyswietl(statystyka); // wyświetlamy statystykę testu
+    statystyka.Wyswietl(); // wyświetlamy statystykę testu
 
     std::cout << std::endl;  
 } 

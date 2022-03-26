@@ -24,9 +24,10 @@ class  LZespolona {
   LZespolona operator * (LZespolona Skl2);
   LZespolona operator / (LZespolona Skl2);
   bool operator == (LZespolona Skl2);
+  bool wpisz (std::istream &rStrmWe, bool reim); // jeśli reim==1 to wpisz do re, jeśli reim==0 to wpisz do im
   double zwrocRe() const {return re;};
-  double zwrosIm() const (return im:};
-  LZesp () {re=0 ; im=0;};
+  double zwrocIm() const {return im;};
+  LZespolona () {re=0 ; im=0;};
 };
 
 
@@ -38,7 +39,6 @@ class  LZespolona {
 //LZespolona  operator / (LZespolona  Skl1,  LZespolona  Skl2);
 std::istream & operator >> (std::istream &rStrmWe, LZespolona &Zesp);
 std::ostream & operator << (std::ostream &rStrmWy, LZespolona Zesp);
-bool  operator == (LZespolona  Skl1,  LZespolona  Skl2);
 
 void WczytajTenZnak(std::istream &StrmWej, char Znak);
 

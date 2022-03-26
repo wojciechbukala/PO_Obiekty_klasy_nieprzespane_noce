@@ -2,84 +2,51 @@
 #include "WyrazenieZesp.hh"
 
 /*!
- * Realizuje wczytywanie wyrazenia zespolonego
- * Argumenty:
- *    &rWyrZ - referencja wyrażenia zespolonego
- *    &rStrmWe - referencja strumienia wejsciowego
- * Zwraca:
- *    return rStrmWe.fail() == false
- */
-bool WczytajWyrazenieZesp(WyrazenieZesp &rWyrZ, std::istream &rStrmWe)
-{
-  char temp; // zmienna pomocnicza do przechowywania wczytanego znaku
-  for(int i=0; i<3; i++){ // pętla wczytująca wykanowyana 3 krotnie ( wczytuje dwie liczby zespolone i znak)
-    rStrmWe >> temp;
-    if(temp==' ' || temp==')' || temp=='i') --i; // Pomijamy spację, ')' oraz 'i'
-    else
-    {
-      switch(temp)
-      {
-        case '(' :  // Jeśli wczytano '(' to odczytujemy liczbę zespoloną
-        if(i==0) rStrmWe >> rWyrZ.Arg1.re >> rWyrZ.Arg1.im; // pierwsza liczba gdy i=0
-        if(i==2) rStrmWe >> rWyrZ.Arg2.re >> rWyrZ.Arg2.im; // druga liczba gdy i=2
-        break;
-      
-        case '+' : rWyrZ.Op = Op_Dodaj; break;
-
-        case '-' : rWyrZ.Op = Op_Odejmij; break;
-
-        case '*' : rWyrZ.Op = Op_Mnoz; break;
-
-        case '/' : rWyrZ.Op= Op_Dziel; break;
-
-        default: std::cout<< "Nie rozpoznano liczby zespolnej ani znaku dzialania"<<std::endl;
-      }
-    }
-    
-  }
-  return rStrmWe.fail() == false;
-}
-
-void WyswietlWyrazenie(WyrazenieZesp  WyrZ)
-{
-  std::cout.precision(2);
-  std::cout << std::fixed << "(" << WyrZ.Arg1.re << std::showpos << WyrZ.Arg1.im<<std::noshowpos << "i)";
-  switch(WyrZ.Op)
-      {
-        case Op_Dodaj: std::cout << " + "; break;
-
-        case Op_Odejmij: std::cout << " - "; break;
-
-        case Op_Mnoz: std::cout << " * "; break;
-
-        case Op_Dziel: std::cout << " / "; break;
-      }
-  std::cout << std::fixed << "(" << WyrZ.Arg2.re << std::showpos << WyrZ.Arg2.im<<std::noshowpos << "i)";
-}
-
-/*!
  * Realizuje obliczanie wyrażenia liczb zespolonych
- * Argumenty:
- *   WyrZ - wyrażenie zespolone do obliczenia
  * Zwraca:
  *    wynik - liczba zespolona będąca wynikiem operacji
  */
-LZespolona Oblicz(WyrazenieZesp  WyrZ)
+LZespolona WyrazenieZesp::Oblicz()
 {
   LZespolona wynik; // zmienna przechowująca wynik
-  switch(WyrZ.Op)
+  switch(Op)
       {
-        case Op_Dodaj: wynik = WyrZ.Arg1 + WyrZ.Arg2; break;
+        case Op_Dodaj: wynik = Arg1 + Arg2; break;
 
-        case Op_Odejmij: wynik = WyrZ.Arg1 - WyrZ.Arg2; break;
+        case Op_Odejmij: wynik = Arg1 - Arg2; break;
 
-        case Op_Mnoz: wynik = WyrZ.Arg1 * WyrZ.Arg2; break;
+        case Op_Mnoz: wynik = Arg1 * Arg2; break;
 
-        case Op_Dziel: wynik =  WyrZ.Arg1 / WyrZ.Arg2; break;
+        case Op_Dziel: wynik =  Arg1 / Arg2; break;
       }
   return wynik;
 }
 
+
+bool WyrazenieZesp::wczytaj (std::istream &rStrmWe, char Arg)
+ {
+   if (Arg=='1')rStrmWe>> Arg1; 
+   else if (Arg=='2')rStrmWe>> Arg2;
+   else rStrmWe.setstate(std::ios::failbit);
+   return rStrmWe.fail() == false;
+ }
+
+bool WyrazenieZesp::PrzypiszZnak (char znak)
+{
+  switch(znak)
+      {
+        case '+' : Op = Op_Dodaj; break;
+
+        case '-' : Op = Op_Odejmij; break;
+
+        case '*' : Op = Op_Mnoz; break;
+
+        case '/' : Op = Op_Dziel; break;
+
+        default: return false;
+      }
+  return 1;
+}
 
 /*!
  * Realizuje przeciążenie operatora przesunięcia bitowego wczytującego wyrażenie zespolone
@@ -95,31 +62,20 @@ std::istream & operator >> (std::istream &rStrmWe, WyrazenieZesp &WyrZ)
   char Znak;
 
   // Wczytujemy pierwszą liczbę zespoloną 
-  rStrmWe >> WyrZ.Arg1;
-  if(rStrmWe.fail()) return rStrmWe;
+  WyrZ.wczytaj(rStrmWe, '1');
 
   // Wczytujemy znak, jeden z dozwolonych + - * /
   rStrmWe >>Znak;
   if(rStrmWe.fail()) return rStrmWe;
-  switch(Znak)
-      {
-        case '+' : WyrZ.Op = Op_Dodaj; break;
 
-        case '-' : WyrZ.Op = Op_Odejmij; break;
+  if(!WyrZ.PrzypiszZnak(Znak))
+  {
+    rStrmWe.setstate(std::ios::failbit);
+    return rStrmWe; }
 
-        case '*' : WyrZ.Op = Op_Mnoz; break;
-
-        case '/' : WyrZ.Op = Op_Dziel; break;
-
-        default: {
-          rStrmWe.setstate(std::ios::failbit);
-          return rStrmWe;
-        }
-      }
 
   //Wczytujemy drugą liczbę zespoloną
-  rStrmWe >> WyrZ. Arg2;
-  if(rStrmWe.fail()) return rStrmWe;
+  WyrZ.wczytaj(rStrmWe, '2');
 
   //Zwracamy strumień wejściowy
   return rStrmWe;
@@ -136,10 +92,10 @@ std::istream & operator >> (std::istream &rStrmWe, WyrazenieZesp &WyrZ)
 std::ostream & operator << (std::ostream &rStrmWy, WyrazenieZesp WyrZ)
 {
   // Wyświetlamy pierwszą liczbę zespoloną
-  rStrmWy << WyrZ.Arg1;
+  rStrmWy << WyrZ.zwrocArg1();
   
   // Wyświetlamy znak
-  switch(WyrZ.Op)
+  switch(WyrZ.zwrocOp())
       {
         case Op_Dodaj: rStrmWy << " + "; break;
 
@@ -151,7 +107,7 @@ std::ostream & operator << (std::ostream &rStrmWy, WyrazenieZesp WyrZ)
       }
 
   //Wyświetlamy drugą liczbę zespoloną
-  rStrmWy << WyrZ.Arg2;
+  rStrmWy << WyrZ.zwrocArg2();
 
   return rStrmWy; // Zwracamy strumień wyjściowy
 } 
