@@ -6,7 +6,9 @@
 
 using namespace std;
 
-
+/* funkcja main
+ * otwiera plik oraz uruchamia funkcje wykonaj test
+ */
 int main(int argc, char **argv)
 {
 
@@ -28,7 +30,7 @@ int main(int argc, char **argv)
   cout << " Start testu arytmetyki zespolonej: " << argv[1] << endl;
   cout << endl;
 
-  WykonajTest(PlikTestu);
+  WykonajTest(PlikTestu);  // wykonujemy test z modulu WykonajTest
 
   PlikTestu.close();
   
