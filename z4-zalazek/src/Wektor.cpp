@@ -51,6 +51,12 @@ Wektor Wektor::operator * (double skalar)
     return T;
 } 
 
+Wektor& Wektor::operator = (Wektor & Wektor2)
+{
+    for(int i=0; i<ROZMIAR; ++i) this->tab[i] = Wektor2.tab[i];
+    return *this;
+}
+
 //Wektor Wektor::operator / (Wektor Wektor2); // Przeciążenie odejmowania dla wektorów
 
 /* 
@@ -86,3 +92,7 @@ std::ostream& operator << (std::ostream &Strm, const Wektor &Wek)
     for(int i=0; i<ROZMIAR; ++i) Strm<< " " << Wek[i];
     return Strm;
 }
+
+
+
+

@@ -12,12 +12,19 @@
  */
 class Macierz {
   Wektor Tab[ROZMIAR]; // maciezrz to ROZMIAR-razy wektor
+  Wektor kopia[ROZMIAR]; // macierz do kopiowania i wykonywania obliczeń 
+  void kopiuj(); // Inicjowanie kopi macierzy do wykoanywania obliczeń wyznacznika
+  void zeruj (); //zerowanie macierzy
+  double mnozenie_diagonali () const; // mnożenie elementów na diagonali
+  void zamien_wiersz(Wektor wek1, Wektor wek2); // zmaina miejsc wierszy
 
   public:
   Wektor operator * (const Wektor Wektor2) const; // Mnożenie macierzy przez wektor 
   Wektor& operator [](int indeks)  {return Tab[indeks];} // Przeciążenie operatorea indeksowania macierza
   double operator () (int a, int b) {return Tab[a][b];} // przeciązenie operatora funkcyjnego dla klasy macierz
-  void transponuj(); // transponowanie macierzy
+  Macierz& operator = (Macierz & Macierz2); // pPrzeciążenie operatora przypisania dla macierzy
+  void transponuj(); // transponowanie macierzy 
+  double wyznacznik_gauss (); // obliczanie wyznacznika metodą gaussa
 };
 
 
@@ -41,6 +48,7 @@ std::istream& operator >> (std::istream &Strm, Macierz &Mac);
  *  Wypisuje na strumień std::ostream
  */
 std::ostream& operator << (std::ostream &Strm,  Macierz Mac);
+
 
 
 #endif

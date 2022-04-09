@@ -22,6 +22,7 @@ class Wektor {
     double operator * (Wektor Wektor2); // Przeciążenie iloczynu sklarnego dla wektora
     Wektor operator * (double skalar);  // Przeciążenie mnożenia wektora przez skalar
     Wektor operator / (Wektor Wektor2); // Przeciążenie odejmowania dla wektorów
+    Wektor& operator = (Wektor & Wektor2);
 };
 
 
@@ -45,5 +46,7 @@ std::istream& operator >> (std::istream &Strm, Wektor &Wek);
  *  Wypisuje na strumień std::ostream
  */
 std::ostream& operator << (std::ostream &Strm, const Wektor &Wek);
+
+
 
 #endif

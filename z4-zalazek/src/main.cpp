@@ -5,6 +5,12 @@
 #include "Macierz.hh"
 #include "UkladRownanLiniowych.hh"
 
+void przypisz (Macierz x, Macierz &z)
+{
+  for(int i=0; i<ROZMIAR; ++i)
+  for(int j=0; j<ROZMIAR; ++j)
+  z[i][j] = x[i][j];
+}
 
 
 using namespace std;
@@ -29,20 +35,19 @@ int main()
     return 1;
   }
 
-  Wektor y, z;
-  Macierz x;
+  Wektor a, b;
+  Macierz x, z;
   PlikUkladu>>x;
-  PlikUkladu>>y>>z;
- 
+  PlikUkladu>>a;
   
-  x.transponuj();
-  cout << "Transpozycja:";
-  cout<<x<<endl;
-  
-  cout<<endl<< "wynik:" <<endl;
-  cout<<x*y;
+  double wyznacznik;
 
-  cout<<endl<<y+z<<endl<<y-z<<endl<<" "<<y*z<<y*2.0<<endl;
+  wyznacznik = x.wyznacznik_gauss();
+  cout<< wyznacznik <<endl;
+ 
+  //przypisz(x.zeruj(),z);
+  
+  //cout<<z;
 
   
   //cout << endl << " Start programu " << endl << endl;
