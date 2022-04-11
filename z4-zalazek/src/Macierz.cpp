@@ -1,12 +1,14 @@
 #include "Macierz.hh"
 
-Wektor Macierz::operator * (const Wektor Wektor2) const // Mnożenie macierza przez wektor 
+Wektor& Macierz::operator * (const Wektor Wektor2) const // Mnożenie macierza przez wektor 
 {
     Wektor Wynik;
+    for(int b=0; b<ROZMIAR; ++b) Wynik[b]=0;
+    Wektor &w = Wynik;
     for(int i=0; i<ROZMIAR; ++i)
     for(int j=0; j<ROZMIAR; ++j)
-    Wynik[i] += Tab[i][j] * Wektor2[j];
-    return Wynik;
+    Wynik[i] += (Tab[i][j] * Wektor2[j]);
+    return w;
 }
 
 Macierz& Macierz::operator = (Macierz & Macierz2)
@@ -34,13 +36,36 @@ void Macierz::kopiuj()
     kopia[i][j] = Tab[i][j]; 
 }
 
-void Macierz::zeruj()
+/* 
+ * Metoda dopasowuje wyznacznik tak, aby na digonali były luczby niezerowe
+ * a pod nią same zera, jeśli jest ot wykonalne.
+ * Argumenty:
+ * -bool &parzystosc - referencja parametru wsazujacego na parzystosc zmaina kolumn
+ *  jeśli jeden to mnożymy przez 1, jeśli 0 to mnożymy przez -1
+ * Zwraca:
+ *  bool - True (1), jeśli wyznacznik != 0
+ *         False (0), jeśli wyznacznik == 0 (przekształcenie macierzy jest niewykonalane)
+ */
+bool Macierz::zeruj(int &parzystosc)
 {
     double wspolczynnik = 0;
+    
 
         int k = 1;
         while(k!= ROZMIAR)
-        {   if(kopia[k][k] == 0) {std::cout << "napotkano 0" << std::endl; break;}
+        {   if(kopia[k-1][k-1] == 0)
+            {
+                for(int i=k; i<ROZMIAR; ++i)
+                {
+                    if(kopia[i][k-1]!=0) {
+                        Wektor pom = kopia[i];
+                        kopia[i] = kopia[k-1];
+                        kopia[k-1] = pom;
+                        parzystosc*=(-1);
+                        }
+                    else if(i==ROZMIAR-1) return 0;
+                }
+            }  
             for(int a=k; a<ROZMIAR; ++a)
             {
                 wspolczynnik = kopia[a][k-1] / kopia[k-1][k-1];
@@ -49,7 +74,7 @@ void Macierz::zeruj()
             }
             ++k;
         }
-    //return kopia;
+    return 1;
 }
 
 /* 
@@ -61,12 +86,13 @@ void Macierz::zeruj()
  *  bool - True (1), jeśli wyznacznik != 0
  *         False (0), jeśli wyznacznik == 0
  */
-void Macierz::zamien_wiersz(Wektor wek1, Wektor wek2)
+/*
+void Macierz::zamien_wiersz(Macierz& mac, Wektor wek1, Wektor wek2)
 {
-    Wektor pom= wek1;
-    wek1 = wek2;
-    wek2 = pom;
-}
+     Wektor pom = wek1;
+     wek1 = wek2;
+     wek2 = pom;
+} */
 
 /* 
  * Metoda wylicza iloczyn elementów na diagonali
@@ -91,9 +117,11 @@ double Macierz::mnozenie_diagonali () const
 double Macierz::wyznacznik_gauss ()
 {
     double wyznacznik;
+    int parzystosc = 1;
     kopiuj();
-    zeruj();
-    wyznacznik=mnozenie_diagonali();
+    if(zeruj(parzystosc))
+    wyznacznik=mnozenie_diagonali() * parzystosc;
+    else wyznacznik = 0;
     return wyznacznik;
 }
 

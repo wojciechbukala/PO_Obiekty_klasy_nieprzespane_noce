@@ -2,18 +2,35 @@
 #define UKLADROWNANLINIOWYCH_HH
 
 #include <iostream>
+#include <Macierz.hh>
+#include <Wektor.hh>
+#include <rozmiar.h>
 
 
 /*
- *  Tutaj trzeba opisac klase. Jakie pojecie modeluje ta klasa
- *  i jakie ma glowne cechy.
+ *  Klasa modelująca pojęcię Układu Równań Liniwych.
+ *  Może działać dla dowlonie dużego układu równań, jeśli
+ *  ilość równań jest równa ilość szukanych rozwiązań
  */
 class UkladRownanLiniowych {
+ 
+  double wyznacznik_glowny; 
+  double wyznaczniki[ROZMIAR];
+  Macierz MacWej; // Macierz współczynników
+  Wektor WyrWolne; // Wektor wyrazów wolnych
+  Wektor WektorBledu; // Opiekt klasy wektor do przechowywania wektora błedy
 
-  public:
-  /*
-   *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
-   */    
+public:
+  Wektor wyniki; // tabela wyników 
+  Macierz dajMacWej() {return MacWej;}; // zwraca atrybut prywatny MacWej
+  Wektor dajWyrWolne() {return WyrWolne;}; // zwraca atrybut prywatny WyrWolne 
+  Macierz& ustawMacWej() {return MacWej;}; // zwraca referencje prywatnego atrybutu MacWej
+  Wektor& ustawWyrWolne() {return WyrWolne;}; // zwraca referencje prywatnego atrybutu WyrWolne
+  bool licz_wyznaczniki();  // liczby wyznaczniki metodą crammera
+  void licz_wyniki();
+  void licz_wektor_bledu();
+  Wektor oblicz();
+  void wyswietl_bledy(std::ostream& Strm);
 };
 
 
@@ -33,9 +50,6 @@ std::istream& operator >> (std::istream &Strm, UkladRownanLiniowych &UklRown);
  * znalezc w pliku:
  *    ~bk/edu/kpo/zalecenia.txt 
  */
-std::ostream& operator << ( std::ostream                  &Strm, 
-                            const UkladRownanLiniowych    &UklRown
-                          );
-
+std::ostream& operator << (std::ostream &Strm, UkladRownanLiniowych UklRown);
 
 #endif

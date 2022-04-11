@@ -6,23 +6,25 @@
 
 
 /*
- *  Tutaj trzeba opisac klase. Jakie pojecie modeluje ta klasa
- *  i jakie ma glowne cechy.
+ * Klasa wektora modelująca pojęcie wektora
+ * jako tablicy jednowymiarowej o rozmiarze
+ * przechowywanym w stałej ROZMIAR
  */
 class Wektor {
   
-  double tab[ROZMIAR];
+  double tab[ROZMIAR]; // Wektor jako tablica jednowymiarowa
 
   public:
     double &operator[] (int indeks) {return tab[indeks];} // Przeciążenie indeksu wektora;
     double operator[] (int indeks) const {return tab[indeks];} // Przeciążenie indeksu wektora;
     Wektor operator + (Wektor Wektor2); // Przeciążenie dodawania dla wektorów
-    Wektor operator - (Wektor Wektor2); // Przęciążenie odejmowania dla wektorów
+    Wektor& operator - (Wektor Wektor2); // Przęciążenie odejmowania dla wektorów
     //Wektor operator * (Wektor Wektor2); // Przeciążenie iloczynu wektorowego dla wektorów
     double operator * (Wektor Wektor2); // Przeciążenie iloczynu sklarnego dla wektora
     Wektor operator * (double skalar);  // Przeciążenie mnożenia wektora przez skalar
     Wektor operator / (Wektor Wektor2); // Przeciążenie odejmowania dla wektorów
-    Wektor& operator = (Wektor & Wektor2);
+    Wektor& operator = (Wektor & Wektor2); // Przeciążenie operatora przypisania dla Wektorów
+    double dlugosc(); // metoda wyliczająca długość wektora
 };
 
 

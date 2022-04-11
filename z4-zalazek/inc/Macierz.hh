@@ -12,14 +12,14 @@
  */
 class Macierz {
   Wektor Tab[ROZMIAR]; // maciezrz to ROZMIAR-razy wektor
+  bool zeruj (int& parzystosc); //zerowanie macierzy
+  double mnozenie_diagonali () const; // mnożenie elementów na diagonali
   Wektor kopia[ROZMIAR]; // macierz do kopiowania i wykonywania obliczeń 
   void kopiuj(); // Inicjowanie kopi macierzy do wykoanywania obliczeń wyznacznika
-  void zeruj (); //zerowanie macierzy
-  double mnozenie_diagonali () const; // mnożenie elementów na diagonali
-  void zamien_wiersz(Wektor wek1, Wektor wek2); // zmaina miejsc wierszy
+  
 
   public:
-  Wektor operator * (const Wektor Wektor2) const; // Mnożenie macierzy przez wektor 
+  Wektor& operator * (const Wektor Wektor2) const ; // Mnożenie macierzy przez wektor 
   Wektor& operator [](int indeks)  {return Tab[indeks];} // Przeciążenie operatorea indeksowania macierza
   double operator () (int a, int b) {return Tab[a][b];} // przeciązenie operatora funkcyjnego dla klasy macierz
   Macierz& operator = (Macierz & Macierz2); // pPrzeciążenie operatora przypisania dla macierzy

@@ -1,14 +1,14 @@
 #include "Wektor.hh"
+#include "cmath"
 
 
-/*
- *  Tutaj nalezy zdefiniowac odpowiednie metody
- *  klasy Wektor, ktore zawieraja wiecej kodu
- *  niz dwie linijki.
- *  Mniejsze metody mozna definiwac w ciele klasy.
+/* 
+ * Przeciążenie operatora dodawania dla wektorów
+ * Argumenty:
+ *  Wektor Wektor2 - składnik sumowania
+ * Zwraca:
+ *  Wektor T - wynik sumowania dwóch wektorów
  */
-
-// Przeciążenie dodawania dla wektorów
 Wektor Wektor::operator + (Wektor Wektor2)
 {
     Wektor T;
@@ -16,12 +16,19 @@ Wektor Wektor::operator + (Wektor Wektor2)
     return T;
 }
 
-// Przęciążenie odejmowania dla wektorów
-Wektor Wektor::operator - (Wektor Wektor2)
+/* 
+ * Przeciążenie operatora odejmowania dla wektorów
+ * Argumenty:
+ *  Wektor Wektor2 - odjemna dla operacji różnicy dwóch wektorów
+ * Zwraca:
+ *  Wektor &wynik - referencja wyniku różnicy dwóch wektorów
+ */
+Wektor& Wektor::operator - (Wektor Wektor2)
 {
     Wektor T;
+    Wektor &wynik = T;
     for(int i=0; i<ROZMIAR; ++i) T[i] = tab[i] - Wektor2[i];
-    return T;
+    return wynik;
 }
 /*
 // Przeciążenie iloczynu wektorowego dla wektorów
@@ -35,7 +42,13 @@ Wektor Wektor::operator * (Wektor Wektor2)
     return T;
 } */
 
-// Przeciążenie iloczynu sklarnego dla wektora
+/* 
+ * Przeciążenie operatora mnożenia dla iloczynu sklarnego
+ * Argumenty:
+ *  Wektor Wektor2 - czynnik mnożenia
+ * Zwraca:
+ *  Wektor T - wynik iloczynu skalarnego dla dwóch wektorów
+ */
 double Wektor::operator * (Wektor Wektor2)
 {
     double T;
@@ -43,7 +56,13 @@ double Wektor::operator * (Wektor Wektor2)
     return T;
 } 
 
-// Przeciążenie mnożenia wektora przez skalar
+/* 
+ * Przeciążenie operatora mnożenia przez skalar
+ * Argumenty:
+ *  double skalar - liczba zmiennoprzecinkowa do mnożenia elementów
+ * Zwraca:
+ *  Wektor T - wymnożony wektor przez liczbe zmiennoprzecinkową (skalar)
+ */
 Wektor Wektor::operator * (double skalar)
 {
     Wektor T;
@@ -51,13 +70,56 @@ Wektor Wektor::operator * (double skalar)
     return T;
 } 
 
+/* 
+ * Przeciążenie operatora dzilenie dla wektorów
+ * posiada zabezpieczenie przed dzieleniem przez zero
+ * Argumenty:
+ *  Wektor Wektor2 - wektor którego elemnty są dzielną w operacji
+ * Zwraca:
+ *  Wektor T - wynik dzielenia
+ */
+Wektor Wektor::operator / (Wektor Wektor2)
+{
+    Wektor T;
+    for(int i=0; i<ROZMIAR; ++i) 
+        {
+            if(Wektor2[i] == 0)
+            {
+                std::cerr << "Blad, nie mozna dzielic przez zero";
+                break;
+            }
+            else {T[i] += tab[i]/Wektor2[i];}
+        }
+    return T;
+}
+
+/* 
+ * Przeciążenie operatora przypisania dla wektora
+ * Argumenty:
+ *  -Wektor &Wektor2 - wektor, którego elementy przypisujemy do tab[ROZMIAR]
+ * Zwraca:
+ *  *this - referencja Wektora, atrybut tab[ROZMIAR], czyli miejsce przechowujące elementy wektora
+ */
 Wektor& Wektor::operator = (Wektor & Wektor2)
 {
     for(int i=0; i<ROZMIAR; ++i) this->tab[i] = Wektor2.tab[i];
     return *this;
 }
 
-//Wektor Wektor::operator / (Wektor Wektor2); // Przeciążenie odejmowania dla wektorów
+/* 
+ * Medota obliczająca długość wektora
+ * Argumenty:
+ *  -brak
+ * Zwraca:
+ *  double mod - liczba zmiennoprzecinkowa, będąca długością wektora
+ */
+double Wektor::dlugosc()
+{
+    double mod=0;
+    for(int i=0; i<ROZMIAR; ++i) mod+= pow(tab[i],2);
+    mod = sqrt(mod);
+    return mod;
+}
 
 /* 
  * Przeciążenie wczytujące Wektor ze strumienia std::istream
@@ -88,11 +150,12 @@ std::istream& operator >> (std::istream &Strm, Wektor &Wek)
  */
 std::ostream& operator << (std::ostream &Strm, const Wektor &Wek)
 {
-    std::cout << "  " << std::endl;
+    Strm << "  (" ;
     for(int i=0; i<ROZMIAR; ++i) Strm<< " " << Wek[i];
+    Strm <<" )";
     return Strm;
 }
-
+ 
 
 
 
