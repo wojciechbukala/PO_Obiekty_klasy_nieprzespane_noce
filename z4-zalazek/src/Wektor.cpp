@@ -150,9 +150,9 @@ std::istream& operator >> (std::istream &Strm, Wektor &Wek)
  */
 std::ostream& operator << (std::ostream &Strm, const Wektor &Wek)
 {
-    Strm << "  (" ;
+    
     for(int i=0; i<ROZMIAR; ++i) Strm<< " " << Wek[i];
-    Strm <<" )";
+    
     return Strm;
 }
  

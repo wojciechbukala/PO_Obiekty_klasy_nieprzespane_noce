@@ -22,8 +22,8 @@ class UkladRownanLiniowych {
 
 public:
   Wektor wyniki; // tabela wyników 
-  Macierz dajMacWej() {return MacWej;}; // zwraca atrybut prywatny MacWej
-  Wektor dajWyrWolne() {return WyrWolne;}; // zwraca atrybut prywatny WyrWolne 
+  Macierz dajMacWej() const {return MacWej;}; // zwraca atrybut prywatny MacWej
+  Wektor dajWyrWolne() const {return WyrWolne;}; // zwraca atrybut prywatny WyrWolne 
   Macierz& ustawMacWej() {return MacWej;}; // zwraca referencje prywatnego atrybutu MacWej
   Wektor& ustawWyrWolne() {return WyrWolne;}; // zwraca referencje prywatnego atrybutu WyrWolne
   bool licz_wyznaczniki();  // liczby wyznaczniki metodą crammera

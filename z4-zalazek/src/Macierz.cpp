@@ -3,7 +3,7 @@
 Wektor& Macierz::operator * (const Wektor Wektor2) const // Mnożenie macierza przez wektor 
 {
     Wektor Wynik;
-    for(int b=0; b<ROZMIAR; ++b) Wynik[b]=0;
+    //for(int b=0; b<ROZMIAR; ++b) Wynik[b]=0;
     Wektor &w = Wynik;
     for(int i=0; i<ROZMIAR; ++i)
     for(int j=0; j<ROZMIAR; ++j)
@@ -11,6 +11,13 @@ Wektor& Macierz::operator * (const Wektor Wektor2) const // Mnożenie macierza p
     return w;
 }
 
+/* 
+ * Medota przeciążająca operator przypisania dla macierzy
+ * Argumenty:
+ *  -Macierz& Macierz- referencja macierzy przypisywanej do innej
+ * Zwraca:
+ *  Macierz& *this - referencja macierzy po przekształceniu
+ */
 Macierz& Macierz::operator = (Macierz & Macierz2)
 {
     for(int j=0; j<ROZMIAR; ++j)
@@ -18,6 +25,13 @@ Macierz& Macierz::operator = (Macierz & Macierz2)
     return *this;
 }
 
+/* 
+ * Medota transponuje orginalną macierz
+ * Argumenty:
+ *  -brak
+ * Zwraca:
+ *  -brak
+ */
 void Macierz::transponuj () // transponowanie macierzy
 {
     Macierz Transpozycja;
@@ -153,7 +167,7 @@ std::istream& operator >> (std::istream &Strm, Macierz &Mac)
  */
 std::ostream& operator << (std::ostream &Strm, Macierz Mac)
 {
-    std::cout << "  " << std::endl;
-    for(int i=0; i<ROZMIAR; ++i) Strm<< " " << Mac[i];
+    Strm << "  " << std::endl;
+    for(int i=0; i<ROZMIAR; ++i) Strm<< " " << Mac[i] <<std::endl;
     return Strm;
 }

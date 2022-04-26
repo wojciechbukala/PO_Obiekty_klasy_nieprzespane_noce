@@ -37,18 +37,35 @@ void UkladRownanLiniowych::licz_wyniki()
 {
     for(int i=0; i<ROZMIAR; ++i) wyniki[i] = wyznaczniki[i] / wyznacznik_glowny;
 }
- 
+
+/*
+ * Metoda wylicza wektor błedu rozwiązań układu równań
+ * zmienia wartośc atrybutu WektorBlendu
+ */
 void UkladRownanLiniowych::licz_wektor_bledu()
 {
-    WektorBledu = (MacWej * WyrWolne) - wyniki;
+    WektorBledu = (MacWej * wyniki) - WyrWolne;
 } 
 
-void UkladRownanLiniowych::wyswietl_bledy(std::ostream& Strm)
+/*
+ * Metoda wyświetla wektor błędu układu równań liniowych
+ * Argumenty: 
+ *  - std::ostream &Strm - referencja strumienia wyjściowego
+ */
+void UkladRownanLiniowych::wyswietl_bledy(std::ostream& Strm) 
 {
-    Strm<< std::endl << "         Wektor bledu:  Ax-b = " << WektorBledu << std::endl;
+    Strm<< std::endl << "         Wektor bledu:  Ax-b = (" << WektorBledu << " )"<< std::endl;
     Strm << "Dlugosc wektora bledu: |Ax-b| = " << WektorBledu.dlugosc() << std::endl;
 }
 
+/*
+ * Przeciążenie operatora wczytywania (>>) 
+ * Argumenty:
+ *  - std::istream &Strm - referencja sturmienia wejściowego
+ *  - UkladRownanLiniowych &UklRown - referencja układu równań linoiwych
+ * Zwraca:
+ *  - std::istream& - referencja strumienia wejściowego.
+ */
 std::istream& operator >> (std::istream &Strm, UkladRownanLiniowych &UklRown)
 {
     Strm >> UklRown.ustawMacWej();
@@ -56,6 +73,14 @@ std::istream& operator >> (std::istream &Strm, UkladRownanLiniowych &UklRown)
     return Strm;
 }
 
+/*
+ * Przeciążenie operatora wczytywania (<<)
+ * Argumenty:
+ *  - std::ostream &Strm - referencja strumienia wejściowego
+ *  - UkladRownanLiniowych UklRown - układ równań liniowych do wyświtlania
+ * Zwrac:
+ *  - std::ostream& - referencja strumienia wyjściowehgo
+ */
 // UWAGA, OPERATOR NIE TRANSPONUJE MACIERZY
 std::ostream& operator << (std::ostream &Strm, UkladRownanLiniowych UklRown)
 {
