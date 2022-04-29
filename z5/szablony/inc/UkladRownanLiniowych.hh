@@ -4,7 +4,6 @@
 #include <iostream>
 #include <Macierz.hh>
 #include <Wektor.hh>
-#include <rozmiar.h>
 
 
 /*
@@ -12,6 +11,7 @@
  *  Może działać dla dowlonie dużego układu równań, jeśli
  *  ilość równań jest równa ilość szukanych rozwiązań
  */
+/*
 class UkladRownanLiniowych {
  
   double wyznacznik_glowny; 
@@ -31,7 +31,7 @@ public:
   void licz_wektor_bledu();
   Wektor oblicz();
   void wyswietl_bledy(std::ostream& Strm);
-};
+}; */
 
 
 /*
@@ -41,7 +41,7 @@ public:
  * znalezc w pliku:
  *    ~bk/edu/kpo/zalecenia.txt 
  */
-std::istream& operator >> (std::istream &Strm, UkladRownanLiniowych &UklRown);
+//std::istream& operator >> (std::istream &Strm, UkladRownanLiniowych &UklRown);
 
 /*
  * To przeciazenie trzeba opisac. Co ono robi. Jaki format
@@ -50,6 +50,6 @@ std::istream& operator >> (std::istream &Strm, UkladRownanLiniowych &UklRown);
  * znalezc w pliku:
  *    ~bk/edu/kpo/zalecenia.txt 
  */
-std::ostream& operator << (std::ostream &Strm, UkladRownanLiniowych UklRown);
+//std::ostream& operator << (std::ostream &Strm, UkladRownanLiniowych UklRown);
 
 #endif

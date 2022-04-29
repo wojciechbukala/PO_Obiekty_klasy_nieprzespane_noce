@@ -1,15 +1,11 @@
 #ifndef MACIERZ_HH
 #define MACIERZ_HH
 
-#include "rozmiar.h"
 #include "Wektor.hh"
 #include <iostream>
 
 
 /*
- *  Tutaj trzeba opisac klase. Jakie pojecie modeluje ta klasa
- *  i jakie ma glowne cechy.
- */
 class Macierz {
   Wektor Tab[ROZMIAR]; // maciezrz to ROZMIAR-razy wektor
   bool zeruj (int& parzystosc); //zerowanie macierzy
@@ -26,7 +22,7 @@ class Macierz {
   Macierz& operator = (Macierz & Macierz2); // pPrzeciążenie operatora przypisania dla macierzy
   void transponuj(); // transponowanie macierzy 
   double wyznacznik_gauss (); // obliczanie wyznacznika metodą gaussa
-};
+}; */
 
 
 /* 
@@ -38,7 +34,7 @@ class Macierz {
  * Zwraca:
  *  Wczytuje strumieniem std::istream 
  */
-std::istream& operator >> (std::istream &Strm, Macierz &Mac);
+//std::istream& operator >> (std::istream &Strm, Macierz &Mac);
 
 /* 
  * Przeciążenie wypisujące Macierz na strumień std::ostream
@@ -48,7 +44,7 @@ std::istream& operator >> (std::istream &Strm, Macierz &Mac);
  * Zwraca:
  *  Wypisuje na strumień std::ostream
  */
-std::ostream& operator << (std::ostream &Strm,  Macierz Mac);
+//std::ostream& operator << (std::ostream &Strm,  Macierz Mac);
 
 
 
