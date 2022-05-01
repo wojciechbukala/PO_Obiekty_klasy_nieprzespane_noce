@@ -21,7 +21,7 @@ class SWektor {
     SWektor<typ,wymiar> operator + (SWektor<typ,wymiar> SWektor2); // Przeciążenie dodawania dla SWektorów
     SWektor<typ,wymiar>& operator - (SWektor<typ, wymiar> SWektor2); // Przęciążenie odejmowania dla SWektorów
     typ operator * (SWektor SWektor2); // Przeciążenie iloczynu sklarnego dla SWektora
-    SWektor<typ,wymiar> operator * (typ skalar);  // Przeciążenie mnożenia SWektora przez skalar
+    SWektor<typ,wymiar> operator * (double skalar);  // Przeciążenie mnożenia SWektora przez skalar
     SWektor<typ,wymiar> operator / (SWektor<typ,wymiar> SWektor2); // Przeciążenie odejmowania dla SWektorów
     SWektor<typ,wymiar>& operator = (SWektor<typ,wymiar>& SWektor2); // Przeciążenie operatora przypisania dla SWektorów
     typ dlugosc(); // metoda wyliczająca długość SWektora
@@ -66,6 +66,7 @@ SWektor<typ, wymiar>& SWektor<typ, wymiar>::operator - (SWektor<typ,wymiar> SWek
  * Zwraca:
  *  SWektor T - wynik iloczynu skalarnego dla dwóch SWektorów
  */
+
 template <typename typ, int wymiar>
 typ SWektor<typ,wymiar>::operator * (SWektor<typ,wymiar> SWektor2)
 {
@@ -82,7 +83,7 @@ typ SWektor<typ,wymiar>::operator * (SWektor<typ,wymiar> SWektor2)
  *  SWektor T - wymnożony SWektor przez liczbe zmiennoprzecinkową (skalar)
  */
 template <typename typ, int wymiar>
-SWektor<typ,wymiar> SWektor<typ,wymiar>::operator * (typ skalar)
+SWektor<typ,wymiar> SWektor<typ,wymiar>::operator * (double skalar)
 {
     SWektor<typ,wymiar> T;
     for(int i=0; i<wymiar; ++i) T[i] = tab[i] * skalar;

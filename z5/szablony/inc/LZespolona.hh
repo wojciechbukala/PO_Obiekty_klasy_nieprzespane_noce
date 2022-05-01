@@ -22,6 +22,7 @@ public:
   LZespolona operator + (LZespolona Skl2);
   LZespolona operator - (LZespolona Skl2);
   LZespolona operator * (LZespolona Skl2);
+  LZespolona operator * (double zmiennoprzecinkowa);
   LZespolona operator / (LZespolona Skl2);
   LZespolona operator / (double liczbaZP); 
   LZespolona sprzezenie(); // metoda obliczająca sprzężenie liczby zespolonej

@@ -23,19 +23,21 @@ int main()
 
   // Testowanie szablonu wektora dla rzeczywistych  
   
+  /*
   LZespolona zesp;
   cin>>zesp;
   cout<<zesp;
+  */
 
-  /*
   cout<<"Wyswietlenie wektora"<<endl;
-  SWektor<double,3> W, W_wynik;
+  SWektor<LZespolona,3> W, W_wynik;
   PlikUkladu>>W;
   cout<<W<<endl;
+  
   cout<<"Wektor*2"<<endl;
   cout<<W*2<<endl;
   cout<<"W=W-W*0.5"<<endl;
   W_wynik = W-W*0.5;
-  cout<<W_wynik<<endl;
-  */
+  cout<<W_wynik<<endl; 
+  
 }

@@ -54,6 +54,14 @@ LZespolona LZespolona::operator * (LZespolona  Skl2)
   return Wynik;
 }
 
+LZespolona LZespolona::operator * (double zmiennoprzecinkowa)
+{
+  LZespolona Wynik;
+  Wynik.re = re*zmiennoprzecinkowa;
+  Wynik.im = im*zmiennoprzecinkowa;
+  return Wynik;
+}
+
 /*!
  * Realizuje dzielenie dwoch liczb zespolonych.
  * Argumenty:
