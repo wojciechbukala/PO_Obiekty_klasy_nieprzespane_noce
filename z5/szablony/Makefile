@@ -18,6 +18,9 @@ obj/LZespolona.o: src/LZespolona.cpp inc/LZespolona.hh
 obj/SWektor.o: src/SWektor.cpp inc/SWektor.hh inc/LZespolona.hh 
 	g++ ${CXXFLAGS} -o obj/SWektor.o src/SWektor.cpp
 
+obj/SMacierz.o:src/SMacierz.cpp inc/SMacierz.hh
+	g++ ${CCXXFLAGS} -o obj/SMacierz.o src/SMacierz.cpp
+
 
 
 clean:

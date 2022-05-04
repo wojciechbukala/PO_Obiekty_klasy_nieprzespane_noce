@@ -2,11 +2,13 @@
 #include <fstream>
 #include "SWektor.hh"
 #include "LZespolona.hh"
+#include "SMacierz.hh"
 
 
 
 using namespace std;
 
+// .uklad_rownan < rownanie_liniowe.dat
 // Funkcja wykonująca obliczanie układu liniowego znajduje się w module Wykonaj.cpp
 
 int main()
@@ -21,14 +23,12 @@ int main()
 
   cout<< "Program" <<endl;
 
-  // Testowanie szablonu wektora dla rzeczywistych  
-  
-  /*
-  LZespolona zesp;
-  cin>>zesp;
-  cout<<zesp;
-  */
+  SMacierz<double,3> M;
+  cout<< "Wyswietlanie macierzy" <<endl;
+  PlikUkladu>>M;
+  cout<<M<<endl;
 
+/*
   cout<<"Wyswietlenie wektora"<<endl;
   SWektor<LZespolona,3> W, W_wynik;
   PlikUkladu>>W;
@@ -39,5 +39,5 @@ int main()
   cout<<"W=W-W*0.5"<<endl;
   W_wynik = W-W*0.5;
   cout<<W_wynik<<endl; 
-  
+  */
 }
