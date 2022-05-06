@@ -21,6 +21,12 @@ obj/SWektor.o: src/SWektor.cpp inc/SWektor.hh inc/LZespolona.hh
 obj/SMacierz.o:src/SMacierz.cpp inc/SMacierz.hh
 	g++ ${CCXXFLAGS} -o obj/SMacierz.o src/SMacierz.cpp
 
+#obj/Wykonaj.o: src/Wykonaj.cpp inc/Wykonaj.hh inc/UkladRownanLiniowych.hh
+#	g++ ${CXXFLAGS} -o obj/Wykonaj.o src/Wykonaj.cpp
+
+obj/SUkladRownanLiniowych.o: src/SUkladRownanLiniowych.cpp inc/SUkladRownanLiniowych.hh inc/SWektor.hh inc/SMacierz.hh
+	g++ ${CXXFLAGS} -o obj/SUkladRownanLiniowych.o src/SUkladRownanLiniowych.cpp
+
 
 
 clean:
