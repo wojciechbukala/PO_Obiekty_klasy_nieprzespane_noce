@@ -4,18 +4,20 @@
 #include "SWektor.hh"
 #include <iostream>
 
+enum zmienna  {nie_zespolona, zespolona};
+
 
 template<typename typ, int wymiar>
 class SMacierz {
   SWektor<typ,wymiar> Tab[wymiar]; // maciezrz to ROZMIAR-razy wektor
   bool zeruj (int& parzystosc); //zerowanie macierzy
   typ mnozenie_diagonali () const; // mnożenie elementów na diagonali
-  SWektor<typ,wymiar> kopia[wymiar]; // macierz do kopiowania i wykonywania obliczeń 
   void kopiuj(); // Inicjowanie kopi macierzy do wykoanywania obliczeń wyznacznika
+  SWektor<typ,wymiar> kopia[wymiar]; // macierz do kopiowania i wykonywania obliczeń 
   
 
   public:
-  SWektor<typ,wymiar>& operator * (const SWektor<typ,wymiar> Wektor2) const ; // Mnożenie macierzy przez wektor 
+  SWektor<typ,wymiar> operator * (const SWektor<typ,wymiar> Wektor2) const ; // Mnożenie macierzy przez wektor 
   SWektor<typ,wymiar>& operator [](int indeks)  {return Tab[indeks];} // Przeciążenie operatorea indeksowania macierza
   SMacierz<typ,wymiar> operator ! (); // Przeciążenie transpononowania
   typ operator () (int a, int b) {return Tab[a][b];} // przeciązenie operatora funkcyjnego dla klasy macierz
@@ -61,7 +63,7 @@ std::ostream& operator << (std::ostream &Strm, SMacierz<typ,wymiar> Mac)
 }
 
 template<typename typ, int wymiar>
-SWektor<typ,wymiar>& SMacierz<typ,wymiar>::operator * (const SWektor<typ,wymiar> Wektor2) const // Mnożenie macierza przez wektor 
+SWektor<typ,wymiar> SMacierz<typ,wymiar>::operator * (const SWektor<typ,wymiar> Wektor2) const // Mnożenie macierza przez wektor 
 {
     SWektor<typ,wymiar> Wynik;
     //for(int b=0; b<ROZMIAR; ++b) Wynik[b]=0;
@@ -69,7 +71,7 @@ SWektor<typ,wymiar>& SMacierz<typ,wymiar>::operator * (const SWektor<typ,wymiar>
     for(int i=0; i<wymiar; ++i)
     for(int j=0; j<wymiar; ++j)
     Wynik[i] += (Tab[i][j] * Wektor2[j]);
-    return w;
+    return Wynik;
 }
 
 /* 
@@ -128,7 +130,8 @@ void SMacierz<typ,wymiar>::kopiuj()
 template<typename typ, int wymiar>
 bool SMacierz<typ,wymiar>::zeruj(int &parzystosc)
 {
-    typ wspolczynnik = 0;
+    typ wspolczynnik;
+    wspolczynnik = 0;
     
 
         int k = 1;
@@ -168,8 +171,9 @@ bool SMacierz<typ,wymiar>::zeruj(int &parzystosc)
 template<typename typ, int wymiar>
 typ SMacierz<typ,wymiar>::mnozenie_diagonali () const
 {
-    typ wynik=1;
-    for(int i=0; i<wymiar; ++i) wynik *= kopia[i][i];
+    typ wynik;
+    wynik = 1;
+    for(int i=0; i<wymiar; ++i) wynik = wynik*kopia[i][i];
     return wynik;
 } 
 /* 

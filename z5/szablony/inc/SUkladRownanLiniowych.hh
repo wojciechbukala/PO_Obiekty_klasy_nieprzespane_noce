@@ -15,7 +15,7 @@ template<typename typ, int wymiar>
 class SUkladRownanLiniowych {
  
   typ wyznacznik_glowny; 
-  double wyznaczniki[wymiar];
+  typ wyznaczniki[wymiar];
   SMacierz<typ,wymiar> MacWej; // Macierz współczynników
   SWektor<typ,wymiar> WyrWolne; // Wektor wyrazów wolnych
   SWektor<typ,wymiar> WektorBledu; // Opiekt klasy wektor do przechowywania wektora błedy
@@ -50,7 +50,7 @@ bool SUkladRownanLiniowych<typ,wymiar>::licz_wyznaczniki()
     wyznacznik_glowny = MacWej.wyznacznik_gauss();
     if(wyznacznik_glowny == 0) return 0;
     else {
-        SMacierz<typ,wymiar> = pom;
+        SMacierz<typ,wymiar>  pom;
         for(int i=0; i<wymiar; ++i) // liczenie wyznacznika w[i]
         {
             pom = MacWej;
@@ -77,7 +77,7 @@ void SUkladRownanLiniowych<typ,wymiar>::licz_wyniki()
  * zmienia wartośc atrybutu WektorBlendu
  */
 template<typename typ, int wymiar> 
-void UkladRownanLiniowych<typ,wymiar>::licz_wektor_bledu()
+void SUkladRownanLiniowych<typ,wymiar>::licz_wektor_bledu()
 {
     WektorBledu = (MacWej * wyniki) - WyrWolne;
 } 
@@ -88,7 +88,7 @@ void UkladRownanLiniowych<typ,wymiar>::licz_wektor_bledu()
  *  - std::ostream &Strm - referencja strumienia wyjściowego
  */
 template<typename typ, int wymiar> 
-void UkladRownanLiniowych<typ,wymiar>::wyswietl_bledy(std::ostream& Strm) 
+void SUkladRownanLiniowych<typ,wymiar>::wyswietl_bledy(std::ostream& Strm) 
 {
     Strm<< std::endl << "         Wektor bledu:  Ax-b = (" << WektorBledu << " )"<< std::endl;
     Strm << "Dlugosc wektora bledu: |Ax-b| = " << WektorBledu.dlugosc() << std::endl;
@@ -103,7 +103,7 @@ void UkladRownanLiniowych<typ,wymiar>::wyswietl_bledy(std::ostream& Strm)
  *  - std::istream& - referencja strumienia wejściowego.
  */
 template<typename typ, int wymiar> 
-std::istream& operator >> (std::istream &Strm, UkladRownanLiniowych<typ,wymiar> &UklRown)
+std::istream& operator >> (std::istream &Strm, SUkladRownanLiniowych<typ,wymiar> &UklRown)
 {
     Strm >> UklRown.ustawMacWej();
     Strm >> UklRown.ustawWyrWolne();
@@ -120,19 +120,19 @@ std::istream& operator >> (std::istream &Strm, UkladRownanLiniowych<typ,wymiar> 
  */
 // UWAGA, OPERATOR NIE TRANSPONUJE MACIERZY
 template<typename typ, int wymiar> 
-std::ostream& operator << (std::ostream &Strm, UkladRownanLiniowych<typ,wymiar> UklRown)
+std::ostream& operator << (std::ostream &Strm, SUkladRownanLiniowych<typ,wymiar> UklRown)
 {
-    for(int i=0; i<ROZMIAR; ++i)
+    for(int i=0; i<wymiar; ++i)
     {
         Strm << "| ";
-        for(int j=0; j<ROZMIAR; ++j)
+        for(int j=0; j<wymiar; ++j)
         {
             Strm << UklRown.dajMacWej()[i][j];
             Strm << " ";
         }
         Strm << "||x_";
         Strm << i+1 ;
-        if(i==ROZMIAR/2) Strm << "| = | ";
+        if(i==wymiar/2) Strm << "| = | ";
         else Strm << "|   | ";
         Strm << UklRown.dajWyrWolne()[i];
         Strm << " |";
@@ -142,3 +142,5 @@ std::ostream& operator << (std::ostream &Strm, UkladRownanLiniowych<typ,wymiar> 
 }
 
 #endif
+
+

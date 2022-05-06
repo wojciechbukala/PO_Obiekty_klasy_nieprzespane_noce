@@ -1,9 +1,11 @@
 #include <iostream>
 #include <fstream>
+#include <unistd.h>
 #include "SWektor.hh"
 #include "LZespolona.hh"
 #include "SMacierz.hh"
-
+#include "SUkladRownanLiniowych.hh"
+//#include "Wykonaj.hh"
 
 
 using namespace std;
@@ -21,23 +23,32 @@ int main()
     return 1;
   }
 
-  cout<< "Program" <<endl;
+  char jaki_typ = ' ';
+  PlikUkladu>> jaki_typ;
+  /*
+  typename rz;
+  if(jaki_typ == 'r') rz = double;
+  if(jaki_typ == 'z') rz = LZespolona; */
+  SUkladRownanLiniowych<LZespolona,5> uklad;
 
-  SMacierz<double,3> M;
-  cout<< "Wyswietlanie macierzy" <<endl;
-  PlikUkladu>>M;
-  cout<<M<<endl;
 
-/*
-  cout<<"Wyswietlenie wektora"<<endl;
-  SWektor<LZespolona,3> W, W_wynik;
-  PlikUkladu>>W;
-  cout<<W<<endl;
-  
-  cout<<"Wektor*2"<<endl;
-  cout<<W*2<<endl;
-  cout<<"W=W-W*0.5"<<endl;
-  W_wynik = W-W*0.5;
-  cout<<W_wynik<<endl; 
-  */
+  PlikUkladu >> uklad;  
+    if(uklad.licz_wyznaczniki()) // Jesli wyznacznik macierzy nie jest równy zero
+    {
+        uklad.licz_wyniki(); // oblicz wynik układu
+        cout << uklad;
+        sleep(0.001);
+        cout << std::endl <<"Rozwiazanie x = (x1, x2, x3):" << std::endl;
+        cout << "(";
+        cout<< uklad.wyniki;  // wyślietl wyniki ukladu
+        cout << " )";
+        cout << std::endl;     
+    //uklad.licz_wektor_bledu();  // obliczanie wektora bledu
+    //uklad.wyswietl_bledy(std::cout);  // wyswietlanie wektora błedu
+    cout << std::endl;
+    }
+    else{
+        cout << "Wyznacznik macierzy równy 0!"<< std::endl <<"Układ równań jest nieoznaczony lub sprzezczny" << std::endl << std::endl;
+    }
+
 }

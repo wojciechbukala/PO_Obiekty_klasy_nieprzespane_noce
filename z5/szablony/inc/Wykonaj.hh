@@ -1,10 +1,10 @@
 #ifndef WYKONAJ_HH
 #define WYKONAJ_HH
 
-#include "UkladRownanLiniowych.hh"
+#include "SUkladRownanLiniowych.hh"
 #include <iostream>
 
-//void wykonaj(std::istream &istr, std::ostream &ostr, UkladRownanLiniowych& uklad);
 
+void wykonaj(std::istream &istr, std::ostream &ostr, SUkladRownanLiniowych<typ,wymiar>& uklad);
 
 #endif

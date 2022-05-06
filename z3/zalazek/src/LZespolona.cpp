@@ -197,3 +197,21 @@ std::istream & operator >>(std::istream &rStrmWe, LZespolona &Zesp)
   WczytajTenZnak(rStrmWe, ')');
   return rStrmWe;
 } 
+
+LZespolona LZespolona::operator = (double liczbaZP)
+{
+  LZespolona Wynik;
+  Wynik.re = liczbaZP;
+  Wynik.im = 0;
+  return Wynik;
+}
+bool LZespolona::operator == (double liczbaZP)
+{
+  if(re==liczbaZP && im==0) return true;
+  else return false;
+}
+bool LZespolona::operator != (double liczbaZP)
+{
+  if(re!=liczbaZP || im!=0) return true;
+  else return false;
+}

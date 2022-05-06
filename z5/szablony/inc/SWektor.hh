@@ -2,6 +2,7 @@
 #define SWektor_HH
 
 #include <iostream>
+#include <cmath>
 #include "LZespolona.hh"
 
 

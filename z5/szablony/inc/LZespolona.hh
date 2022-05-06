@@ -25,6 +25,9 @@ public:
   LZespolona operator * (double zmiennoprzecinkowa);
   LZespolona operator / (LZespolona Skl2);
   LZespolona operator / (double liczbaZP); 
+  void operator = (double liczbaZP);
+  bool operator == (double liczbaZP);
+  bool operator != (double liczbaZP);
   LZespolona sprzezenie(); // metoda obliczająca sprzężenie liczby zespolonej
   double kwadrat_modulu(); // medota obliczająca kwadrat modulu liczby zespolonej
   bool operator == (LZespolona Skl2);
