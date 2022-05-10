@@ -4,9 +4,11 @@
 #include "SWektor.hh"
 #include <iostream>
 
-enum zmienna  {nie_zespolona, zespolona};
-
-
+/*
+ * Szablon klasy modelującej pojęcie macierzy.
+ * typ - typ zmennych składowych macierzy (np. double, int, LZespolona).
+ * wymiar - rozmiar macierzy kwadratowej, liczba całkowita int.
+ */
 template<typename typ, int wymiar>
 class SMacierz {
   SWektor<typ,wymiar> Tab[wymiar]; // maciezrz to ROZMIAR-razy wektor

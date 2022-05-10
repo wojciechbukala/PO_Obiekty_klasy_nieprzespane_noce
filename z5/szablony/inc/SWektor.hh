@@ -7,9 +7,9 @@
 
 
 /*
- * Klasa SWektora modelująca pojęcie SWektora
- * jako tablicy jednowymiarowej o<wymiarze
- * przechowywanym w stałej<wymiar
+ * Szablon klasy modelującej pojęcie wektora.
+ * typ - typ zmennych składowych wektora (np. double, int, LZespolona).
+ * wymiar - rozmiar wektora, liczba całkowita int.
  */
 template <typename typ, int wymiar>
 class SWektor {

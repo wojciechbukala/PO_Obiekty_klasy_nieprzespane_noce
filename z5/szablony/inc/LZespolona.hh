@@ -18,6 +18,8 @@ class  LZespolona {
   double   re;    /*! Pole repezentuje czesc rzeczywista. */
   double   im;    /*! Pole repezentuje czesc urojona. */
 public:
+  LZespolona () {re=0 ; im=0;};
+  LZespolona(float r, float i) {re=r ; im=i;}
   // Zapowiedzi definicji przeciążeń operatrów
   LZespolona operator + (LZespolona Skl2);
   LZespolona operator - (LZespolona Skl2);
@@ -34,7 +36,6 @@ public:
   bool wpisz (std::istream &rStrmWe, bool reim); // jeśli reim==1 to wpisz do re, jeśli reim==0 to wpisz do im
   double zwrocRe() const {return re;};
   double zwrocIm() const {return im;};
-  LZespolona () {re=0 ; im=0;};
 };
 
 

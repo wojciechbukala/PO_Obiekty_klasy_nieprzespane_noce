@@ -206,16 +206,30 @@ std::istream & operator >>(std::istream &rStrmWe, LZespolona &Zesp)
   return rStrmWe;
 } 
 
+/* Metoda przeciążenia operaotra przypisania
+ * Argumenty:
+ *  double liczbaZP - liczba zmiennoprzecinkowa przypisywana liczbie zespolonej
+ */
 void LZespolona::operator = (double liczbaZP)
 {
   re = liczbaZP;
   im = 0;
 }
+
+/* Metoda przeciążenie operatora porównania liczby zespolonej ze zmiennoprzecinkową
+ * Argumnety:
+ *  double liczbaZP - liczba zmiennoprzecinkowa do porównania
+ */
 bool LZespolona::operator == (double liczbaZP)
 {
   if(re==liczbaZP && im==0) return true;
   else return false;
 }
+
+/* Metoda przeciążenia operatora negacji porównania liczby zespolonej ze zmiennoprzecinkową
+ * Argumenty:
+ *  double liczbaZP - liczba zmiennoprzecinkowa prównywana z LZespolona
+ */
 bool LZespolona::operator != (double liczbaZP)
 {
   if(re!=liczbaZP || im!=0) return true;
