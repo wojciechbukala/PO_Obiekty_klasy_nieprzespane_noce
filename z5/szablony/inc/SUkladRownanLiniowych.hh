@@ -7,9 +7,9 @@
 
 
 /*
- *  Klasa modelująca pojęcię Układu Równań Liniwych.
- *  Może działać dla dowlonie dużego układu równań, jeśli
- *  ilość równań jest równa ilość szukanych rozwiązań
+ * Szablon klasy modelującej pojęcie układu równań liniowych.
+ * typ - typ zmennych składowych układu równań (np. double, int, LZespolona).
+ * wymiar - rozmiar układu równań, liczba całkowita int.
  */
 template<typename typ, int wymiar>
 class SUkladRownanLiniowych {
