@@ -12,12 +12,13 @@ using namespace std;
 
 // .uklad_rownan < rownanie_liniowe.dat
 // Funkcja wykonująca obliczanie układu liniowego znajduje się w module Wykonaj.cpp
+// Specjalizacja szablonu
 
 int main()
 { 
 
   fstream PlikUkladu; 
-  PlikUkladu.open("uklad_zesp.txt", std::ios::in | std::ios::out); // otwieramy plik z transponowanym układem równań
+  PlikUkladu.open("uklad_double.txt", std::ios::in | std::ios::out); // otwieramy plik z transponowanym układem równań
    
   if (PlikUkladu.is_open() == false) {
     cout<< "Blad, nie mozna otworzyc pliku "<< "uklad_zesp.txt"<<endl;
@@ -46,6 +47,10 @@ if(jaki_typ == 'r') {
     //uklad.licz_wektor_bledu();  // obliczanie wektora bledu
     //uklad.wyswietl_bledy(std::cout);  // wyswietlanie wektora błedu
     cout << std::endl;
+    SWektor<double,2> wek;
+    cout<< "Modyfikacja dla wektora, wypisywanie transponowane" <<endl;
+    PlikUkladu >> wek;
+    cout << wek;
     }
     else{
         cout << "Wyznacznik macierzy równy 0!"<< std::endl <<"Układ równań jest nieoznaczony lub sprzezczny" << std::endl << std::endl;
@@ -65,10 +70,15 @@ if(jaki_typ == 'r') {
     //uklad.licz_wektor_bledu();  // obliczanie wektora bledu
     //uklad.wyswietl_bledy(std::cout);  // wyswietlanie wektora błedu
     cout << std::endl;
+    SWektor<LZespolona,2> wek;
+    cout<< "Modyfikacja dla wektora, wypisywanie transponowane" <<endl;
+    PlikUkladu >> wek;
+    cout << wek;
     }
     else{
         cout << "Wyznacznik macierzy równy 0!"<< std::endl <<"Układ równań jest nieoznaczony lub sprzezczny" << std::endl << std::endl;
     }
-}
+} else cout<< "Nie odczytano r lub z, z pliku." <<endl;
+
 
 }

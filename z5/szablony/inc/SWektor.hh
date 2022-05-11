@@ -28,6 +28,14 @@ class SWektor {
     typ dlugosc(); // metoda wyliczająca długość SWektora
 };
 
+template <typename typ>
+std::ostream& operator << (std::ostream &Strm, const SWektor<typ,2> &Wek)
+{
+    
+    for(int i=0; i<2; ++i) Strm<< Wek[i] << std::endl;
+    
+    return Strm;
+}
 
 /* 
  * Przeciążenie operatora dodawania dla SWektorów
