@@ -17,8 +17,8 @@ using namespace std;
 int main()
 { 
 
-  fstream PlikUkladu; 
-  PlikUkladu.open("uklad_double.txt", std::ios::in | std::ios::out); // otwieramy plik z transponowanym układem równań
+  fstream PlikUkladu;  // uklad_double.txt lub uklad_zesp.txt
+  PlikUkladu.open("uklad_zesp.txt", std::ios::in | std::ios::out); // otwieramy plik z transponowanym układem równań
    
   if (PlikUkladu.is_open() == false) {
     cout<< "Blad, nie mozna otworzyc pliku "<< "uklad_zesp.txt"<<endl;
