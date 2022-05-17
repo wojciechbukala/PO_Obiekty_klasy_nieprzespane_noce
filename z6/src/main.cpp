@@ -3,6 +3,7 @@
 #include "lacze_do_gnuplota.hh"
 #include "PowierzchniaMarsa.hh"
 #include "ObiektGeom.hh"
+#include "Lazik.hh"
 #include "Kolory.hh"
 #include "Wektor3D.h"
 
@@ -52,9 +53,9 @@ int main()
   Inicjalizuj_Lacze(Lacze);
   if (!Inicjalizuj_PowierzchnieMarsa(Lacze)) return 1;
 
-  ObiektGeom  Ob1("bryly_wzorcowe/szescian3.dat","FSR",Kolor_JasnoNiebieski, wek1, wek2);
-  ObiektGeom  Ob2("bryly_wzorcowe/szescian3.dat","Perseverance",Kolor_Czerwony, wek1, wek3);
-  ObiektGeom  Ob3("bryly_wzorcowe/szescian3.dat","Curiosity",Kolor_Czerwony, wek1, wek4);  
+  Lazik  Ob1("bryly_wzorcowe/szescian3.dat","FSR",Kolor_JasnoNiebieski, wek1, wek2);
+  Lazik  Ob2("bryly_wzorcowe/szescian3.dat","Perseverance",Kolor_Czerwony, wek1, wek3);
+  Lazik  Ob3("bryly_wzorcowe/szescian3.dat","Curiosity",Kolor_Czerwony, wek1, wek4);  
 
   DodajDoListyRysowania(Lacze,Ob1);
   DodajDoListyRysowania(Lacze,Ob2);
@@ -70,9 +71,12 @@ int main()
   cout << "Nacisnij klawisz ENTER, aby FSR wykonal przesuniecie." << endl;
   cin.ignore(100,'\n');
 
+/*
   Ob1.zmien_polozenie(wek5);
   Ob1.Przelicz_i_Zapisz_Wierzcholki();
-  Lacze.Rysuj();
+  Lacze.Rysuj(); */
+
+  Ob1.jazda(Lacze, wek5);
 
   cout << "Nacisnij klawisz ENTER, aby FSR wykonal przesuniecie." << endl;
   cin.ignore(100,'\n');
@@ -83,5 +87,5 @@ int main()
   
   cout << "Nacisnij klawisz ENTER, aby zakonczyc." << endl;
   cin.ignore(100,'\n');
-  wek1.wyswietl_ile_wek();
+  //wek1.wyswietl_ile_wek();
 }

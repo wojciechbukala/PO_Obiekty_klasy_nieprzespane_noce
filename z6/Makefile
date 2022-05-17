@@ -23,7 +23,7 @@ pliki_do_rysowania:
 
 
 obj/main.o: src/main.cpp inc/lacze_do_gnuplota.hh inc/ObiektGeom.hh inc/PowierzchniaMarsa.hh\
-            inc/Kolory.hh
+            inc/Kolory.hh inc/Lazik.hh
 	g++  -Iinc -W -Wall -pedantic -c -o obj/main.o src/main.cpp
 
 obj/lacze_do_gnuplota.o: src/lacze_do_gnuplota.cpp inc/lacze_do_gnuplota.hh
@@ -34,6 +34,9 @@ obj/PowierzchniaMarsa.o: src/PowierzchniaMarsa.cpp inc/PowierzchniaMarsa.hh inc/
 
 obj/ObiektGeom.o: src/ObiektGeom.cpp inc/ObiektGeom.hh inc/lacze_do_gnuplota.hh inc/Wektor3D.h
 	g++  -Iinc -W -Wall -pedantic -c -o obj/ObiektGeom.o src/ObiektGeom.cpp
+
+obj/Lazik.o: src/Lazik.cpp inc/Lazik.hh inc/ObiektGeom.hh
+	g++  -Iinc -W -Wall -pedantic -c -o obj/Lazik.o src/Lazik.cpp
 
 obj/SWektor.o: src/SWektor.cpp inc/SWektor.hh inc/LZespolona.hh 
 	g++ ${CXXFLAGS} -o obj/SWektor.o src/SWektor.cpp
