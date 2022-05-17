@@ -1,0 +1,1 @@
+#include "SMacierz.hh"

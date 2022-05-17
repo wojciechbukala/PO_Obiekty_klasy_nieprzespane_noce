@@ -1,5 +1,6 @@
 APP=sterowanie-lazikiem
 
+CXXFLAGS= -c -g -Iinc -Wall -pedantic
 
 __start__: obj dat  pliki_do_rysowania ./${APP}
 	rm -f core.* core; ./${APP}
@@ -31,9 +32,14 @@ obj/lacze_do_gnuplota.o: src/lacze_do_gnuplota.cpp inc/lacze_do_gnuplota.hh
 obj/PowierzchniaMarsa.o: src/PowierzchniaMarsa.cpp inc/PowierzchniaMarsa.hh inc/lacze_do_gnuplota.hh
 	g++  -Iinc -W -Wall -pedantic -c -o obj/PowierzchniaMarsa.o src/PowierzchniaMarsa.cpp
 
-obj/ObiektGeom.o: src/ObiektGeom.cpp inc/ObiektGeom.hh inc/lacze_do_gnuplota.hh
+obj/ObiektGeom.o: src/ObiektGeom.cpp inc/ObiektGeom.hh inc/lacze_do_gnuplota.hh inc/Wektor3D.h
 	g++  -Iinc -W -Wall -pedantic -c -o obj/ObiektGeom.o src/ObiektGeom.cpp
 
+obj/SWektor.o: src/SWektor.cpp inc/SWektor.hh inc/LZespolona.hh 
+	g++ ${CXXFLAGS} -o obj/SWektor.o src/SWektor.cpp
+
+obj/SMacierz.o:src/SMacierz.cpp inc/SMacierz.hh
+	g++ ${CCXXFLAGS} -o obj/SMacierz.o src/SMacierz.cpp
 
 clean:
 	rm -f obj/* ./${APP} core.* core liki_do_rysowania/*

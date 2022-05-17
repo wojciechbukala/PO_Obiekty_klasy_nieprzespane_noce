@@ -4,6 +4,7 @@
 #include "PowierzchniaMarsa.hh"
 #include "ObiektGeom.hh"
 #include "Kolory.hh"
+#include "Wektor3D.h"
 
 
 using namespace std;
@@ -44,23 +45,24 @@ void DodajDoListyRysowania(PzG::LaczeDoGNUPlota &rLacze, const ObiektGeom  &rOb)
 
 int main()
 {
+  Wektor3D wek1(20,20,10), wek2, wek3(60,60,10), wek4(-20,70,20), wek5(20,0,0), wek6(40,0,0);
+
   PzG::LaczeDoGNUPlota  Lacze;
-  
+
   Inicjalizuj_Lacze(Lacze);
   if (!Inicjalizuj_PowierzchnieMarsa(Lacze)) return 1;
 
-  ObiektGeom  Ob1("bryly_wzorcowe/szescian3.dat","FSR",Kolor_JasnoNiebieski);
-  ObiektGeom  Ob2("bryly_wzorcowe/szescian3.dat","Perseverance",Kolor_Czerwony);
-  ObiektGeom  Ob3("bryly_wzorcowe/szescian3.dat","Curiosity",Kolor_Czerwony);  
+  ObiektGeom  Ob1("bryly_wzorcowe/szescian3.dat","FSR",Kolor_JasnoNiebieski, wek1, wek2);
+  ObiektGeom  Ob2("bryly_wzorcowe/szescian3.dat","Perseverance",Kolor_Czerwony, wek1, wek3);
+  ObiektGeom  Ob3("bryly_wzorcowe/szescian3.dat","Curiosity",Kolor_Czerwony, wek1, wek4);  
 
   DodajDoListyRysowania(Lacze,Ob1);
   DodajDoListyRysowania(Lacze,Ob2);
   DodajDoListyRysowania(Lacze,Ob3);
 
-  
-  Ob1.Przelicz_i_Zapisz_Wierzcholki(20,20,10,0,0,0);
-  Ob2.Przelicz_i_Zapisz_Wierzcholki(20,20,10,60,60,0);
-  Ob3.Przelicz_i_Zapisz_Wierzcholki(20,20,10,-20,70,0);  
+  Ob1.Przelicz_i_Zapisz_Wierzcholki();
+  Ob2.Przelicz_i_Zapisz_Wierzcholki();
+  Ob3.Przelicz_i_Zapisz_Wierzcholki();  
   
   cout << endl << "Start programu gnuplot" << endl << endl;
   Lacze.Rysuj();
@@ -68,15 +70,18 @@ int main()
   cout << "Nacisnij klawisz ENTER, aby FSR wykonal przesuniecie." << endl;
   cin.ignore(100,'\n');
 
-  Ob1.Przelicz_i_Zapisz_Wierzcholki(20,20,10,20,0,0);
+  Ob1.zmien_polozenie(wek5);
+  Ob1.Przelicz_i_Zapisz_Wierzcholki();
   Lacze.Rysuj();
 
   cout << "Nacisnij klawisz ENTER, aby FSR wykonal przesuniecie." << endl;
   cin.ignore(100,'\n');
 
-  Ob1.Przelicz_i_Zapisz_Wierzcholki(20,20,10,40,0,0);
+  Ob1.zmien_polozenie(wek6);
+  Ob1.Przelicz_i_Zapisz_Wierzcholki();
   Lacze.Rysuj();
   
   cout << "Nacisnij klawisz ENTER, aby zakonczyc." << endl;
   cin.ignore(100,'\n');
+  wek1.wyswietl_ile_wek();
 }

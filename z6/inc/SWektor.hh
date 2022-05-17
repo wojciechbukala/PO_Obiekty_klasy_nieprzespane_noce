@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <cmath>
-#include "LZespolona.hh"
 
 
 /*
@@ -15,6 +14,8 @@ template <typename typ, int wymiar>
 class SWektor {
   
   typ tab[wymiar]; // SWektor jako tablica jednowymiarowa
+  static int ilosc_wektorow; // zmienna statyczna do wyswietlania ilosci wektorów
+  static int ilosc_aktywnych_wektorow; // zmienna statyczna do wyświetlania ilości aktywnych wektorów
 
   public:
     typ &operator[] (int indeks) {return tab[indeks];} // Przeciążenie indeksu SWektora;
@@ -24,18 +25,56 @@ class SWektor {
     typ operator * (SWektor SWektor2); // Przeciążenie iloczynu sklarnego dla SWektora
     SWektor<typ,wymiar> operator * (double skalar);  // Przeciążenie mnożenia SWektora przez skalar
     SWektor<typ,wymiar> operator / (SWektor<typ,wymiar> SWektor2); // Przeciążenie odejmowania dla SWektorów
-    SWektor<typ,wymiar>& operator = (SWektor<typ,wymiar>& SWektor2); // Przeciążenie operatora przypisania dla SWektorów
+    //SWektor<typ,wymiar>& operator = (SWektor<typ,wymiar>& SWektor2); // Przeciążenie operatora przypisania dla SWektorów
     typ dlugosc(); // metoda wyliczająca długość SWektora
-    SWektor<typ,wymiar>() {for(int i=0; i<wymiar; ++i) tab[i]=0;}; // konstruktor bezprametryczny
+    SWektor(); // konstruktor bezprametryczny
+    SWektor(typ jeden, typ dwa, typ trzy); // konstruktor dla wektora 3 wyrazowego
+    ~SWektor();
+    SWektor operator & (SWektor const Wektor2); // metoda do mnożenie poszczególnych elementów macierzy
+    static void wyswietl_ile_wek(std::ostream StrmWy) {StrmWy << ilosc_wektorow << std::endl << ilosc_aktywnych_wektorow << std::endl;}; //metoda statyczna do wyświetlania ilości elementow
 };
 
-template <typename typ>
-std::ostream& operator << (std::ostream &Strm, const SWektor<typ,2> &Wek)
+//template <typename typ, int wymiar>
+//int SWektor<typ,wymiar>::ilosc_wektorow = 0;  // przypisujemy wartosc zero do zmiennej statycznej
+
+
+template<typename typ, int wymiar>
+SWektor<typ,wymiar>::SWektor() 
 {
-    
-    for(int i=0; i<2; ++i) Strm<< Wek[i] << std::endl;
-    
-    return Strm;
+    for(int i=0; i<wymiar; ++i) tab[i]=0; 
+    //++ilosc_wektorow; 
+    //++ilosc_aktywnych_wektorow;
+}
+
+template<typename typ, int wymiar>
+SWektor<typ,wymiar>::SWektor(typ jeden, typ dwa, typ trzy) // konstruktor dla wektora 3 wyrazowego
+{
+    tab[0] = jeden; 
+    tab[1] = dwa; 
+    tab[2] = trzy; 
+    //++ilosc_wektorow; 
+    //++ilosc_aktywnych_wektorow;
+}
+
+template<typename typ, int wymiar>
+SWektor<typ,wymiar>::~SWektor()
+{
+    //--ilosc_aktywnych_wektorow;
+}
+
+/* 
+ * Przeciążenie operatora & mnożenie dla elementów SWektorów
+ * Argumenty:
+ *  SWektor const SWektor2 - drugi z elementów mnożenia
+ * Zwraca:
+ *  SWektor wynik - macież gdzie elementy są wynikami mnożenia kolejnych elementów dwóch macierzy
+ */
+template <typename typ, int wymiar>
+SWektor<typ,wymiar> SWektor<typ, wymiar>:: operator & (SWektor const Wektor2)
+{
+    SWektor wynik;
+    for(int i=0; i<wymiar; ++i) wynik[i] = tab[i] * Wektor2[i];
+    return wynik;
 }
 
 /* 
@@ -131,12 +170,13 @@ SWektor<typ,wymiar> SWektor<typ,wymiar>::operator / (SWektor<typ,wymiar> SWektor
  * Zwraca:
  *  *this - referencja SWektora, atrybut tab<wymiar], czyli miejsce przechowujące elementy SWektora
  */
+/*
 template <typename typ, int wymiar>
 SWektor<typ,wymiar>& SWektor<typ,wymiar>::operator = (SWektor<typ,wymiar> & SWektor2)
 {
     for(int i=0; i<wymiar; ++i) this->tab[i] = SWektor2.tab[i];
     return *this;
-}
+} */
 
 /* 
  * Medota obliczająca długość SWektora
@@ -191,5 +231,6 @@ std::ostream& operator << (std::ostream &Strm, const SWektor<typ,wymiar> &Wek)
     
     return Strm;
 }
+
 
 #endif

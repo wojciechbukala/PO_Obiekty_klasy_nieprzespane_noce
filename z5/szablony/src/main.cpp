@@ -78,7 +78,7 @@ if(jaki_typ == 'r') {
     else{
         cout << "Wyznacznik macierzy równy 0!"<< std::endl <<"Układ równań jest nieoznaczony lub sprzezczny" << std::endl << std::endl;
     }
-} else cout<< "Nie odczytano r lub z, z pliku." <<endl;
+} else cout<< "Nie odczytano r lub z, z pliku." <<endl; 
 
 
 }
