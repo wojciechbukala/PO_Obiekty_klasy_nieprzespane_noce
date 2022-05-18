@@ -42,11 +42,15 @@ void DodajDoListyRysowania(PzG::LaczeDoGNUPlota &rLacze, const ObiektGeom  &rOb)
   wInfoPliku->ZmienKolor(rOb.WezKolorID());
 }
 
-
+template<>
+  int Wektor3D::ilosc_wektorow = 0;
+template<>
+  int Wektor3D::ilosc_aktywnych_wektorow = 0;
 
 int main()
 {
   Wektor3D wek1(20,20,10), wek2, wek3(60,60,10), wek4(-20,70,20), wek5(20,0,0), wek6(40,0,0);
+
 
   PzG::LaczeDoGNUPlota  Lacze;
 
@@ -76,7 +80,7 @@ int main()
   Ob1.Przelicz_i_Zapisz_Wierzcholki();
   Lacze.Rysuj(); */
 
-  Ob1.jazda(Lacze, wek5);
+  //Ob1.jazda(Lacze, wek5);
 
   cout << "Nacisnij klawisz ENTER, aby FSR wykonal przesuniecie." << endl;
   cin.ignore(100,'\n');
@@ -87,5 +91,5 @@ int main()
   
   cout << "Nacisnij klawisz ENTER, aby zakonczyc." << endl;
   cin.ignore(100,'\n');
-  //wek1.wyswietl_ile_wek();
+  Wektor3D::wyswietl_ile_wek(std::cout);
 }

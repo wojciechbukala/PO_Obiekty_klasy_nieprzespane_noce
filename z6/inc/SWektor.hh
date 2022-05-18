@@ -29,21 +29,23 @@ class SWektor {
     typ dlugosc(); // metoda wyliczająca długość SWektora
     SWektor(); // konstruktor bezprametryczny
     SWektor(typ jeden, typ dwa, typ trzy); // konstruktor dla wektora 3 wyrazowego
-    ~SWektor();
+    ~SWektor(); // destruktor
     SWektor operator & (SWektor const Wektor2); // metoda do mnożenie poszczególnych elementów macierzy
-    static void wyswietl_ile_wek(std::ostream StrmWy) {StrmWy << ilosc_wektorow << std::endl << ilosc_aktywnych_wektorow << std::endl;}; //metoda statyczna do wyświetlania ilości elementow
+    static void wyswietl_ile_wek(std::ostream& StrmWy) {StrmWy << ilosc_wektorow << std::endl << ilosc_aktywnych_wektorow << std::endl;}; //metoda statyczna do wyświetlania ilości elementow
 };
 
-//template <typename typ, int wymiar>
-//int SWektor<typ,wymiar>::ilosc_wektorow = 0;  // przypisujemy wartosc zero do zmiennej statycznej
+/*
+template <typename typ, int wymiar>
+int SWektor<typ,wymiar>::ilosc_wektorow = 0;  // przypisujemy wartosc zero do zmiennej statycznej
+int SWektor<typ,wymiar>::ilosc_aktywnych_wektorow =0; */
 
 
 template<typename typ, int wymiar>
 SWektor<typ,wymiar>::SWektor() 
 {
     for(int i=0; i<wymiar; ++i) tab[i]=0; 
-    //++ilosc_wektorow; 
-    //++ilosc_aktywnych_wektorow;
+    ++ilosc_wektorow; 
+    ++ilosc_aktywnych_wektorow;
 }
 
 template<typename typ, int wymiar>
@@ -52,14 +54,14 @@ SWektor<typ,wymiar>::SWektor(typ jeden, typ dwa, typ trzy) // konstruktor dla we
     tab[0] = jeden; 
     tab[1] = dwa; 
     tab[2] = trzy; 
-    //++ilosc_wektorow; 
-    //++ilosc_aktywnych_wektorow;
+    ++ilosc_wektorow; 
+    ++ilosc_aktywnych_wektorow;
 }
 
 template<typename typ, int wymiar>
 SWektor<typ,wymiar>::~SWektor()
 {
-    //--ilosc_aktywnych_wektorow;
+    --ilosc_aktywnych_wektorow;
 }
 
 /* 
