@@ -57,17 +57,17 @@ int main()
   Inicjalizuj_Lacze(Lacze);
   if (!Inicjalizuj_PowierzchnieMarsa(Lacze)) return 1;
 
-  Lazik  Ob1("bryly_wzorcowe/szescian3.dat","FSR",Kolor_JasnoNiebieski, wek1, wek2);
-  Lazik  Ob2("bryly_wzorcowe/szescian3.dat","Perseverance",Kolor_Czerwony, wek1, wek3);
-  Lazik  Ob3("bryly_wzorcowe/szescian3.dat","Curiosity",Kolor_Czerwony, wek1, wek4);  
+  Lazik  Ob1("bryly_wzorcowe/szescian3.dat","FSR",Kolor_JasnoNiebieski, wek1, wek2,0);
+  //Lazik  Ob2("bryly_wzorcowe/szescian3.dat","Perseverance",Kolor_Czerwony, wek1, wek3);
+  //Lazik  Ob3("bryly_wzorcowe/szescian3.dat","Curiosity",Kolor_Czerwony, wek1, wek4);  
 
   DodajDoListyRysowania(Lacze,Ob1);
-  DodajDoListyRysowania(Lacze,Ob2);
-  DodajDoListyRysowania(Lacze,Ob3);
+  //DodajDoListyRysowania(Lacze,Ob2);
+  //DodajDoListyRysowania(Lacze,Ob2);
 
   Ob1.Przelicz_i_Zapisz_Wierzcholki();
-  Ob2.Przelicz_i_Zapisz_Wierzcholki();
-  Ob3.Przelicz_i_Zapisz_Wierzcholki();  
+  //Ob2.Przelicz_i_Zapisz_Wierzcholki();
+  //Ob3.Przelicz_i_Zapisz_Wierzcholki();  
   
   cout << endl << "Start programu gnuplot" << endl << endl;
   Lacze.Rysuj();
@@ -75,19 +75,13 @@ int main()
   cout << "Nacisnij klawisz ENTER, aby FSR wykonal przesuniecie." << endl;
   cin.ignore(100,'\n');
 
+  Ob1.obrot(cout,cin);
+  Ob1.jazda(Lacze, cin, cout);
+
 /*
-  Ob1.zmien_polozenie(wek5);
-  Ob1.Przelicz_i_Zapisz_Wierzcholki();
-  Lacze.Rysuj(); */
-
-  //Ob1.jazda(Lacze, wek5);
-
-  cout << "Nacisnij klawisz ENTER, aby FSR wykonal przesuniecie." << endl;
-  cin.ignore(100,'\n');
-
   Ob1.zmien_polozenie(wek6);
   Ob1.Przelicz_i_Zapisz_Wierzcholki();
-  Lacze.Rysuj();
+  Lacze.Rysuj(); */
   
   cout << "Nacisnij klawisz ENTER, aby zakonczyc." << endl;
   cin.ignore(100,'\n');

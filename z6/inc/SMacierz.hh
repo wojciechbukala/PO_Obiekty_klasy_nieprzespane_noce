@@ -69,7 +69,7 @@ SWektor<typ,wymiar> SMacierz<typ,wymiar>::operator * (const SWektor<typ,wymiar> 
 {
     SWektor<typ,wymiar> Wynik;
     //for(int b=0; b<ROZMIAR; ++b) Wynik[b]=0;
-    SWektor<typ,wymiar> &w = Wynik;
+    //SWektor<typ,wymiar> &w = Wynik;
     for(int i=0; i<wymiar; ++i)
     for(int j=0; j<wymiar; ++j)
     Wynik[i] += (Tab[i][j] * Wektor2[j]);

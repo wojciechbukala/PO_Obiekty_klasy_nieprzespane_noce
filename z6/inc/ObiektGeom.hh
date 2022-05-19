@@ -3,6 +3,7 @@
 
 #include <string>
 #include "Wektor3D.h"
+#include "Macierz3D.h"
 
 #define NAZWA_KARTOTEKI_PLIKOW_DO_RYSOWANIA    "pliki_do_rysowania"
 
