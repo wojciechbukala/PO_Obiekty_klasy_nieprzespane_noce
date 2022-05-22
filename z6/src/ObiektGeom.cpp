@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include "ObiektGeom.hh"
-#include "Wektor3D.h"
+
 
 
 
@@ -18,6 +18,7 @@ ObiektGeom::ObiektGeom( const char*  sNazwaPliku_BrylaWzorcowa, const char*  sNa
   _NazwaPliku_BrylaRysowana += ".dat";
   skala = wczytana_skala;
   polozenie = wczytane_polozenie;
+  for(int i=0; i<3; ++i) MacierzRotacji[i][i]=1;
 }
 
 
@@ -42,6 +43,7 @@ bool ObiektGeom::Przelicz_i_Zapisz_Wierzcholki()
   if (StrmWe.fail())return false;
   
   do {
+    wsp = MacierzRotacji * wsp;
     wsp = (wsp & skala) + polozenie; 
 
 
@@ -72,6 +74,7 @@ bool ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(std::ostream &StrmWy, std::istrea
   if (StrmWe.fail())return false;
   
   do {
+    wsp = MacierzRotacji * wsp;
     wsp = (wsp & skala) + polozenie; 
 
 

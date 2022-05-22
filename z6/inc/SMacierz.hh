@@ -23,7 +23,7 @@ class SMacierz {
   SWektor<typ,wymiar>& operator [](int indeks)  {return Tab[indeks];} // Przeciążenie operatorea indeksowania macierza
   SMacierz<typ,wymiar> operator ! (); // Przeciążenie transpononowania
   typ operator () (int a, int b) {return Tab[a][b];} // przeciązenie operatora funkcyjnego dla klasy macierz
-  SMacierz<typ,wymiar>& operator = (SMacierz<typ,wymiar>& Macierz2); // pPrzeciążenie operatora przypisania dla macierzy
+  SMacierz<typ,wymiar>/*&*/ operator = (SMacierz<typ,wymiar>& Macierz2); // pPrzeciążenie operatora przypisania dla macierzy
   void transponuj(); // transponowanie macierzy 
   typ wyznacznik_gauss (); // obliczanie wyznacznika metodą gaussa
 }; 
@@ -84,7 +84,7 @@ SWektor<typ,wymiar> SMacierz<typ,wymiar>::operator * (const SWektor<typ,wymiar> 
  *  Macierz& *this - referencja macierzy po przekształceniu
  */
 template<typename typ, int wymiar>
-SMacierz<typ,wymiar>& SMacierz<typ,wymiar>::operator = (SMacierz<typ,wymiar> & Macierz2)
+SMacierz<typ,wymiar>/*&*/ SMacierz<typ,wymiar>::operator = (SMacierz<typ,wymiar> & Macierz2)
 {
     for(int j=0; j<wymiar; ++j)
     for(int i=0; i<wymiar; ++i) this->Tab[j][i] = Macierz2.Tab[j][i];

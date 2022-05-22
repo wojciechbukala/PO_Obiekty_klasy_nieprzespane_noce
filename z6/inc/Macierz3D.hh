@@ -4,4 +4,5 @@
 
 typedef SMacierz<double,3> Macierz3D;
 
+
 #endif

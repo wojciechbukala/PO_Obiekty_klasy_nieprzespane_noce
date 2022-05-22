@@ -2,8 +2,8 @@
 #define OBIEKTGEOM_HH
 
 #include <string>
-#include "Wektor3D.h"
-#include "Macierz3D.h"
+#include "Wektor3D.hh"
+#include "Macierz3D.hh"
 
 #define NAZWA_KARTOTEKI_PLIKOW_DO_RYSOWANIA    "pliki_do_rysowania"
 
@@ -15,6 +15,7 @@ class ObiektGeom {
     int           _KolorID;
     Wektor3D skala;
     Wektor3D polozenie;
+    Macierz3D MacierzRotacji;
   
   public:
     ObiektGeom(const char* sNazwaPliku_BrylaWzorcowa, const char* sNazwaObiektu, int KolorID, Wektor3D wczytana_skala, Wektor3D wczytane_polozenie);
@@ -24,7 +25,7 @@ class ObiektGeom {
     /*   Przeciążenia funkcji Przelicz_i_Zapisz_Wierzchołki   */
     bool Przelicz_i_Zapisz_Wierzcholki(); // funkcja z strumieniami branymi z pól klasy
     bool Przelicz_i_Zapisz_Wierzcholki(std::ostream &StrmWy, std::istream &StrmWe); // zdekomponowana funkcja z możliwością zmiany strumienia wejściowego i wyjściowego
-    void zmien_polozenie(Wektor3D nowy) {polozenie = nowy;};   
+    void zmien_polozenie(Wektor3D nowy) {polozenie = nowy;};  
 };
 
 
