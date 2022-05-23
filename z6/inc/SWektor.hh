@@ -31,7 +31,8 @@ class SWektor {
     SWektor(typ jeden, typ dwa, typ trzy); // konstruktor dla wektora 3 wyrazowego
     ~SWektor(); // destruktor
     SWektor operator & (SWektor const Wektor2); // metoda do mnożenie poszczególnych elementów macierzy
-    static void wyswietl_ile_wek(std::ostream& StrmWy) {StrmWy << ilosc_wektorow << std::endl << ilosc_aktywnych_wektorow << std::endl;}; //metoda statyczna do wyświetlania ilości elementow
+    static void wyswietl_ile_wek(std::ostream& StrmWy) {StrmWy << ilosc_wektorow << std::endl ;}; //metoda statyczna do wyświetlania ilości elementow
+    static void wyswietl_ile_akt_wek(std::ostream& StrmWy) {StrmWy << ilosc_aktywnych_wektorow << std::endl;}; //metoda statyczna do wyświetlania ilości elementow
 };
 
 /*

@@ -8,76 +8,59 @@
 
 using namespace std;
 
-
-void ZmienLazika(std::ostream &StrmWy, std::istream &StrmWe, Lazik Lazik1, Lazik Lazik2, Lazik Lazik3, Scena scena)
-{
-    int numer_drona; // zmienna przechowująca numer drona
-    /* Interfejs wyświetlania wszystkich trzech możliwośi wyboru drona. */
-    StrmWy << "1. ---------- Nazwa: Sample_Fetch_Rover" << std::endl;
-    StrmWy << "          Polozenie: " << Lazik1.DajPolozenie() << std::endl;
-    StrmWy << "    Orientacja [st]: " << Lazik1.DajKat() << std::endl;
-    StrmWy << std::endl;
-    StrmWy << "2. ---------- Nazwa: Perseverance" << std::endl;
-    StrmWy << "          Polozenie: " << Lazik2.DajPolozenie() << std::endl;
-    StrmWy << "    Orientacja [st]: " << Lazik2.DajKat() << std::endl;
-    StrmWy << std::endl;
-    StrmWy << "2. ---------- Nazwa: Curiosity" << std::endl;
-    StrmWy << "          Polozenie: " << Lazik3.DajPolozenie() << std::endl;
-    StrmWy << "    Orientacja [st]: " << Lazik3.DajKat() << std::endl;
-    StrmWy << std::endl;
-    StrmWy << "Podaj numer lazik >";
-    StrmWe >> numer_drona;
-    scena.WyborDrona(numer_drona);
-}
-
 template<>
   int Wektor3D::ilosc_wektorow = 0;
 template<>
   int Wektor3D::ilosc_aktywnych_wektorow = 0;
 
+void wyswietl_wektory(std::ostream &StrmWy)
+{
+    StrmWy << "Aktualna ilosc obiektow Wektor3D: ";
+    Wektor3D::wyswietl_ile_akt_wek(StrmWy);
+    StrmWy << "  Laczna ilosc obiektow Wektor3D: ";
+    Wektor3D::wyswietl_ile_wek(StrmWy);
+    StrmWy << std::endl << std::endl;
+}
+
 int main()
 { 
+  
   Scena s;
-  s.jedziemy(cin, cout);
-  s.krecimy(cin, cout);
+  char wczytany_znak = ' ';
 
-  /*
-  Wektor3D wek1(20,20,10), wek2, wek3(60,60,10), wek4(-20,70,20), wek5(20,0,0), wek6(40,0,0);
-
-
-  PzG::LaczeDoGNUPlota  Lacze;
-
-  Inicjalizuj_Lacze(Lacze);
-  if (!Inicjalizuj_PowierzchnieMarsa(Lacze)) return 1;
-
-  Lazik  Ob1("bryly_wzorcowe/szescian3.dat","FSR",Kolor_JasnoNiebieski, wek1, wek2,0, 10);
-  Lazik  Ob2("bryly_wzorcowe/szescian3.dat","Perseverance",Kolor_Czerwony, wek1, wek3, 0, 10);
-  Lazik  Ob3("bryly_wzorcowe/szescian3.dat","Curiosity",Kolor_Czerwony, wek1, wek4, 0, 10);  
-
-  DodajDoListyRysowania(Lacze,Ob1);
-  DodajDoListyRysowania(Lacze,Ob2);
-  DodajDoListyRysowania(Lacze,Ob3);
-
-  Ob1.Przelicz_i_Zapisz_Wierzcholki();
-  Ob2.Przelicz_i_Zapisz_Wierzcholki();
-  Ob3.Przelicz_i_Zapisz_Wierzcholki();  
+  do
+  {
+    cout<<endl<<endl;
+    s.WyswietlAktywny(std::cout); // wyświetlamy informacje o aktywnm laziku (położenie, kąt)
+    wyswietl_wektory(std::cout); /// wyświetlamy zmienne statyczne wektora zliczające ilośc elementów klasy
   
-  cout << endl << "Start programu gnuplot" << endl << endl;
-  Lacze.Rysuj();
+    cout << "j-jazda na wprost" << endl;
+    cout << "o-zmien orientacje" << endl;
+    cout << "w-wybor lazika" << endl;
+    cout << "m-wyswietl menu" << endl << endl;
+    cout << "k-koniec" << endl;
+    cin >> wczytany_znak;
 
-  cout << "Nacisnij klawisz ENTER, aby FSR wykonal przesuniecie." << endl;
-  cin.ignore(100,'\n');
+    switch(wczytany_znak)
+    {
+      case 'j':
+      s.jedziemy(std::cin, std::cout); break;
 
-  Ob1.obrot(Lacze,cout,cin);
-  Ob1.jazda(Lacze, cin, cout); */
+      case 'o':
+      s.krecimy(std::cin, std::cout); break;
 
-/*
-  Ob1.zmien_polozenie(wek6);
-  Ob1.Przelicz_i_Zapisz_Wierzcholki();
-  Lacze.Rysuj(); */
+      case 'w':
+      s.ZmienDrona(std::cin, std::cout); break;
+
+      case 'm' : break;
+
+      case 'k' : break;
+
+      default:
+      cerr << "Blad! Podaj jedna z opcji."; break;
+    }
+  } while (wczytany_znak != 'k');
   
-  /*
-  cout << "Nacisnij klawisz ENTER, aby zakonczyc." << endl;
-  cin.ignore(100,'\n');
-  Wektor3D::wyswietl_ile_wek(std::cout); */
+  cout << "Koniec dzialania programu." << endl;
+
 }

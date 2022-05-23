@@ -10,6 +10,7 @@
 #include <iostream>
 #include <fstream>
 
+
 class Scena 
 {
     std::shared_ptr<Lazik> AktualnyLazik;
@@ -24,6 +25,8 @@ class Scena
     void krecimy(std::istream& StrmWe, std::ostream& StrmWy)
         {AktualnyLazik->obrot(Lacze, StrmWy, StrmWe);}
     void WyborDrona(int dron);
+    void ZmienDrona(std::istream &StrmWe, std::ostream &StrmWy);
+    void WyswietlAktywny(std::ostream &StrmWy);
 };
 
 #endif

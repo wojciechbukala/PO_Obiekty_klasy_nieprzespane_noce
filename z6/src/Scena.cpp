@@ -51,12 +51,42 @@ Scena::Scena()
 
 void Scena::WyborDrona(int dron)
 {
-    int ktory_dron = 0;
     std::list<std::shared_ptr<Lazik>>::iterator iter = ObiektySceny.begin();
-    do
+    for (int i=0; i < dron; i++)
     {
         AktualnyLazik = *iter;
-        ktory_dron++;
-    } while(ktory_dron != dron);
+        ++iter;
+    }
 }
 
+void Scena::ZmienDrona(std::istream &StrmWe, std::ostream &StrmWy)
+{
+    std::list<std::shared_ptr<Lazik>>::iterator iter = ObiektySceny.begin();
+    int numer_drona; // zmienna przechowująca numer drona
+    /* Interfejs wyświetlania wszystkich trzech możliwośi wyboru drona. */
+    StrmWy << "1. ---------- Nazwa: Sample_Fetch_Rover" << std::endl;
+    StrmWy << "          Polozenie: " << (*iter)->DajPolozenie() << std::endl;
+    StrmWy << "    Orientacja [st]: " << (*iter)->DajKat() << std::endl;
+    StrmWy << std::endl;
+    iter++;
+    StrmWy << "2. ---------- Nazwa: Perseverance" << std::endl;
+    StrmWy << "          Polozenie: " << (*iter)->DajPolozenie() << std::endl;
+    StrmWy << "    Orientacja [st]: " << (*iter)->DajKat() << std::endl;
+    StrmWy << std::endl;
+    iter++;
+    StrmWy << "3. ---------- Nazwa: Curiosity" << std::endl;
+    StrmWy << "          Polozenie: " << (*iter)->DajPolozenie() << std::endl;
+    StrmWy << "    Orientacja [st]: " << (*iter)->DajKat() << std::endl;
+    StrmWy << std::endl;
+    StrmWy << "Podaj numer lazik >";
+    StrmWe >> numer_drona;
+    WyborDrona(numer_drona);   
+}
+
+void Scena::WyswietlAktywny(std::ostream &StrmWy)
+{
+    StrmWy << "1. ---------- Nazwa: Sample_Fetch_Rover" << std::endl;
+    StrmWy << "          Polozenie: " << AktualnyLazik->DajPolozenie() << std::endl;
+    StrmWy << "    Orientacja [st]: " << AktualnyLazik->DajKat() << std::endl;
+    StrmWy << std::endl;
+}
