@@ -22,10 +22,10 @@ void Lazik::jazda(PzG::LaczeDoGNUPlota  Lacze, std::istream& StrmWej, std::ostre
     StrmWyj << "Podaj odleglosc do przejechania:";
     StrmWej >> OdlegloscDoPrzejechania;
     Wektor3D nowe_polozenie = polozenie;  // wektor do obliczeń, po wykonaniu animacji ma nowe współżędne
-    Szybkosc = 30; // tymczasowo do testowania
-    double x_kierunek = cos(KatOrientacji); // przesuniecie o x , double x = OdlegloscDoPrzejechania * cos(KatOrientacji)
-    double y_kierunek = sin(KatOrientacji); // przesuniecie o y , double y = OdlegloscDoPrzejechania * sin(KatOrientacji)
-    for(double i = 0 ; i <= OdlegloscDoPrzejechania; ++i)  // dzielimy przejście na OdlegloscDoPrzejechania*100 małych kroczkow
+    double x_kierunek = cos(KatOrientacji*3.14/180); // przesuniecie o x , double x = OdlegloscDoPrzejechania * cos(KatOrientacji)
+    double y_kierunek = sin(KatOrientacji*3.14/180); // przesuniecie o y , double y = OdlegloscDoPrzejechania * sin(KatOrientacji)
+    std::cout << "Kat: " << KatOrientacji << std::endl;
+    for(double i = 0 ; i < OdlegloscDoPrzejechania; ++i)  // dzielimy przejście na OdlegloscDoPrzejechania*100 małych kroczkow
       {
       nowe_polozenie[0] += x_kierunek;
       nowe_polozenie[1] += y_kierunek;  
@@ -41,12 +41,12 @@ void Lazik::obrot(PzG::LaczeDoGNUPlota  Lacze, std::ostream& StrmWyj, std::istre
     StrmWyj << "Podaj kat obrotu: ";
     double nowy_kat;
     StrmWej >> nowy_kat;
-    for(double i = KatOrientacji; i<nowy_kat; ++i)
+    for(double i = KatOrientacji; i<nowy_kat + KatOrientacji; ++i)
     {
         Rotacja(i);
         Przelicz_i_Zapisz_Wierzcholki();
         std::this_thread::sleep_for(std::chrono::milliseconds(20));
         Lacze.Rysuj();
     }
-    KatOrientacji = nowy_kat;
+    KatOrientacji += nowy_kat;
 }
