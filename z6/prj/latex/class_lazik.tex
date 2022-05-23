@@ -1,0 +1,166 @@
+\hypertarget{class_lazik}{}\doxysection{Lazik Class Reference}
+\label{class_lazik}\index{Lazik@{Lazik}}
+
+
+Klasa \mbox{\hyperlink{class_lazik}{Lazik}}.  
+
+
+
+
+{\ttfamily \#include $<$Lazik.\+hh$>$}
+
+
+
+Inheritance diagram for Lazik\+:
+% FIG 0
+
+
+Collaboration diagram for Lazik\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_lazik_aedd421473c3870fce453264cd3378cdb}\label{class_lazik_aedd421473c3870fce453264cd3378cdb}} 
+\mbox{\hyperlink{class_lazik_aedd421473c3870fce453264cd3378cdb}{Lazik}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor bezparametryczny klasy \mbox{\hyperlink{class_lazik}{Lazik}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_lazik_a79058f9b56bbbf30fa6fbe79744994a3}{Lazik}} (const char $\ast$s\+Nazwa\+Pliku\+\_\+\+Bryla\+Wzorcowa, const char $\ast$s\+Nazwa\+Obiektu, int Kolor\+ID, \mbox{\hyperlink{class_s_wektor}{Wektor3D}} wczytana\+\_\+skala, \mbox{\hyperlink{class_s_wektor}{Wektor3D}} wczytane\+\_\+polozenie, double kat, double szybkosc)
+\begin{DoxyCompactList}\small\item\em Konstruktor parametryczny klasy \mbox{\hyperlink{class_lazik}{Lazik}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lazik_a7da319cee14583cc71b2e72f1f471fdc}{jazda}} (\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}} Lacze, std\+::istream \&Strm\+Wej, std\+::ostream \&Strm\+Wyj)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiadająca za jazdę po prostej łazika. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lazik_a374072e80c57bf031d95a82f0cc9ea31}{obrot}} (\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}} Lacze, std\+::ostream \&Strm\+Wyj, std\+::istream \&Strm\+Wej)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiadająca za obrot łazika zgodnie z aktualną macierzą rotacji. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lazik_afe3c18158e4ab7f639cc97ce5ef9e100}{Rotacja}} (double kat)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiadająca za zmiane wartości elementów macierzy rotacji. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_lazik_ad174b917528fbcb330092e3ca3a3e21f}{Daj\+Kat}} ()
+\begin{DoxyCompactList}\small\item\em Zwraca aktualne Kat Orientacji. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_wektor}{Wektor3D}} \mbox{\hyperlink{class_lazik_ab7f2cfb36af50122b8f6547e71614f03}{Daj\+Polozenie}} ()
+\begin{DoxyCompactList}\small\item\em Zwraca aktualne polozenie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_lazik_a137101021c6fcca9194a8b3e7337e871}\label{class_lazik_a137101021c6fcca9194a8b3e7337e871}} 
+double \mbox{\hyperlink{class_lazik_a137101021c6fcca9194a8b3e7337e871}{Kat\+Orientacji}}
+\begin{DoxyCompactList}\small\item\em Kąt o który aktualnie jest odwrócony łazik. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lazik_a4a87ea5532b0b4151f114f45e5756bb7}\label{class_lazik_a4a87ea5532b0b4151f114f45e5756bb7}} 
+double \mbox{\hyperlink{class_lazik_a4a87ea5532b0b4151f114f45e5756bb7}{Szybkosc}}
+\begin{DoxyCompactList}\small\item\em Szybkość z jaką będzie poruszał się łazik. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lazik_a17290030c6992d1efd0123046432c80f}\label{class_lazik_a17290030c6992d1efd0123046432c80f}} 
+double \mbox{\hyperlink{class_lazik_a17290030c6992d1efd0123046432c80f}{Odleglosc\+Do\+Przejechania}}
+\begin{DoxyCompactList}\small\item\em Odległość jaką ma przejechać łazik. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa \mbox{\hyperlink{class_lazik}{Lazik}}. 
+
+Dziedziczy publicznie do klasie \mbox{\hyperlink{class_obiekt_geom}{Obiekt\+Geom}}. Modeluje pojęcie łazika będącego jednym z obiektów geometrycznych. Posiada metody odpowiedzialne za rotacje oraz jazde łazika. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_lazik_a79058f9b56bbbf30fa6fbe79744994a3}\label{class_lazik_a79058f9b56bbbf30fa6fbe79744994a3}} 
+\index{Lazik@{Lazik}!Lazik@{Lazik}}
+\index{Lazik@{Lazik}!Lazik@{Lazik}}
+\doxysubsubsection{\texorpdfstring{Lazik()}{Lazik()}}
+{\footnotesize\ttfamily Lazik\+::\+Lazik (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s\+Nazwa\+Pliku\+\_\+\+Bryla\+Wzorcowa,  }\item[{const char $\ast$}]{s\+Nazwa\+Obiektu,  }\item[{int}]{Kolor\+ID,  }\item[{\mbox{\hyperlink{class_s_wektor}{Wektor3D}}}]{wczytana\+\_\+skala,  }\item[{\mbox{\hyperlink{class_s_wektor}{Wektor3D}}}]{wczytane\+\_\+polozenie,  }\item[{double}]{kat,  }\item[{double}]{szybkosc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor parametryczny klasy \mbox{\hyperlink{class_lazik}{Lazik}}. 
+
+Przypisuje wrtości początkowe i inicjuje niektóre pola klasy 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em wczytana\+\_\+skala} & -\/ skala przeliczania punktow wpisuwana do pola klasy skala odziedziczonej z \mbox{\hyperlink{class_obiekt_geom}{Obiekt\+Geom}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em wczytane\+\_\+polozenie} & -\/ polożenie początkowe łazika wpisywane po pola polożenie odziedziczonego z \mbox{\hyperlink{class_obiekt_geom}{Obiekt\+Geom}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em kat} & -\/ początkowy Kat\+Orientacji wpisywany do tego pola klasy \mbox{\hyperlink{class_lazik}{Lazik}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em szybkosc} & -\/ wartosc wpisywana do pola klasy \mbox{\hyperlink{class_lazik}{Lazik}}, jest prędkością z jaką poruszał się bedzie łazik podczas jazdy \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lazik_ad174b917528fbcb330092e3ca3a3e21f}\label{class_lazik_ad174b917528fbcb330092e3ca3a3e21f}} 
+\index{Lazik@{Lazik}!DajKat@{DajKat}}
+\index{DajKat@{DajKat}!Lazik@{Lazik}}
+\doxysubsubsection{\texorpdfstring{DajKat()}{DajKat()}}
+{\footnotesize\ttfamily double Lazik\+::\+Daj\+Kat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zwraca aktualne Kat Orientacji. 
+
+\begin{DoxyReturn}{Returns}
+Aktualna wartosc pola Kat\+Orientacji 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lazik_ab7f2cfb36af50122b8f6547e71614f03}\label{class_lazik_ab7f2cfb36af50122b8f6547e71614f03}} 
+\index{Lazik@{Lazik}!DajPolozenie@{DajPolozenie}}
+\index{DajPolozenie@{DajPolozenie}!Lazik@{Lazik}}
+\doxysubsubsection{\texorpdfstring{DajPolozenie()}{DajPolozenie()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_wektor}{Wektor3D}} Lazik\+::\+Daj\+Polozenie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zwraca aktualne polozenie. 
+
+\begin{DoxyReturn}{Returns}
+Aktualna wartosc wektora polozenie 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lazik_a7da319cee14583cc71b2e72f1f471fdc}\label{class_lazik_a7da319cee14583cc71b2e72f1f471fdc}} 
+\index{Lazik@{Lazik}!jazda@{jazda}}
+\index{jazda@{jazda}!Lazik@{Lazik}}
+\doxysubsubsection{\texorpdfstring{jazda()}{jazda()}}
+{\footnotesize\ttfamily void Lazik\+::jazda (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}}}]{Lacze,  }\item[{std\+::istream \&}]{Strm\+Wej,  }\item[{std\+::ostream \&}]{Strm\+Wyj }\end{DoxyParamCaption})}
+
+
+
+Metoda odpowiadająca za jazdę po prostej łazika. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Lacze} & -\/ lacze do gnuplota \\
+\hline
+\mbox{\texttt{ in}}  & {\em Strm\+Wej} & -\/ referencja strumienia wejściowego. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Strm\+Wyj} & -\/ referencja strumienia wyjściowego. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_lazik_a374072e80c57bf031d95a82f0cc9ea31}\label{class_lazik_a374072e80c57bf031d95a82f0cc9ea31}} 
+\index{Lazik@{Lazik}!obrot@{obrot}}
+\index{obrot@{obrot}!Lazik@{Lazik}}
+\doxysubsubsection{\texorpdfstring{obrot()}{obrot()}}
+{\footnotesize\ttfamily void Lazik\+::obrot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}}}]{Lacze,  }\item[{std\+::ostream \&}]{Strm\+Wyj,  }\item[{std\+::istream \&}]{Strm\+Wej }\end{DoxyParamCaption})}
+
+
+
+Metoda odpowiadająca za obrot łazika zgodnie z aktualną macierzą rotacji. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Lacze} & -\/ lacze do gnuplota \\
+\hline
+\mbox{\texttt{ in}}  & {\em Strm\+Wej} & -\/ referencja strumienia wejściowego. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Strm\+Wyj} & -\/ referencja strumienia wyjściowego. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_lazik_afe3c18158e4ab7f639cc97ce5ef9e100}\label{class_lazik_afe3c18158e4ab7f639cc97ce5ef9e100}} 
+\index{Lazik@{Lazik}!Rotacja@{Rotacja}}
+\index{Rotacja@{Rotacja}!Lazik@{Lazik}}
+\doxysubsubsection{\texorpdfstring{Rotacja()}{Rotacja()}}
+{\footnotesize\ttfamily void Lazik\+::\+Rotacja (\begin{DoxyParamCaption}\item[{double}]{kat }\end{DoxyParamCaption})}
+
+
+
+Metoda odpowiadająca za zmiane wartości elementów macierzy rotacji. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em kat} & -\/ kąt jaki ma zostać wpisany do macierzy rotacji \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/Lazik.\+hh\item 
+src/Lazik.\+cpp\end{DoxyCompactItemize}

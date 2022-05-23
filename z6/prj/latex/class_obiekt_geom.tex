@@ -1,0 +1,200 @@
+\hypertarget{class_obiekt_geom}{}\doxysection{Obiekt\+Geom Class Reference}
+\label{class_obiekt_geom}\index{ObiektGeom@{ObiektGeom}}
+
+
+Klasa \mbox{\hyperlink{class_obiekt_geom}{Obiekt\+Geom}}.  
+
+
+
+
+{\ttfamily \#include $<$Obiekt\+Geom.\+hh$>$}
+
+
+
+Inheritance diagram for Obiekt\+Geom\+:
+% FIG 0
+
+
+Collaboration diagram for Obiekt\+Geom\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_obiekt_geom_af22c3b4bc9615553ee26ceca612fe0cc}{Obiekt\+Geom}} (const char $\ast$s\+Nazwa\+Pliku\+\_\+\+Bryla\+Wzorcowa, const char $\ast$s\+Nazwa\+Obiektu, int Kolor\+ID, \mbox{\hyperlink{class_s_wektor}{Wektor3D}} wczytana\+\_\+skala, \mbox{\hyperlink{class_s_wektor}{Wektor3D}} wczytane\+\_\+polozenie)
+\begin{DoxyCompactList}\small\item\em Konstruktor parametryczny klasy \mbox{\hyperlink{class_obiekt_geom}{Obiekt\+Geom}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_obiekt_geom_a7d2459f8346277154a88a0e05bf7a08a}{Wez\+Kolor\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Zwraca kolor obiektu. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_obiekt_geom_adad1663bd767290abe2603247c6c4100}{Wez\+Nazwe\+Obiektu}} () const
+\begin{DoxyCompactList}\small\item\em Zwraca nazwę obiektu geomtrycznego. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_obiekt_geom_a22e77af279ca2fb3543eebb4de37f69a}{Wez\+Nazwe\+Pliku\+\_\+\+Bryla\+Rysowana}} () const
+\begin{DoxyCompactList}\small\item\em Zwraca nazwe pliku rysowanej bryły. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_obiekt_geom_a77d6ffce2f6621a4f709c820442af295}{Przelicz\+\_\+i\+\_\+\+Zapisz\+\_\+\+Wierzcholki}} ()
+\begin{DoxyCompactList}\small\item\em Przeciążnie funkcji przeliczania i zapisywania współrzendnych wierzchołków bez parametrów. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_obiekt_geom_af49b3116d1df5fe60809463d741a0514}{Przelicz\+\_\+i\+\_\+\+Zapisz\+\_\+\+Wierzcholki}} (std\+::ostream \&Strm\+Wy, std\+::istream \&Strm\+We)
+\begin{DoxyCompactList}\small\item\em Przeciążnie funkcji przeliczania i zapisywania współrzendnych wierzchołków z parametrami. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_obiekt_geom_a97636604339a3f5c0ae0538dca0e24ff}{zmien\+\_\+polozenie}} (\mbox{\hyperlink{class_s_wektor}{Wektor3D}} nowy)
+\begin{DoxyCompactList}\small\item\em Motoda zmienia położenie obiektu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_obiekt_geom_a826722f3c7da3cec1f675ade0c13564c}\label{class_obiekt_geom_a826722f3c7da3cec1f675ade0c13564c}} 
+std\+::string {\bfseries \+\_\+\+Nazwa\+Pliku\+\_\+\+Bryla\+Wzorcowa}
+\item 
+\mbox{\Hypertarget{class_obiekt_geom_a7a914f88e2659917cd175f5b79639e8b}\label{class_obiekt_geom_a7a914f88e2659917cd175f5b79639e8b}} 
+std\+::string {\bfseries \+\_\+\+Nazwa\+Pliku\+\_\+\+Bryla\+Rysowana}
+\item 
+\mbox{\Hypertarget{class_obiekt_geom_aacc908cf9790acc9044932893a910c2e}\label{class_obiekt_geom_aacc908cf9790acc9044932893a910c2e}} 
+std\+::string {\bfseries \+\_\+\+Nazwa\+Obiektu}
+\item 
+\mbox{\Hypertarget{class_obiekt_geom_a231891cae034085462791310e2b94d57}\label{class_obiekt_geom_a231891cae034085462791310e2b94d57}} 
+int {\bfseries \+\_\+\+Kolor\+ID}
+\item 
+\mbox{\Hypertarget{class_obiekt_geom_a9f2599116c476b403db6426ebaa2aab8}\label{class_obiekt_geom_a9f2599116c476b403db6426ebaa2aab8}} 
+\mbox{\hyperlink{class_s_wektor}{Wektor3D}} \mbox{\hyperlink{class_obiekt_geom_a9f2599116c476b403db6426ebaa2aab8}{skala}}
+\begin{DoxyCompactList}\small\item\em Wektor przechowujący skale potrzebną w obliczeniach. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_obiekt_geom_a1e68fc525ae1046eb6ffd2bb2843c15c}\label{class_obiekt_geom_a1e68fc525ae1046eb6ffd2bb2843c15c}} 
+\mbox{\hyperlink{class_s_wektor}{Wektor3D}} \mbox{\hyperlink{class_obiekt_geom_a1e68fc525ae1046eb6ffd2bb2843c15c}{polozenie}}
+\begin{DoxyCompactList}\small\item\em Wektor przechowujący położenie danego przedmiotu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_macierz}{Macierz3D}} \mbox{\hyperlink{class_obiekt_geom_a3fc67b4e1a51ac654aa21d96dd8cbac5}{Macierz\+Rotacji}}
+\begin{DoxyCompactList}\small\item\em Macierz potrzeba do przeliczania obrotu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa \mbox{\hyperlink{class_obiekt_geom}{Obiekt\+Geom}}. 
+
+Modeluje pojęcie obiektu geometrycznego, może być to przykładowo łazik. Działa na danych takich jak wierzchołki, położenie, skala i macierz rotacji. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_obiekt_geom_af22c3b4bc9615553ee26ceca612fe0cc}\label{class_obiekt_geom_af22c3b4bc9615553ee26ceca612fe0cc}} 
+\index{ObiektGeom@{ObiektGeom}!ObiektGeom@{ObiektGeom}}
+\index{ObiektGeom@{ObiektGeom}!ObiektGeom@{ObiektGeom}}
+\doxysubsubsection{\texorpdfstring{ObiektGeom()}{ObiektGeom()}}
+{\footnotesize\ttfamily Obiekt\+Geom\+::\+Obiekt\+Geom (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s\+Nazwa\+Pliku\+\_\+\+Bryla\+Wzorcowa,  }\item[{const char $\ast$}]{s\+Nazwa\+Obiektu,  }\item[{int}]{Kolor\+ID,  }\item[{\mbox{\hyperlink{class_s_wektor}{Wektor3D}}}]{wczytana\+\_\+skala,  }\item[{\mbox{\hyperlink{class_s_wektor}{Wektor3D}}}]{wczytane\+\_\+polozenie }\end{DoxyParamCaption})}
+
+
+
+Konstruktor parametryczny klasy \mbox{\hyperlink{class_obiekt_geom}{Obiekt\+Geom}}. 
+
+Przypisuje wrtości początkowe i inicjuje niektóre pola klasy 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em wczytana\+\_\+skala} & -\/ skala przeliczania punktow wpisuwana do pola klasy skala odziedziczonej z \mbox{\hyperlink{class_obiekt_geom}{Obiekt\+Geom}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em wczytane\+\_\+polozenie} & -\/ polożenie początkowe łazika wpisywane po pola polożenie odziedziczonego z \mbox{\hyperlink{class_obiekt_geom}{Obiekt\+Geom}}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_obiekt_geom_a77d6ffce2f6621a4f709c820442af295}\label{class_obiekt_geom_a77d6ffce2f6621a4f709c820442af295}} 
+\index{ObiektGeom@{ObiektGeom}!Przelicz\_i\_Zapisz\_Wierzcholki@{Przelicz\_i\_Zapisz\_Wierzcholki}}
+\index{Przelicz\_i\_Zapisz\_Wierzcholki@{Przelicz\_i\_Zapisz\_Wierzcholki}!ObiektGeom@{ObiektGeom}}
+\doxysubsubsection{\texorpdfstring{Przelicz\_i\_Zapisz\_Wierzcholki()}{Przelicz\_i\_Zapisz\_Wierzcholki()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Obiekt\+Geom\+::\+Przelicz\+\_\+i\+\_\+\+Zapisz\+\_\+\+Wierzcholki (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Przeciążnie funkcji przeliczania i zapisywania współrzendnych wierzchołków bez parametrów. 
+
+Ważna metoda dla działania programu. Pozwala przliczyć gdzie powinien znajdować się~obiekt.
+
+\begin{DoxyReturn}{Returns}
+bool 1 -\/ pomyślnie wykonano przliczanie, 0 -\/ coś się nie powiodło 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_obiekt_geom_af49b3116d1df5fe60809463d741a0514}\label{class_obiekt_geom_af49b3116d1df5fe60809463d741a0514}} 
+\index{ObiektGeom@{ObiektGeom}!Przelicz\_i\_Zapisz\_Wierzcholki@{Przelicz\_i\_Zapisz\_Wierzcholki}}
+\index{Przelicz\_i\_Zapisz\_Wierzcholki@{Przelicz\_i\_Zapisz\_Wierzcholki}!ObiektGeom@{ObiektGeom}}
+\doxysubsubsection{\texorpdfstring{Przelicz\_i\_Zapisz\_Wierzcholki()}{Przelicz\_i\_Zapisz\_Wierzcholki()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Obiekt\+Geom\+::\+Przelicz\+\_\+i\+\_\+\+Zapisz\+\_\+\+Wierzcholki (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{Strm\+Wy,  }\item[{std\+::istream \&}]{Strm\+We }\end{DoxyParamCaption})}
+
+
+
+Przeciążnie funkcji przeliczania i zapisywania współrzendnych wierzchołków z parametrami. 
+
+Ważna metoda dla działania programu. Pozwala przliczyć gdzie powinien znajdować się~obiekt.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Strm\+Wej} & -\/ referencja strumienia wejściowego. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Strm\+Wyj} & -\/ referencja strumienia wyjściowego.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 1 -\/ pomyślnie wykonano przliczanie, 0 -\/ coś się nie powiodło 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_obiekt_geom_a7d2459f8346277154a88a0e05bf7a08a}\label{class_obiekt_geom_a7d2459f8346277154a88a0e05bf7a08a}} 
+\index{ObiektGeom@{ObiektGeom}!WezKolorID@{WezKolorID}}
+\index{WezKolorID@{WezKolorID}!ObiektGeom@{ObiektGeom}}
+\doxysubsubsection{\texorpdfstring{WezKolorID()}{WezKolorID()}}
+{\footnotesize\ttfamily int Obiekt\+Geom\+::\+Wez\+Kolor\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zwraca kolor obiektu. 
+
+\begin{DoxyReturn}{Returns}
+int \+\_\+\+Kolor\+ID -\/ kolor obiektu 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_obiekt_geom_adad1663bd767290abe2603247c6c4100}\label{class_obiekt_geom_adad1663bd767290abe2603247c6c4100}} 
+\index{ObiektGeom@{ObiektGeom}!WezNazweObiektu@{WezNazweObiektu}}
+\index{WezNazweObiektu@{WezNazweObiektu}!ObiektGeom@{ObiektGeom}}
+\doxysubsubsection{\texorpdfstring{WezNazweObiektu()}{WezNazweObiektu()}}
+{\footnotesize\ttfamily const std\+::string\& Obiekt\+Geom\+::\+Wez\+Nazwe\+Obiektu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zwraca nazwę obiektu geomtrycznego. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string \+\_\+\+Nazwa\+Obiektu -\/ nazwa obiektu 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_obiekt_geom_a22e77af279ca2fb3543eebb4de37f69a}\label{class_obiekt_geom_a22e77af279ca2fb3543eebb4de37f69a}} 
+\index{ObiektGeom@{ObiektGeom}!WezNazwePliku\_BrylaRysowana@{WezNazwePliku\_BrylaRysowana}}
+\index{WezNazwePliku\_BrylaRysowana@{WezNazwePliku\_BrylaRysowana}!ObiektGeom@{ObiektGeom}}
+\doxysubsubsection{\texorpdfstring{WezNazwePliku\_BrylaRysowana()}{WezNazwePliku\_BrylaRysowana()}}
+{\footnotesize\ttfamily const std\+::string\& Obiekt\+Geom\+::\+Wez\+Nazwe\+Pliku\+\_\+\+Bryla\+Rysowana (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zwraca nazwe pliku rysowanej bryły. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string \+\_\+\+Nazwa\+Pliku\+\_\+\+Bryla\+Rysowowa 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_obiekt_geom_a97636604339a3f5c0ae0538dca0e24ff}\label{class_obiekt_geom_a97636604339a3f5c0ae0538dca0e24ff}} 
+\index{ObiektGeom@{ObiektGeom}!zmien\_polozenie@{zmien\_polozenie}}
+\index{zmien\_polozenie@{zmien\_polozenie}!ObiektGeom@{ObiektGeom}}
+\doxysubsubsection{\texorpdfstring{zmien\_polozenie()}{zmien\_polozenie()}}
+{\footnotesize\ttfamily void Obiekt\+Geom\+::zmien\+\_\+polozenie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_wektor}{Wektor3D}}}]{nowy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Motoda zmienia położenie obiektu. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em nowy} & -\/ Wektor3D z nowym położeniem\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 1 -\/ pomyślnie wykonano przliczanie, 0 -\/ coś się nie powiodło 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_obiekt_geom_a3fc67b4e1a51ac654aa21d96dd8cbac5}\label{class_obiekt_geom_a3fc67b4e1a51ac654aa21d96dd8cbac5}} 
+\index{ObiektGeom@{ObiektGeom}!MacierzRotacji@{MacierzRotacji}}
+\index{MacierzRotacji@{MacierzRotacji}!ObiektGeom@{ObiektGeom}}
+\doxysubsubsection{\texorpdfstring{MacierzRotacji}{MacierzRotacji}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_macierz}{Macierz3D}} Obiekt\+Geom\+::\+Macierz\+Rotacji\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Macierz potrzeba do przeliczania obrotu. 
+
+s\+Działa na funkcjach trygonometrycznych i potrzebuje kąta orientacji do prawidołowego działania. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/Obiekt\+Geom.\+hh\item 
+src/Obiekt\+Geom.\+cpp\end{DoxyCompactItemize}

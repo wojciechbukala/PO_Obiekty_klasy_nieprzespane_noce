@@ -85,7 +85,9 @@ void Scena::ZmienDrona(std::istream &StrmWe, std::ostream &StrmWy)
 
 void Scena::WyswietlAktywny(std::ostream &StrmWy)
 {
-    StrmWy << "1. ---------- Nazwa: Sample_Fetch_Rover" << std::endl;
+    if(AktualnyLazik->WezNazweObiektu()=="FSR") StrmWy << "1. ---------- Nazwa: Sample_Fetch_Rover" << std::endl;
+    if(AktualnyLazik->WezNazweObiektu()=="Perseverance") StrmWy << "2. ---------- Nazwa: Perserverance" << std::endl;
+    if(AktualnyLazik->WezNazweObiektu()=="Curiosity") StrmWy << "3. ---------- Nazwa: Curiosity" << std::endl;
     StrmWy << "          Polozenie: " << AktualnyLazik->DajPolozenie() << std::endl;
     StrmWy << "    Orientacja [st]: " << AktualnyLazik->DajKat() << std::endl;
     StrmWy << std::endl;

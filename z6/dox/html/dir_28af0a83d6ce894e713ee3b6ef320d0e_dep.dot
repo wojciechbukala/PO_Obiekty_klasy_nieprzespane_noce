@@ -1,0 +1,13 @@
+digraph "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce" {
+  compound=true
+  node [ fontsize="10", fontname="FreeSans"];
+  edge [ labelfontsize="10", labelfontname="FreeSans"];
+  subgraph clusterdir_f81ae62be570093ea74b29e455737807 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Documents" fontname="FreeSans", fontsize="10", URL="dir_f81ae62be570093ea74b29e455737807.html"]
+  subgraph clusterdir_28af0a83d6ce894e713ee3b6ef320d0e {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_28af0a83d6ce894e713ee3b6ef320d0e.html"];
+    dir_28af0a83d6ce894e713ee3b6ef320d0e [shape=plaintext label="PO_Obiekty_klasy_nieprzespane_noce"];
+    dir_7c43a130a4d563d62d3b9206ea4a6ab5 [shape=box label="z6" color="red" fillcolor="white" style="filled" URL="dir_7c43a130a4d563d62d3b9206ea4a6ab5.html"];
+  }
+  }
+}

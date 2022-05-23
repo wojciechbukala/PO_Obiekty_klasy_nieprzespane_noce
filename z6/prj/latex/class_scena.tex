@@ -1,0 +1,125 @@
+\hypertarget{class_scena}{}\doxysection{Scena Class Reference}
+\label{class_scena}\index{Scena@{Scena}}
+
+
+Klasa \mbox{\hyperlink{class_scena}{Scena}}.  
+
+
+
+
+{\ttfamily \#include $<$Scena.\+hh$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scena_a8f9fe11b4cfef890123a2acc94672e17}\label{class_scena_a8f9fe11b4cfef890123a2acc94672e17}} 
+\mbox{\hyperlink{class_scena_a8f9fe11b4cfef890123a2acc94672e17}{Scena}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor bezparametryczny. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scena_a92ef746dc8f551b620d6e320642936ac}\label{class_scena_a92ef746dc8f551b620d6e320642936ac}} 
+void \mbox{\hyperlink{class_scena_a92ef746dc8f551b620d6e320642936ac}{Dodaj\+Do\+Listy\+Rysowania}} ()
+\begin{DoxyCompactList}\small\item\em Metoda dodaje elementy do listy rysowania. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scena_a8ad6334db9dd88a39f00fab496653a55}{jedziemy}} (std\+::istream \&Strm\+We, std\+::ostream \&Strm\+Wy)
+\begin{DoxyCompactList}\small\item\em Metoda pozwalająca wywoływać jazde łazika. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scena_ae25703936a3e4a315b8d8801fdc1c976}{krecimy}} (std\+::istream \&Strm\+We, std\+::ostream \&Strm\+Wy)
+\begin{DoxyCompactList}\small\item\em Metoda pozwalająca wywoływać obrót łazika o zadanyc kąt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scena_a578d9521dc37886bd085549b13dda704}{Wybor\+Drona}} (int dron)
+\begin{DoxyCompactList}\small\item\em Metoda pozwalająca wywoływać obrót łazika o zadanyc kąt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scena_a15db04e306877472fad0339491070b92}{Zmien\+Drona}} (std\+::istream \&Strm\+We, std\+::ostream \&Strm\+Wy)
+\begin{DoxyCompactList}\small\item\em Metoda pozwalająca zamienić drona, ktorym chemy sterować \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scena_a01f245ce656d3b8d414f4350127643e1}{Wyswietl\+Aktywny}} (std\+::ostream \&Strm\+Wy)
+\begin{DoxyCompactList}\small\item\em Metoda wyświetla paramtry aktywnego łazika. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa \mbox{\hyperlink{class_scena}{Scena}}. 
+
+Modeluje pojęcie sceny, czyli miejsca gdzie inicjalizowane są obiekty geometryczne oraz występują interakcje związane z nimi. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scena_a8ad6334db9dd88a39f00fab496653a55}\label{class_scena_a8ad6334db9dd88a39f00fab496653a55}} 
+\index{Scena@{Scena}!jedziemy@{jedziemy}}
+\index{jedziemy@{jedziemy}!Scena@{Scena}}
+\doxysubsubsection{\texorpdfstring{jedziemy()}{jedziemy()}}
+{\footnotesize\ttfamily void Scena\+::jedziemy (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{Strm\+We,  }\item[{std\+::ostream \&}]{Strm\+Wy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda pozwalająca wywoływać jazde łazika. 
+
+Wykorzystuje metodę jazda z klasy lazik dla atulanego lazika aby wywołać jego ruch 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Strm\+Wej} & -\/ referencja strumienia wejściowego. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Strm\+Wyj} & -\/ referencja strumienia wyjściowego. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scena_ae25703936a3e4a315b8d8801fdc1c976}\label{class_scena_ae25703936a3e4a315b8d8801fdc1c976}} 
+\index{Scena@{Scena}!krecimy@{krecimy}}
+\index{krecimy@{krecimy}!Scena@{Scena}}
+\doxysubsubsection{\texorpdfstring{krecimy()}{krecimy()}}
+{\footnotesize\ttfamily void Scena\+::krecimy (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{Strm\+We,  }\item[{std\+::ostream \&}]{Strm\+Wy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda pozwalająca wywoływać obrót łazika o zadanyc kąt. 
+
+Wykorzystuje metodę obrot z klasy lazik dla atulanego lazika aby wywołać jego obrot o zadany kąt. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Strm\+Wej} & -\/ referencja strumienia wejściowego. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Strm\+Wyj} & -\/ referencja strumienia wyjściowego. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scena_a578d9521dc37886bd085549b13dda704}\label{class_scena_a578d9521dc37886bd085549b13dda704}} 
+\index{Scena@{Scena}!WyborDrona@{WyborDrona}}
+\index{WyborDrona@{WyborDrona}!Scena@{Scena}}
+\doxysubsubsection{\texorpdfstring{WyborDrona()}{WyborDrona()}}
+{\footnotesize\ttfamily void Scena\+::\+Wybor\+Drona (\begin{DoxyParamCaption}\item[{int}]{dron }\end{DoxyParamCaption})}
+
+
+
+Metoda pozwalająca wywoływać obrót łazika o zadanyc kąt. 
+
+Wykorzystuje metodę obrot z klasy lazik dla atulanego lazika aby wywołać jego obrot o zadany kąt. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dron} & -\/ numer dron, który chcemy wybrać \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scena_a01f245ce656d3b8d414f4350127643e1}\label{class_scena_a01f245ce656d3b8d414f4350127643e1}} 
+\index{Scena@{Scena}!WyswietlAktywny@{WyswietlAktywny}}
+\index{WyswietlAktywny@{WyswietlAktywny}!Scena@{Scena}}
+\doxysubsubsection{\texorpdfstring{WyswietlAktywny()}{WyswietlAktywny()}}
+{\footnotesize\ttfamily void Scena\+::\+Wyswietl\+Aktywny (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{Strm\+Wy }\end{DoxyParamCaption})}
+
+
+
+Metoda wyświetla paramtry aktywnego łazika. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Strm\+Wy} & -\/ referencja strumienia wyjściowego. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scena_a15db04e306877472fad0339491070b92}\label{class_scena_a15db04e306877472fad0339491070b92}} 
+\index{Scena@{Scena}!ZmienDrona@{ZmienDrona}}
+\index{ZmienDrona@{ZmienDrona}!Scena@{Scena}}
+\doxysubsubsection{\texorpdfstring{ZmienDrona()}{ZmienDrona()}}
+{\footnotesize\ttfamily void Scena\+::\+Zmien\+Drona (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{Strm\+We,  }\item[{std\+::ostream \&}]{Strm\+Wy }\end{DoxyParamCaption})}
+
+
+
+Metoda pozwalająca zamienić drona, ktorym chemy sterować 
+
+Wykorzystuje metodę Wybor\+Drona, dodając do niej interfejs wyboru obiektu 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Strm\+We} & -\/ referencja strumienia wejściowego. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Strm\+Wy} & -\/ referencja strumienia wyjściowego. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/Scena.\+hh\item 
+src/Scena.\+cpp\end{DoxyCompactItemize}

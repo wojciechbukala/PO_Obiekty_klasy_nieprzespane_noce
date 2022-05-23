@@ -1,0 +1,13 @@
+digraph "/home/wojciech/Documents" {
+  compound=true
+  node [ fontsize="10", fontname="FreeSans"];
+  edge [ labelfontsize="10", labelfontname="FreeSans"];
+  subgraph clusterdir_2747347d4eec450d4b66382331a0637c {
+    graph [ bgcolor="#ddddee", pencolor="black", label="wojciech" fontname="FreeSans", fontsize="10", URL="dir_2747347d4eec450d4b66382331a0637c.html"]
+  subgraph clusterdir_f81ae62be570093ea74b29e455737807 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_f81ae62be570093ea74b29e455737807.html"];
+    dir_f81ae62be570093ea74b29e455737807 [shape=plaintext label="Documents"];
+    dir_28af0a83d6ce894e713ee3b6ef320d0e [shape=box label="PO_Obiekty_klasy_nieprzespane_noce" color="red" fillcolor="white" style="filled" URL="dir_28af0a83d6ce894e713ee3b6ef320d0e.html"];
+  }
+  }
+}

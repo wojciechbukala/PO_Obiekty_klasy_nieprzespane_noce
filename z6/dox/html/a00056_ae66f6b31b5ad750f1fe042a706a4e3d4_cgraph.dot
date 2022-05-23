@@ -1,0 +1,24 @@
+digraph "main"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="Scena::jedziemy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00089.html#a8ad6334db9dd88a39f00fab496653a55",tooltip="Metoda pozwalająca wywoływać jazde łazika."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="Scena::krecimy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00089.html#ae25703936a3e4a315b8d8801fdc1c976",tooltip="Metoda pozwalająca wywoływać obrót łazika o zadanyc kąt."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="wyswietl_wektory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00056.html#a53facbc5708c337c9d744606d516cc0c",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="SWektor\< double, 3\l \>::wyswietl_ile_akt_wek",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00097.html#a4c6985476780b4b08ec519debc68f03c",tooltip=" "];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="SWektor\< double, 3\l \>::wyswietl_ile_wek",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00097.html#a36e477e02c34a794ca7c441e5759f891",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="Scena::WyswietlAktywny",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00089.html#a01f245ce656d3b8d414f4350127643e1",tooltip="Metoda wyświetla paramtry aktywnego łazika."];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="Scena::ZmienDrona",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00089.html#a15db04e306877472fad0339491070b92",tooltip="Metoda pozwalająca zamienić drona, ktorym chemy sterować"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="Scena::WyborDrona",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00089.html#a578d9521dc37886bd085549b13dda704",tooltip="Metoda pozwalająca wywoływać obrót łazika o zadanyc kąt."];
+}

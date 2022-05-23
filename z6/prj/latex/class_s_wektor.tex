@@ -1,0 +1,262 @@
+\hypertarget{class_s_wektor}{}\doxysection{S\+Wektor$<$ typ, wymiar $>$ Class Template Reference}
+\label{class_s_wektor}\index{SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}}
+
+
+Szablon klasy modelującej pojęcie wektora. Klasa ta jest szablonem i może stworzyć wektory dowolnie dużej wielkości i zawierający elementy różych typów.  
+
+
+
+
+{\ttfamily \#include $<$S\+Wektor.\+hh$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+typ \& \mbox{\hyperlink{class_s_wektor_a16a317ea2ed25d2b6bdada044faf55fd}{operator\mbox{[}$\,$\mbox{]}}} (int indeks)
+\begin{DoxyCompactList}\small\item\em Przeciążenie indeksu S\+Wektora. \end{DoxyCompactList}\item 
+typ \mbox{\hyperlink{class_s_wektor_a1b21215594bfc20c02f007a199f03a19}{operator\mbox{[}$\,$\mbox{]}}} (int indeks) const
+\begin{DoxyCompactList}\small\item\em Przeciążenie indeksu S\+Wektora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ \mbox{\hyperlink{class_s_wektor_a0c24eacff6a0eec8f591042e1263075b}{operator+}} (\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ S\+Wektor2)
+\begin{DoxyCompactList}\small\item\em Przeciążenie operatora dodawania dla S\+Wektorów. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ \& \mbox{\hyperlink{class_s_wektor_a7c322709e1f3566e6f06d9cf5639fc1e}{operator-\/}} (\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ S\+Wektor2)
+\begin{DoxyCompactList}\small\item\em Przeciążenie operatora odejmowania dla S\+Wektorów. \end{DoxyCompactList}\item 
+typ \mbox{\hyperlink{class_s_wektor_a5908ccc55afc93184ad0ad24e1ac7e06}{operator$\ast$}} (\mbox{\hyperlink{class_s_wektor}{S\+Wektor}} S\+Wektor2)
+\begin{DoxyCompactList}\small\item\em Przeciążenie operatora mnożenia dla iloczynu sklarnego. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ \mbox{\hyperlink{class_s_wektor_a0ab691cbaa25a1587c4765b717ca9701}{operator$\ast$}} (double skalar)
+\begin{DoxyCompactList}\small\item\em Przeciążenie operatora mnożenia przez skalar. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ \mbox{\hyperlink{class_s_wektor_a593901c9e69d42c2083b282dfbb82909}{operator/}} (\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ S\+Wektor2)
+\begin{DoxyCompactList}\small\item\em Przeciążenie operatora dzilenie dla S\+Wektorów posiada zabezpieczenie przed dzieleniem przez zero. \end{DoxyCompactList}\item 
+typ \mbox{\hyperlink{class_s_wektor_a7c404f9709a9cb1b3161f4a5b6420544}{dlugosc}} ()
+\begin{DoxyCompactList}\small\item\em Medota obliczająca długość S\+Wektora. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_wektor_a0b203431c851ff880e87a78b56762498}\label{class_s_wektor_a0b203431c851ff880e87a78b56762498}} 
+\mbox{\hyperlink{class_s_wektor_a0b203431c851ff880e87a78b56762498}{S\+Wektor}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor bezparametryczny wykonuje inkrementację ilosc\+\_\+wektorow i ilosc\+\_\+aktywnych\+\_\+wektorow. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_wektor_a7035cb7939d6927d2103004da2341b85}{S\+Wektor}} (typ jeden, typ dwa, typ trzy)
+\begin{DoxyCompactList}\small\item\em Konstruktor parametryczny wykonuje inkrementację ilosc\+\_\+wektorw i ilosc\+\_\+aktywnych\+\_\+wektorow. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}} \mbox{\hyperlink{class_s_wektor_a5c4527740c93aab4e157ecd7d6a23310}{operator\&}} (\mbox{\hyperlink{class_s_wektor}{S\+Wektor}} const Wektor2)
+\begin{DoxyCompactList}\small\item\em destruktor wektora wykonuje dekrementację pola ilosc\+\_\+aktywnych\+\_\+wektorow template$<$typename typ, int wymiar$>$ S\+Wektor$<$typ,wymiar$>$\+::$\sim$\+S\+Wektor() \{ --ilosc\+\_\+aktywnych\+\_\+wektorow; \} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_wektor_a36e477e02c34a794ca7c441e5759f891}\label{class_s_wektor_a36e477e02c34a794ca7c441e5759f891}} 
+static void {\bfseries wyswietl\+\_\+ile\+\_\+wek} (std\+::ostream \&Strm\+Wy)
+\item 
+\mbox{\Hypertarget{class_s_wektor_a4c6985476780b4b08ec519debc68f03c}\label{class_s_wektor_a4c6985476780b4b08ec519debc68f03c}} 
+static void {\bfseries wyswietl\+\_\+ile\+\_\+akt\+\_\+wek} (std\+::ostream \&Strm\+Wy)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename typ, int wymiar$>$\newline
+class S\+Wektor$<$ typ, wymiar $>$}
+
+Szablon klasy modelującej pojęcie wektora. Klasa ta jest szablonem i może stworzyć wektory dowolnie dużej wielkości i zawierający elementy różych typów. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em typ} & -\/ typ zmennych składowych wektora (np. double, int, L\+Zespolona). \\
+\hline
+\mbox{\texttt{ in}}  & {\em wymiar} & -\/ rozmiar wektora, liczba całkowita int. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_s_wektor_a7035cb7939d6927d2103004da2341b85}\label{class_s_wektor_a7035cb7939d6927d2103004da2341b85}} 
+\index{SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}!SWektor@{SWektor}}
+\index{SWektor@{SWektor}!SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}}
+\doxysubsubsection{\texorpdfstring{SWektor()}{SWektor()}}
+{\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$\+::\mbox{\hyperlink{class_s_wektor}{S\+Wektor}} (\begin{DoxyParamCaption}\item[{typ}]{jeden,  }\item[{typ}]{dwa,  }\item[{typ}]{trzy }\end{DoxyParamCaption})}
+
+
+
+Konstruktor parametryczny wykonuje inkrementację ilosc\+\_\+wektorw i ilosc\+\_\+aktywnych\+\_\+wektorow. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em jeden} & -\/ pierwszy element wektora \\
+\hline
+\mbox{\texttt{ in}}  & {\em dwa} & -\/ drugie element wektora \\
+\hline
+\mbox{\texttt{ in}}  & {\em trzy} & -\/ trzeci element wektora \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_wektor_a7c404f9709a9cb1b3161f4a5b6420544}\label{class_s_wektor_a7c404f9709a9cb1b3161f4a5b6420544}} 
+\index{SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}!dlugosc@{dlugosc}}
+\index{dlugosc@{dlugosc}!SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}}
+\doxysubsubsection{\texorpdfstring{dlugosc()}{dlugosc()}}
+{\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
+typ \mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$\+::dlugosc}
+
+
+
+Medota obliczająca długość S\+Wektora. 
+
+\begin{DoxyReturn}{Returns}
+double mod -\/ liczba zmiennoprzecinkowa, będąca długością~S\+Wektora 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_wektor_a5c4527740c93aab4e157ecd7d6a23310}\label{class_s_wektor_a5c4527740c93aab4e157ecd7d6a23310}} 
+\index{SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}!operator\&@{operator\&}}
+\index{operator\&@{operator\&}!SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}}
+\doxysubsubsection{\texorpdfstring{operator\&()}{operator\&()}}
+{\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ \mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$\+::operator\& (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ const}]{Wektor2 }\end{DoxyParamCaption})}
+
+
+
+destruktor wektora wykonuje dekrementację pola ilosc\+\_\+aktywnych\+\_\+wektorow template$<$typename typ, int wymiar$>$ S\+Wektor$<$typ,wymiar$>$\+::$\sim$\+S\+Wektor() \{ --ilosc\+\_\+aktywnych\+\_\+wektorow; \} 
+
+/$\ast$!
+
+Przeciążenie operatora \& mnożenie dla elementów S\+Wektorów
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em const} & S\+Wektor2 -\/ drugi z elementów mnożenia\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}} wynik -\/ macież gdzie elementy są wynikami mnożenia kolejnych elementów dwóch macierzy 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_wektor_a0ab691cbaa25a1587c4765b717ca9701}\label{class_s_wektor_a0ab691cbaa25a1587c4765b717ca9701}} 
+\index{SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ \mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{double}]{skalar }\end{DoxyParamCaption})}
+
+
+
+Przeciążenie operatora mnożenia przez skalar. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em skalar} & -\/ liczba zmiennoprzecinkowa do mnożenia elementów\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}} T -\/ wymnożony \mbox{\hyperlink{class_s_wektor}{S\+Wektor}} przez liczbe zmiennoprzecinkową (skalar) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_wektor_a5908ccc55afc93184ad0ad24e1ac7e06}\label{class_s_wektor_a5908ccc55afc93184ad0ad24e1ac7e06}} 
+\index{SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
+typ \mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$}]{S\+Wektor2 }\end{DoxyParamCaption})}
+
+
+
+Przeciążenie operatora mnożenia dla iloczynu sklarnego. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+Wektor2} & -\/ czynnik mnożenia\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}} T -\/ wynik iloczynu skalarnego dla dwóch S\+Wektorów 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_wektor_a0c24eacff6a0eec8f591042e1263075b}\label{class_s_wektor_a0c24eacff6a0eec8f591042e1263075b}} 
+\index{SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ \mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$\+::operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$}]{S\+Wektor2 }\end{DoxyParamCaption})}
+
+
+
+Przeciążenie operatora dodawania dla S\+Wektorów. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_s_wektor}{S\+Wektor}}} & S\+Wektor2 -\/ składnik sumowania\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}} T -\/ wynik sumowania dwóch S\+Wektorów 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_wektor_a7c322709e1f3566e6f06d9cf5639fc1e}\label{class_s_wektor_a7c322709e1f3566e6f06d9cf5639fc1e}} 
+\index{SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ \& \mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$}]{S\+Wektor2 }\end{DoxyParamCaption})}
+
+
+
+Przeciążenie operatora odejmowania dla S\+Wektorów. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+Wektor2} & -\/ odjemna dla operacji różnicy dwóch S\+Wektorów\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\&wynik -\/ referencja wyniku różnicy dwóch S\+Wektorów 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_wektor_a593901c9e69d42c2083b282dfbb82909}\label{class_s_wektor_a593901c9e69d42c2083b282dfbb82909}} 
+\index{SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}!operator/@{operator/}}
+\index{operator/@{operator/}!SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ \mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$\+::operator/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$}]{S\+Wektor2 }\end{DoxyParamCaption})}
+
+
+
+Przeciążenie operatora dzilenie dla S\+Wektorów posiada zabezpieczenie przed dzieleniem przez zero. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+Wektor2} & -\/ \mbox{\hyperlink{class_s_wektor}{S\+Wektor}} którego elemnty są dzielną w operacji\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}} T -\/ wynik dzielenia 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_wektor_a16a317ea2ed25d2b6bdada044faf55fd}\label{class_s_wektor_a16a317ea2ed25d2b6bdada044faf55fd}} 
+\index{SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
+typ\& \mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{indeks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Przeciążenie indeksu S\+Wektora. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em indeks} & -\/ indeks elementu wektora \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+typ -\/ zwraca element wektora 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_wektor_a1b21215594bfc20c02f007a199f03a19}\label{class_s_wektor_a1b21215594bfc20c02f007a199f03a19}} 
+\index{SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
+typ \mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{indeks }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Przeciążenie indeksu S\+Wektora. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em indeks} & -\/ indeks elementu wektora \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+typ -\/ zwraca element wektora 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/S\+Wektor.\+hh\end{DoxyCompactItemize}

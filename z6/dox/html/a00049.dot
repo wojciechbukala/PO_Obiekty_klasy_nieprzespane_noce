@@ -1,0 +1,33 @@
+digraph "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/SWektor.hh"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="/home/wojciech/Documents\l/PO_Obiekty_klasy_nieprzespane\l_noce/z6/prj/inc/SWektor.hh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="/home/wojciech/Documents\l/PO_Obiekty_klasy_nieprzespane\l_noce/z6/prj/inc/Wektor3D.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00050.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="/home/wojciech/Documents\l/PO_Obiekty_klasy_nieprzespane\l_noce/z6/prj/inc/ObiektGeom.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00035.html",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="/home/wojciech/Documents\l/PO_Obiekty_klasy_nieprzespane\l_noce/z6/prj/inc/Lazik.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00029.html",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="/home/wojciech/Documents\l/PO_Obiekty_klasy_nieprzespane\l_noce/z6/prj/inc/Scena.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00041.html",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="/home/wojciech/Documents\l/PO_Obiekty_klasy_nieprzespane\l_noce/z6/prj/src/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00056.html",tooltip=" "];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="/home/wojciech/Documents\l/PO_Obiekty_klasy_nieprzespane\l_noce/z6/prj/src/Scena.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00065.html",tooltip=" "];
+  Node4 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="/home/wojciech/Documents\l/PO_Obiekty_klasy_nieprzespane\l_noce/z6/prj/src/Lazik.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00053.html",tooltip=" "];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="/home/wojciech/Documents\l/PO_Obiekty_klasy_nieprzespane\l_noce/z6/prj/src/ObiektGeom.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00059.html",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="/home/wojciech/Documents\l/PO_Obiekty_klasy_nieprzespane\l_noce/z6/prj/inc/SMacierz.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00044.html",tooltip=" "];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 [label="/home/wojciech/Documents\l/PO_Obiekty_klasy_nieprzespane\l_noce/z6/prj/inc/Macierz3D.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00032.html",tooltip=" "];
+  Node11 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node12 [label="/home/wojciech/Documents\l/PO_Obiekty_klasy_nieprzespane\l_noce/z6/prj/src/SMacierz.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00068.html",tooltip=" "];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node13 [label="/home/wojciech/Documents\l/PO_Obiekty_klasy_nieprzespane\l_noce/z6/prj/src/SWektor.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00071.html",tooltip=" "];
+}

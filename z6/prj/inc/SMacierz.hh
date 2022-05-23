@@ -4,39 +4,97 @@
 #include "SWektor.hh"
 #include <iostream>
 
-/*
+/*!
+ *  \brief Szblon klasy Macierz.
+ *
  * Szablon klasy modelującej pojęcie macierzy.
  * typ - typ zmennych składowych macierzy (np. double, int, LZespolona).
  * wymiar - rozmiar macierzy kwadratowej, liczba całkowita int.
+ * 
+ * \param [in] typ - typ elementow macierzy (np int, double, Wektor).
+ * \param [in] wymiar - wymiar macierzy kwadratowej.
  */
 template<typename typ, int wymiar>
 class SMacierz {
-  SWektor<typ,wymiar> Tab[wymiar]; // maciezrz to ROZMIAR-razy wektor
-  bool zeruj (int& parzystosc); //zerowanie macierzy
-  typ mnozenie_diagonali () const; // mnożenie elementów na diagonali
-  void kopiuj(); // Inicjowanie kopi macierzy do wykoanywania obliczeń wyznacznika
-  SWektor<typ,wymiar> kopia[wymiar]; // macierz do kopiowania i wykonywania obliczeń 
+  /*!
+   * \brief macierz to ROZMIAR-razy wektor.
+   */
+  SWektor<typ,wymiar> Tab[wymiar];
+  /*!
+   * \brief zerowanie macierzy
+   * 
+   * \param [in] parzystosc - referencja zmiennej która mnoży wyznacznik razy -1 lub 1
+   * \return 1 - jeśli się wykona zerowanie
+   */ 
+  bool zeruj (int& parzystosc);
+  /*!
+   * \brief mnożenie elementów na diagonali
+   * 
+   * \return wymnożona diagonala (typ)
+   */   
+  typ mnozenie_diagonali () const; 
+  /*!
+   * \brief Inicjowanie kopi macierzy do wykoanywania obliczeń wyznacznika
+   */
+  void kopiuj();
+  /*!
+   * \brief macierz do kopiowania i wykonywania obliczeń 
+   */
+  SWektor<typ,wymiar> kopia[wymiar];
   
 
   public:
-  SWektor<typ,wymiar> operator * (const SWektor<typ,wymiar> Wektor2) const ; // Mnożenie macierzy przez wektor 
-  SWektor<typ,wymiar>& operator [](int indeks)  {return Tab[indeks];} // Przeciążenie operatorea indeksowania macierza
-  SMacierz<typ,wymiar> operator ! (); // Przeciążenie transpononowania
-  typ operator () (int a, int b) {return Tab[a][b];} // przeciązenie operatora funkcyjnego dla klasy macierz
-  SMacierz<typ,wymiar>/*&*/ operator = (SMacierz<typ,wymiar>& Macierz2); // pPrzeciążenie operatora przypisania dla macierzy
-  void transponuj(); // transponowanie macierzy 
-  typ wyznacznik_gauss (); // obliczanie wyznacznika metodą gaussa
+ /*!
+   * \brief Mnożenie macierzy przez wektor
+   * \param [in] SWektor - wektor przez który mnożymy macierz
+   * \return SWektor - wynik mnożenia macierzy przez wektor
+   */ 
+  SWektor<typ,wymiar> operator * (const SWektor<typ,wymiar> Wektor2) const ;
+ /*!
+   * \brief Przeciążenie operatorea indeksowania macierza
+   * \param [in] indeks - indeks elementu, który chcemy
+   * \return SWektor - zwrócony wektor
+   */
+  SWektor<typ,wymiar>& operator [](int indeks)  {return Tab[indeks];}
+/*!
+   * \brief Przeciążenie transpononowania
+   * \return SMacierz - transponowana macierz
+   */
+  SMacierz<typ,wymiar> operator ! ();
+   /*!
+   * \brief przeciązenie operatora funkcyjnego dla klasy macierz
+   * \param [in] a - indeks wiersza
+   * \param [in] b - indeks kolumny
+   * \return typ - zwrócony element macierzy
+   */
+  typ operator () (int a, int b) {return Tab[a][b];} 
+     /*!
+   * \brief Przeciążenie operatora przypisania dla macierzy
+   * \param [in] Macierz2 - macierz przypisywana do innej
+   * \return przypisana macierz
+   */
+  SMacierz<typ,wymiar>/*&*/ operator = (SMacierz<typ,wymiar>& Macierz2); 
+  /*!
+   * \brief Transponowanie orginalnej macierzy
+   */
+  void transponuj();
+  /*!
+   * \brief obliczanie wyznacznika metodą gaussa
+   * \return typ - wyznacznik macierzy oblicznocy metodą gaussa
+   */
+  typ wyznacznik_gauss ();
 }; 
 
 
-/* 
+/*!
+ * \brief Przeciążenie wczytywania macierzy
  * Przeciążenie wczytujące Macierz ze strumienia std::istream
  * Akceptowany format prametrów macierzy to liczby zmiennoprzicnkowe
  * Argumenty:
- *  Macierz &Mac - referencja macierzy do któregej wpisujemy parametry
- *  std::istream &Strm - referencja sturmienia wejściowego
+ *  \param [in] Mac - referencja macierzy do któregej wpisujemy parametry
+ *  \param [in] Strm - referencja sturmienia wejściowego
  * Zwraca:
- *  Wczytuje strumieniem std::istream 
+ *  \return  Wczytuje strumieniem std::istream 
  */
 template<typename typ, int wymiar>
 std::istream& operator >> (std::istream &Strm, SMacierz<typ,wymiar> &Mac)
@@ -49,12 +107,14 @@ std::istream& operator >> (std::istream &Strm, SMacierz<typ,wymiar> &Mac)
     return Strm;
 }
 
-/*
- * To przeciazenie trzeba opisac. Co ono robi. Jaki format
- * danych akceptuje. Jakie jest znaczenie parametrow itd.
- * Szczegoly dotyczace zalecen realizacji opisow mozna
- * znalezc w pliku:
- *    ~bk/edu/kpo/zalecenia.txt 
+/*!
+ * \brief Przeciążenie wypisywania Macierzy
+ * Za pomocą przeciążenie operatora przesunięcia
+ * bitowego zdefiniowne jest wypisywanie macierzy
+ * na stryumień wyjściowy.
+ * \param [in] Strm - referencja strumienia wyjściowego
+ * \param SMacierz -  Macierz do wyświetlenia
+ * \return Strm - strumień wyjściowy
  */
 template<typename typ, int wymiar>
 std::ostream& operator << (std::ostream &Strm, SMacierz<typ,wymiar> Mac)

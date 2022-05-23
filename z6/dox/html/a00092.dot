@@ -1,0 +1,9 @@
+digraph "SMacierz&lt; typ, wymiar &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="SMacierz\< typ, wymiar \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Szblon klasy Macierz."];
+  Node1 -> Node2 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< double, 3 \>" ,fontname="FreeSans"];
+  Node2 [label="SMacierz\< double, 3 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00093.html",tooltip=" "];
+}

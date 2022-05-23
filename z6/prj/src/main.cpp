@@ -8,11 +8,21 @@
 
 using namespace std;
 
+/*!
+ * \brief inicjowanie zmiennej statycznej ilosc_wektorow
+ */
 template<>
   int Wektor3D::ilosc_wektorow = 0;
+/*!
+ * \brief inicjowanie zmiennej statycznej ilosc_aktywnych_wektorow
+ */
 template<>
   int Wektor3D::ilosc_aktywnych_wektorow = 0;
 
+/*!
+ * \brief funkcja wyświetla zmienne statyczne klasy SWektor zliczające liczbę jej obiektów
+ * \param [in] StrmWy - referencja strumienia wyjściowego
+ */
 void wyswietl_wektory(std::ostream &StrmWy)
 {
     StrmWy << "Aktualna ilosc obiektow Wektor3D: ";
@@ -22,11 +32,16 @@ void wyswietl_wektory(std::ostream &StrmWy)
     StrmWy << std::endl << std::endl;
 }
 
+/*!
+ * \brief Funkcja main.
+ * Tworzy obiekt klasy scena.
+ * Wykonuje funkcjonalność menu wyboru opcji (j, o, w, m, k).
+ */
 int main()
 { 
   
-  Scena s;
-  char wczytany_znak = ' ';
+  Scena s;  // tworzymy obiekt klasy scena
+  char wczytany_znak = ' '; // zmienna przechowująca wczytany znak w menu wynboru opcji
 
   do
   {
@@ -34,27 +49,29 @@ int main()
     s.WyswietlAktywny(std::cout); // wyświetlamy informacje o aktywnm laziku (położenie, kąt)
     wyswietl_wektory(std::cout); /// wyświetlamy zmienne statyczne wektora zliczające ilośc elementów klasy
   
+    // menu wyboru opcji
     cout << "j-jazda na wprost" << endl;
     cout << "o-zmien orientacje" << endl;
     cout << "w-wybor lazika" << endl;
     cout << "m-wyswietl menu" << endl << endl;
     cout << "k-koniec" << endl;
+    cout << endl << "Twoj wybor, m - menu> ";
     cin >> wczytany_znak;
 
     switch(wczytany_znak)
     {
-      case 'j':
+      case 'j':  // opcja jazda po prostej
       s.jedziemy(std::cin, std::cout); break;
 
-      case 'o':
+      case 'o':  // opcja rotacji
       s.krecimy(std::cin, std::cout); break;
 
-      case 'w':
+      case 'w':  // opcja wyboru łazika
       s.ZmienDrona(std::cin, std::cout); break;
 
-      case 'm' : break;
+      case 'm' : break;  // opcja menu
 
-      case 'k' : break;
+      case 'k' : break;  // opcja koniec
 
       default:
       cerr << "Blad! Podaj jedna z opcji."; break;

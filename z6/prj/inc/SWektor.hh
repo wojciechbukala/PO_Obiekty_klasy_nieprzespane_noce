@@ -5,21 +5,43 @@
 #include <cmath>
 
 
-/*
- * Szablon klasy modelującej pojęcie wektora.
- * typ - typ zmennych składowych wektora (np. double, int, LZespolona).
- * wymiar - rozmiar wektora, liczba całkowita int.
+/*!
+ * \brief  Szablon klasy modelującej pojęcie wektora.
+ * Klasa ta jest szablonem i może stworzyć wektory dowolnie dużej 
+ * wielkości i zawierający elementy różych typów
+ * \param [in] typ - typ zmennych składowych wektora (np. double, int, LZespolona).
+ * \param [in] wymiar - rozmiar wektora, liczba całkowita int.
  */
 template <typename typ, int wymiar>
 class SWektor {
-  
-  typ tab[wymiar]; // SWektor jako tablica jednowymiarowa
-  static int ilosc_wektorow; // zmienna statyczna do wyswietlania ilosci wektorów
-  static int ilosc_aktywnych_wektorow; // zmienna statyczna do wyświetlania ilości aktywnych wektorów
+  /*!
+   * \brief  SWektor jako tablica jednowymiarowa
+   */
+  typ tab[wymiar];
+  /*!
+   * \brief zmienna statyczna do zliczania wszytkich stworzonych wektorów 
+   */
+  static int ilosc_wektorow;
+  /*!
+   * \brief zmienna statyczna do zliczania wszystkich aktywnych wektorów
+   */
+  static int ilosc_aktywnych_wektorow;
 
   public:
-    typ &operator[] (int indeks) {return tab[indeks];} // Przeciążenie indeksu SWektora;
-    typ operator[] (int indeks) const {return tab[indeks];} // Przeciążenie indeksu SWektora;
+  /*!
+   * \brief Przeciążenie indeksu SWektora
+   * \param [in] indeks - indeks elementu wektora
+   * \return typ - zwraca element wektora
+   */
+    typ &operator[] (int indeks) {return tab[indeks];} 
+  /*!
+   * \brief Przeciążenie indeksu SWektora
+   * \param [in] indeks - indeks elementu wektora
+   * \return typ - zwraca element wektora
+   */
+    typ operator[] (int indeks) const {return tab[indeks];}
+
+    // dokumentacja do poniższych metod w dalszej części pliku //
     SWektor<typ,wymiar> operator + (SWektor<typ,wymiar> SWektor2); // Przeciążenie dodawania dla SWektorów
     SWektor<typ,wymiar>& operator - (SWektor<typ, wymiar> SWektor2); // Przęciążenie odejmowania dla SWektorów
     typ operator * (SWektor SWektor2); // Przeciążenie iloczynu sklarnego dla SWektora
@@ -40,7 +62,11 @@ template <typename typ, int wymiar>
 int SWektor<typ,wymiar>::ilosc_wektorow = 0;  // przypisujemy wartosc zero do zmiennej statycznej
 int SWektor<typ,wymiar>::ilosc_aktywnych_wektorow =0; */
 
-
+/*!
+ * \brief Konstruktor bezparametryczny
+ * wykonuje inkrementację ilosc_wektorow
+ * i ilosc_aktywnych_wektorow
+ */
 template<typename typ, int wymiar>
 SWektor<typ,wymiar>::SWektor() 
 {
@@ -49,6 +75,14 @@ SWektor<typ,wymiar>::SWektor()
     ++ilosc_aktywnych_wektorow;
 }
 
+/*!
+ * \brief Konstruktor parametryczny
+ * wykonuje inkrementację ilosc_wektorw
+ * i ilosc_aktywnych_wektorow
+ * \param [in] jeden - pierwszy element wektora
+ * \param [in] dwa - drugie element wektora
+ * \param [in] trzy - trzeci element wektora
+ */
 template<typename typ, int wymiar>
 SWektor<typ,wymiar>::SWektor(typ jeden, typ dwa, typ trzy) // konstruktor dla wektora 3 wyrazowego
 {
@@ -59,18 +93,23 @@ SWektor<typ,wymiar>::SWektor(typ jeden, typ dwa, typ trzy) // konstruktor dla we
     ++ilosc_aktywnych_wektorow;
 }
 
+/*!
+ * \brief destruktor wektora
+ * wykonuje dekrementację pola
+ * ilosc_aktywnych_wektorow
+ */
 template<typename typ, int wymiar>
 SWektor<typ,wymiar>::~SWektor()
 {
     --ilosc_aktywnych_wektorow;
 }
 
-/* 
- * Przeciążenie operatora & mnożenie dla elementów SWektorów
- * Argumenty:
- *  SWektor const SWektor2 - drugi z elementów mnożenia
- * Zwraca:
- *  SWektor wynik - macież gdzie elementy są wynikami mnożenia kolejnych elementów dwóch macierzy
+/*! 
+ * \brief Przeciążenie operatora & mnożenie dla elementów SWektorów
+ * 
+ *  \param [in] const SWektor2 - drugi z elementów mnożenia
+ *
+ * \return SWektor wynik - macież gdzie elementy są wynikami mnożenia kolejnych elementów dwóch macierzy
  */
 template <typename typ, int wymiar>
 SWektor<typ,wymiar> SWektor<typ, wymiar>:: operator & (SWektor const Wektor2)
@@ -80,12 +119,12 @@ SWektor<typ,wymiar> SWektor<typ, wymiar>:: operator & (SWektor const Wektor2)
     return wynik;
 }
 
-/* 
- * Przeciążenie operatora dodawania dla SWektorów
- * Argumenty:
- *  SWektor SWektor2 - składnik sumowania
- * Zwraca:
- *  SWektor T - wynik sumowania dwóch SWektorów
+/*! 
+ * \brief Przeciążenie operatora dodawania dla SWektorów
+ *
+ *  \param [in] SWektor SWektor2 - składnik sumowania
+ * 
+ *  \return SWektor T - wynik sumowania dwóch SWektorów
  */
  template <typename typ, int wymiar>
 SWektor<typ, wymiar> SWektor<typ, wymiar>::operator + (SWektor<typ,wymiar> SWektor2)
@@ -95,12 +134,12 @@ SWektor<typ, wymiar> SWektor<typ, wymiar>::operator + (SWektor<typ,wymiar> SWekt
     return T;
 }
 
-/* 
- * Przeciążenie operatora odejmowania dla SWektorów
- * Argumenty:
- *  SWektor SWektor2 - odjemna dla operacji różnicy dwóch SWektorów
- * Zwraca:
- *  SWektor &wynik - referencja wyniku różnicy dwóch SWektorów
+/*!
+ * \brief Przeciążenie operatora odejmowania dla SWektorów
+ *
+ *  \param [in] SWektor2 - odjemna dla operacji różnicy dwóch SWektorów
+ *
+ *  \return &wynik - referencja wyniku różnicy dwóch SWektorów
  */
 template <typename typ, int wymiar>
 SWektor<typ, wymiar>& SWektor<typ, wymiar>::operator - (SWektor<typ,wymiar> SWektor2)
@@ -111,12 +150,12 @@ SWektor<typ, wymiar>& SWektor<typ, wymiar>::operator - (SWektor<typ,wymiar> SWek
     return wynik;
 }
 
-/* 
- * Przeciążenie operatora mnożenia dla iloczynu sklarnego
- * Argumenty:
- *  SWektor SWektor2 - czynnik mnożenia
- * Zwraca:
- *  SWektor T - wynik iloczynu skalarnego dla dwóch SWektorów
+/*! 
+ * \brief Przeciążenie operatora mnożenia dla iloczynu sklarnego
+ *
+ *  \param [in] SWektor2 - czynnik mnożenia
+ * 
+ *  \return SWektor T - wynik iloczynu skalarnego dla dwóch SWektorów
  */
 
 template <typename typ, int wymiar>
@@ -127,12 +166,12 @@ typ SWektor<typ,wymiar>::operator * (SWektor<typ,wymiar> SWektor2)
     return T;
 } 
 
-/* 
- * Przeciążenie operatora mnożenia przez skalar
- * Argumenty:
- *  double skalar - liczba zmiennoprzecinkowa do mnożenia elementów
- * Zwraca:
- *  SWektor T - wymnożony SWektor przez liczbe zmiennoprzecinkową (skalar)
+/*! 
+ * \brief Przeciążenie operatora mnożenia przez skalar
+ *
+ *  \param [in] skalar - liczba zmiennoprzecinkowa do mnożenia elementów
+ *
+ *  \return SWektor T - wymnożony SWektor przez liczbe zmiennoprzecinkową (skalar)
  */
 template <typename typ, int wymiar>
 SWektor<typ,wymiar> SWektor<typ,wymiar>::operator * (double skalar)
@@ -142,13 +181,13 @@ SWektor<typ,wymiar> SWektor<typ,wymiar>::operator * (double skalar)
     return T;
 } 
 
-/* 
- * Przeciążenie operatora dzilenie dla SWektorów
+/*! 
+ * \brief Przeciążenie operatora dzilenie dla SWektorów
  * posiada zabezpieczenie przed dzieleniem przez zero
- * Argumenty:
- *  SWektor SWektor2 - SWektor którego elemnty są dzielną w operacji
- * Zwraca:
- *  SWektor T - wynik dzielenia
+ *
+ *  \param [in] SWektor2 - SWektor którego elemnty są dzielną w operacji
+ * 
+ * \return SWektor T - wynik dzielenia
  */
 template <typename typ, int wymiar>
 SWektor<typ,wymiar> SWektor<typ,wymiar>::operator / (SWektor<typ,wymiar> SWektor2)
@@ -167,11 +206,10 @@ SWektor<typ,wymiar> SWektor<typ,wymiar>::operator / (SWektor<typ,wymiar> SWektor
 }
 
 /* 
- * Przeciążenie operatora przypisania dla SWektora
- * Argumenty:
- *  -SWektor &SWektor2 - SWektor, którego elementy przypisujemy do tab<wymiar]
- * Zwraca:
- *  *this - referencja SWektora, atrybut tab<wymiar], czyli miejsce przechowujące elementy SWektora
+ * \brief Przeciążenie operatora przypisania dla SWektora
+ *
+ *  \param [in] &SWektor2 - SWektor, którego elementy przypisujemy do tab<wymiar]
+ *  \return *this - referencja SWektora, atrybut tab<wymiar], czyli miejsce przechowujące elementy SWektora
  */
 /*
 template <typename typ, int wymiar>
@@ -181,12 +219,10 @@ SWektor<typ,wymiar>& SWektor<typ,wymiar>::operator = (SWektor<typ,wymiar> & SWek
     return *this;
 } */
 
-/* 
- * Medota obliczająca długość SWektora
- * Argumenty:
- *  -brak
- * Zwraca:
- *  double mod - liczba zmiennoprzecinkowa, będąca długością SWektora
+/*! 
+ * \brief Medota obliczająca długość SWektora
+ *
+ *\return  double mod - liczba zmiennoprzecinkowa, będąca długością SWektora
  */
 template <typename typ, int wymiar>
 typ SWektor<typ,wymiar>::dlugosc()
@@ -197,14 +233,13 @@ typ SWektor<typ,wymiar>::dlugosc()
     return mod;
 }
 
-/* 
- * Przeciążenie wczytujące SWektor ze strumienia std::istream
+/*! 
+ * \brief Przeciążenie wczytujące SWektor ze strumienia std::istream
  * Akceptowany format prametrów SWektora to liczby zmiennoprzicnkowe
- * Argumenty:
- *  SWektor &Wek - referencja SWektora do którego wpisujemy parametry
- *  std::istream &Strm - referencja sturmienia wejściowego
- * Zwraca:
- *  Wczytuje strumieniem std::istream SWektor
+ *  \param [in] Wek - referencja SWektora do którego wpisujemy parametry
+ *  \param [in] Strm - referencja sturmienia wejściowego
+ * 
+ * \return Wczytuje strumieniem std::istream SWektor
  */
 
 template <typename typ, int wymiar>
@@ -218,13 +253,13 @@ std::istream& operator >> (std::istream &Strm, SWektor<typ,wymiar> &Wek)
     return Strm;
 }
 
-/* 
- * Przeciążenie wypisujące SWektor na strumień std::ostream
- * Argumenty:
- *  SWektor Wek - SWektor którego parametry wypisujemy 
- *  std::ostream &Strm - referencja sturmienia wyjściowego
- * Zwraca:
- *  Wypisuje na strumień std::ostream
+/*! 
+ * \brief Przeciążenie wypisujące SWektor na strumień std::ostream
+ *
+ *  \param [in] Wek - SWektor którego parametry wypisujemy 
+ *  \param [in] Strm - referencja sturmienia wyjściowego
+ *
+ * \return  Wypisuje na strumień std::ostream
  */
 template <typename typ, int wymiar>
 std::ostream& operator << (std::ostream &Strm, const SWektor<typ,wymiar> &Wek)

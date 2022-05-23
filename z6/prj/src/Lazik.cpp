@@ -22,10 +22,12 @@ void Lazik::jazda(PzG::LaczeDoGNUPlota  Lacze, std::istream& StrmWej, std::ostre
     StrmWyj << "Podaj odleglosc do przejechania:";
     StrmWej >> OdlegloscDoPrzejechania;
     Wektor3D nowe_polozenie = polozenie;  // wektor do obliczeń, po wykonaniu animacji ma nowe współżędne
-    double x_kierunek = cos(KatOrientacji*3.14/180); // przesuniecie o x , double x = OdlegloscDoPrzejechania * cos(KatOrientacji)
-    double y_kierunek = sin(KatOrientacji*3.14/180); // przesuniecie o y , double y = OdlegloscDoPrzejechania * sin(KatOrientacji)
-    std::cout << "Kat: " << KatOrientacji << std::endl;
-    for(double i = 0 ; i < OdlegloscDoPrzejechania; ++i)  // dzielimy przejście na OdlegloscDoPrzejechania*100 małych kroczkow
+    double kat_roboczy;
+    if(OdlegloscDoPrzejechania<0) kat_roboczy = KatOrientacji + 180; // jeśli mamy jechać do tyłu to zmieniamy orientację o 180 stopni
+    else kat_roboczy = KatOrientacji; // przypadek kiedy jedziemy do przodu
+    double x_kierunek = cos(kat_roboczy*3.14/180); // przesuniecie o x , double x = OdlegloscDoPrzejechania * cos(KatOrientacji)
+    double y_kierunek = sin(kat_roboczy*3.14/180); // przesuniecie o y , double y = OdlegloscDoPrzejechania * sin(KatOrientacji)
+    for(double i = 0 ; i < abs(OdlegloscDoPrzejechania); ++i)  // dzielimy przejście na OdlegloscDoPrzejechania*100 małych kroczkow
       {
       nowe_polozenie[0] += x_kierunek;
       nowe_polozenie[1] += y_kierunek;  

@@ -1,0 +1,20 @@
+digraph "Lazik"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="Lazik",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Klasa Lazik."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="ObiektGeom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00085.html",tooltip="Klasa ObiektGeom."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" skala\npolozenie" ,fontname="FreeSans"];
+  Node3 [label="SWektor\< double, 3 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00097.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< double, 3 \>" ,fontname="FreeSans"];
+  Node4 [label="SWektor\< typ, wymiar \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00097.html",tooltip="Szablon klasy modelującej pojęcie wektora. Klasa ta jest szablonem i może stworzyć wektory dowolnie d..."];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" MacierzRotacji" ,fontname="FreeSans"];
+  Node5 [label="SMacierz\< double, 3 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00093.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Tab\nkopia" ,fontname="FreeSans"];
+  Node6 [label="SWektor\< double, wymiar \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00097.html",tooltip=" "];
+  Node4 -> Node6 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< double, wymiar \>" ,fontname="FreeSans"];
+  Node7 -> Node5 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< double, 3 \>" ,fontname="FreeSans"];
+  Node7 [label="SMacierz\< typ, wymiar \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00093.html",tooltip="Szblon klasy Macierz."];
+}
