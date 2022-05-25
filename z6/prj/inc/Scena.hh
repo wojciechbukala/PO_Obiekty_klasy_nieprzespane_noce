@@ -69,9 +69,9 @@ class Scena
      *
      *  Wykorzystuje metodę obrot z klasy lazik dla
      *  atulanego lazika aby wywołać jego obrot o zadany kąt.
-     * \param[in] dron - numer dron, który chcemy wybrać
+     * \param[in] lazik - numer lazika, który chcemy wybrać
      */    
-    void WyborDrona(int dron);
+    void WyborLazika(int lazik);
         /*!
      *  \brief Metoda pozwalająca zamienić drona, ktorym chemy sterować
      *
@@ -80,13 +80,14 @@ class Scena
      * \param[in] StrmWe - referencja strumienia wejściowego.
      * \param[in] StrmWy - referencja strumienia wyjściowego.
      */
-    void ZmienDrona(std::istream &StrmWe, std::ostream &StrmWy);
+    void ZmienLazika(std::istream &StrmWe, std::ostream &StrmWy);
     /*!
      *  \brief Metoda wyświetla paramtry aktywnego łazika
      *
      * \param[in] StrmWy - referencja strumienia wyjściowego.
      */
     void WyswietlAktywny(std::ostream &StrmWy);
+    void zmien_szybkosc(std::istream &StrmWe, std::ostream &StrmWy);
 };
 
 #endif

@@ -49,20 +49,20 @@ Scena::Scena()
     Lacze.Rysuj();
 }
 
-void Scena::WyborDrona(int dron)
+void Scena::WyborLazika(int lazik)
 {
     std::list<std::shared_ptr<Lazik>>::iterator iter = ObiektySceny.begin();
-    for (int i=0; i < dron; i++)
+    for (int i=0; i < lazik; i++)
     {
         AktualnyLazik = *iter;
         ++iter;
     }
 }
 
-void Scena::ZmienDrona(std::istream &StrmWe, std::ostream &StrmWy)
+void Scena::ZmienLazika(std::istream &StrmWe, std::ostream &StrmWy)
 {
     std::list<std::shared_ptr<Lazik>>::iterator iter = ObiektySceny.begin();
-    int numer_drona; // zmienna przechowująca numer drona
+    int numer_lazika; // zmienna przechowująca numer drona
     /* Interfejs wyświetlania wszystkich trzech możliwośi wyboru drona. */
     StrmWy << "1. ---------- Nazwa: Sample_Fetch_Rover" << std::endl;
     StrmWy << "          Polozenie: " << (*iter)->DajPolozenie() << std::endl;
@@ -79,8 +79,8 @@ void Scena::ZmienDrona(std::istream &StrmWe, std::ostream &StrmWy)
     StrmWy << "    Orientacja [st]: " << (*iter)->DajKat() << std::endl;
     StrmWy << std::endl;
     StrmWy << "Podaj numer lazik >";
-    StrmWe >> numer_drona;
-    WyborDrona(numer_drona);   
+    StrmWe >> numer_lazika;
+    WyborLazika(numer_lazika);   
 }
 
 void Scena::WyswietlAktywny(std::ostream &StrmWy)
@@ -91,4 +91,12 @@ void Scena::WyswietlAktywny(std::ostream &StrmWy)
     StrmWy << "          Polozenie: " << AktualnyLazik->DajPolozenie() << std::endl;
     StrmWy << "    Orientacja [st]: " << AktualnyLazik->DajKat() << std::endl;
     StrmWy << std::endl;
+}
+
+void Scena::zmien_szybkosc(std::istream &StrmWe, std::ostream &StrmWy)
+{
+    double nowa_szybkosc;
+    StrmWy << "Podaj nowa szybkosc lazika: ";
+    StrmWe >> nowa_szybkosc;
+    AktualnyLazik->WpiszSzybkosc(nowa_szybkosc);
 }

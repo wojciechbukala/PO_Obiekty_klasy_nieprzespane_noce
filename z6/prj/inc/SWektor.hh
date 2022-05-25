@@ -47,10 +47,12 @@ class SWektor {
     typ operator * (SWektor SWektor2); // Przeciążenie iloczynu sklarnego dla SWektora
     SWektor<typ,wymiar> operator * (double skalar);  // Przeciążenie mnożenia SWektora przez skalar
     SWektor<typ,wymiar> operator / (SWektor<typ,wymiar> SWektor2); // Przeciążenie odejmowania dla SWektorów
+    bool operator == (SWektor<typ,wymiar> SWektor2); // Przeciążenie operatora porównania
     //SWektor<typ,wymiar>& operator = (SWektor<typ,wymiar>& SWektor2); // Przeciążenie operatora przypisania dla SWektorów
     typ dlugosc(); // metoda wyliczająca długość SWektora
     SWektor(); // konstruktor bezprametryczny
     SWektor(typ jeden, typ dwa, typ trzy); // konstruktor dla wektora 3 wyrazowego
+    SWektor(typ jeden, typ dwa); // konstruktor dla wektora 2 wyrazowego
     ~SWektor(); // destruktor
     SWektor operator & (SWektor const Wektor2); // metoda do mnożenie poszczególnych elementów macierzy
     static void wyswietl_ile_wek(std::ostream& StrmWy) {StrmWy << ilosc_wektorow << std::endl ;}; //metoda statyczna do wyświetlania ilości elementow
@@ -76,11 +78,11 @@ SWektor<typ,wymiar>::SWektor()
 }
 
 /*!
- * \brief Konstruktor parametryczny
+ * \brief Konstruktor parametryczny dla wektora 3D
  * wykonuje inkrementację ilosc_wektorw
  * i ilosc_aktywnych_wektorow
  * \param [in] jeden - pierwszy element wektora
- * \param [in] dwa - drugie element wektora
+ * \param [in] dwa - drugi element wektora
  * \param [in] trzy - trzeci element wektora
  */
 template<typename typ, int wymiar>
@@ -89,6 +91,22 @@ SWektor<typ,wymiar>::SWektor(typ jeden, typ dwa, typ trzy) // konstruktor dla we
     tab[0] = jeden; 
     tab[1] = dwa; 
     tab[2] = trzy; 
+    ++ilosc_wektorow; 
+    ++ilosc_aktywnych_wektorow;
+}
+
+/*!
+ * \brief Konstruktor parametryczny dla wektora 2D
+ * wykonuje inkrementację ilosc_wektorw
+ * i ilosc_aktywnych_wektorow
+ * \param [in] jeden - pierwszy element wektora
+ * \param [in] dwa - drugi element wektora
+ */
+template<typename typ, int wymiar>
+SWektor<typ,wymiar>::SWektor(typ jeden, typ dwa) // konstruktor dla wektora 2 wyrazowego
+{
+    tab[0] = jeden; 
+    tab[1] = dwa; 
     ++ilosc_wektorow; 
     ++ilosc_aktywnych_wektorow;
 }
@@ -210,8 +228,7 @@ SWektor<typ,wymiar> SWektor<typ,wymiar>::operator / (SWektor<typ,wymiar> SWektor
  *
  *  \param [in] &SWektor2 - SWektor, którego elementy przypisujemy do tab<wymiar]
  *  \return *this - referencja SWektora, atrybut tab<wymiar], czyli miejsce przechowujące elementy SWektora
- */
-/*
+ */  /*
 template <typename typ, int wymiar>
 SWektor<typ,wymiar>& SWektor<typ,wymiar>::operator = (SWektor<typ,wymiar> & SWektor2)
 {
@@ -219,6 +236,12 @@ SWektor<typ,wymiar>& SWektor<typ,wymiar>::operator = (SWektor<typ,wymiar> & SWek
     return *this;
 } */
 
+template <typename typ, int wymiar>
+bool SWektor<typ,wymiar>::operator == (SWektor<typ,wymiar> SWektor2) // Przeciążenie operatora porównania
+{
+    for(int i=0; i<wymiar; ++i) if(this->tab[i] != SWektor2.tab[i]) return false;
+    return true;
+} 
 /*! 
  * \brief Medota obliczająca długość SWektora
  *

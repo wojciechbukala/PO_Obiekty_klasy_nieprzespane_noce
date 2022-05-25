@@ -20,6 +20,17 @@ template<>
   int Wektor3D::ilosc_aktywnych_wektorow = 0;
 
 /*!
+ * \brief inicjowanie zmiennej statycznej ilosc_wektorow
+ */
+template<>
+  int Wektor2D::ilosc_wektorow = 0;
+/*!
+ * \brief inicjowanie zmiennej statycznej ilosc_aktywnych_wektorow
+ */
+template<>
+  int Wektor2D::ilosc_aktywnych_wektorow = 0;
+
+/*!
  * \brief funkcja wyświetla zmienne statyczne klasy SWektor zliczające liczbę jej obiektów
  * \param [in] StrmWy - referencja strumienia wyjściowego
  */
@@ -39,7 +50,7 @@ void wyswietl_wektory(std::ostream &StrmWy)
  */
 int main()
 { 
-  
+
   Scena s;  // tworzymy obiekt klasy scena
   char wczytany_znak = ' '; // zmienna przechowująca wczytany znak w menu wynboru opcji
 
@@ -51,6 +62,7 @@ int main()
   
     // menu wyboru opcji
     cout << "j-jazda na wprost" << endl;
+    cout << "s-zmien szybkosc lazika" <<endl;
     cout << "o-zmien orientacje" << endl;
     cout << "w-wybor lazika" << endl;
     cout << "m-wyswietl menu" << endl << endl;
@@ -63,11 +75,14 @@ int main()
       case 'j':  // opcja jazda po prostej
       s.jedziemy(std::cin, std::cout); break;
 
+      case 's':  // opcja zmiany szybkosci
+      s.zmien_szybkosc(std::cin, std::cout); break;
+
       case 'o':  // opcja rotacji
       s.krecimy(std::cin, std::cout); break;
 
       case 'w':  // opcja wyboru łazika
-      s.ZmienDrona(std::cin, std::cout); break;
+      s.ZmienLazika(std::cin, std::cout); break;
 
       case 'm' : break;  // opcja menu
 
@@ -78,6 +93,7 @@ int main()
     }
   } while (wczytany_znak != 'k');
   
-  cout << "Koniec dzialania programu." << endl;
+
+  cout << "Koniec dzialania programu." << endl; 
 
 }

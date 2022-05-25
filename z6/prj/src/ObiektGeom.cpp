@@ -2,10 +2,6 @@
 #include <fstream>
 #include "ObiektGeom.hh"
 
-
-
-
-
 using namespace std;
 
 ObiektGeom::ObiektGeom( const char*  sNazwaPliku_BrylaWzorcowa, const char*  sNazwaObiektu, int KolorID, Wektor3D wczytana_skala, Wektor3D wczytane_polozenie):
@@ -58,6 +54,14 @@ bool ObiektGeom::Przelicz_i_Zapisz_Wierzcholki()
     StrmWe >> wsp;
     
   } while (!StrmWe.fail());
+
+  double DlugoscObrysuX = skala[0] * (MacierzRotacji[1][0] + MacierzRotacji[1][1]);
+  double DlugoscObrysuY = skala[1] * (MacierzRotacji[1][0] + MacierzRotacji[1][1]);
+
+  Wektor2D x(polozenie[0]-(DlugoscObrysuX/2), polozenie[0]+(DlugoscObrysuX/2));
+  Wektor2D y(polozenie[1]-(DlugoscObrysuY/2), polozenie[1]+(DlugoscObrysuY/2));
+  Obrys.WpiszBokX(x);
+  Obrys.WpiszBokY(y); 
 
   if (!StrmWe.eof()) return false;
   

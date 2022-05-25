@@ -2,7 +2,6 @@
 #define LAZIK_HH
 
 #include <string>
-#include <cmath>
 #include <chrono>
 #include <thread>
 #include "ObiektGeom.hh"
@@ -48,7 +47,12 @@ protected:
     */
     Lazik(const char* sNazwaPliku_BrylaWzorcowa, const char* sNazwaObiektu, int KolorID, Wektor3D wczytana_skala, Wektor3D wczytane_polozenie, double kat, double szybkosc) 
     : ObiektGeom(sNazwaPliku_BrylaWzorcowa, sNazwaObiektu, KolorID, wczytana_skala, wczytane_polozenie) {KatOrientacji=kat; Szybkosc = szybkosc;}
-       
+    /*!
+    * \brief Metoda odpowiadająca za zmienianie wartosci szybkosci.
+    *
+    * \param[in] nowa_szybkosc - wartosci na jaką należy zmienić pole Szybkosc
+    */       
+    void WpiszSzybkosc(double nowa_szybkosc) {Szybkosc = nowa_szybkosc;}
     /*!
     * \brief Metoda odpowiadająca za jazdę po prostej łazika.
     *
@@ -87,6 +91,15 @@ protected:
       * \return Aktualna wartosc wektora polozenie
       */
     Wektor3D DajPolozenie() {return polozenie;};
+    /*!
+      * \brief Przeciążenie metody wirtualnej z klasy ObiektGeom do sprawdzania typu obiektu
+      * \return Zwraca nazwę obiektu klasy Lazik
+      */
+    std::string JakiObiekt () override
+    {
+      return "Lazik";
+    }
+    //std::string CzyKolizja(ObiektGeom& DrugiLazik) override;
 };
 
 

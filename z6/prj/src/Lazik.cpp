@@ -43,12 +43,30 @@ void Lazik::obrot(PzG::LaczeDoGNUPlota  Lacze, std::ostream& StrmWyj, std::istre
     StrmWyj << "Podaj kat obrotu: ";
     double nowy_kat;
     StrmWej >> nowy_kat;
-    for(double i = KatOrientacji; i<nowy_kat + KatOrientacji; ++i)
+    if(nowy_kat > 0)
     {
-        Rotacja(i);
-        Przelicz_i_Zapisz_Wierzcholki();
-        std::this_thread::sleep_for(std::chrono::milliseconds(20));
-        Lacze.Rysuj();
+        for(double i = KatOrientacji; i<nowy_kat + KatOrientacji; ++i)
+        {
+            Rotacja(i);
+            Przelicz_i_Zapisz_Wierzcholki();
+            std::this_thread::sleep_for(std::chrono::milliseconds(20));
+            Lacze.Rysuj();
+        }
+    } else {
+        for(double i = KatOrientacji; i>nowy_kat + KatOrientacji; --i)
+        {
+            Rotacja(i);
+            Przelicz_i_Zapisz_Wierzcholki();
+            std::this_thread::sleep_for(std::chrono::milliseconds(20));
+            Lacze.Rysuj();
+        }
     }
     KatOrientacji += nowy_kat;
 }
+
+/*
+bool Lazik::CzyKolizja(ObiektGeom& DrugiLazik)
+{
+    if(Obrys.NakladajaSie(DrugiLazik)) return "TK_BrakKolizji" ; // nie nakładają się
+    else return "TK_KOLIZJA" // nakładają się
+} */

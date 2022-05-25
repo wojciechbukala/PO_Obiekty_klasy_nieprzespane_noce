@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dokumentacja Łaziki: SWektor&lt; typ, wymiar &gt; Class Template Reference</title>
+<title>Lazik: SWektor&lt; typ, wymiar &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Dokumentacja Łaziki
+   <div id="projectname">Lazik
    </div>
-   <div id="projectbrief">Dokumentacja do zadania 6. Wojciech Bukała nr 263479, AiR, rok 2021/22</div>
+   <div id="projectbrief">Wojciech Bukała</div>
   </td>
  </tr>
  </tbody>
@@ -109,8 +109,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7035cb7939d6927d2103004da2341b85"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_wektor.html#a7035cb7939d6927d2103004da2341b85">SWektor</a> (typ jeden, typ dwa, typ trzy)</td></tr>
 <tr class="memdesc:a7035cb7939d6927d2103004da2341b85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor parametryczny wykonuje inkrementację ilosc_wektorw i ilosc_aktywnych_wektorow.  <a href="class_s_wektor.html#a7035cb7939d6927d2103004da2341b85">More...</a><br /></td></tr>
 <tr class="separator:a7035cb7939d6927d2103004da2341b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a131cc7251dbd68af2f2ba02858a9bd29"><td class="memItemLeft" align="right" valign="top"><a id="a131cc7251dbd68af2f2ba02858a9bd29"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_wektor.html#a131cc7251dbd68af2f2ba02858a9bd29">~SWektor</a> ()</td></tr>
+<tr class="memdesc:a131cc7251dbd68af2f2ba02858a9bd29"><td class="mdescLeft">&#160;</td><td class="mdescRight">destruktor wektora wykonuje dekrementację pola ilosc_aktywnych_wektorow <br /></td></tr>
+<tr class="separator:a131cc7251dbd68af2f2ba02858a9bd29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c4527740c93aab4e157ecd7d6a23310"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_wektor.html">SWektor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_wektor.html#a5c4527740c93aab4e157ecd7d6a23310">operator&amp;</a> (<a class="el" href="class_s_wektor.html">SWektor</a> const Wektor2)</td></tr>
-<tr class="memdesc:a5c4527740c93aab4e157ecd7d6a23310"><td class="mdescLeft">&#160;</td><td class="mdescRight">destruktor wektora wykonuje dekrementację pola ilosc_aktywnych_wektorow template&lt;typename typ, int wymiar&gt; SWektor&lt;typ,wymiar&gt;::~SWektor() { &ndash;ilosc_aktywnych_wektorow; }  <a href="class_s_wektor.html#a5c4527740c93aab4e157ecd7d6a23310">More...</a><br /></td></tr>
+<tr class="memdesc:a5c4527740c93aab4e157ecd7d6a23310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Przeciążenie operatora &amp; mnożenie dla elementów SWektorów.  <a href="class_s_wektor.html#a5c4527740c93aab4e157ecd7d6a23310">More...</a><br /></td></tr>
 <tr class="separator:a5c4527740c93aab4e157ecd7d6a23310"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -219,9 +223,7 @@ template&lt;typename typ , int wymiar&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>destruktor wektora wykonuje dekrementację pola ilosc_aktywnych_wektorow template&lt;typename typ, int wymiar&gt; SWektor&lt;typ,wymiar&gt;::~SWektor() { &ndash;ilosc_aktywnych_wektorow; } </p>
-<p>/*!</p>
-<p>Przeciążenie operatora &amp; mnożenie dla elementów SWektorów</p>
+<p>Przeciążenie operatora &amp; mnożenie dla elementów SWektorów. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">const</td><td>SWektor2 - drugi z elementów mnożenia</td></tr>

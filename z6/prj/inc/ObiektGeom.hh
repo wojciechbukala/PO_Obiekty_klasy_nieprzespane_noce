@@ -2,8 +2,11 @@
 #define OBIEKTGEOM_HH
 
 #include <string>
+#include <cmath>
 #include "Wektor3D.hh"
 #include "Macierz3D.hh"
+#include "Wektor2D.hh"
+#include "ObrysXY.hh"
 
 #define NAZWA_KARTOTEKI_PLIKOW_DO_RYSOWANIA    "pliki_do_rysowania"
 
@@ -32,10 +35,13 @@ class ObiektGeom {
     /*!
      *  \brief Macierz potrzeba do przeliczania obrotu.
     *    
-    *  sDziała na funkcjach trygonometrycznych i potrzebuje
+    *  Działa na funkcjach trygonometrycznych i potrzebuje
     *  kąta orientacji do prawidołowego działania.
     */
     Macierz3D MacierzRotacji;
+    /*!
+     *  \brief Pole Obrys reprezentujące obiekt jako kontur 2D.
+    */
   
   public:
      /*!
@@ -92,7 +98,20 @@ class ObiektGeom {
       *
       * \return bool 1 - pomyślnie wykonano przliczanie, 0 - coś się nie powiodło 
       */
-    void zmien_polozenie(Wektor3D nowy) {polozenie = nowy;};  
+    void zmien_polozenie(Wektor3D nowy) {polozenie = nowy;};
+     /*!
+      * \brief Abstrakcyjna metoda wirtualna do sprawdzania typu obiektu klasy pochodnej
+      * \return Zwraca nazwę obiektu klasy pochodnej
+      */
+    virtual std::string JakiObiekt () {return "JakisObiekt";} 
+     /*!
+      * \brief Destruktor wirtualny klasy ObiektGeom
+      */
+    virtual ~ObiektGeom() {};
+    /*!
+     *  \brief Pole Obrys reprezentujące obiekt jako kontur 2D.
+    */
+    ObrysXY Obrys;
 };
 
 
