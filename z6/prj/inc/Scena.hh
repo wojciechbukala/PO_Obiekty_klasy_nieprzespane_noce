@@ -26,7 +26,7 @@ class Scena
     /*!
      *  \brief Lista wszystkich obiektów klasy łazik
      */
-    std::list<std::shared_ptr<Lazik>> ObiektySceny;
+    std::list<std::shared_ptr<ObiektGeom>> ObiektySceny;
     /*!
      *  \brief Lacze do gnuplota
      */

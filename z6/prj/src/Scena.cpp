@@ -15,7 +15,7 @@ void Scena::DodajDoListyRysowania()
 {
   PzG::InfoPlikuDoRysowania *wInfoPliku;
   
-  for(std::list<std::shared_ptr<Lazik>>::iterator iter = ObiektySceny.begin(); iter != ObiektySceny.end(); ++iter) 
+  for(std::list<std::shared_ptr<ObiektGeom>>::iterator iter = ObiektySceny.begin(); iter != ObiektySceny.end(); ++iter) 
     {    
     wInfoPliku = &Lacze.DodajNazwePliku((*iter)->WezNazwePliku_BrylaRysowana());
     wInfoPliku->ZmienKolor((*iter)->WezKolorID());
@@ -51,32 +51,32 @@ Scena::Scena()
 
 void Scena::WyborLazika(int lazik)
 {
-    std::list<std::shared_ptr<Lazik>>::iterator iter = ObiektySceny.begin();
+    std::list<std::shared_ptr<ObiektGeom>>::iterator iter = ObiektySceny.begin();
     for (int i=0; i < lazik; i++)
     {
-        AktualnyLazik = *iter;
+        AktualnyLazik = std::static_pointer_cast<Lazik>(*iter);
         ++iter;
     }
 }
 
 void Scena::ZmienLazika(std::istream &StrmWe, std::ostream &StrmWy)
 {
-    std::list<std::shared_ptr<Lazik>>::iterator iter = ObiektySceny.begin();
+    std::list<std::shared_ptr<ObiektGeom>>::iterator iter = ObiektySceny.begin();
     int numer_lazika; // zmienna przechowująca numer drona
     /* Interfejs wyświetlania wszystkich trzech możliwośi wyboru drona. */
     StrmWy << "1. ---------- Nazwa: Sample_Fetch_Rover" << std::endl;
-    StrmWy << "          Polozenie: " << (*iter)->DajPolozenie() << std::endl;
-    StrmWy << "    Orientacja [st]: " << (*iter)->DajKat() << std::endl;
+    StrmWy << "          Polozenie: " << std::static_pointer_cast<Lazik>(*iter)->DajPolozenie() << std::endl;
+    StrmWy << "    Orientacja [st]: " << std::static_pointer_cast<Lazik>(*iter)->DajKat() << std::endl;
     StrmWy << std::endl;
     iter++;
     StrmWy << "2. ---------- Nazwa: Perseverance" << std::endl;
-    StrmWy << "          Polozenie: " << (*iter)->DajPolozenie() << std::endl;
-    StrmWy << "    Orientacja [st]: " << (*iter)->DajKat() << std::endl;
+    StrmWy << "          Polozenie: " << std::static_pointer_cast<Lazik>(*iter)->DajPolozenie() << std::endl;
+    StrmWy << "    Orientacja [st]: " << std::static_pointer_cast<Lazik>(*iter)->DajKat() << std::endl;
     StrmWy << std::endl;
     iter++;
     StrmWy << "3. ---------- Nazwa: Curiosity" << std::endl;
-    StrmWy << "          Polozenie: " << (*iter)->DajPolozenie() << std::endl;
-    StrmWy << "    Orientacja [st]: " << (*iter)->DajKat() << std::endl;
+    StrmWy << "          Polozenie: " << std::static_pointer_cast<Lazik>(*iter)->DajPolozenie() << std::endl;
+    StrmWy << "    Orientacja [st]: " << std::static_pointer_cast<Lazik>(*iter)->DajKat() << std::endl;
     StrmWy << std::endl;
     StrmWy << "Podaj numer lazik >";
     StrmWe >> numer_lazika;
