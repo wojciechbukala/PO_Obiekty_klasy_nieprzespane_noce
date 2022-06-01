@@ -99,7 +99,7 @@ protected:
     {
       return "Lazik";
     }
-    //std::string CzyKolizja(ObiektGeom& DrugiLazik) override;
+    //std::string CzyKolizja(std::shared_ptr<Lazik>& l) override;
 };
 
 

@@ -63,10 +63,16 @@ void Lazik::obrot(PzG::LaczeDoGNUPlota  Lacze, std::ostream& StrmWyj, std::istre
     }
     KatOrientacji += nowy_kat;
 }
-
 /*
-bool Lazik::CzyKolizja(ObiektGeom& DrugiLazik)
+TypKolizji Lazik::CzyKolizja(std::shared_ptr<Lazik>& l) override
 {
-    if(Obrys.NakladajaSie(DrugiLazik)) return "TK_BrakKolizji" ; // nie nakładają się
-    else return "TK_KOLIZJA" // nakładają się
+    if(Zderzenie(*l)) return TK_Kolizja;
+    else return TK_BrakKolizji;
+}
+
+
+bool Lazik::Zderzenie(Lazik la)
+{
+    if(Obrys.NakladajaSie(la.Obrys) return 1; // nie nakładają się
+    else return 0; // nakładają się
 } */

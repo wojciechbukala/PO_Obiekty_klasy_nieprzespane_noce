@@ -91,6 +91,7 @@ void Scena::WyswietlAktywny(std::ostream &StrmWy)
     StrmWy << "          Polozenie: " << AktualnyLazik->DajPolozenie() << std::endl;
     StrmWy << "    Orientacja [st]: " << AktualnyLazik->DajKat() << std::endl;
     StrmWy << std::endl;
+    //StrmWy << AktualnyLazik -> JakiObiekt();
 }
 
 void Scena::zmien_szybkosc(std::istream &StrmWe, std::ostream &StrmWy)

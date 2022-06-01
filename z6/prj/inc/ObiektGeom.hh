@@ -112,6 +112,7 @@ class ObiektGeom {
      *  \brief Pole Obrys reprezentujące obiekt jako kontur 2D.
     */
     ObrysXY Obrys;
+    //virtual std::stirng CzyKolizja(std::shared_ptr<Lazik>& l);
 };
 
 
