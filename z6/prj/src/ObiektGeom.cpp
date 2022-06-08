@@ -55,13 +55,15 @@ bool ObiektGeom::Przelicz_i_Zapisz_Wierzcholki()
     
   } while (!StrmWe.fail());
 
-  double DlugoscObrysuX = skala[0] * (MacierzRotacji[1][0] + MacierzRotacji[1][1]);
-  double DlugoscObrysuY = skala[1] * (MacierzRotacji[1][0] + MacierzRotacji[1][1]);
+  double DlugoscObrysuX = skala[0] * (abs(MacierzRotacji[1][0]) + abs(MacierzRotacji[1][1]));
+  double DlugoscObrysuY = skala[1] * (abs(MacierzRotacji[1][0]) + abs(MacierzRotacji[1][1]));
 
-  Wektor2D x(polozenie[0]-(DlugoscObrysuX/2), polozenie[0]+(DlugoscObrysuX/2));
-  Wektor2D y(polozenie[1]-(DlugoscObrysuY/2), polozenie[1]+(DlugoscObrysuY/2));
-  Obrys.WpiszBokX(x);
-  Obrys.WpiszBokY(y); 
+
+  Wektor2D wek_x(polozenie[0]-(DlugoscObrysuX/2), polozenie[0]+(DlugoscObrysuX/2));
+  Wektor2D wek_y(polozenie[1]-(DlugoscObrysuY/2), polozenie[1]+(DlugoscObrysuY/2));
+  Obrys.WpiszBokX(wek_x);
+  Obrys.WpiszBokY(wek_y); 
+
 
   if (!StrmWe.eof()) return false;
   

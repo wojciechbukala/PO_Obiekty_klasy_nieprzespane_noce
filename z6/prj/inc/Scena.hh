@@ -4,11 +4,7 @@
 #include "Kolory.hh"
 #include "lacze_do_gnuplota.hh"
 #include "PowierzchniaMarsa.hh"
-#include <list>
-#include <memory>
-#include <unistd.h>
-#include <iostream>
-#include <fstream>
+#include "ProbkaRegolitu.hh"
 
 /*!
  *  \brief Klasa Scena
@@ -53,7 +49,7 @@ class Scena
      * \param[in] StrmWyj - referencja strumienia wyjściowego.
      */
     void jedziemy(std::istream& StrmWe, std::ostream& StrmWy) 
-        {AktualnyLazik->jazda(Lacze, StrmWe, StrmWy);}
+        {jazda(Lacze, StrmWe, StrmWy);}
     /*!
      *  \brief Metoda pozwalająca wywoływać obrót łazika o zadanyc kąt
      *
@@ -63,7 +59,7 @@ class Scena
      * \param[in] StrmWyj - referencja strumienia wyjściowego.
      */
     void krecimy(std::istream& StrmWe, std::ostream& StrmWy)
-        {AktualnyLazik->obrot(Lacze, StrmWy, StrmWe);}
+        {obrot(Lacze, StrmWy, StrmWe);}
     /*!
      *  \brief Metoda pozwalająca wywoływać obrót łazika o zadanyc kąt
      *
@@ -88,6 +84,8 @@ class Scena
      */
     void WyswietlAktywny(std::ostream &StrmWy);
     void zmien_szybkosc(std::istream &StrmWe, std::ostream &StrmWy);
+    void jazda(PzG::LaczeDoGNUPlota  Lacze, std::istream& StrmWej, std::ostream& StrmWyj);
+    void obrot(PzG::LaczeDoGNUPlota  Lacze, std::ostream& StrmWyj, std::istream& StrmWej);
+    TypKolizji CzyAktywnyLazikKoliduje() const;
 };
-
 #endif

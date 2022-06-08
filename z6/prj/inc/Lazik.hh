@@ -31,6 +31,37 @@ protected:
     */
     double OdlegloscDoPrzejechania;
   public:
+  /**
+   * @brief Interfejs zracający wartość atrybutu chornionego KatOrientacji
+   * 
+   * @return KatOrientacji
+   */
+    double DajKatOrientacji() {return KatOrientacji;}
+    /**
+     * @brief Interfejs zwracający wartość atrybutu chronionego Szybkosc
+     * 
+     * @return double Szybkosc
+     */
+    double DajSzybkosc() {return Szybkosc;}
+    /**
+     * @brief Interfejs zwracający wartość atrubutu chornonego OdlegloscDoPrzejechania
+     * 
+     * @return double OdlegloscDoPrzejechania
+     */
+    double DajOdlegloscDoPrzejechania() {return OdlegloscDoPrzejechania;}
+    /**
+     * @brief Interfejs wpisujący wartość do atrybutu chornionego OdlegloscDoPrzejechania
+     * 
+     * @param wpisz - wartość jaką chcemy przypisać do OdlegloscDoPrzejechania
+     */
+    void WpiszOdlegloscDoPrzejechania(double wpisz) {OdlegloscDoPrzejechania = wpisz;}
+    /**
+     * @brief Interfejs wpisujący wartość do atrybutu chronionego KatOrientacji
+     * 
+     * @param nowy - wrtosc jaką chcemy wpisać do KatOrientacji
+     */
+    void WpiszKatOrientacji(double nowy) {KatOrientacji =nowy;}
+
      /*!
     * \brief Konstruktor bezparametryczny klasy Lazik.
     */
@@ -60,7 +91,7 @@ protected:
     * \param[in] StrmWej - referencja strumienia wejściowego.
     * \param[in] StrmWyj - referencja strumienia wyjściowego.
     */
-    void jazda(PzG::LaczeDoGNUPlota  Lacze, std::istream& StrmWej, std::ostream& StrmWyj);
+    //void jazda(PzG::LaczeDoGNUPlota  Lacze, std::istream& StrmWej, std::ostream& StrmWyj);
 
     /*!
     * \brief Metoda odpowiadająca za obrot łazika zgodnie z aktualną macierzą rotacji.
@@ -69,7 +100,7 @@ protected:
     * \param[in] StrmWej - referencja strumienia wejściowego.
     * \param[in] StrmWyj - referencja strumienia wyjściowego.
     */    
-    void obrot(PzG::LaczeDoGNUPlota  Lacze,std::ostream& StrmWyj, std::istream& StrmWej);
+    //void obrot(PzG::LaczeDoGNUPlota  Lacze,std::ostream& StrmWyj, std::istream& StrmWej);
 
     /*!
     * \brief Metoda odpowiadająca za zmiane wartości elementów macierzy rotacji.
@@ -99,7 +130,7 @@ protected:
     {
       return "Lazik";
     }
-    //std::string CzyKolizja(std::shared_ptr<Lazik>& l) override;
+    TypKolizji CzyKolizja(std::shared_ptr<Lazik> l) override;
 };
 
 

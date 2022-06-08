@@ -3,12 +3,21 @@
 
 #include <string>
 #include <cmath>
+#include <chrono>
+#include <thread>
+#include <list>
+#include <memory>
+#include <unistd.h>
+#include <iostream>
+#include <fstream>
 #include "Wektor3D.hh"
 #include "Macierz3D.hh"
-#include "Wektor2D.hh"
 #include "ObrysXY.hh"
+#include "TypKolizji.hh"
 
 #define NAZWA_KARTOTEKI_PLIKOW_DO_RYSOWANIA    "pliki_do_rysowania"
+
+class Lazik; // deklarujemy tutaj aby można było użyć wskaźnika
 
 /*!
  *  \brief Klasa ObiektGeom
@@ -44,6 +53,8 @@ class ObiektGeom {
     */
   
   public:
+  std::string DajNazweObiektu () {return _NazwaObiektu;}
+  void WpiszPolozenie(Wektor3D nowe) {polozenie = nowe;}
      /*!
     * \brief Konstruktor parametryczny klasy ObiektGeom.
     *
@@ -112,7 +123,11 @@ class ObiektGeom {
      *  \brief Pole Obrys reprezentujące obiekt jako kontur 2D.
     */
     ObrysXY Obrys;
-    //virtual std::stirng CzyKolizja(std::shared_ptr<Lazik>& l);
+    virtual TypKolizji CzyKolizja(std::shared_ptr<Lazik> l) = 0;
+        void Obrysy(){
+    std::cout << Obrys.bokX << std::endl;
+    std::cout << Obrys.bokY << std::endl;
+    } 
 };
 
 

@@ -73,7 +73,7 @@ class SMacierz {
    * \param [in] Macierz2 - macierz przypisywana do innej
    * \return przypisana macierz
    */
-  SMacierz<typ,wymiar>/*&*/ operator = (SMacierz<typ,wymiar>& Macierz2); 
+  SMacierz<typ,wymiar>& operator = (SMacierz<typ,wymiar>& Macierz2); 
   /*!
    * \brief Transponowanie orginalnej macierzy
    */
@@ -144,7 +144,7 @@ SWektor<typ,wymiar> SMacierz<typ,wymiar>::operator * (const SWektor<typ,wymiar> 
  *  Macierz& *this - referencja macierzy po przekształceniu
  */
 template<typename typ, int wymiar>
-SMacierz<typ,wymiar>/*&*/ SMacierz<typ,wymiar>::operator = (SMacierz<typ,wymiar> & Macierz2)
+SMacierz<typ,wymiar>& SMacierz<typ,wymiar>::operator = (SMacierz<typ,wymiar> & Macierz2)
 {
     for(int j=0; j<wymiar; ++j)
     for(int i=0; i<wymiar; ++i) this->Tab[j][i] = Macierz2.Tab[j][i];

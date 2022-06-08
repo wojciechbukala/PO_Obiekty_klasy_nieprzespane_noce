@@ -17,62 +17,10 @@ void Lazik::Rotacja(double kat) // zmiana macierzy rotacji
       MacierzRotacji[2][2] = 1;
 } 
 
-void Lazik::jazda(PzG::LaczeDoGNUPlota  Lacze, std::istream& StrmWej, std::ostream& StrmWyj)
-{
-    StrmWyj << "Podaj odleglosc do przejechania:";
-    StrmWej >> OdlegloscDoPrzejechania;
-    Wektor3D nowe_polozenie = polozenie;  // wektor do obliczeń, po wykonaniu animacji ma nowe współżędne
-    double kat_roboczy;
-    if(OdlegloscDoPrzejechania<0) kat_roboczy = KatOrientacji + 180; // jeśli mamy jechać do tyłu to zmieniamy orientację o 180 stopni
-    else kat_roboczy = KatOrientacji; // przypadek kiedy jedziemy do przodu
-    double x_kierunek = cos(kat_roboczy*3.14/180); // przesuniecie o x , double x = OdlegloscDoPrzejechania * cos(KatOrientacji)
-    double y_kierunek = sin(kat_roboczy*3.14/180); // przesuniecie o y , double y = OdlegloscDoPrzejechania * sin(KatOrientacji)
-    for(double i = 0 ; i < abs(OdlegloscDoPrzejechania); ++i)  // dzielimy przejście na OdlegloscDoPrzejechania*100 małych kroczkow
-      {
-      nowe_polozenie[0] += x_kierunek;
-      nowe_polozenie[1] += y_kierunek;  
-      zmien_polozenie(nowe_polozenie);
-      if(Przelicz_i_Zapisz_Wierzcholki()) std::this_thread::sleep_for(std::chrono::milliseconds(200/int(Szybkosc))); // odstęp czasowy zależny od szybkości
-      Lacze.Rysuj();
-      }
-      polozenie = nowe_polozenie; // zmieniamy położenie łazika na stałe
-} 
 
-void Lazik::obrot(PzG::LaczeDoGNUPlota  Lacze, std::ostream& StrmWyj, std::istream& StrmWej)
+TypKolizji Lazik::CzyKolizja(std::shared_ptr<Lazik> l)
 {
-    StrmWyj << "Podaj kat obrotu: ";
-    double nowy_kat;
-    StrmWej >> nowy_kat;
-    if(nowy_kat > 0)
-    {
-        for(double i = KatOrientacji; i<nowy_kat + KatOrientacji; ++i)
-        {
-            Rotacja(i);
-            Przelicz_i_Zapisz_Wierzcholki();
-            std::this_thread::sleep_for(std::chrono::milliseconds(20));
-            Lacze.Rysuj();
-        }
-    } else {
-        for(double i = KatOrientacji; i>nowy_kat + KatOrientacji; --i)
-        {
-            Rotacja(i);
-            Przelicz_i_Zapisz_Wierzcholki();
-            std::this_thread::sleep_for(std::chrono::milliseconds(20));
-            Lacze.Rysuj();
-        }
-    }
-    KatOrientacji += nowy_kat;
-}
-/*
-TypKolizji Lazik::CzyKolizja(std::shared_ptr<Lazik>& l) override
-{
-    if(Zderzenie(*l)) return TK_Kolizja;
-    else return TK_BrakKolizji;
+    if(Obrys.NakladajaSie(l->Obrys)) {/*std::cout << "Kolizja" << std::endl; */return TK_Kolizja; }
+    else {/* std::cout<< "brak kolizji" << std::endl; */return TK_BrakKolizji;}
 }
 
-
-bool Lazik::Zderzenie(Lazik la)
-{
-    if(Obrys.NakladajaSie(la.Obrys) return 1; // nie nakładają się
-    else return 0; // nakładają się
-} */

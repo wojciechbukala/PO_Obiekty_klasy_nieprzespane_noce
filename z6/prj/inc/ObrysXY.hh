@@ -12,7 +12,8 @@
  *  potrzebne przy zderzeniach.
  */
 class ObrysXY {
-  protected: 
+  //protected: 
+  public:
     /*!
      *  \brief Wektor przechowujący bok prsotokąta o kierunku zgodnym z płaszczyzną X.
      */
@@ -23,7 +24,7 @@ class ObrysXY {
     Wektor2D bokY;
 
   
-  public:
+  //public:
     /*!
      * \brief konstruktor bezparametryczny
      */
@@ -37,11 +38,11 @@ class ObrysXY {
     /*!
      *  \brief Metoda umożliwiająca aktualizacje wartosci atrybutu bokX.
      */
-    void WpiszBokX (Wektor2D wektor) {bokX = wektor;}
+    void WpiszBokX (Wektor2D& wektor) {bokX[0] = wektor[0]; bokX[1]=wektor[1];}
     /*!
      *  \brief Metoda umożliwiająca aktualizacje wartosci atrybutu bokY.
      */
-    void WpiszBokY (Wektor2D wektor) {bokY = wektor;}
+    void WpiszBokY (Wektor2D& wektor) {bokY = wektor;}
     /*!
      *  \brief Metoda umożliwiająca aktualizacje wartosci atrybutu bokY.
      *  \param [in] DrugiLazik - Lazik dla którego sprawdzamy czy nie nachodzi na obecny.

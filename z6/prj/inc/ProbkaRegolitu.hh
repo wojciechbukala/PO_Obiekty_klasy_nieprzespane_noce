@@ -1,11 +1,8 @@
 #ifndef PROBKAREGOLITU_HH
 #define PROBKAREGOLITU_HH
 
-#include <string>
-#include <chrono>
-#include <thread>
 #include "ObiektGeom.hh"
-#include "lacze_do_gnuplota.hh"
+#include "Lazik.hh"
 
 
 /*!
@@ -17,11 +14,16 @@
  *  regolitu to obiekt geometryczny więc,
  *  klasa dziedziczy po ObiekGeom
  */
-class ProbkaRegolitu : public ObiektGeom {
-    protected:
-
-  public:
-    //std::string CzyKolizja(ObiektGeom& DrugiLazik) override;
+class ProbkaRegolitu: public ObiektGeom {
+    public:
+      ProbkaRegolitu();
+      ProbkaRegolitu(const char *sNazwaPliku_BrylaWzorcowa, const char* sNazwaObiektu, unsigned int KolorID, Wektor3D wczytana_skala, Wektor3D wczytane_polozenie):
+       ObiektGeom(sNazwaPliku_BrylaWzorcowa, sNazwaObiektu, KolorID, wczytana_skala, wczytane_polozenie) {}
+      TypKolizji CzyKolizja(const std::shared_ptr<Lazik> l) override;
+      std::string JakiObiekt () override
+        {
+          return "ProbkaRegolitu";
+        }
 };
 
 
