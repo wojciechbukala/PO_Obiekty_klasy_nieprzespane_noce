@@ -87,5 +87,6 @@ class Scena
     void jazda(PzG::LaczeDoGNUPlota  Lacze, std::istream& StrmWej, std::ostream& StrmWyj);
     void obrot(PzG::LaczeDoGNUPlota  Lacze, std::ostream& StrmWyj, std::istream& StrmWej);
     TypKolizji CzyAktywnyLazikKoliduje() const;
+    void WyswietlProbki (std::ostream &StrmWy);
 };
 #endif

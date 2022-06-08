@@ -57,6 +57,15 @@ class SWektor {
     SWektor operator & (SWektor const Wektor2); // metoda do mnożenie poszczególnych elementów macierzy
     static void wyswietl_ile_wek(std::ostream& StrmWy) {StrmWy << ilosc_wektorow << std::endl ;}; //metoda statyczna do wyświetlania ilości elementow
     static void wyswietl_ile_akt_wek(std::ostream& StrmWy) {StrmWy << ilosc_aktywnych_wektorow << std::endl;}; //metoda statyczna do wyświetlania ilości elementow
+    /*
+    SWektor<typ,wymiar>:SWektor() 
+    {
+        for(int i=0; i<wymiar; ++i) tab[i]=0; 
+        ++ilosc_wektorow; 
+        ++ilosc_aktywnych_wektorow;
+    } */
+
+
 };
 
 /*
@@ -76,6 +85,18 @@ SWektor<typ,wymiar>::SWektor()
     ++ilosc_wektorow; 
     ++ilosc_aktywnych_wektorow;
 }
+
+
+/*
+template<typename typ, int wymiar>
+SWektor<typ,wymiar>::SWektor<typ,wymiar>:SWektor(typ jeden, typ dwa, typ trzy) // konstruktor dla wektora 3 wyrazowego
+{
+    tab[0] = jeden; 
+    tab[1] = dwa; 
+    tab[2] = trzy; 
+    ++ilosc_wektorow; 
+    ++ilosc_aktywnych_wektorow;
+} */
 
 /*!
  * \brief Konstruktor parametryczny dla wektora 3D

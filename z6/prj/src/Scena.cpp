@@ -210,3 +210,18 @@ TypKolizji Scena::CzyAktywnyLazikKoliduje() const
     }
     return wynikKolizji;
 } 
+
+void Scena::WyswietlProbki (std::ostream &StrmWy)
+{
+    int i=-2;
+    for(const std::shared_ptr<ObiektGeom> & Ob : ObiektySceny)
+    {
+        if(ObiektySceny.empty()) {StrmWy << "Brak probek na liscie!" << std::endl; break;}
+        if(Ob->JakiObiekt() == "ProbkaRegolitu")
+        {
+            StrmWy<<i<<". ";
+            StrmWy << Ob->DajNazweObiektu() << std::endl;
+        }
+        ++i;
+    }
+}

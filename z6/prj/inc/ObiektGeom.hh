@@ -18,6 +18,7 @@
 #define NAZWA_KARTOTEKI_PLIKOW_DO_RYSOWANIA    "pliki_do_rysowania"
 
 class Lazik; // deklarujemy tutaj aby można było użyć wskaźnika
+class ProbkaRegolitu; // deklarujemy aby móc używać w LazikSFR
 
 /*!
  *  \brief Klasa ObiektGeom

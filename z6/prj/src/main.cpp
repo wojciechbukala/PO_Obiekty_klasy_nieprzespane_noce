@@ -65,6 +65,7 @@ int main()
     cout << "s-zmien szybkosc lazika" <<endl;
     cout << "o-zmien orientacje" << endl;
     cout << "w-wybor lazika" << endl;
+    cout << "l-lista probek na scenie" << endl;
     cout << "m-wyswietl menu" << endl << endl;
     cout << "k-koniec" << endl;
     cout << endl << "Twoj wybor, m - menu> ";
@@ -83,6 +84,9 @@ int main()
 
       case 'w':  // opcja wyboru łazika
       s.ZmienLazika(std::cin, std::cout); break;
+
+      case 'l':  // opcja wyswietlania probek na scenie
+      s.WyswietlProbki(std::cout); break;
 
       case 'm' : break;  // opcja menu
 
