@@ -17,14 +17,16 @@ pliki_do_rysowania:
 	mkdir pliki_do_rysowania
 
 
-./${APP}: obj/main.o obj/lacze_do_gnuplota.o obj/PowierzchniaMarsa.o obj/ObiektGeom.o obj/Lazik.o obj/Scena.o obj/ObrysXY.o obj/ProbkaRegolitu.o
+./${APP}: obj/main.o obj/lacze_do_gnuplota.o obj/PowierzchniaMarsa.o obj/ObiektGeom.o\
+			obj/Lazik.o obj/Scena.o obj/ObrysXY.o obj/ProbkaRegolitu.o obj/LazikSFR.o
 	g++ -o ./${APP} obj/main.o obj/lacze_do_gnuplota.o obj/PowierzchniaMarsa.o\
                         obj/ObiektGeom.o obj/Lazik.o obj/Scena.o obj/ObrysXY.o\
-						obj/ProbkaRegolitu.o
+						obj/ProbkaRegolitu.o obj/LazikSFR.o
 
 
 obj/main.o: src/main.cpp inc/lacze_do_gnuplota.hh inc/ObiektGeom.hh inc/PowierzchniaMarsa.hh\
-            inc/Kolory.hh inc/Lazik.hh inc/Scena.hh inc/ObrysXY.hh inc/ProbkaRegolitu.hh
+            inc/Kolory.hh inc/Lazik.hh inc/Scena.hh inc/ObrysXY.hh inc/ProbkaRegolitu.hh\
+			inc/LazikSFR.hh
 	g++  -Iinc -W -Wall -pedantic -c -o obj/main.o src/main.cpp
 
 obj/lacze_do_gnuplota.o: src/lacze_do_gnuplota.cpp inc/lacze_do_gnuplota.hh
@@ -43,11 +45,14 @@ obj/ObrysXY.o: src/ObrysXY.cpp inc/ObrysXY.hh inc/Wektor2D.hh
 obj/Lazik.o: src/Lazik.cpp inc/Lazik.hh inc/ObiektGeom.hh
 	g++  -Iinc -W -Wall -pedantic -c -o obj/Lazik.o src/Lazik.cpp
 
-obj/Scena.o: src/Scena.cpp inc/Scena.hh inc/Kolory.hh inc/Lazik.hh inc/lacze_do_gnuplota.hh inc/PowierzchniaMarsa.hh inc/ProbkaRegolitu.hh
+obj/Scena.o: src/Scena.cpp inc/Scena.hh inc/Kolory.hh inc/Lazik.hh inc/lacze_do_gnuplota.hh inc/PowierzchniaMarsa.hh inc/ProbkaRegolitu.hh inc/LazikSFR.hh
 	g++  -Iinc -W -Wall -pedantic -c -o obj/Scena.o src/Scena.cpp
 
 obj/ProbkaRegolitu.o: src/ProbkaRegolitu.cpp inc/ProbkaRegolitu.hh inc/ObiektGeom.hh 
 	g++ ${CXXFLAGS} -o obj/ProbkaRegolitu.o src/ProbkaRegolitu.cpp
+
+obj/LazikSFR.o: src/LazikSFR.cpp inc/LazikSFR.hh inc/Lazik.hh inc/ProbkaRegolitu.hh
+	g++ ${CXXFLAGS} -o obj/LazikSFR.o src/LazikSFR.cpp
 
 obj/SWektor.o: src/SWektor.cpp inc/SWektor.hh inc/LZespolona.hh 
 	g++ ${CXXFLAGS} -o obj/SWektor.o src/SWektor.cpp

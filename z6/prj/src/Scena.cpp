@@ -25,7 +25,7 @@ void Scena::DodajDoListyRysowania()
 
 Scena::Scena()
 {
-    Wektor3D laziki_skala(20,20,10), lazik1_polozenie, lazik2_polozenie(60,60,10), lazik3_polozenie(-20,70,20);
+    Wektor3D laziki_skala(20,20,10), lazik1_polozenie, lazik2_polozenie(50,40,10), lazik3_polozenie(-20,70,20);
     Wektor3D regolit_skala(2,6,2), regolit1_polozenie(0,90,0), regolit2_polozenie(0,85,0), regolit3_polozenie(10,80,0),
     regolit4_polozenie(70,60,0), regolit5_polozenie(70,50,0), regolit6_polozenie(-70,55,0), regolit7_polozenie(-80,65,0),
     regolit8_polozenie(-60,50,0), regolit9_polozenie(50,-60,0);
@@ -33,7 +33,7 @@ Scena::Scena()
     Inicjalizuj_Lacze();
     if (!Inicjalizuj_PowierzchnieMarsa(Lacze)) std::cerr << "Blad 1";
 
-    std::shared_ptr<Lazik> Lazik1 = std::make_shared<Lazik>("bryly_wzorcowe/szescian3.dat","FSR",Kolor_JasnoNiebieski, laziki_skala, lazik1_polozenie,0, 10);
+    std::shared_ptr<LazikSFR> Lazik1 = std::make_shared<LazikSFR>("bryly_wzorcowe/szescian3.dat","FSR",Kolor_JasnoNiebieski, laziki_skala, lazik1_polozenie,0, 10);
     ObiektySceny.push_back(Lazik1);  // tworzymy pierwszy łazik
 
     std::shared_ptr<Lazik> Lazik2 = std::make_shared<Lazik>("bryly_wzorcowe/szescian3.dat","Perseverance",Kolor_Czerwony, laziki_skala, lazik2_polozenie, 0, 10);
@@ -69,7 +69,7 @@ Scena::Scena()
     std::shared_ptr<ProbkaRegolitu> Rego9 = std::make_shared<ProbkaRegolitu>("bryly_wzorcowe/szescian2.dat","Roubion",Kolor_Czerwony, regolit_skala, regolit9_polozenie);
     ObiektySceny.push_back(Rego9);  // wrzucamy próbkę regolitu na listę obiektów
 
-    AktualnyLazik = Lazik1;
+    AktualnyLazik = Lazik1; 
     (Lazik1)->Przelicz_i_Zapisz_Wierzcholki();
     (Lazik2)->Przelicz_i_Zapisz_Wierzcholki();
     (Lazik3)->Przelicz_i_Zapisz_Wierzcholki();
@@ -205,7 +205,10 @@ TypKolizji Scena::CzyAktywnyLazikKoliduje() const
         {
             //if(Ob->CzyKolizja(AktualnyLazik) == TK_Kolizja) std::cout << "Kolizja" <<std::endl;
             wynikKolizji = Ob->CzyKolizja(AktualnyLazik);
-            if(wynikKolizji != TK_BrakKolizji) {return wynikKolizji;}
+            if(wynikKolizji != TK_BrakKolizji) // KOLIZJA!
+            {
+                return wynikKolizji;
+            }
         }
     }
     return wynikKolizji;
@@ -225,3 +228,19 @@ void Scena::WyswietlProbki (std::ostream &StrmWy)
         ++i;
     }
 }
+
+ void Scena::ZbierzProbke (std::shared_ptr<ObiektGeom> Probka)
+ {
+     if(AktualnyLazik->JakiObiekt() != "LazikSFR") // Jeśli nie jest to lazik sfr to nie można zebrać probki
+     {
+         std::cerr << "Lazik inny niz SFR. Nie mozna zebrac probki!" << std::endl;
+     }
+     else // Aktulany lazik jest Lazikiem SFR
+     {
+         std::static_pointer_cast<LazikSFR>(AktualnyLazik)->DodajDoListyProbek(std::static_pointer_cast<ProbkaRegolitu>(Probka));
+         ObiektySceny.remove(Probka);
+         DodajDoListyRysowania();
+         Lacze.Rysuj();
+     }
+ }
+ 

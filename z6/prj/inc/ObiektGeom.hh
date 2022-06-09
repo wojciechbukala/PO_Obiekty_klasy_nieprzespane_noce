@@ -54,7 +54,17 @@ class ObiektGeom {
     */
   
   public:
+  /**
+   * @brief Metoda pomocnicza zwracająca nazwę obiektu
+   * 
+   * @return std::string - nazwa obiektu
+   */
   std::string DajNazweObiektu () {return _NazwaObiektu;}
+  /**
+   * @brief Metoda pomocnicza do zmiany położenia
+   * 
+   * @param nowe - Wektor3D określający współrzędne nowego położenia
+   */
   void WpiszPolozenie(Wektor3D nowe) {polozenie = nowe;}
      /*!
     * \brief Konstruktor parametryczny klasy ObiektGeom.
@@ -124,11 +134,21 @@ class ObiektGeom {
      *  \brief Pole Obrys reprezentujące obiekt jako kontur 2D.
     */
     ObrysXY Obrys;
+    /**
+     * @brief Metoda wirtualna sprawdzająca czy nastąpiła kolizja
+     * 
+     * @param l inteligentny wskaźnik na obiekt klasy Lazik
+     * @return TypKolizji jaki jest typ kolizji
+     */
     virtual TypKolizji CzyKolizja(std::shared_ptr<Lazik> l) = 0;
-        void Obrysy(){
-    std::cout << Obrys.bokX << std::endl;
-    std::cout << Obrys.bokY << std::endl;
-    } 
+    /**
+     * @brief Metoda pomocnicza do wyświtlania obrysu Obiektu
+     * 
+     */
+    void Obrysy(){
+        std::cout << Obrys.bokX << std::endl;
+        std::cout << Obrys.bokY << std::endl;
+        }    
 };
 
 

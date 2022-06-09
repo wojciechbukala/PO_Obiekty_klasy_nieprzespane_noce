@@ -131,6 +131,7 @@ protected:
       return "Lazik";
     }
     TypKolizji CzyKolizja(std::shared_ptr<Lazik> l) override;
+    virtual ~Lazik(){}
 };
 
 
