@@ -1,3 +1,4 @@
+// Wojciech Bukała, AiR, 2021/22, zadanie 6.
 #include <iostream>
 #include <fstream>
 #include "lacze_do_gnuplota.hh"
@@ -57,13 +58,14 @@ int main()
   do
   {
     cout<<endl<<endl;
-    s.WyswietlAktywny(std::cout); // wyświetlamy informacje o aktywnm laziku (położenie, kąt)
+    s.StanAktualnegoLazika(std::cout); // wyświetlamy informacje o aktywnm laziku (położenie, kąt)
     wyswietl_wektory(std::cout); /// wyświetlamy zmienne statyczne wektora zliczające ilośc elementów klasy
   
     // menu wyboru opcji
     cout << "j-jazda na wprost" << endl;
     cout << "s-zmien szybkosc lazika" <<endl;
     cout << "o-zmien orientacje" << endl;
+    cout << "p-podejmij probke (tylko dla SFR)" << endl;
     cout << "w-wybor lazika" << endl;
     cout << "l-lista probek na scenie" << endl;
     cout << "m-wyswietl menu" << endl << endl;
@@ -81,6 +83,9 @@ int main()
 
       case 'o':  // opcja rotacji
       s.krecimy(std::cin, std::cout); break;
+
+      case 'p':  // opcja podjecia próbki
+      s.PodejmijProbke(std::cout); break; 
 
       case 'w':  // opcja wyboru łazika
       s.ZmienLazika(std::cin, std::cout); break;

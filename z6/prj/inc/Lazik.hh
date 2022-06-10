@@ -123,6 +123,12 @@ protected:
       */
     Wektor3D DajPolozenie() {return polozenie;};
     /*!
+     *  \brief Metoda wyświetla paramtry aktywnego łazika
+     *
+     * \param[in] StrmWy - referencja strumienia wyjściowego.
+     */
+    virtual void WyswietlStan(std::ostream &StrmWy);
+    /*!
       * \brief Przeciążenie metody wirtualnej z klasy ObiektGeom do sprawdzania typu obiektu
       * \return Zwraca nazwę obiektu klasy Lazik
       */
@@ -130,7 +136,17 @@ protected:
     {
       return "Lazik";
     }
+    /**
+     * @brief przeciążenie metody wirtualnej sprawdzającej kolizję
+     * 
+     * @param l - inteligentny wskaźnik na Łazik
+     * @return TypKolizji - jaki typ kolizji?
+     */
     TypKolizji CzyKolizja(std::shared_ptr<Lazik> l) override;
+    /**
+     * @brief Destroy the Lazik object
+     * 
+     */
     virtual ~Lazik(){}
 };
 

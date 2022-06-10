@@ -54,6 +54,7 @@ class ObiektGeom {
     */
   
   public:
+  std::string DajNazwePlikuBrylaRysowana () {return _NazwaPliku_BrylaRysowana;}
   /**
    * @brief Metoda pomocnicza zwracająca nazwę obiektu
    * 

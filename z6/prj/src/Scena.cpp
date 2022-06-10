@@ -85,6 +85,8 @@ Scena::Scena()
 
     DodajDoListyRysowania();
     Lacze.Rysuj();
+
+    CzyMoznaZebrac = false;
 }
 
 void Scena::obrot(PzG::LaczeDoGNUPlota  Lacze, std::ostream& StrmWyj, std::istream& StrmWej)
@@ -174,16 +176,6 @@ void Scena::ZmienLazika(std::istream &StrmWe, std::ostream &StrmWy)
     WyborLazika(numer_lazika);   
 }
 
-void Scena::WyswietlAktywny(std::ostream &StrmWy)
-{
-    if(AktualnyLazik->WezNazweObiektu()=="FSR") StrmWy << "1. ---------- Nazwa: Sample_Fetch_Rover" << std::endl;
-    if(AktualnyLazik->WezNazweObiektu()=="Perseverance") StrmWy << "2. ---------- Nazwa: Perserverance" << std::endl;
-    if(AktualnyLazik->WezNazweObiektu()=="Curiosity") StrmWy << "3. ---------- Nazwa: Curiosity" << std::endl;
-    StrmWy << "          Polozenie: " << AktualnyLazik->DajPolozenie() << std::endl;
-    StrmWy << "    Orientacja [st]: " << AktualnyLazik->DajKat() << std::endl;
-    StrmWy << std::endl;
-    //AktualnyLazik->Obrysy();
-}
 
 void Scena::zmien_szybkosc(std::istream &StrmWe, std::ostream &StrmWy)
 {
@@ -194,8 +186,9 @@ void Scena::zmien_szybkosc(std::istream &StrmWe, std::ostream &StrmWy)
 }
 
 
-TypKolizji Scena::CzyAktywnyLazikKoliduje() const
+TypKolizji Scena::CzyAktywnyLazikKoliduje()
 {
+    CzyMoznaZebrac = false;
     TypKolizji wynikKolizji = TK_BrakKolizji;
    // std::shared_ptr<ObiektGeom>  ObKolid = nullptr;
     for(const std::shared_ptr<ObiektGeom> & Ob : ObiektySceny)
@@ -207,6 +200,12 @@ TypKolizji Scena::CzyAktywnyLazikKoliduje() const
             wynikKolizji = Ob->CzyKolizja(AktualnyLazik);
             if(wynikKolizji != TK_BrakKolizji) // KOLIZJA!
             {
+                if(Ob->JakiObiekt() == "ProbkaRegolitu" && AktualnyLazik->JakiObiekt() == "LazikSFR") 
+                {
+                    /* jeśli kolidują ze sobą próbka regolitu i łazik SFR to można zebarać probkę */
+                    AktualnaProbka = std::static_pointer_cast<ProbkaRegolitu>(Ob);
+                    CzyMoznaZebrac = true;
+                }
                 return wynikKolizji;
             }
         }
@@ -229,7 +228,7 @@ void Scena::WyswietlProbki (std::ostream &StrmWy)
     }
 }
 
- void Scena::ZbierzProbke (std::shared_ptr<ObiektGeom> Probka)
+ void Scena::ZbierzProbke (std::shared_ptr<ObiektGeom>  Probka)
  {
      if(AktualnyLazik->JakiObiekt() != "LazikSFR") // Jeśli nie jest to lazik sfr to nie można zebrać probki
      {
@@ -238,9 +237,27 @@ void Scena::WyswietlProbki (std::ostream &StrmWy)
      else // Aktulany lazik jest Lazikiem SFR
      {
          std::static_pointer_cast<LazikSFR>(AktualnyLazik)->DodajDoListyProbek(std::static_pointer_cast<ProbkaRegolitu>(Probka));
+         Lacze.UsunNazwePliku(Probka->DajNazwePlikuBrylaRysowana());
          ObiektySceny.remove(Probka);
-         DodajDoListyRysowania();
          Lacze.Rysuj();
      }
  }
+
+void Scena::PodejmijProbke(std::ostream& StrmWy)
+{
+    if(CzyMoznaZebrac == false) StrmWy << "Nie można zebrać probki" << std::endl;
+    else ZbierzProbke(AktualnaProbka);
+}
  
+ void Scena::WyswietlProbkiSFR (std::ostream &StrmWyj)
+ {
+    if(AktualnyLazik->JakiObiekt() == "LazikSFR") 
+    {
+        std::static_pointer_cast<LazikSFR>(AktualnyLazik)->WyswietlListeProbek(StrmWyj);
+    }
+ }
+
+void Scena::StanAktualnegoLazika (std::ostream& StrmWy)
+{
+    AktualnyLazik->WyswietlStan(StrmWy);
+}

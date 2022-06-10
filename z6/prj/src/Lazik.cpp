@@ -24,3 +24,21 @@ TypKolizji Lazik::CzyKolizja(std::shared_ptr<Lazik> l)
     else {/* std::cout<< "brak kolizji" << std::endl; */return TK_BrakKolizji;}
 }
 
+void Lazik::WyswietlStan(std::ostream &StrmWy)
+{
+    if(WezNazweObiektu()=="Perseverance") StrmWy << "2. ---------- Nazwa: Perserverance" << std::endl;
+    if(WezNazweObiektu()=="Curiosity") StrmWy << "3. ---------- Nazwa: Curiosity" << std::endl;
+    StrmWy << "          Polozenie: " << DajPolozenie() << std::endl;
+    StrmWy << "    Orientacja [st]: " << DajKat() << std::endl;
+    StrmWy << std::endl;
+}
+/*
+void Lazik::WyswietlAktywny(std::ostream &StrmWy)
+{
+    if(AktualnyLazik->WezNazweObiektu()=="FSR") StrmWy << "1. ---------- Nazwa: Sample_Fetch_Rover" << std::endl;
+    if(AktualnyLazik->WezNazweObiektu()=="Perseverance") StrmWy << "2. ---------- Nazwa: Perserverance" << std::endl;
+    if(AktualnyLazik->WezNazweObiektu()=="Curiosity") StrmWy << "3. ---------- Nazwa: Curiosity" << std::endl;
+    StrmWy << "          Polozenie: " << AktualnyLazik->DajPolozenie() << std::endl;
+    StrmWy << "    Orientacja [st]: " << AktualnyLazik->DajKat() << std::endl;
+    StrmWy << std::endl;
+} */

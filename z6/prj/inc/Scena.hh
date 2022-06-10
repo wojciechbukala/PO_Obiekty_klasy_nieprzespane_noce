@@ -18,8 +18,15 @@ class Scena
 {
     /*!
      *  \brief Inteligentny wskaźnika tworzący obiekt klasy Lazik
+     * przechowuje aktulanie poruszający się łazik
      */
     std::shared_ptr<Lazik> AktualnyLazik;
+    /**
+     * @brief Inteligentny wskaźnik tworzący obiket klasy Probka Regolitu
+     * przechowuje próbkę którą aktualnie potencjalnie można podjąć
+     * 
+     */
+    std::shared_ptr<ProbkaRegolitu> AktualnaProbka;
     /*!
      *  \brief Lista wszystkich obiektów klasy łazik
      */
@@ -31,6 +38,7 @@ class Scena
     /*!
      *  \brief Metoda inicjalizująca łącze z gnuplotem
      */
+    bool CzyMoznaZebrac;
     void Inicjalizuj_Lacze();
   public:
     /*!
@@ -78,12 +86,6 @@ class Scena
      * \param[in] StrmWy - referencja strumienia wyjściowego.
      */
     void ZmienLazika(std::istream &StrmWe, std::ostream &StrmWy);
-    /*!
-     *  \brief Metoda wyświetla paramtry aktywnego łazika
-     *
-     * \param[in] StrmWy - referencja strumienia wyjściowego.
-     */
-    void WyswietlAktywny(std::ostream &StrmWy);
     /**
      * @brief Metoda do zmiany szybkości jazdy łazika
      * 
@@ -112,13 +114,39 @@ class Scena
      * 
      * @return TypKolizji 
      */
-    TypKolizji CzyAktywnyLazikKoliduje() const;
+    TypKolizji CzyAktywnyLazikKoliduje();
     /**
      * @brief metoda wyświetlająca próbki regolitu na scenie
      * 
      * @param StrmWy - strumień wyjściowy
      */
     void WyswietlProbki (std::ostream &StrmWy);
-    void ZbierzProbke (std::shared_ptr<ObiektGeom> Probka);
+    /**
+     * @brief metoda zbierania próbek przez SFR
+     * 
+     * @param Probka - próbka z którą koliduje Łazik
+     */
+    void ZbierzProbke (std::shared_ptr<ObiektGeom>  Probka);
+    /**
+     * @brief metoda wyświtlająca próbki lazika SFR w klasie scena
+     * 
+     * @param StrmWyj - strumień wyjściowy
+     */
+    void WyswietlProbkiSFR (std::ostream &StrmWyj);
+    /**
+     * @brief Metoda obsługująca podjęcie próbki
+     *  jest używana w main dla obiektu scena i
+     *  korzysta z metody ZbierzProbke
+     * 
+     * @param StrmWy - strumień wyjściowy
+     */
+    void PodejmijProbke(std::ostream& StrmWy);
+    /**
+     * @brief metoda do wyświetlania stanu aktualnego lazika.
+     *  Korzysta z metody wirtualnej StanLazika()
+     * 
+     * @param StrmWy - strumień wyjściowy
+     */
+    void StanAktualnegoLazika (std::ostream& StrmWy);
 };
 #endif
