@@ -1,0 +1,88 @@
+\hypertarget{_powierzchnia_marsa_8cpp}{}\doxysection{src/\+Powierzchnia\+Marsa.cpp File Reference}
+\label{_powierzchnia_marsa_8cpp}\index{src/PowierzchniaMarsa.cpp@{src/PowierzchniaMarsa.cpp}}
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}Powierzchnia\+Marsa.\+hh\char`\"{}}\newline
+Include dependency graph for Powierzchnia\+Marsa.\+cpp\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_powierzchnia_marsa_8cpp_a1e6e82d06f2d76815dc6eba9527104f5}\label{_powierzchnia_marsa_8cpp_a1e6e82d06f2d76815dc6eba9527104f5}} 
+\#define {\bfseries N\+A\+Z\+W\+A\+\_\+\+P\+L\+I\+K\+U\+\_\+\+\_\+\+P\+O\+W\+I\+E\+R\+Z\+C\+H\+N\+I\+A\+\_\+\+P\+L\+A\+N\+E\+TY}~\char`\"{}pliki\+\_\+do\+\_\+rysowania/powierzchnia\+\_\+planety.\+dat\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_powierzchnia_marsa_8cpp_a4eefeb43e7c6727fb4e262012df87ad2}{Utworz\+Powierzchnie\+\_\+\+Zapisz\+Do\+Pliku}} (ofstream \&r\+Strm\+Wy)
+\item 
+bool \mbox{\hyperlink{_powierzchnia_marsa_8cpp_a90f8388bf4b0322ca71017caae3e0d73}{Utworz\+Powierzchnie\+\_\+\+Zapisz\+Do\+Pliku}} (const char $\ast$s\+Nazwa\+Pliku)
+\item 
+bool \mbox{\hyperlink{_powierzchnia_marsa_8cpp_a4ea2370930491646c4519a1f689f117c}{Inicjalizuj\+\_\+\+Powierzchnie\+Marsa}} (\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}} \&r\+Lacze)
+\begin{DoxyCompactList}\small\item\em Inicjalizuje model powierzchni Marsa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ostatnia modyfikacja\+: 2022.\+06.\+15 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_powierzchnia_marsa_8cpp_a4ea2370930491646c4519a1f689f117c}\label{_powierzchnia_marsa_8cpp_a4ea2370930491646c4519a1f689f117c}} 
+\index{PowierzchniaMarsa.cpp@{PowierzchniaMarsa.cpp}!Inicjalizuj\_PowierzchnieMarsa@{Inicjalizuj\_PowierzchnieMarsa}}
+\index{Inicjalizuj\_PowierzchnieMarsa@{Inicjalizuj\_PowierzchnieMarsa}!PowierzchniaMarsa.cpp@{PowierzchniaMarsa.cpp}}
+\doxysubsubsection{\texorpdfstring{Inicjalizuj\_PowierzchnieMarsa()}{Inicjalizuj\_PowierzchnieMarsa()}}
+{\footnotesize\ttfamily bool Inicjalizuj\+\_\+\+Powierzchnie\+Marsa (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}} \&}]{r\+Lacze }\end{DoxyParamCaption})}
+
+
+
+Inicjalizuje model powierzchni Marsa. 
+
+Funkcja inicjalizująca powierzchnie marsa.
+
+Zapisuje do pliku powierzchnię w postaci siatki oraz przekazuje nazwę tego pliku do łącza do gnuplota. To spowoduje, że program gnuplot będzie rysował powierzchnie na podstawie danych w tym pliku. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em r\+Lacze} & -\/ zainicjalizowane łącze do gnuplota.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & -\/ operacja powiodła się, \\
+\hline
+{\em false} & -\/ w przypadku przeciwnym. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_powierzchnia_marsa_8cpp_a90f8388bf4b0322ca71017caae3e0d73}\label{_powierzchnia_marsa_8cpp_a90f8388bf4b0322ca71017caae3e0d73}} 
+\index{PowierzchniaMarsa.cpp@{PowierzchniaMarsa.cpp}!UtworzPowierzchnie\_ZapiszDoPliku@{UtworzPowierzchnie\_ZapiszDoPliku}}
+\index{UtworzPowierzchnie\_ZapiszDoPliku@{UtworzPowierzchnie\_ZapiszDoPliku}!PowierzchniaMarsa.cpp@{PowierzchniaMarsa.cpp}}
+\doxysubsubsection{\texorpdfstring{UtworzPowierzchnie\_ZapiszDoPliku()}{UtworzPowierzchnie\_ZapiszDoPliku()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Utworz\+Powierzchnie\+\_\+\+Zapisz\+Do\+Pliku (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s\+Nazwa\+Pliku }\end{DoxyParamCaption})}
+
+Zapisuje do pliku siatkę punktów, które tworzą model powierzchni planety. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em s\+Nazwa\+Pliku} & -\/ nazwa pliku, do którego ma być zapisana siatka punktów \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & -\/ operacja powiodła się, \\
+\hline
+{\em false} & -\/ w przypadku przeciwnym. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_powierzchnia_marsa_8cpp_a4eefeb43e7c6727fb4e262012df87ad2}\label{_powierzchnia_marsa_8cpp_a4eefeb43e7c6727fb4e262012df87ad2}} 
+\index{PowierzchniaMarsa.cpp@{PowierzchniaMarsa.cpp}!UtworzPowierzchnie\_ZapiszDoPliku@{UtworzPowierzchnie\_ZapiszDoPliku}}
+\index{UtworzPowierzchnie\_ZapiszDoPliku@{UtworzPowierzchnie\_ZapiszDoPliku}!PowierzchniaMarsa.cpp@{PowierzchniaMarsa.cpp}}
+\doxysubsubsection{\texorpdfstring{UtworzPowierzchnie\_ZapiszDoPliku()}{UtworzPowierzchnie\_ZapiszDoPliku()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Utworz\+Powierzchnie\+\_\+\+Zapisz\+Do\+Pliku (\begin{DoxyParamCaption}\item[{ofstream \&}]{r\+Strm\+Wy }\end{DoxyParamCaption})}
+
+Zapisuje do strumienia siatkę punktów, które tworzą model powierzchni planety. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em r\+Strm\+Wy} & -\/ strumień wyjściowy, do którego zapisana jest siatka punktów. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & -\/ operacja powiodła się, \\
+\hline
+{\em false} & -\/ w przypadku przeciwnym. \\
+\hline
+\end{DoxyRetVals}

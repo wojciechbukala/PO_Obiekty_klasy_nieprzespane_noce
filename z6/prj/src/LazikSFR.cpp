@@ -1,5 +1,10 @@
 #include "LazikSFR.hh"
 
+/*!
+ * \file
+ *
+ *  Ostatnia modyfikacja: 2022.06.15
+ */
 
 
 TypKolizji LazikSFR::CzyKolizja(std::shared_ptr<Lazik> l)

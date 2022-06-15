@@ -2,6 +2,13 @@
 #include <cmath>
 #include <algorithm>
 
+/*!
+ * \file
+ *
+ *  Ostatnia modyfikacja: 2022.06.15
+ */
+
+
 bool ObrysXY::NakladajaSie(ObrysXY DrugiLazik)
 {
 

@@ -1,0 +1,177 @@
+\hypertarget{class_lazik_s_f_r}{}\doxysection{Lazik\+S\+FR Class Reference}
+\label{class_lazik_s_f_r}\index{LazikSFR@{LazikSFR}}
+
+
+Inheritance diagram for Lazik\+S\+FR\+:
+% FIG 0
+
+
+Collaboration diagram for Lazik\+S\+FR\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lazik_s_f_r_a4cc919a502588913ee0f9b0ffdb22815}{Lazik\+S\+FR}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor bezparametryczny. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_lazik_s_f_r_ab9521b123c8bac5aea7b96a04c86b6c8}{Lazik\+S\+FR}} (const char $\ast$s\+Nazwa\+Pliku\+\_\+\+Bryla\+Wzorcowa, const char $\ast$s\+Nazwa\+Obiektu, int Kolor\+ID, \mbox{\hyperlink{_wektor3_d_8hh_a97a30d7257f40ddd7ba8726d98ba5c8b}{Wektor3D}} wczytana\+\_\+skala, \mbox{\hyperlink{_wektor3_d_8hh_a97a30d7257f40ddd7ba8726d98ba5c8b}{Wektor3D}} wczytane\+\_\+polozenie, double kat, double szybkosc)
+\begin{DoxyCompactList}\small\item\em Konstruktor parametryczny, kopiujący klasy \mbox{\hyperlink{class_lazik_s_f_r}{Lazik\+S\+FR}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_lazik_s_f_r_aca5f178c35d9a43056991e9695dca082}{$\sim$\+Lazik\+S\+FR}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor wirtualny klasy \mbox{\hyperlink{class_lazik_s_f_r}{Lazik\+S\+FR}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_typ_kolizji_8hh_a23331f89664c4cd6c3ca86abdcc50576}{Typ\+Kolizji}} \mbox{\hyperlink{class_lazik_s_f_r_aac9a779a7ce0fa0299f45ac8c74357b5}{Czy\+Kolizja}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_lazik}{Lazik}} $>$ l) override
+\begin{DoxyCompactList}\small\item\em Przeciążenie metody wirtualnej sprawdzającej czy nastąpiła kolizja. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_lazik_s_f_r_ad632247a3c7b64f5ab844a011e14d453}{Jaki\+Obiekt}} () override
+\begin{DoxyCompactList}\small\item\em Przeciążenie metody wirtualnej zwracającej typ obiektu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lazik_s_f_r_ac754a16b2bde5896321011f9e93e1906}{Dodaj\+Do\+Listy\+Probek}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_probka_regolitu}{Probka\+Regolitu}} $>$ Prob\+Rego)
+\begin{DoxyCompactList}\small\item\em metoda dodająca do listy zebrane próbki \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lazik_s_f_r_a7676e39064a90d1d3d24425fca0abb31}{Wyswietl\+Liste\+Probek}} (std\+::ostream \&Strm\+Wy)
+\begin{DoxyCompactList}\small\item\em metoda wyświetlająca listę próbek zebranych przez S\+FR \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lazik_s_f_r_a0520dbb7e36fbaea42c21c13fd9a83e9}{Wyswietl\+Stan}} (std\+::ostream \&Strm\+Wy) override
+\begin{DoxyCompactList}\small\item\em przeciążenie metody wirtualnej do wyświetlania stanu łazika \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_lazik_s_f_r_a4cc919a502588913ee0f9b0ffdb22815}\label{class_lazik_s_f_r_a4cc919a502588913ee0f9b0ffdb22815}} 
+\index{LazikSFR@{LazikSFR}!LazikSFR@{LazikSFR}}
+\index{LazikSFR@{LazikSFR}!LazikSFR@{LazikSFR}}
+\doxysubsubsection{\texorpdfstring{LazikSFR()}{LazikSFR()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Lazik\+S\+F\+R\+::\+Lazik\+S\+FR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstruktor bezparametryczny. 
+
+\mbox{\Hypertarget{class_lazik_s_f_r_ab9521b123c8bac5aea7b96a04c86b6c8}\label{class_lazik_s_f_r_ab9521b123c8bac5aea7b96a04c86b6c8}} 
+\index{LazikSFR@{LazikSFR}!LazikSFR@{LazikSFR}}
+\index{LazikSFR@{LazikSFR}!LazikSFR@{LazikSFR}}
+\doxysubsubsection{\texorpdfstring{LazikSFR()}{LazikSFR()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Lazik\+S\+F\+R\+::\+Lazik\+S\+FR (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s\+Nazwa\+Pliku\+\_\+\+Bryla\+Wzorcowa,  }\item[{const char $\ast$}]{s\+Nazwa\+Obiektu,  }\item[{int}]{Kolor\+ID,  }\item[{\mbox{\hyperlink{_wektor3_d_8hh_a97a30d7257f40ddd7ba8726d98ba5c8b}{Wektor3D}}}]{wczytana\+\_\+skala,  }\item[{\mbox{\hyperlink{_wektor3_d_8hh_a97a30d7257f40ddd7ba8726d98ba5c8b}{Wektor3D}}}]{wczytane\+\_\+polozenie,  }\item[{double}]{kat,  }\item[{double}]{szybkosc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor parametryczny, kopiujący klasy \mbox{\hyperlink{class_lazik_s_f_r}{Lazik\+S\+FR}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s\+Nazwa\+Pliku\+\_\+\+Bryla\+Wzorcowa} & -\/ nazwa pliku bryły wzorcowej \\
+\hline
+{\em s\+Nazwa\+Obiektu} & -\/ nazwa obiektu \\
+\hline
+{\em Kolor\+ID} & -\/ kolor obiektu (Lazika\+S\+FR) \\
+\hline
+{\em wczytana\+\_\+skala} & -\/ skala do rysowania obiektu (Lazika\+S\+FR) \\
+\hline
+{\em wczytane\+\_\+polozenie} & -\/ położenie obiektu (Lazika\+S\+FR) \\
+\hline
+{\em kat} & -\/ kąt orientacji dla obiektu klasy \mbox{\hyperlink{class_lazik_s_f_r}{Lazik\+S\+FR}} \\
+\hline
+{\em szybkosc} & -\/ szybkość poruszania się obiketu klasy \mbox{\hyperlink{class_lazik_s_f_r}{Lazik\+S\+FR}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_lazik_s_f_r_aca5f178c35d9a43056991e9695dca082}\label{class_lazik_s_f_r_aca5f178c35d9a43056991e9695dca082}} 
+\index{LazikSFR@{LazikSFR}!````~LazikSFR@{$\sim$LazikSFR}}
+\index{````~LazikSFR@{$\sim$LazikSFR}!LazikSFR@{LazikSFR}}
+\doxysubsubsection{\texorpdfstring{$\sim$LazikSFR()}{~LazikSFR()}}
+{\footnotesize\ttfamily virtual Lazik\+S\+F\+R\+::$\sim$\+Lazik\+S\+FR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destruktor wirtualny klasy \mbox{\hyperlink{class_lazik_s_f_r}{Lazik\+S\+FR}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lazik_s_f_r_aac9a779a7ce0fa0299f45ac8c74357b5}\label{class_lazik_s_f_r_aac9a779a7ce0fa0299f45ac8c74357b5}} 
+\index{LazikSFR@{LazikSFR}!CzyKolizja@{CzyKolizja}}
+\index{CzyKolizja@{CzyKolizja}!LazikSFR@{LazikSFR}}
+\doxysubsubsection{\texorpdfstring{CzyKolizja()}{CzyKolizja()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_typ_kolizji_8hh_a23331f89664c4cd6c3ca86abdcc50576}{Typ\+Kolizji}} Lazik\+S\+F\+R\+::\+Czy\+Kolizja (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_lazik}{Lazik}} $>$}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Przeciążenie metody wirtualnej sprawdzającej czy nastąpiła kolizja. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & inteligentny wskaźnik na \mbox{\hyperlink{class_lazik}{Lazik}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Typ\+Kolizji -\/ typ kolizji która wystąpiła 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_lazik_a6bb5fdba106f6dd9e4d1378e6680b0d0}{Lazik}}.
+
+\mbox{\Hypertarget{class_lazik_s_f_r_ac754a16b2bde5896321011f9e93e1906}\label{class_lazik_s_f_r_ac754a16b2bde5896321011f9e93e1906}} 
+\index{LazikSFR@{LazikSFR}!DodajDoListyProbek@{DodajDoListyProbek}}
+\index{DodajDoListyProbek@{DodajDoListyProbek}!LazikSFR@{LazikSFR}}
+\doxysubsubsection{\texorpdfstring{DodajDoListyProbek()}{DodajDoListyProbek()}}
+{\footnotesize\ttfamily void Lazik\+S\+F\+R\+::\+Dodaj\+Do\+Listy\+Probek (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_probka_regolitu}{Probka\+Regolitu}} $>$}]{Prob\+Rego }\end{DoxyParamCaption})}
+
+
+
+metoda dodająca do listy zebrane próbki 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Prob\+Rego} & -\/ próbka do dodania \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_lazik_s_f_r_ad632247a3c7b64f5ab844a011e14d453}\label{class_lazik_s_f_r_ad632247a3c7b64f5ab844a011e14d453}} 
+\index{LazikSFR@{LazikSFR}!JakiObiekt@{JakiObiekt}}
+\index{JakiObiekt@{JakiObiekt}!LazikSFR@{LazikSFR}}
+\doxysubsubsection{\texorpdfstring{JakiObiekt()}{JakiObiekt()}}
+{\footnotesize\ttfamily std\+::string Lazik\+S\+F\+R\+::\+Jaki\+Obiekt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Przeciążenie metody wirtualnej zwracającej typ obiektu. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string -\/ typ obiektu czyli \char`\"{}\+Lazik\+S\+F\+R\char`\"{} 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_lazik_a7d376d3627504ff7fb27377223b623fd}{Lazik}}.
+
+\mbox{\Hypertarget{class_lazik_s_f_r_a7676e39064a90d1d3d24425fca0abb31}\label{class_lazik_s_f_r_a7676e39064a90d1d3d24425fca0abb31}} 
+\index{LazikSFR@{LazikSFR}!WyswietlListeProbek@{WyswietlListeProbek}}
+\index{WyswietlListeProbek@{WyswietlListeProbek}!LazikSFR@{LazikSFR}}
+\doxysubsubsection{\texorpdfstring{WyswietlListeProbek()}{WyswietlListeProbek()}}
+{\footnotesize\ttfamily void Lazik\+S\+F\+R\+::\+Wyswietl\+Liste\+Probek (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{Strm\+Wy }\end{DoxyParamCaption})}
+
+
+
+metoda wyświetlająca listę próbek zebranych przez S\+FR 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Strm\+Wy} & -\/ strumień wyjściowy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_lazik_s_f_r_a0520dbb7e36fbaea42c21c13fd9a83e9}\label{class_lazik_s_f_r_a0520dbb7e36fbaea42c21c13fd9a83e9}} 
+\index{LazikSFR@{LazikSFR}!WyswietlStan@{WyswietlStan}}
+\index{WyswietlStan@{WyswietlStan}!LazikSFR@{LazikSFR}}
+\doxysubsubsection{\texorpdfstring{WyswietlStan()}{WyswietlStan()}}
+{\footnotesize\ttfamily void Lazik\+S\+F\+R\+::\+Wyswietl\+Stan (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{Strm\+Wy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+przeciążenie metody wirtualnej do wyświetlania stanu łazika 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Strm\+Wy} & -\/ strumień wyjściowy \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_lazik_a0989b383bf050ddb1ba8c38751fd0d3c}{Lazik}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wojciech/\+Documents/\+P\+O\+\_\+\+Obiekty\+\_\+klasy\+\_\+nieprzespane\+\_\+noce/z6/prj/inc/\mbox{\hyperlink{_lazik_s_f_r_8hh}{Lazik\+S\+F\+R.\+hh}}\item 
+/home/wojciech/\+Documents/\+P\+O\+\_\+\+Obiekty\+\_\+klasy\+\_\+nieprzespane\+\_\+noce/z6/prj/src/\mbox{\hyperlink{_lazik_s_f_r_8cpp}{Lazik\+S\+F\+R.\+cpp}}\end{DoxyCompactItemize}

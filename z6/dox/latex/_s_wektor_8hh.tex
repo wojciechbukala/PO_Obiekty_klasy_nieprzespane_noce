@@ -1,0 +1,68 @@
+\hypertarget{_s_wektor_8hh}{}\doxysection{/home/wojciech/\+Documents/\+P\+O\+\_\+\+Obiekty\+\_\+klasy\+\_\+nieprzespane\+\_\+noce/z6/prj/inc/\+S\+Wektor.hh File Reference}
+\label{_s_wektor_8hh}\index{/home/wojciech/Documents/PO\_Obiekty\_klasy\_nieprzespane\_noce/z6/prj/inc/SWektor.hh@{/home/wojciech/Documents/PO\_Obiekty\_klasy\_nieprzespane\_noce/z6/prj/inc/SWektor.hh}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+Include dependency graph for S\+Wektor.\+hh\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_wektor}{S\+Wektor$<$ typ, wymiar $>$}}
+\begin{DoxyCompactList}\small\item\em Szablon klasy modelującej pojęcie wektora. Klasa ta jest szablonem i może stworzyć wektory dowolnie dużej wielkości i zawierający elementy różych typów. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename typ , int wymiar$>$ }\\std\+::istream \& \mbox{\hyperlink{_s_wektor_8hh_a632b90a301d887bbe3b4643851e11526}{operator$>$$>$}} (std\+::istream \&Strm, \mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ \&Wek)
+\begin{DoxyCompactList}\small\item\em Przeciążenie wczytujące \mbox{\hyperlink{class_s_wektor}{S\+Wektor}} ze strumienia std\+::istream Akceptowany format prametrów S\+Wektora to liczby zmiennoprzicnkowe. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename typ , int wymiar$>$ }\\std\+::ostream \& \mbox{\hyperlink{_s_wektor_8hh_a3b8c29f7e4785b5f3eeb790ac8366a6a}{operator$<$$<$}} (std\+::ostream \&Strm, const \mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ \&Wek)
+\begin{DoxyCompactList}\small\item\em Przeciążenie wypisujące \mbox{\hyperlink{class_s_wektor}{S\+Wektor}} na strumień std\+::ostream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ostatnia modyfikacja\+: 2022.\+06.\+15 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_s_wektor_8hh_a3b8c29f7e4785b5f3eeb790ac8366a6a}\label{_s_wektor_8hh_a3b8c29f7e4785b5f3eeb790ac8366a6a}} 
+\index{SWektor.hh@{SWektor.hh}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!SWektor.hh@{SWektor.hh}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{Strm,  }\item[{const \mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ \&}]{Wek }\end{DoxyParamCaption})}
+
+
+
+Przeciążenie wypisujące \mbox{\hyperlink{class_s_wektor}{S\+Wektor}} na strumień std\+::ostream. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Wek} & -\/ \mbox{\hyperlink{class_s_wektor}{S\+Wektor}} którego parametry wypisujemy \\
+\hline
+\mbox{\texttt{ in}}  & {\em Strm} & -\/ referencja sturmienia wyjściowego\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wypisuje na strumień std\+::ostream 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_wektor_8hh_a632b90a301d887bbe3b4643851e11526}\label{_s_wektor_8hh_a632b90a301d887bbe3b4643851e11526}} 
+\index{SWektor.hh@{SWektor.hh}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!SWektor.hh@{SWektor.hh}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
+std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{Strm,  }\item[{\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ \&}]{Wek }\end{DoxyParamCaption})}
+
+
+
+Przeciążenie wczytujące \mbox{\hyperlink{class_s_wektor}{S\+Wektor}} ze strumienia std\+::istream Akceptowany format prametrów S\+Wektora to liczby zmiennoprzicnkowe. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Wek} & -\/ referencja S\+Wektora do którego wpisujemy parametry \\
+\hline
+\mbox{\texttt{ in}}  & {\em Strm} & -\/ referencja sturmienia wejściowego\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wczytuje strumieniem std\+::istream \mbox{\hyperlink{class_s_wektor}{S\+Wektor}} 
+\end{DoxyReturn}

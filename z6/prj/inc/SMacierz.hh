@@ -5,6 +5,12 @@
 #include <iostream>
 
 /*!
+ * \file
+ *
+ *  Ostatnia modyfikacja: 2022.06.15
+ */
+
+/*!
  *  \brief Szblon klasy Macierz.
  *
  * Szablon klasy modelującej pojęcie macierzy.

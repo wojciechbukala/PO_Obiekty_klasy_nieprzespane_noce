@@ -20,7 +20,14 @@ Collaboration diagram for Obiekt\+Geom\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_obiekt_geom_af22c3b4bc9615553ee26ceca612fe0cc}{Obiekt\+Geom}} (const char $\ast$s\+Nazwa\+Pliku\+\_\+\+Bryla\+Wzorcowa, const char $\ast$s\+Nazwa\+Obiektu, int Kolor\+ID, \mbox{\hyperlink{class_s_wektor}{Wektor3D}} wczytana\+\_\+skala, \mbox{\hyperlink{class_s_wektor}{Wektor3D}} wczytane\+\_\+polozenie)
+\mbox{\Hypertarget{class_obiekt_geom_a348425f0aa9a59e8710e15d40cfcfda2}\label{class_obiekt_geom_a348425f0aa9a59e8710e15d40cfcfda2}} 
+std\+::string \mbox{\hyperlink{class_obiekt_geom_a348425f0aa9a59e8710e15d40cfcfda2}{Daj\+Nazwe\+Pliku\+Bryla\+Rysowana}} ()
+\begin{DoxyCompactList}\small\item\em Pole Obrys reprezentujące obiekt jako kontur 2D. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_obiekt_geom_ae7d225fcb3bd94c0eb00e9ef60d4e792}{Daj\+Nazwe\+Obiektu}} ()
+\begin{DoxyCompactList}\small\item\em Metoda pomocnicza zwracająca nazwę obiektu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_obiekt_geom_a8d7af740f74bf6bee86657eb88f397d0}{Wpisz\+Polozenie}} (\mbox{\hyperlink{_wektor3_d_8hh_a97a30d7257f40ddd7ba8726d98ba5c8b}{Wektor3D}} nowe)
+\begin{DoxyCompactList}\small\item\em Metoda pomocnicza do zmiany położenia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_obiekt_geom_af22c3b4bc9615553ee26ceca612fe0cc}{Obiekt\+Geom}} (const char $\ast$s\+Nazwa\+Pliku\+\_\+\+Bryla\+Wzorcowa, const char $\ast$s\+Nazwa\+Obiektu, int Kolor\+ID, \mbox{\hyperlink{_wektor3_d_8hh_a97a30d7257f40ddd7ba8726d98ba5c8b}{Wektor3D}} wczytana\+\_\+skala, \mbox{\hyperlink{_wektor3_d_8hh_a97a30d7257f40ddd7ba8726d98ba5c8b}{Wektor3D}} wczytane\+\_\+polozenie)
 \begin{DoxyCompactList}\small\item\em Konstruktor parametryczny klasy \mbox{\hyperlink{class_obiekt_geom}{Obiekt\+Geom}}. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_obiekt_geom_a7d2459f8346277154a88a0e05bf7a08a}{Wez\+Kolor\+ID}} () const
 \begin{DoxyCompactList}\small\item\em Zwraca kolor obiektu. \end{DoxyCompactList}\item 
@@ -32,8 +39,23 @@ bool \mbox{\hyperlink{class_obiekt_geom_a77d6ffce2f6621a4f709c820442af295}{Przel
 \begin{DoxyCompactList}\small\item\em Przeciążnie funkcji przeliczania i zapisywania współrzendnych wierzchołków bez parametrów. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_obiekt_geom_af49b3116d1df5fe60809463d741a0514}{Przelicz\+\_\+i\+\_\+\+Zapisz\+\_\+\+Wierzcholki}} (std\+::ostream \&Strm\+Wy, std\+::istream \&Strm\+We)
 \begin{DoxyCompactList}\small\item\em Przeciążnie funkcji przeliczania i zapisywania współrzendnych wierzchołków z parametrami. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_obiekt_geom_a97636604339a3f5c0ae0538dca0e24ff}{zmien\+\_\+polozenie}} (\mbox{\hyperlink{class_s_wektor}{Wektor3D}} nowy)
-\begin{DoxyCompactList}\small\item\em Motoda zmienia położenie obiektu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_obiekt_geom_a97636604339a3f5c0ae0538dca0e24ff}{zmien\+\_\+polozenie}} (\mbox{\hyperlink{_wektor3_d_8hh_a97a30d7257f40ddd7ba8726d98ba5c8b}{Wektor3D}} nowy)
+\begin{DoxyCompactList}\small\item\em Motoda zmienia położenie obiektu. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_obiekt_geom_ad98bc33b7d73387189d735dc71c6d5a7}{Jaki\+Obiekt}} ()
+\begin{DoxyCompactList}\small\item\em Abstrakcyjna metoda wirtualna do sprawdzania typu obiektu klasy pochodnej. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_obiekt_geom_a18186ba8920ccd2ccb91d63814e0c81b}\label{class_obiekt_geom_a18186ba8920ccd2ccb91d63814e0c81b}} 
+virtual \mbox{\hyperlink{class_obiekt_geom_a18186ba8920ccd2ccb91d63814e0c81b}{$\sim$\+Obiekt\+Geom}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor wirtualny klasy \mbox{\hyperlink{class_obiekt_geom}{Obiekt\+Geom}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{_typ_kolizji_8hh_a23331f89664c4cd6c3ca86abdcc50576}{Typ\+Kolizji}} \mbox{\hyperlink{class_obiekt_geom_ab7cf2f2ccc80efa5ee08c07141511eb6}{Czy\+Kolizja}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_lazik}{Lazik}} $>$ l)=0
+\begin{DoxyCompactList}\small\item\em Metoda wirtualna sprawdzająca czy nastąpiła kolizja. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_obiekt_geom_a7371213efc6c3271f1c1bfe85437e9aa}{Obrysy}} ()
+\begin{DoxyCompactList}\small\item\em Metoda pomocnicza do wyświtlania obrysu Obiektu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_obiekt_geom_a6a9086cb48693858cb34dc6f2ef5ec9f}\label{class_obiekt_geom_a6a9086cb48693858cb34dc6f2ef5ec9f}} 
+\mbox{\hyperlink{class_obrys_x_y}{Obrys\+XY}} \mbox{\hyperlink{class_obiekt_geom_a6a9086cb48693858cb34dc6f2ef5ec9f}{Obrys}}
+\begin{DoxyCompactList}\small\item\em Pole Obrys reprezentujące obiekt jako kontur 2D. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -50,12 +72,12 @@ std\+::string {\bfseries \+\_\+\+Nazwa\+Obiektu}
 int {\bfseries \+\_\+\+Kolor\+ID}
 \item 
 \mbox{\Hypertarget{class_obiekt_geom_a9f2599116c476b403db6426ebaa2aab8}\label{class_obiekt_geom_a9f2599116c476b403db6426ebaa2aab8}} 
-\mbox{\hyperlink{class_s_wektor}{Wektor3D}} \mbox{\hyperlink{class_obiekt_geom_a9f2599116c476b403db6426ebaa2aab8}{skala}}
+\mbox{\hyperlink{_wektor3_d_8hh_a97a30d7257f40ddd7ba8726d98ba5c8b}{Wektor3D}} \mbox{\hyperlink{class_obiekt_geom_a9f2599116c476b403db6426ebaa2aab8}{skala}}
 \begin{DoxyCompactList}\small\item\em Wektor przechowujący skale potrzebną w obliczeniach. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_obiekt_geom_a1e68fc525ae1046eb6ffd2bb2843c15c}\label{class_obiekt_geom_a1e68fc525ae1046eb6ffd2bb2843c15c}} 
-\mbox{\hyperlink{class_s_wektor}{Wektor3D}} \mbox{\hyperlink{class_obiekt_geom_a1e68fc525ae1046eb6ffd2bb2843c15c}{polozenie}}
+\mbox{\hyperlink{_wektor3_d_8hh_a97a30d7257f40ddd7ba8726d98ba5c8b}{Wektor3D}} \mbox{\hyperlink{class_obiekt_geom_a1e68fc525ae1046eb6ffd2bb2843c15c}{polozenie}}
 \begin{DoxyCompactList}\small\item\em Wektor przechowujący położenie danego przedmiotu. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_s_macierz}{Macierz3D}} \mbox{\hyperlink{class_obiekt_geom_a3fc67b4e1a51ac654aa21d96dd8cbac5}{Macierz\+Rotacji}}
+\mbox{\hyperlink{_macierz3_d_8hh_a8fdcc84d7860623c8b93f7025048c415}{Macierz3D}} \mbox{\hyperlink{class_obiekt_geom_a3fc67b4e1a51ac654aa21d96dd8cbac5}{Macierz\+Rotacji}}
 \begin{DoxyCompactList}\small\item\em Macierz potrzeba do przeliczania obrotu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -69,7 +91,7 @@ Modeluje pojęcie obiektu geometrycznego, może być to przykładowo łazik. Dzi
 \index{ObiektGeom@{ObiektGeom}!ObiektGeom@{ObiektGeom}}
 \index{ObiektGeom@{ObiektGeom}!ObiektGeom@{ObiektGeom}}
 \doxysubsubsection{\texorpdfstring{ObiektGeom()}{ObiektGeom()}}
-{\footnotesize\ttfamily Obiekt\+Geom\+::\+Obiekt\+Geom (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s\+Nazwa\+Pliku\+\_\+\+Bryla\+Wzorcowa,  }\item[{const char $\ast$}]{s\+Nazwa\+Obiektu,  }\item[{int}]{Kolor\+ID,  }\item[{\mbox{\hyperlink{class_s_wektor}{Wektor3D}}}]{wczytana\+\_\+skala,  }\item[{\mbox{\hyperlink{class_s_wektor}{Wektor3D}}}]{wczytane\+\_\+polozenie }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Obiekt\+Geom\+::\+Obiekt\+Geom (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s\+Nazwa\+Pliku\+\_\+\+Bryla\+Wzorcowa,  }\item[{const char $\ast$}]{s\+Nazwa\+Obiektu,  }\item[{int}]{Kolor\+ID,  }\item[{\mbox{\hyperlink{_wektor3_d_8hh_a97a30d7257f40ddd7ba8726d98ba5c8b}{Wektor3D}}}]{wczytana\+\_\+skala,  }\item[{\mbox{\hyperlink{_wektor3_d_8hh_a97a30d7257f40ddd7ba8726d98ba5c8b}{Wektor3D}}}]{wczytane\+\_\+polozenie }\end{DoxyParamCaption})}
 
 
 
@@ -85,6 +107,68 @@ Przypisuje wrtości początkowe i inicjuje niektóre pola klasy
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_obiekt_geom_ab7cf2f2ccc80efa5ee08c07141511eb6}\label{class_obiekt_geom_ab7cf2f2ccc80efa5ee08c07141511eb6}} 
+\index{ObiektGeom@{ObiektGeom}!CzyKolizja@{CzyKolizja}}
+\index{CzyKolizja@{CzyKolizja}!ObiektGeom@{ObiektGeom}}
+\doxysubsubsection{\texorpdfstring{CzyKolizja()}{CzyKolizja()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_typ_kolizji_8hh_a23331f89664c4cd6c3ca86abdcc50576}{Typ\+Kolizji}} Obiekt\+Geom\+::\+Czy\+Kolizja (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_lazik}{Lazik}} $>$}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Metoda wirtualna sprawdzająca czy nastąpiła kolizja. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & inteligentny wskaźnik na obiekt klasy \mbox{\hyperlink{class_lazik}{Lazik}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Typ\+Kolizji jaki jest typ kolizji 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_lazik_a6bb5fdba106f6dd9e4d1378e6680b0d0}{Lazik}}, \mbox{\hyperlink{class_lazik_s_f_r_aac9a779a7ce0fa0299f45ac8c74357b5}{Lazik\+S\+FR}}, and \mbox{\hyperlink{class_probka_regolitu_a27e3c34db17401a9e9f5d6e9ed3b5171}{Probka\+Regolitu}}.
+
+\mbox{\Hypertarget{class_obiekt_geom_ae7d225fcb3bd94c0eb00e9ef60d4e792}\label{class_obiekt_geom_ae7d225fcb3bd94c0eb00e9ef60d4e792}} 
+\index{ObiektGeom@{ObiektGeom}!DajNazweObiektu@{DajNazweObiektu}}
+\index{DajNazweObiektu@{DajNazweObiektu}!ObiektGeom@{ObiektGeom}}
+\doxysubsubsection{\texorpdfstring{DajNazweObiektu()}{DajNazweObiektu()}}
+{\footnotesize\ttfamily std\+::string Obiekt\+Geom\+::\+Daj\+Nazwe\+Obiektu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda pomocnicza zwracająca nazwę obiektu. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string -\/ nazwa obiektu 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_obiekt_geom_ad98bc33b7d73387189d735dc71c6d5a7}\label{class_obiekt_geom_ad98bc33b7d73387189d735dc71c6d5a7}} 
+\index{ObiektGeom@{ObiektGeom}!JakiObiekt@{JakiObiekt}}
+\index{JakiObiekt@{JakiObiekt}!ObiektGeom@{ObiektGeom}}
+\doxysubsubsection{\texorpdfstring{JakiObiekt()}{JakiObiekt()}}
+{\footnotesize\ttfamily virtual std\+::string Obiekt\+Geom\+::\+Jaki\+Obiekt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Abstrakcyjna metoda wirtualna do sprawdzania typu obiektu klasy pochodnej. 
+
+\begin{DoxyReturn}{Returns}
+Zwraca nazwę obiektu klasy pochodnej 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_lazik_a7d376d3627504ff7fb27377223b623fd}{Lazik}}, \mbox{\hyperlink{class_lazik_s_f_r_ad632247a3c7b64f5ab844a011e14d453}{Lazik\+S\+FR}}, and \mbox{\hyperlink{class_probka_regolitu_a62a95565c37b8e0e420f3c01856cccd2}{Probka\+Regolitu}}.
+
+\mbox{\Hypertarget{class_obiekt_geom_a7371213efc6c3271f1c1bfe85437e9aa}\label{class_obiekt_geom_a7371213efc6c3271f1c1bfe85437e9aa}} 
+\index{ObiektGeom@{ObiektGeom}!Obrysy@{Obrysy}}
+\index{Obrysy@{Obrysy}!ObiektGeom@{ObiektGeom}}
+\doxysubsubsection{\texorpdfstring{Obrysy()}{Obrysy()}}
+{\footnotesize\ttfamily void Obiekt\+Geom\+::\+Obrysy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda pomocnicza do wyświtlania obrysu Obiektu. 
+
 \mbox{\Hypertarget{class_obiekt_geom_a77d6ffce2f6621a4f709c820442af295}\label{class_obiekt_geom_a77d6ffce2f6621a4f709c820442af295}} 
 \index{ObiektGeom@{ObiektGeom}!Przelicz\_i\_Zapisz\_Wierzcholki@{Przelicz\_i\_Zapisz\_Wierzcholki}}
 \index{Przelicz\_i\_Zapisz\_Wierzcholki@{Przelicz\_i\_Zapisz\_Wierzcholki}!ObiektGeom@{ObiektGeom}}
@@ -161,11 +245,26 @@ Zwraca nazwe pliku rysowanej bryły.
 \begin{DoxyReturn}{Returns}
 std\+::string \+\_\+\+Nazwa\+Pliku\+\_\+\+Bryla\+Rysowowa 
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_obiekt_geom_a8d7af740f74bf6bee86657eb88f397d0}\label{class_obiekt_geom_a8d7af740f74bf6bee86657eb88f397d0}} 
+\index{ObiektGeom@{ObiektGeom}!WpiszPolozenie@{WpiszPolozenie}}
+\index{WpiszPolozenie@{WpiszPolozenie}!ObiektGeom@{ObiektGeom}}
+\doxysubsubsection{\texorpdfstring{WpiszPolozenie()}{WpiszPolozenie()}}
+{\footnotesize\ttfamily void Obiekt\+Geom\+::\+Wpisz\+Polozenie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_wektor3_d_8hh_a97a30d7257f40ddd7ba8726d98ba5c8b}{Wektor3D}}}]{nowe }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda pomocnicza do zmiany położenia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nowe} & -\/ Wektor3D określający współrzędne nowego położenia \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_obiekt_geom_a97636604339a3f5c0ae0538dca0e24ff}\label{class_obiekt_geom_a97636604339a3f5c0ae0538dca0e24ff}} 
 \index{ObiektGeom@{ObiektGeom}!zmien\_polozenie@{zmien\_polozenie}}
 \index{zmien\_polozenie@{zmien\_polozenie}!ObiektGeom@{ObiektGeom}}
 \doxysubsubsection{\texorpdfstring{zmien\_polozenie()}{zmien\_polozenie()}}
-{\footnotesize\ttfamily void Obiekt\+Geom\+::zmien\+\_\+polozenie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_wektor}{Wektor3D}}}]{nowy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void Obiekt\+Geom\+::zmien\+\_\+polozenie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_wektor3_d_8hh_a97a30d7257f40ddd7ba8726d98ba5c8b}{Wektor3D}}}]{nowy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -186,15 +285,15 @@ bool 1 -\/ pomyślnie wykonano przliczanie, 0 -\/ coś się nie powiodło
 \index{ObiektGeom@{ObiektGeom}!MacierzRotacji@{MacierzRotacji}}
 \index{MacierzRotacji@{MacierzRotacji}!ObiektGeom@{ObiektGeom}}
 \doxysubsubsection{\texorpdfstring{MacierzRotacji}{MacierzRotacji}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_s_macierz}{Macierz3D}} Obiekt\+Geom\+::\+Macierz\+Rotacji\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_macierz3_d_8hh_a8fdcc84d7860623c8b93f7025048c415}{Macierz3D}} Obiekt\+Geom\+::\+Macierz\+Rotacji\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
 Macierz potrzeba do przeliczania obrotu. 
 
-s\+Działa na funkcjach trygonometrycznych i potrzebuje kąta orientacji do prawidołowego działania. 
+Działa na funkcjach trygonometrycznych i potrzebuje kąta orientacji do prawidołowego działania. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-inc/Obiekt\+Geom.\+hh\item 
-src/Obiekt\+Geom.\+cpp\end{DoxyCompactItemize}
+inc/\mbox{\hyperlink{_obiekt_geom_8hh}{Obiekt\+Geom.\+hh}}\item 
+src/\mbox{\hyperlink{_obiekt_geom_8cpp}{Obiekt\+Geom.\+cpp}}\end{DoxyCompactItemize}

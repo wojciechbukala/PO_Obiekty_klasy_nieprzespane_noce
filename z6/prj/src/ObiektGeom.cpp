@@ -3,6 +3,12 @@
 #include "ObiektGeom.hh"
 
 using namespace std;
+/*!
+ * \file
+ *
+ *  Ostatnia modyfikacja: 2022.06.15
+ */
+
 
 ObiektGeom::ObiektGeom( const char*  sNazwaPliku_BrylaWzorcowa, const char*  sNazwaObiektu, int KolorID, Wektor3D wczytana_skala, Wektor3D wczytane_polozenie):
   _NazwaPliku_BrylaWzorcowa(sNazwaPliku_BrylaWzorcowa), _KolorID(KolorID)

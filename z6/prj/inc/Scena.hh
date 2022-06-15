@@ -8,6 +8,12 @@
 #include "ProbkaRegolitu.hh"
 
 /*!
+ * \file
+ *
+ *  Ostatnia modyfikacja: 2022.06.15
+ */
+
+/*!
  *  \brief Klasa Scena
  *
  *  Modeluje pojęcie sceny, czyli miejsca

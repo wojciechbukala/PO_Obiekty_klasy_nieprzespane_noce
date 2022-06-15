@@ -1,0 +1,120 @@
+\hypertarget{class_probka_regolitu}{}\doxysection{Probka\+Regolitu Class Reference}
+\label{class_probka_regolitu}\index{ProbkaRegolitu@{ProbkaRegolitu}}
+
+
+Klasa \mbox{\hyperlink{class_probka_regolitu}{Probka\+Regolitu}}.  
+
+
+
+
+{\ttfamily \#include $<$Probka\+Regolitu.\+hh$>$}
+
+
+
+Inheritance diagram for Probka\+Regolitu\+:
+% FIG 0
+
+
+Collaboration diagram for Probka\+Regolitu\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_probka_regolitu_aa23e335f2002e1b71ef55ba5cc0f7d04}{Probka\+Regolitu}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor bezprametryczny klasy \mbox{\hyperlink{class_probka_regolitu}{Probka\+Regolitu}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_probka_regolitu_af17f86c27d2b89dfddfd2bf29289ef5d}{Probka\+Regolitu}} (const char $\ast$s\+Nazwa\+Pliku\+\_\+\+Bryla\+Wzorcowa, const char $\ast$s\+Nazwa\+Obiektu, unsigned int Kolor\+ID, \mbox{\hyperlink{_wektor3_d_8hh_a97a30d7257f40ddd7ba8726d98ba5c8b}{Wektor3D}} wczytana\+\_\+skala, \mbox{\hyperlink{_wektor3_d_8hh_a97a30d7257f40ddd7ba8726d98ba5c8b}{Wektor3D}} wczytane\+\_\+polozenie)
+\begin{DoxyCompactList}\small\item\em Konstruktor parametryczny, kopiujący klasy \mbox{\hyperlink{class_probka_regolitu}{Probka\+Regolitu}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_typ_kolizji_8hh_a23331f89664c4cd6c3ca86abdcc50576}{Typ\+Kolizji}} \mbox{\hyperlink{class_probka_regolitu_a27e3c34db17401a9e9f5d6e9ed3b5171}{Czy\+Kolizja}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_lazik}{Lazik}} $>$ l) override
+\begin{DoxyCompactList}\small\item\em przeciążenie metody wirtualnej sprawdzającej kolizję \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_probka_regolitu_a62a95565c37b8e0e420f3c01856cccd2}{Jaki\+Obiekt}} () override
+\begin{DoxyCompactList}\small\item\em przeciążenie metody wirtulanej zwracającej typ obiektu \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Klasa \mbox{\hyperlink{class_probka_regolitu}{Probka\+Regolitu}}. 
+
+Modeluje pojęcie problki regolitu czyli materiału zbieranego przez laziki z powierzchni marsa. Probka regolitu to obiekt geometryczny więc, klasa dziedziczy po Obiek\+Geom 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_probka_regolitu_aa23e335f2002e1b71ef55ba5cc0f7d04}\label{class_probka_regolitu_aa23e335f2002e1b71ef55ba5cc0f7d04}} 
+\index{ProbkaRegolitu@{ProbkaRegolitu}!ProbkaRegolitu@{ProbkaRegolitu}}
+\index{ProbkaRegolitu@{ProbkaRegolitu}!ProbkaRegolitu@{ProbkaRegolitu}}
+\doxysubsubsection{\texorpdfstring{ProbkaRegolitu()}{ProbkaRegolitu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Probka\+Regolitu\+::\+Probka\+Regolitu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstruktor bezprametryczny klasy \mbox{\hyperlink{class_probka_regolitu}{Probka\+Regolitu}}. 
+
+\mbox{\Hypertarget{class_probka_regolitu_af17f86c27d2b89dfddfd2bf29289ef5d}\label{class_probka_regolitu_af17f86c27d2b89dfddfd2bf29289ef5d}} 
+\index{ProbkaRegolitu@{ProbkaRegolitu}!ProbkaRegolitu@{ProbkaRegolitu}}
+\index{ProbkaRegolitu@{ProbkaRegolitu}!ProbkaRegolitu@{ProbkaRegolitu}}
+\doxysubsubsection{\texorpdfstring{ProbkaRegolitu()}{ProbkaRegolitu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Probka\+Regolitu\+::\+Probka\+Regolitu (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s\+Nazwa\+Pliku\+\_\+\+Bryla\+Wzorcowa,  }\item[{const char $\ast$}]{s\+Nazwa\+Obiektu,  }\item[{unsigned int}]{Kolor\+ID,  }\item[{\mbox{\hyperlink{_wektor3_d_8hh_a97a30d7257f40ddd7ba8726d98ba5c8b}{Wektor3D}}}]{wczytana\+\_\+skala,  }\item[{\mbox{\hyperlink{_wektor3_d_8hh_a97a30d7257f40ddd7ba8726d98ba5c8b}{Wektor3D}}}]{wczytane\+\_\+polozenie }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor parametryczny, kopiujący klasy \mbox{\hyperlink{class_probka_regolitu}{Probka\+Regolitu}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s\+Nazwa\+Pliku\+\_\+\+Bryla\+Wzorcowa} & -\/ Nazwa bryły wzorcowej \\
+\hline
+{\em s\+Nazwa\+Obiektu} & -\/ Nazwa Obiektu (próbki) \\
+\hline
+{\em Kolor\+ID} & -\/ Kolor Obiektu (próbki) \\
+\hline
+{\em wczytana\+\_\+skala} & -\/ Skala rysowania \\
+\hline
+{\em wczytane\+\_\+polozenie} & -\/ Położenie Obiektu (próbki) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_probka_regolitu_a27e3c34db17401a9e9f5d6e9ed3b5171}\label{class_probka_regolitu_a27e3c34db17401a9e9f5d6e9ed3b5171}} 
+\index{ProbkaRegolitu@{ProbkaRegolitu}!CzyKolizja@{CzyKolizja}}
+\index{CzyKolizja@{CzyKolizja}!ProbkaRegolitu@{ProbkaRegolitu}}
+\doxysubsubsection{\texorpdfstring{CzyKolizja()}{CzyKolizja()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_typ_kolizji_8hh_a23331f89664c4cd6c3ca86abdcc50576}{Typ\+Kolizji}} Probka\+Regolitu\+::\+Czy\+Kolizja (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_lazik}{Lazik}} $>$}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+przeciążenie metody wirtualnej sprawdzającej kolizję 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & -\/ inteligentny wskaźnika na Łazik \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Typ\+Kolizji -\/ jaki typ kolizji? 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_obiekt_geom_ab7cf2f2ccc80efa5ee08c07141511eb6}{Obiekt\+Geom}}.
+
+\mbox{\Hypertarget{class_probka_regolitu_a62a95565c37b8e0e420f3c01856cccd2}\label{class_probka_regolitu_a62a95565c37b8e0e420f3c01856cccd2}} 
+\index{ProbkaRegolitu@{ProbkaRegolitu}!JakiObiekt@{JakiObiekt}}
+\index{JakiObiekt@{JakiObiekt}!ProbkaRegolitu@{ProbkaRegolitu}}
+\doxysubsubsection{\texorpdfstring{JakiObiekt()}{JakiObiekt()}}
+{\footnotesize\ttfamily std\+::string Probka\+Regolitu\+::\+Jaki\+Obiekt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+przeciążenie metody wirtulanej zwracającej typ obiektu 
+
+\begin{DoxyReturn}{Returns}
+std\+::string -\/ \char`\"{}\+Probkaregolitu\char`\"{} 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_obiekt_geom_ad98bc33b7d73387189d735dc71c6d5a7}{Obiekt\+Geom}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{_probka_regolitu_8hh}{Probka\+Regolitu.\+hh}}\item 
+src/\mbox{\hyperlink{_probka_regolitu_8cpp}{Probka\+Regolitu.\+cpp}}\end{DoxyCompactItemize}

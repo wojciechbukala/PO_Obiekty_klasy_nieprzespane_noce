@@ -10,6 +10,13 @@
 using namespace std;
 
 /*!
+ * \file
+ *
+ *  Ostatnia modyfikacja: 2022.06.15
+ */
+
+
+/*!
  * \brief inicjowanie zmiennej statycznej ilosc_wektorow
  */
 template<>

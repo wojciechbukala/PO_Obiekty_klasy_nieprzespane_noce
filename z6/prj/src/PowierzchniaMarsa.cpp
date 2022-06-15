@@ -7,6 +7,12 @@ using namespace std;
 
 #define NAZWA_PLIKU__POWIERZCHNIA_PLANETY "pliki_do_rysowania/powierzchnia_planety.dat"
 
+/*!
+ * \file
+ *
+ *  Ostatnia modyfikacja: 2022.06.15
+ */
+
 
 
 /*!

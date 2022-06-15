@@ -1,0 +1,32 @@
+digraph "inc/ObiektGeom.hh"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="inc/ObiektGeom.hh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="inc/Lazik.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_lazik_8hh.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="inc/LazikSFR.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_lazik_s_f_r_8hh.html",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="inc/Scena.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_scena_8hh.html",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="src/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html",tooltip=" "];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="src/Scena.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_scena_8cpp.html",tooltip=" "];
+  Node3 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="src/LazikSFR.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_lazik_s_f_r_8cpp.html",tooltip=" "];
+  Node2 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="inc/ProbkaRegolitu.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_probka_regolitu_8hh.html",tooltip=" "];
+  Node8 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="src/ProbkaRegolitu.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_probka_regolitu_8cpp.html",tooltip=" "];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="src/Lazik.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_lazik_8cpp.html",tooltip=" "];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="src/ObiektGeom.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_obiekt_geom_8cpp.html",tooltip=" "];
+}

@@ -9,6 +9,11 @@
 #define ROMIAR_POWIERZCHNI_Y    200
 #define ROZMIAR_OCZKA_KRATY     10
 
+/*!
+ * \file
+ *
+ *  Ostatnia modyfikacja: 2022.06.15
+ */
 
 /*!
    * \brief Funkcja inicjalizująca powierzchnie marsa.

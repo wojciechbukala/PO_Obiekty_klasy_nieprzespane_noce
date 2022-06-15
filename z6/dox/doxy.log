@@ -1,365 +1,331 @@
-warning: doxygen no longer ships with the FreeSans font.
-You may want to clear or change DOT_FONTNAME.
-Otherwise you run the risk that the wrong font is being used for dot generated graphs.
-warning: The selected output language "polish" has not been updated
-since release 1.8.2.  As a result some sentences may appear in English.
-
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/SWektor.hh:273: warning: Reached end of file while still inside a (nested) comment. Nesting level 1 (probable line reference: 96)
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/src/main.cpp:15: warning: no matching class member found for 
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/LazikSFR.hh:13: warning: Compound LazikSFR is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/src/main.cpp:23: warning: no matching class member found for 
   template 
   int Wektor3D::ilosc_wektorow
 
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/src/main.cpp:20: warning: no matching class member found for 
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/src/main.cpp:28: warning: no matching class member found for 
   template 
   int Wektor3D::ilosc_aktywnych_wektorow
 
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/PowierzchniaMarsa.hh:14: warning: Found unknown command '\retrun'
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/PowierzchniaMarsa.hh:19: warning: argument 'rLacze' from the argument list of Inicjalizuj_PowierzchnieMarsa has multiple @param documentation sections
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/SMacierz.hh:110: warning: argument 'SMacierz' of command @param is not found in the argument list of operator<<(std::ostream &Strm, SMacierz< typ, wymiar > Mac)
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/SMacierz.hh:120: warning: The following parameter of operator<<(std::ostream &Strm, SMacierz< typ, wymiar > Mac) is not documented:
-  parameter 'Mac'
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/Lazik.hh:49: warning: The following parameters of Lazik::Lazik(const char *sNazwaPliku_BrylaWzorcowa, const char *sNazwaObiektu, int KolorID, Wektor3D wczytana_skala, Wektor3D wczytane_polozenie, double kat, double szybkosc) are not documented:
-  parameter 'sNazwaPliku_BrylaWzorcowa'
-  parameter 'sNazwaObiektu'
-  parameter 'KolorID'
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:48: warning: The following parameters of ObiektGeom::ObiektGeom(const char *sNazwaPliku_BrylaWzorcowa, const char *sNazwaObiektu, int KolorID, Wektor3D wczytana_skala, Wektor3D wczytane_polozenie) are not documented:
-  parameter 'sNazwaPliku_BrylaWzorcowa'
-  parameter 'sNazwaObiektu'
-  parameter 'KolorID'
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:76: warning: argument 'StrmWej' of command @param is not found in the argument list of ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(std::ostream &StrmWy, std::istream &StrmWe)
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:76: warning: argument 'StrmWyj' of command @param is not found in the argument list of ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(std::ostream &StrmWy, std::istream &StrmWe)
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:87: warning: The following parameters of ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(std::ostream &StrmWy, std::istream &StrmWe) are not documented:
-  parameter 'StrmWy'
-  parameter 'StrmWe'
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:95: warning: documented empty return type of ObiektGeom::zmien_polozenie
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/Scena.hh:47: warning: argument 'StrmWej' of command @param is not found in the argument list of Scena::jedziemy(std::istream &StrmWe, std::ostream &StrmWy)
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/Scena.hh:47: warning: argument 'StrmWyj' of command @param is not found in the argument list of Scena::jedziemy(std::istream &StrmWe, std::ostream &StrmWy)
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/Scena.hh:55: warning: The following parameters of Scena::jedziemy(std::istream &StrmWe, std::ostream &StrmWy) are not documented:
-  parameter 'StrmWe'
-  parameter 'StrmWy'
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/Scena.hh:57: warning: argument 'StrmWej' of command @param is not found in the argument list of Scena::krecimy(std::istream &StrmWe, std::ostream &StrmWy)
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/Scena.hh:57: warning: argument 'StrmWyj' of command @param is not found in the argument list of Scena::krecimy(std::istream &StrmWe, std::ostream &StrmWy)
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/Scena.hh:65: warning: The following parameters of Scena::krecimy(std::istream &StrmWe, std::ostream &StrmWy) are not documented:
-  parameter 'StrmWe'
-  parameter 'StrmWy'
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/SMacierz.hh:47: warning: argument 'SWektor' of command @param is not found in the argument list of SMacierz< typ, wymiar >::operator*(const SWektor< typ, wymiar > Wektor2) const
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/SMacierz.hh:52: warning: The following parameter of SMacierz::operator*(const SWektor< typ, wymiar > Wektor2) const is not documented:
-  parameter 'Wektor2'
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/SWektor.hh:96: warning: argument 'const' of command @param is not found in the argument list of SWektor< typ, wymiar >::operator&(SWektor const Wektor2)
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/SWektor.hh:55: warning: The following parameter of SWektor::operator&(SWektor const Wektor2) is not documented:
-  parameter 'Wektor2'
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/SWektor.hh:121: warning: argument 'SWektor' of command @param is not found in the argument list of SWektor< typ, wymiar >::operator+(SWektor< typ, wymiar > SWektor2)
-/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/SWektor.hh:45: warning: The following parameter of SWektor::operator+(SWektor< typ, wymiar > SWektor2) is not documented:
-  parameter 'SWektor2'
-sh: 1: dot: not found
-sh: 1: dot: not found
-sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00028.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00028.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00042.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00042.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00040.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00040.png"'
-sh: 1: dot: not found
-sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00057.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00057.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00062_a90f8388bf4b0322ca71017caae3e0d73_cgraph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00062_a90f8388bf4b0322ca71017caae3e0d73_cgraph.png"'
-sh: 1: sh: 1: dot: not founddot: not found
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/src/main.cpp:34: warning: no matching class member found for 
+  template 
+  int Wektor2D::ilosc_wektorow
 
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_b2d4c21d3c37447583dd1cde508f25df_dep.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_b2d4c21d3c37447583dd1cde508f25df_dep.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00056_a53facbc5708c337c9d744606d516cc0c_icgraph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00056_a53facbc5708c337c9d744606d516cc0c_icgraph.png"'
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/src/main.cpp:39: warning: no matching class member found for 
+  template 
+  int Wektor2D::ilosc_aktywnych_wektorow
+
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:18: warning: Member NAZWA_KARTOTEKI_PLIKOW_DO_RYSOWANIA (macro definition) of file ObiektGeom.hh is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/PowierzchniaMarsa.hh:8: warning: Member ROMIAR_POWIERZCHNI_X (macro definition) of file PowierzchniaMarsa.hh is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/PowierzchniaMarsa.hh:9: warning: Member ROMIAR_POWIERZCHNI_Y (macro definition) of file PowierzchniaMarsa.hh is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/PowierzchniaMarsa.hh:10: warning: Member ROZMIAR_OCZKA_KRATY (macro definition) of file PowierzchniaMarsa.hh is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/PowierzchniaMarsa.hh:19: warning: Found unknown command '\retrun'
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/PowierzchniaMarsa.hh:24: warning: argument 'rLacze' from the argument list of Inicjalizuj_PowierzchnieMarsa has multiple @param documentation sections
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/SMacierz.hh:116: warning: argument 'SMacierz' of command @param is not found in the argument list of operator<<(std::ostream &Strm, SMacierz< typ, wymiar > Mac)
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/SMacierz.hh:126: warning: The following parameter of operator<<(std::ostream &Strm, SMacierz< typ, wymiar > Mac) is not documented:
+  parameter 'Mac'
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/src/lacze_do_gnuplota.cpp:28: warning: Member DOMYSLNA_SZEROKOSC (macro definition) of file lacze_do_gnuplota.cpp is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/src/lacze_do_gnuplota.cpp:29: warning: Member DOMYSLNY_KOLOR (macro definition) of file lacze_do_gnuplota.cpp is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/src/lacze_do_gnuplota.cpp:30: warning: Member DOMYSLNY_STYL (macro definition) of file lacze_do_gnuplota.cpp is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/src/lacze_do_gnuplota.cpp:32: warning: Member STDIN (macro definition) of file lacze_do_gnuplota.cpp is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/src/lacze_do_gnuplota.cpp:33: warning: Member STDOUT (macro definition) of file lacze_do_gnuplota.cpp is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/src/lacze_do_gnuplota.cpp:426: warning: Member ROZ_LINII (macro definition) of file lacze_do_gnuplota.cpp is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/src/PowierzchniaMarsa.cpp:8: warning: Member NAZWA_PLIKU__POWIERZCHNIA_PLANETY (macro definition) of file PowierzchniaMarsa.cpp is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:39: warning: Member _NazwaPliku_BrylaWzorcowa (variable) of class ObiektGeom is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:40: warning: Member _NazwaPliku_BrylaRysowana (variable) of class ObiektGeom is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:41: warning: Member _NazwaObiektu (variable) of class ObiektGeom is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:42: warning: Member _KolorID (variable) of class ObiektGeom is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/Lazik.hh:84: warning: The following parameters of Lazik::Lazik(const char *sNazwaPliku_BrylaWzorcowa, const char *sNazwaObiektu, int KolorID, Wektor3D wczytana_skala, Wektor3D wczytane_polozenie, double kat, double szybkosc) are not documented:
+  parameter 'sNazwaPliku_BrylaWzorcowa'
+  parameter 'sNazwaObiektu'
+  parameter 'KolorID'
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/Lazik.hh:110: warning: argument 'Lacze' of command @param is not found in the argument list of Lazik::Rotacja(double kat)
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/Lazik.hh:110: warning: argument 'StrmWej' of command @param is not found in the argument list of Lazik::Rotacja(double kat)
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/Lazik.hh:110: warning: argument 'StrmWyj' of command @param is not found in the argument list of Lazik::Rotacja(double kat)
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/Lazik.hh:110: warning: argument 'Lacze' of command @param is not found in the argument list of Lazik::Rotacja(double kat)
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/Lazik.hh:110: warning: argument 'StrmWej' of command @param is not found in the argument list of Lazik::Rotacja(double kat)
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/Lazik.hh:110: warning: argument 'StrmWyj' of command @param is not found in the argument list of Lazik::Rotacja(double kat)
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:39: warning: Member _NazwaPliku_BrylaWzorcowa (variable) of class ObiektGeom is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:40: warning: Member _NazwaPliku_BrylaRysowana (variable) of class ObiektGeom is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:41: warning: Member _NazwaObiektu (variable) of class ObiektGeom is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:42: warning: Member _KolorID (variable) of class ObiektGeom is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:39: warning: Member _NazwaPliku_BrylaWzorcowa (variable) of class ObiektGeom is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:40: warning: Member _NazwaPliku_BrylaRysowana (variable) of class ObiektGeom is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:41: warning: Member _NazwaObiektu (variable) of class ObiektGeom is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:42: warning: Member _KolorID (variable) of class ObiektGeom is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:83: warning: The following parameters of ObiektGeom::ObiektGeom(const char *sNazwaPliku_BrylaWzorcowa, const char *sNazwaObiektu, int KolorID, Wektor3D wczytana_skala, Wektor3D wczytane_polozenie) are not documented:
+  parameter 'sNazwaPliku_BrylaWzorcowa'
+  parameter 'sNazwaObiektu'
+  parameter 'KolorID'
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:111: warning: argument 'StrmWej' of command @param is not found in the argument list of ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(std::ostream &StrmWy, std::istream &StrmWe)
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:111: warning: argument 'StrmWyj' of command @param is not found in the argument list of ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(std::ostream &StrmWy, std::istream &StrmWe)
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:122: warning: The following parameters of ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(std::ostream &StrmWy, std::istream &StrmWe) are not documented:
+  parameter 'StrmWy'
+  parameter 'StrmWe'
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:39: warning: Member _NazwaPliku_BrylaWzorcowa (variable) of class ObiektGeom is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:40: warning: Member _NazwaPliku_BrylaRysowana (variable) of class ObiektGeom is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:41: warning: Member _NazwaObiektu (variable) of class ObiektGeom is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/ObiektGeom.hh:42: warning: Member _KolorID (variable) of class ObiektGeom is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/Scena.hh:58: warning: argument 'StrmWej' of command @param is not found in the argument list of Scena::jedziemy(std::istream &StrmWe, std::ostream &StrmWy)
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/Scena.hh:58: warning: argument 'StrmWyj' of command @param is not found in the argument list of Scena::jedziemy(std::istream &StrmWe, std::ostream &StrmWy)
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/Scena.hh:66: warning: The following parameters of Scena::jedziemy(std::istream &StrmWe, std::ostream &StrmWy) are not documented:
+  parameter 'StrmWe'
+  parameter 'StrmWy'
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/Scena.hh:68: warning: argument 'StrmWej' of command @param is not found in the argument list of Scena::krecimy(std::istream &StrmWe, std::ostream &StrmWy)
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/Scena.hh:68: warning: argument 'StrmWyj' of command @param is not found in the argument list of Scena::krecimy(std::istream &StrmWe, std::ostream &StrmWy)
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/Scena.hh:76: warning: The following parameters of Scena::krecimy(std::istream &StrmWe, std::ostream &StrmWy) are not documented:
+  parameter 'StrmWe'
+  parameter 'StrmWy'
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/SMacierz.hh:53: warning: argument 'SWektor' of command @param is not found in the argument list of SMacierz< typ, wymiar >::operator*(const SWektor< typ, wymiar > Wektor2) const
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/SMacierz.hh:58: warning: The following parameter of SMacierz::operator*(const SWektor< typ, wymiar > Wektor2) const is not documented:
+  parameter 'Wektor2'
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/SWektor.hh:55: warning: Member operator==(SWektor< typ, wymiar > SWektor2) (function) of class SWektor is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/SWektor.hh:63: warning: Member wyswietl_ile_wek(std::ostream &StrmWy) (function) of class SWektor is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/SWektor.hh:64: warning: Member wyswietl_ile_akt_wek(std::ostream &StrmWy) (function) of class SWektor is not documented.
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/SWektor.hh:151: warning: argument 'const' of command @param is not found in the argument list of SWektor< typ, wymiar >::operator&(SWektor const Wektor2)
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/SWektor.hh:62: warning: The following parameter of SWektor::operator&(SWektor const Wektor2) is not documented:
+  parameter 'Wektor2'
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/SWektor.hh:166: warning: argument 'SWektor' of command @param is not found in the argument list of SWektor< typ, wymiar >::operator+(SWektor< typ, wymiar > SWektor2)
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/SWektor.hh:50: warning: The following parameter of SWektor::operator+(SWektor< typ, wymiar > SWektor2) is not documented:
+  parameter 'SWektor2'
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/lacze_do_gnuplota.hh:74: warning: unexpected command endverbatim
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/lacze_do_gnuplota.hh:86: warning: unexpected command endverbatim
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/src/lacze_do_gnuplota.cpp:714: warning: unable to resolve link to 'AtrybutyRysowania::_Rozmiar' for \link command
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/src/lacze_do_gnuplota.cpp:715: warning: unable to resolve link to 'AtrybutyRysowania::_Kolor' for \link command
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/src/lacze_do_gnuplota.cpp:716: warning: unable to resolve link to 'AtrybutyRysowania::_Styl' for \link command
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/src/lacze_do_gnuplota.cpp:719: warning: unable to resolve link to 'AtrybutyRysowania::_Rozmiar' for \link command
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/src/lacze_do_gnuplota.cpp:720: warning: unable to resolve link to 'AtrybutyRysowania::_Kolor' for \link command
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/src/lacze_do_gnuplota.cpp:721: warning: unable to resolve link to 'AtrybutyRysowania::_Styl' for \link command
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/src/lacze_do_gnuplota.cpp:1023: warning: unable to resolve link to 'InfoPunktyDoRysowania::_Atryb' for \link command
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/lacze_do_gnuplota.hh:552: warning: return value 'true' of PzG::LaczeDoGNUPlota::UtworzProcesPotomny has multiple documentation sections
+/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/prj/inc/lacze_do_gnuplota.hh:552: warning: return value 'false' of PzG::LaczeDoGNUPlota::UtworzProcesPotomny has multiple documentation sections
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_s_macierz_8cpp__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_s_macierz_8cpp__incl.png"'
 sh: 1: dot: not found
 sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a92ef746dc8f551b620d6e320642936ac_icgraph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a92ef746dc8f551b620d6e320642936ac_icgraph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_8.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_8.png"'
 sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00043.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00043.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00062_a4eefeb43e7c6727fb4e262012df87ad2_icgraph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00062_a4eefeb43e7c6727fb4e262012df87ad2_icgraph.png"'
-sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00072.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00072.png"'
-sh: 1: dot: not found
-sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00045.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00045.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00066.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00066.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/class_obrys_x_y__coll__graph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/class_obrys_x_y__coll__graph.png"'
+sh: 1: error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/class_lazik__coll__graph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/class_lazik__coll__graph.png"'
+dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_macierz3_d_8hh__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_macierz3_d_8hh__incl.png"'
 sh: 1: dot: not found
 sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a8ad6334db9dd88a39f00fab496653a55_icgraph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a8ad6334db9dd88a39f00fab496653a55_icgraph.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00036.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00036.png"'
-sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00080.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00080.png"'
-sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00038_a4ea2370930491646c4519a1f689f117c_icgraph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00038_a4ea2370930491646c4519a1f689f117c_icgraph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_powierzchnia_marsa_8cpp__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_powierzchnia_marsa_8cpp__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_obrys_x_y_8hh__dep__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_obrys_x_y_8hh__dep__incl.pdf"'
 sh: 1: dot: not found
 sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00037.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00037.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_9.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_9.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_lazik_8cpp__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_lazik_8cpp__incl.pdf"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/class_lazik_s_f_r__inherit__graph.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/class_lazik_s_f_r__inherit__graph.pdf"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_typ_kolizji_8hh__dep__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_typ_kolizji_8hh__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_powierzchnia_marsa_8hh__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_powierzchnia_marsa_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_powierzchnia_marsa_8hh__dep__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_powierzchnia_marsa_8hh__dep__incl.pdf"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/class_probka_regolitu__coll__graph.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/class_probka_regolitu__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/class_obiekt_geom__inherit__graph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/class_obiekt_geom__inherit__graph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_macierz3_d_8hh__dep__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_macierz3_d_8hh__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/lacze__do__gnuplota_8hh__dep__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/lacze__do__gnuplota_8hh__dep__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/lacze__do__gnuplota_8cpp__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/lacze__do__gnuplota_8cpp__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_lazik_8hh__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_lazik_8hh__incl.pdf"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_s_wektor_8hh__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_s_wektor_8hh__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_lazik_s_f_r_8cpp__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_lazik_s_f_r_8cpp__incl.pdf"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/main_8cpp__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/main_8cpp__incl.pdf"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_obiekt_geom_8cpp__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_obiekt_geom_8cpp__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_wektor3_d_8hh__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_wektor3_d_8hh__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_lazik_8hh__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_lazik_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_obrys_x_y_8hh__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_obrys_x_y_8hh__incl.pdf"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_obiekt_geom_8hh__dep__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_obiekt_geom_8hh__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_wektor3_d_8hh__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_wektor3_d_8hh__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_obiekt_geom_8hh__dep__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_obiekt_geom_8hh__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_10.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_10.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_scena_8cpp__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_scena_8cpp__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/class_probka_regolitu__inherit__graph.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/class_probka_regolitu__inherit__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_lazik_s_f_r_8hh__dep__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_lazik_s_f_r_8hh__dep__incl.pdf"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_macierz3_d_8hh__dep__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_macierz3_d_8hh__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/class_obrys_x_y__coll__graph.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/class_obrys_x_y__coll__graph.pdf"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_probka_regolitu_8cpp__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_probka_regolitu_8cpp__incl.pdf"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_obiekt_geom_8hh__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_obiekt_geom_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_11.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_11.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_s_macierz_8hh__dep__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_s_macierz_8hh__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_kolory_8hh__dep__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_kolory_8hh__dep__incl.pdf"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/class_lazik__inherit__graph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/class_lazik__inherit__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_kolory_8hh__dep__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_kolory_8hh__dep__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_probka_regolitu_8hh__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_probka_regolitu_8hh__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/class_lazik__inherit__graph.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/class_lazik__inherit__graph.pdf"'
+sh: 1: dot: not found
 error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_0.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_0.png"'
 sh: 1: dot: not found
 sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_f81ae62be570093ea74b29e455737807_dep.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_f81ae62be570093ea74b29e455737807_dep.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00069.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00069.png"'
-sh: 1: sh: 1: dot: not founddot: not found
-
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_1.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_1.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00039.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00039.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/class_obiekt_geom__coll__graph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/class_obiekt_geom__coll__graph.png"'
 sh: 1: dot: not found
-sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00083.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00083.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_a33f836eff0431b70f45e502aaab53c1_dep.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_a33f836eff0431b70f45e502aaab53c1_dep.png"'
-sh: 1: dot: not found
-sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_scena_8cpp__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_scena_8cpp__incl.pdf"'
 error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/graph_legend.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/graph_legend.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00038_a4ea2370930491646c4519a1f689f117c_cgraph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00038_a4ea2370930491646c4519a1f689f117c_cgraph.png"'
 sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_3.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_3.png"'
 sh: 1: dot: not found
-sh: 1: error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00062_a4ea2370930491646c4519a1f689f117c_icgraph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00062_a4ea2370930491646c4519a1f689f117c_icgraph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_obiekt_geom_8cpp__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_obiekt_geom_8cpp__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_macierz3_d_8hh__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_macierz3_d_8hh__incl.pdf"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_1.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_1.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/class_probka_regolitu__coll__graph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/class_probka_regolitu__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_s_wektor_8cpp__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_s_wektor_8cpp__incl.pdf"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_wektor2_d_8hh__dep__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_wektor2_d_8hh__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/class_lazik__coll__graph.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/class_lazik__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/class_lazik_s_f_r__coll__graph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/class_lazik_s_f_r__coll__graph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_4aa64b0872d36146e049722e293482e3_dep.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_4aa64b0872d36146e049722e293482e3_dep.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_lazik_8cpp__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_lazik_8cpp__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_s_wektor_8cpp__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_s_wektor_8cpp__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_obrys_x_y_8hh__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_obrys_x_y_8hh__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_2.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_2.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_s_wektor_8hh__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_s_wektor_8hh__incl.pdf"'
+sh: 1: dot: not found
+sh: 1: error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_s_wektor_8hh__dep__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_s_wektor_8hh__dep__incl.png"'
 dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_obrys_x_y_8cpp__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_obrys_x_y_8cpp__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_400757c3a0df52e783ed9699284f29ce_dep.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_400757c3a0df52e783ed9699284f29ce_dep.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_12.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_12.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_powierzchnia_marsa_8hh__dep__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_powierzchnia_marsa_8hh__dep__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/main_8cpp__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/main_8cpp__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_s_macierz_8hh__dep__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_s_macierz_8hh__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_powierzchnia_marsa_8hh__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_powierzchnia_marsa_8hh__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_wektor2_d_8hh__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_wektor2_d_8hh__incl.pdf"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_scena_8hh__dep__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_scena_8hh__dep__incl.pdf"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/lacze__do__gnuplota_8hh__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/lacze__do__gnuplota_8hh__incl.pdf"'
 sh: 1: dot: not found
 error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_4.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_4.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00084.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00084.png"'
 sh: 1: dot: not found
-sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_2.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_2.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00046.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00046.png"'
-sh: 1: dot: not found
-sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00051.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00051.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00048.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00048.png"'
-sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00092.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00092.png"'
-sh: 1: dot: not found
-sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_5.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_5.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a578d9521dc37886bd085549b13dda704_icgraph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a578d9521dc37886bd085549b13dda704_icgraph.png"'
-sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00052.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00052.png"'
-sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a15db04e306877472fad0339491070b92_icgraph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a15db04e306877472fad0339491070b92_icgraph.png"'
-sh: 1: dot: not found
-sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00056_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00056_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00049.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00049.png"'
-sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_2747347d4eec450d4b66382331a0637c_dep.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_2747347d4eec450d4b66382331a0637c_dep.png"'
-sh: 1: dot: not found
-sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a15db04e306877472fad0339491070b92_cgraph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a15db04e306877472fad0339491070b92_cgraph.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00054.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00054.png"'
+sh: 1: error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_3.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_3.png"'
+dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_probka_regolitu_8cpp__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_probka_regolitu_8cpp__incl.png"'
 sh: 1: sh: 1: dot: not founddot: not found
 
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00060.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00060.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00079.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00079.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_13.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_13.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_5.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_5.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_lazik_s_f_r_8hh__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_lazik_s_f_r_8hh__incl.png"'
 sh: 1: dot: not found
 sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_7c43a130a4d563d62d3b9206ea4a6ab5_dep.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_7c43a130a4d563d62d3b9206ea4a6ab5_dep.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_28af0a83d6ce894e713ee3b6ef320d0e_dep.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_28af0a83d6ce894e713ee3b6ef320d0e_dep.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/class_lazik_s_f_r__coll__graph.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/class_lazik_s_f_r__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_probka_regolitu_8hh__dep__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_probka_regolitu_8hh__dep__incl.pdf"'
 sh: 1: dot: not found
 sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00030.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00030.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_ae25703936a3e4a315b8d8801fdc1c976_icgraph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_ae25703936a3e4a315b8d8801fdc1c976_icgraph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_wektor2_d_8hh__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_wektor2_d_8hh__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/lacze__do__gnuplota_8hh__dep__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/lacze__do__gnuplota_8hh__dep__incl.pdf"'
 sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00031.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00031.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_obiekt_geom_8hh__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_obiekt_geom_8hh__incl.pdf"'
+sh: 1: sh: 1: dot: not founddot: not found
+
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/class_obiekt_geom__inherit__graph.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/class_obiekt_geom__inherit__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_wektor3_d_8hh__dep__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_wektor3_d_8hh__dep__incl.pdf"'
+sh: 1: sh: 1: dot: not founddot: not found
+
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_powierzchnia_marsa_8cpp__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_powierzchnia_marsa_8cpp__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_obrys_x_y_8cpp__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_obrys_x_y_8cpp__incl.pdf"'
 sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00056_a53facbc5708c337c9d744606d516cc0c_cgraph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00056_a53facbc5708c337c9d744606d516cc0c_cgraph.png"'
-sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00063.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00063.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/class_probka_regolitu__inherit__graph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/class_probka_regolitu__inherit__graph.png"'
 sh: 1: dot: not found
 sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a01f245ce656d3b8d414f4350127643e1_icgraph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a01f245ce656d3b8d414f4350127643e1_icgraph.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00033.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00033.png"'
 sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a0ca26a82143a42520f6ab3dd10e115dc_icgraph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a0ca26a82143a42520f6ab3dd10e115dc_icgraph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_wektor3_d_8hh__dep__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_wektor3_d_8hh__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_s_macierz_8hh__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_s_macierz_8hh__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_typ_kolizji_8hh__dep__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_typ_kolizji_8hh__dep__incl.pdf"'
 sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_obrys_x_y_8hh__dep__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_obrys_x_y_8hh__dep__incl.png"'
+sh: 1: sh: 1: dot: not founddot: not found
+
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_lazik_s_f_r_8hh__dep__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_lazik_s_f_r_8hh__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_lazik_8hh__dep__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_lazik_8hh__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_scena_8hh__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_scena_8hh__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_probka_regolitu_8hh__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_probka_regolitu_8hh__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/lacze__do__gnuplota_8hh__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/lacze__do__gnuplota_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_lazik_8hh__dep__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_lazik_8hh__dep__incl.pdf"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_s_macierz_8hh__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_s_macierz_8hh__incl.pdf"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_scena_8hh__dep__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_scena_8hh__dep__incl.png"'
 sh: 1: dot: not found
 error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_6.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_6.png"'
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00096.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00096.png"'
 sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2_dep.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2_dep.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_lazik_s_f_r_8cpp__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_lazik_s_f_r_8cpp__incl.png"'
 sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00034.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00034.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_s_macierz_8cpp__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_s_macierz_8cpp__incl.pdf"'
 sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00062_a4ea2370930491646c4519a1f689f117c_cgraph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00062_a4ea2370930491646c4519a1f689f117c_cgraph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_wektor2_d_8hh__dep__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_wektor2_d_8hh__dep__incl.png"'
 sh: 1: dot: not found
-error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a8f9fe11b4cfef890123a2acc94672e17_cgraph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a8f9fe11b4cfef890123a2acc94672e17_cgraph.png"'
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00028.map for inclusion in the docs!
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/class_obiekt_geom__coll__graph.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/class_obiekt_geom__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_scena_8hh__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_scena_8hh__incl.pdf"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_probka_regolitu_8hh__dep__incl.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_probka_regolitu_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_lazik_s_f_r_8hh__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_lazik_s_f_r_8hh__incl.pdf"'
+sh: 1: sh: 1: dot: not founddot: not found
+
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/lacze__do__gnuplota_8cpp__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/lacze__do__gnuplota_8cpp__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/class_lazik_s_f_r__inherit__graph.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/class_lazik_s_f_r__inherit__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_s_wektor_8hh__dep__incl.dot" -Tpdf -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/latex/_s_wektor_8hh__dep__incl.pdf"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_7.dot" -Tpng -o "/home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_7.png"'
+error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/_kolory_8hh__dep__incl.map for inclusion in the docs!
 If you installed Graphviz/dot after a previous failing run, 
 try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00030.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00031.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00033.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00034.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00036.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00037.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00039.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00040.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00038_a4ea2370930491646c4519a1f689f117c_cgraph.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00038_a4ea2370930491646c4519a1f689f117c_icgraph.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00042.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00043.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00045.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00046.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00048.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00049.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00051.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00052.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00054.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00057.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00056_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00056_a53facbc5708c337c9d744606d516cc0c_cgraph.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00056_a53facbc5708c337c9d744606d516cc0c_icgraph.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00060.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00063.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00062_a4ea2370930491646c4519a1f689f117c_cgraph.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00062_a4ea2370930491646c4519a1f689f117c_icgraph.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00062_a90f8388bf4b0322ca71017caae3e0d73_cgraph.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00062_a4eefeb43e7c6727fb4e262012df87ad2_icgraph.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00066.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00069.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00072.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00080.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00079.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00084.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00083.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a8f9fe11b4cfef890123a2acc94672e17_cgraph.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a92ef746dc8f551b620d6e320642936ac_icgraph.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a0ca26a82143a42520f6ab3dd10e115dc_icgraph.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a8ad6334db9dd88a39f00fab496653a55_icgraph.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_ae25703936a3e4a315b8d8801fdc1c976_icgraph.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a578d9521dc37886bd085549b13dda704_icgraph.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a01f245ce656d3b8d414f4350127643e1_icgraph.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a15db04e306877472fad0339491070b92_cgraph.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00089_a15db04e306877472fad0339491070b92_icgraph.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00092.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/a00096.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_f81ae62be570093ea74b29e455737807_dep.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2_dep.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_28af0a83d6ce894e713ee3b6ef320d0e_dep.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_a33f836eff0431b70f45e502aaab53c1_dep.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_b2d4c21d3c37447583dd1cde508f25df_dep.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_2747347d4eec450d4b66382331a0637c_dep.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/dir_7c43a130a4d563d62d3b9206ea4a6ab5_dep.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_0.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_1.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_2.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_3.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_4.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_5.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
-error: problems opening map file /home/wojciech/Documents/PO_Obiekty_klasy_nieprzespane_noce/z6/dox/html/inherit_graph_6.map for inclusion in the docs!
-If you installed Graphviz/dot after a previous failing run, 
-try deleting the output directory and rerun doxygen.
+error: problem writing FIG 0 figure!

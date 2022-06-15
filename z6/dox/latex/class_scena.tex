@@ -1,0 +1,269 @@
+\hypertarget{class_scena}{}\doxysection{Scena Class Reference}
+\label{class_scena}\index{Scena@{Scena}}
+
+
+Klasa \mbox{\hyperlink{class_scena}{Scena}}.  
+
+
+
+
+{\ttfamily \#include $<$Scena.\+hh$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scena_a8f9fe11b4cfef890123a2acc94672e17}\label{class_scena_a8f9fe11b4cfef890123a2acc94672e17}} 
+\mbox{\hyperlink{class_scena_a8f9fe11b4cfef890123a2acc94672e17}{Scena}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor bezparametryczny. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scena_a92ef746dc8f551b620d6e320642936ac}\label{class_scena_a92ef746dc8f551b620d6e320642936ac}} 
+void \mbox{\hyperlink{class_scena_a92ef746dc8f551b620d6e320642936ac}{Dodaj\+Do\+Listy\+Rysowania}} ()
+\begin{DoxyCompactList}\small\item\em Metoda dodaje elementy do listy rysowania. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scena_a8ad6334db9dd88a39f00fab496653a55}{jedziemy}} (std\+::istream \&Strm\+We, std\+::ostream \&Strm\+Wy)
+\begin{DoxyCompactList}\small\item\em Metoda pozwalająca wywoływać jazde łazika. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scena_ae25703936a3e4a315b8d8801fdc1c976}{krecimy}} (std\+::istream \&Strm\+We, std\+::ostream \&Strm\+Wy)
+\begin{DoxyCompactList}\small\item\em Metoda pozwalająca wywoływać obrót łazika o zadanyc kąt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scena_a72dbb8ce338cd5ca9117993dbdd3d3c3}{Wybor\+Lazika}} (int lazik)
+\begin{DoxyCompactList}\small\item\em Metoda pozwalająca wywoływać obrót łazika o zadanyc kąt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scena_a78d78232b584ef1b8a28a2a0772f5fa5}{Zmien\+Lazika}} (std\+::istream \&Strm\+We, std\+::ostream \&Strm\+Wy)
+\begin{DoxyCompactList}\small\item\em Metoda pozwalająca zamienić drona, ktorym chemy sterować \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scena_ad03102e81912853bd4b64618888efe6f}{zmien\+\_\+szybkosc}} (std\+::istream \&Strm\+We, std\+::ostream \&Strm\+Wy)
+\begin{DoxyCompactList}\small\item\em Metoda do zmiany szybkości jazdy łazika. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scena_aaf1899315bf0c5e5b3fbca57628158db}{jazda}} (\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}} Lacze, std\+::istream \&Strm\+Wej, std\+::ostream \&Strm\+Wyj)
+\begin{DoxyCompactList}\small\item\em Metoda wykonująca funkcjonalność i animację jazdy łazika. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scena_abd6056860a738916c446c90c7aaf7a75}{obrot}} (\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}} Lacze, std\+::ostream \&Strm\+Wyj, std\+::istream \&Strm\+Wej)
+\begin{DoxyCompactList}\small\item\em Metoda wykonująca funkcjonalność i animację obrotu łazika o zadany kąt. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_typ_kolizji_8hh_a23331f89664c4cd6c3ca86abdcc50576}{Typ\+Kolizji}} \mbox{\hyperlink{class_scena_a08a30772dc5b0bc7a2c236aca59ccca7}{Czy\+Aktywny\+Lazik\+Koliduje}} ()
+\begin{DoxyCompactList}\small\item\em Metoda sprawdzająca kolizję aktulanego łazika. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scena_a1e7fce2f408c7fc9eb1f55158f838b6a}{Wyswietl\+Probki}} (std\+::ostream \&Strm\+Wy)
+\begin{DoxyCompactList}\small\item\em metoda wyświetlająca próbki regolitu na scenie \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scena_a69eeb723abc59e5de697c33116d31f26}{Zbierz\+Probke}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_obiekt_geom}{Obiekt\+Geom}} $>$ Probka)
+\begin{DoxyCompactList}\small\item\em metoda zbierania próbek przez S\+FR \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scena_a7bd5a34e4438f50c8c3412f991931832}{Wyswietl\+Probki\+S\+FR}} (std\+::ostream \&Strm\+Wyj)
+\begin{DoxyCompactList}\small\item\em metoda wyświtlająca próbki lazika S\+FR w klasie scena \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scena_aaebf58980aeb7507ed094fd834f7edc7}{Podejmij\+Probke}} (std\+::ostream \&Strm\+Wy)
+\begin{DoxyCompactList}\small\item\em Metoda obsługująca podjęcie próbki jest używana w main dla obiektu scena i korzysta z metody Zbierz\+Probke. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scena_adb0789e19d44259eed1e7f779298853c}{Stan\+Aktualnego\+Lazika}} (std\+::ostream \&Strm\+Wy)
+\begin{DoxyCompactList}\small\item\em metoda do wyświetlania stanu aktualnego lazika. Korzysta z metody wirtualnej Stan\+Lazika() \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa \mbox{\hyperlink{class_scena}{Scena}}. 
+
+Modeluje pojęcie sceny, czyli miejsca gdzie inicjalizowane są obiekty geometryczne oraz występują interakcje związane z nimi. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scena_a08a30772dc5b0bc7a2c236aca59ccca7}\label{class_scena_a08a30772dc5b0bc7a2c236aca59ccca7}} 
+\index{Scena@{Scena}!CzyAktywnyLazikKoliduje@{CzyAktywnyLazikKoliduje}}
+\index{CzyAktywnyLazikKoliduje@{CzyAktywnyLazikKoliduje}!Scena@{Scena}}
+\doxysubsubsection{\texorpdfstring{CzyAktywnyLazikKoliduje()}{CzyAktywnyLazikKoliduje()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_typ_kolizji_8hh_a23331f89664c4cd6c3ca86abdcc50576}{Typ\+Kolizji}} Scena\+::\+Czy\+Aktywny\+Lazik\+Koliduje (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda sprawdzająca kolizję aktulanego łazika. 
+
+\begin{DoxyReturn}{Returns}
+Typ\+Kolizji 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_scena_aaf1899315bf0c5e5b3fbca57628158db}\label{class_scena_aaf1899315bf0c5e5b3fbca57628158db}} 
+\index{Scena@{Scena}!jazda@{jazda}}
+\index{jazda@{jazda}!Scena@{Scena}}
+\doxysubsubsection{\texorpdfstring{jazda()}{jazda()}}
+{\footnotesize\ttfamily void Scena\+::jazda (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}}}]{Lacze,  }\item[{std\+::istream \&}]{Strm\+Wej,  }\item[{std\+::ostream \&}]{Strm\+Wyj }\end{DoxyParamCaption})}
+
+
+
+Metoda wykonująca funkcjonalność i animację jazdy łazika. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Lacze} & -\/ łącze do gnuplota \\
+\hline
+{\em Strm\+Wej} & -\/ strumień wejściowy \\
+\hline
+{\em Strm\+Wyj} & -\/ strumień wyjściowy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scena_a8ad6334db9dd88a39f00fab496653a55}\label{class_scena_a8ad6334db9dd88a39f00fab496653a55}} 
+\index{Scena@{Scena}!jedziemy@{jedziemy}}
+\index{jedziemy@{jedziemy}!Scena@{Scena}}
+\doxysubsubsection{\texorpdfstring{jedziemy()}{jedziemy()}}
+{\footnotesize\ttfamily void Scena\+::jedziemy (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{Strm\+We,  }\item[{std\+::ostream \&}]{Strm\+Wy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda pozwalająca wywoływać jazde łazika. 
+
+Wykorzystuje metodę jazda z klasy lazik dla atulanego lazika aby wywołać jego ruch 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Strm\+Wej} & -\/ referencja strumienia wejściowego. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Strm\+Wyj} & -\/ referencja strumienia wyjściowego. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scena_ae25703936a3e4a315b8d8801fdc1c976}\label{class_scena_ae25703936a3e4a315b8d8801fdc1c976}} 
+\index{Scena@{Scena}!krecimy@{krecimy}}
+\index{krecimy@{krecimy}!Scena@{Scena}}
+\doxysubsubsection{\texorpdfstring{krecimy()}{krecimy()}}
+{\footnotesize\ttfamily void Scena\+::krecimy (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{Strm\+We,  }\item[{std\+::ostream \&}]{Strm\+Wy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda pozwalająca wywoływać obrót łazika o zadanyc kąt. 
+
+Wykorzystuje metodę obrot z klasy lazik dla atulanego lazika aby wywołać jego obrot o zadany kąt. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Strm\+Wej} & -\/ referencja strumienia wejściowego. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Strm\+Wyj} & -\/ referencja strumienia wyjściowego. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scena_abd6056860a738916c446c90c7aaf7a75}\label{class_scena_abd6056860a738916c446c90c7aaf7a75}} 
+\index{Scena@{Scena}!obrot@{obrot}}
+\index{obrot@{obrot}!Scena@{Scena}}
+\doxysubsubsection{\texorpdfstring{obrot()}{obrot()}}
+{\footnotesize\ttfamily void Scena\+::obrot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}}}]{Lacze,  }\item[{std\+::ostream \&}]{Strm\+Wyj,  }\item[{std\+::istream \&}]{Strm\+Wej }\end{DoxyParamCaption})}
+
+
+
+Metoda wykonująca funkcjonalność i animację obrotu łazika o zadany kąt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Lacze} & -\/ łącze do gnuplota \\
+\hline
+{\em Strm\+Wyj} & -\/ strumień wyjściowy \\
+\hline
+{\em Strm\+Wej} & -\/ strumień wejściowy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scena_aaebf58980aeb7507ed094fd834f7edc7}\label{class_scena_aaebf58980aeb7507ed094fd834f7edc7}} 
+\index{Scena@{Scena}!PodejmijProbke@{PodejmijProbke}}
+\index{PodejmijProbke@{PodejmijProbke}!Scena@{Scena}}
+\doxysubsubsection{\texorpdfstring{PodejmijProbke()}{PodejmijProbke()}}
+{\footnotesize\ttfamily void Scena\+::\+Podejmij\+Probke (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{Strm\+Wy }\end{DoxyParamCaption})}
+
+
+
+Metoda obsługująca podjęcie próbki jest używana w main dla obiektu scena i korzysta z metody Zbierz\+Probke. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Strm\+Wy} & -\/ strumień wyjściowy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scena_adb0789e19d44259eed1e7f779298853c}\label{class_scena_adb0789e19d44259eed1e7f779298853c}} 
+\index{Scena@{Scena}!StanAktualnegoLazika@{StanAktualnegoLazika}}
+\index{StanAktualnegoLazika@{StanAktualnegoLazika}!Scena@{Scena}}
+\doxysubsubsection{\texorpdfstring{StanAktualnegoLazika()}{StanAktualnegoLazika()}}
+{\footnotesize\ttfamily void Scena\+::\+Stan\+Aktualnego\+Lazika (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{Strm\+Wy }\end{DoxyParamCaption})}
+
+
+
+metoda do wyświetlania stanu aktualnego lazika. Korzysta z metody wirtualnej Stan\+Lazika() 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Strm\+Wy} & -\/ strumień wyjściowy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scena_a72dbb8ce338cd5ca9117993dbdd3d3c3}\label{class_scena_a72dbb8ce338cd5ca9117993dbdd3d3c3}} 
+\index{Scena@{Scena}!WyborLazika@{WyborLazika}}
+\index{WyborLazika@{WyborLazika}!Scena@{Scena}}
+\doxysubsubsection{\texorpdfstring{WyborLazika()}{WyborLazika()}}
+{\footnotesize\ttfamily void Scena\+::\+Wybor\+Lazika (\begin{DoxyParamCaption}\item[{int}]{lazik }\end{DoxyParamCaption})}
+
+
+
+Metoda pozwalająca wywoływać obrót łazika o zadanyc kąt. 
+
+Wykorzystuje metodę obrot z klasy lazik dla atulanego lazika aby wywołać jego obrot o zadany kąt. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em lazik} & -\/ numer lazika, który chcemy wybrać \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scena_a1e7fce2f408c7fc9eb1f55158f838b6a}\label{class_scena_a1e7fce2f408c7fc9eb1f55158f838b6a}} 
+\index{Scena@{Scena}!WyswietlProbki@{WyswietlProbki}}
+\index{WyswietlProbki@{WyswietlProbki}!Scena@{Scena}}
+\doxysubsubsection{\texorpdfstring{WyswietlProbki()}{WyswietlProbki()}}
+{\footnotesize\ttfamily void Scena\+::\+Wyswietl\+Probki (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{Strm\+Wy }\end{DoxyParamCaption})}
+
+
+
+metoda wyświetlająca próbki regolitu na scenie 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Strm\+Wy} & -\/ strumień wyjściowy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scena_a7bd5a34e4438f50c8c3412f991931832}\label{class_scena_a7bd5a34e4438f50c8c3412f991931832}} 
+\index{Scena@{Scena}!WyswietlProbkiSFR@{WyswietlProbkiSFR}}
+\index{WyswietlProbkiSFR@{WyswietlProbkiSFR}!Scena@{Scena}}
+\doxysubsubsection{\texorpdfstring{WyswietlProbkiSFR()}{WyswietlProbkiSFR()}}
+{\footnotesize\ttfamily void Scena\+::\+Wyswietl\+Probki\+S\+FR (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{Strm\+Wyj }\end{DoxyParamCaption})}
+
+
+
+metoda wyświtlająca próbki lazika S\+FR w klasie scena 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Strm\+Wyj} & -\/ strumień wyjściowy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scena_a69eeb723abc59e5de697c33116d31f26}\label{class_scena_a69eeb723abc59e5de697c33116d31f26}} 
+\index{Scena@{Scena}!ZbierzProbke@{ZbierzProbke}}
+\index{ZbierzProbke@{ZbierzProbke}!Scena@{Scena}}
+\doxysubsubsection{\texorpdfstring{ZbierzProbke()}{ZbierzProbke()}}
+{\footnotesize\ttfamily void Scena\+::\+Zbierz\+Probke (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_obiekt_geom}{Obiekt\+Geom}} $>$}]{Probka }\end{DoxyParamCaption})}
+
+
+
+metoda zbierania próbek przez S\+FR 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Probka} & -\/ próbka z którą koliduje Łazik \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scena_ad03102e81912853bd4b64618888efe6f}\label{class_scena_ad03102e81912853bd4b64618888efe6f}} 
+\index{Scena@{Scena}!zmien\_szybkosc@{zmien\_szybkosc}}
+\index{zmien\_szybkosc@{zmien\_szybkosc}!Scena@{Scena}}
+\doxysubsubsection{\texorpdfstring{zmien\_szybkosc()}{zmien\_szybkosc()}}
+{\footnotesize\ttfamily void Scena\+::zmien\+\_\+szybkosc (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{Strm\+We,  }\item[{std\+::ostream \&}]{Strm\+Wy }\end{DoxyParamCaption})}
+
+
+
+Metoda do zmiany szybkości jazdy łazika. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Strm\+We} & -\/ strumień wejściowy \\
+\hline
+{\em Strm\+Wy} & -\/ strumień wyjściowy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scena_a78d78232b584ef1b8a28a2a0772f5fa5}\label{class_scena_a78d78232b584ef1b8a28a2a0772f5fa5}} 
+\index{Scena@{Scena}!ZmienLazika@{ZmienLazika}}
+\index{ZmienLazika@{ZmienLazika}!Scena@{Scena}}
+\doxysubsubsection{\texorpdfstring{ZmienLazika()}{ZmienLazika()}}
+{\footnotesize\ttfamily void Scena\+::\+Zmien\+Lazika (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{Strm\+We,  }\item[{std\+::ostream \&}]{Strm\+Wy }\end{DoxyParamCaption})}
+
+
+
+Metoda pozwalająca zamienić drona, ktorym chemy sterować 
+
+Wykorzystuje metodę Wybor\+Drona, dodając do niej interfejs wyboru obiektu 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Strm\+We} & -\/ referencja strumienia wejściowego. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Strm\+Wy} & -\/ referencja strumienia wyjściowego. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wojciech/\+Documents/\+P\+O\+\_\+\+Obiekty\+\_\+klasy\+\_\+nieprzespane\+\_\+noce/z6/prj/inc/\mbox{\hyperlink{_scena_8hh}{Scena.\+hh}}\item 
+/home/wojciech/\+Documents/\+P\+O\+\_\+\+Obiekty\+\_\+klasy\+\_\+nieprzespane\+\_\+noce/z6/prj/src/\mbox{\hyperlink{_scena_8cpp}{Scena.\+cpp}}\end{DoxyCompactItemize}

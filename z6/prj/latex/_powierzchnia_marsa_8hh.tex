@@ -1,0 +1,59 @@
+\hypertarget{_powierzchnia_marsa_8hh}{}\doxysection{inc/\+Powierzchnia\+Marsa.hh File Reference}
+\label{_powierzchnia_marsa_8hh}\index{inc/PowierzchniaMarsa.hh@{inc/PowierzchniaMarsa.hh}}
+{\ttfamily \#include \char`\"{}lacze\+\_\+do\+\_\+gnuplota.\+hh\char`\"{}}\newline
+Include dependency graph for Powierzchnia\+Marsa.\+hh\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_powierzchnia_marsa_8hh_a0e22612848696b13661669accc112c0a}\label{_powierzchnia_marsa_8hh_a0e22612848696b13661669accc112c0a}} 
+\#define {\bfseries R\+O\+M\+I\+A\+R\+\_\+\+P\+O\+W\+I\+E\+R\+Z\+C\+H\+N\+I\+\_\+X}~200
+\item 
+\mbox{\Hypertarget{_powierzchnia_marsa_8hh_aa8d616943ddb06335b5ca63e6a90fd46}\label{_powierzchnia_marsa_8hh_aa8d616943ddb06335b5ca63e6a90fd46}} 
+\#define {\bfseries R\+O\+M\+I\+A\+R\+\_\+\+P\+O\+W\+I\+E\+R\+Z\+C\+H\+N\+I\+\_\+Y}~200
+\item 
+\mbox{\Hypertarget{_powierzchnia_marsa_8hh_afb8adcd16d39ff705ad0f90a77988013}\label{_powierzchnia_marsa_8hh_afb8adcd16d39ff705ad0f90a77988013}} 
+\#define {\bfseries R\+O\+Z\+M\+I\+A\+R\+\_\+\+O\+C\+Z\+K\+A\+\_\+\+K\+R\+A\+TY}~10
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_powierzchnia_marsa_8hh_a4ea2370930491646c4519a1f689f117c}{Inicjalizuj\+\_\+\+Powierzchnie\+Marsa}} (\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}} \&r\+Lacze)
+\begin{DoxyCompactList}\small\item\em Funkcja inicjalizująca powierzchnie marsa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ostatnia modyfikacja\+: 2022.\+06.\+15 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_powierzchnia_marsa_8hh_a4ea2370930491646c4519a1f689f117c}\label{_powierzchnia_marsa_8hh_a4ea2370930491646c4519a1f689f117c}} 
+\index{PowierzchniaMarsa.hh@{PowierzchniaMarsa.hh}!Inicjalizuj\_PowierzchnieMarsa@{Inicjalizuj\_PowierzchnieMarsa}}
+\index{Inicjalizuj\_PowierzchnieMarsa@{Inicjalizuj\_PowierzchnieMarsa}!PowierzchniaMarsa.hh@{PowierzchniaMarsa.hh}}
+\doxysubsubsection{\texorpdfstring{Inicjalizuj\_PowierzchnieMarsa()}{Inicjalizuj\_PowierzchnieMarsa()}}
+{\footnotesize\ttfamily bool Inicjalizuj\+\_\+\+Powierzchnie\+Marsa (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}} \&}]{r\+Lacze }\end{DoxyParamCaption})}
+
+
+
+Funkcja inicjalizująca powierzchnie marsa. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \&r\+Lacze} & -\/ referencja łącza \textbackslash{}retrun\\
+\hline
+\end{DoxyParams}
+Funkcja inicjalizująca powierzchnie marsa.
+
+Zapisuje do pliku powierzchnię w postaci siatki oraz przekazuje nazwę tego pliku do łącza do gnuplota. To spowoduje, że program gnuplot będzie rysował powierzchnie na podstawie danych w tym pliku. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em r\+Lacze} & -\/ zainicjalizowane łącze do gnuplota.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & -\/ operacja powiodła się, \\
+\hline
+{\em false} & -\/ w przypadku przeciwnym. \\
+\hline
+\end{DoxyRetVals}

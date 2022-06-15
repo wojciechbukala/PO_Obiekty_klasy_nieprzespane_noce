@@ -4,6 +4,13 @@
 
 using namespace std;
 
+/*!
+ * \file
+ *
+ *  Ostatnia modyfikacja: 2022.06.15
+ */
+
+
 void Lazik::Rotacja(double kat) // zmiana macierzy rotacji
 {
       MacierzRotacji[0][0] = cos(kat*3.14/180);

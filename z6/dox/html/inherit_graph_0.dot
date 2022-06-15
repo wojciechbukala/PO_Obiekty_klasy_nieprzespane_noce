@@ -1,10 +1,14 @@
-digraph "Graficzna hierarchia klas"
+digraph "Graphical Class Hierarchy"
 {
  // LATEX_PDF_SIZE
-  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
-  node [fontname="FreeSans",fontsize="10",shape=record];
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="ObiektGeom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00085.html",tooltip="Klasa ObiektGeom."];
-  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
-  Node1 [label="Lazik",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00081.html",tooltip="Klasa Lazik."];
+  Node0 [label="ObiektGeom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_obiekt_geom.html",tooltip="Klasa ObiektGeom."];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="Lazik",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lazik.html",tooltip="Klasa Lazik."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="LazikSFR",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lazik_s_f_r.html",tooltip=" "];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ProbkaRegolitu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_probka_regolitu.html",tooltip="Klasa ProbkaRegolitu."];
 }

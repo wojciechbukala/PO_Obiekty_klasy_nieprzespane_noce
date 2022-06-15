@@ -1,0 +1,52 @@
+digraph "inc/SWektor.hh"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="inc/SWektor.hh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="inc/Wektor3D.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_wektor3_d_8hh.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="inc/ObiektGeom.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_obiekt_geom_8hh.html",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="inc/Lazik.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_lazik_8hh.html",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="inc/LazikSFR.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_lazik_s_f_r_8hh.html",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="inc/Scena.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_scena_8hh.html",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="src/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html",tooltip=" "];
+  Node6 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="src/Scena.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_scena_8cpp.html",tooltip=" "];
+  Node5 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="src/LazikSFR.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_lazik_s_f_r_8cpp.html",tooltip=" "];
+  Node4 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="inc/ProbkaRegolitu.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_probka_regolitu_8hh.html",tooltip=" "];
+  Node10 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="src/ProbkaRegolitu.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_probka_regolitu_8cpp.html",tooltip=" "];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="src/Lazik.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_lazik_8cpp.html",tooltip=" "];
+  Node4 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="src/ObiektGeom.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_obiekt_geom_8cpp.html",tooltip=" "];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="inc/SMacierz.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_macierz_8hh.html",tooltip=" "];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="inc/Macierz3D.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_macierz3_d_8hh.html",tooltip=" "];
+  Node15 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="src/SMacierz.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_macierz_8cpp.html",tooltip=" "];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="inc/Wektor2D.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_wektor2_d_8hh.html",tooltip=" "];
+  Node17 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="inc/ObrysXY.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_obrys_x_y_8hh.html",tooltip=" "];
+  Node18 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node18 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node19 [label="src/ObrysXY.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_obrys_x_y_8cpp.html",tooltip=" "];
+  Node1 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node20 [label="src/SWektor.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_wektor_8cpp.html",tooltip=" "];
+}

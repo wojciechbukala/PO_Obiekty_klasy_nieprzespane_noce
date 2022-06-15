@@ -3,6 +3,11 @@
 #include "Lazik.hh"
 #include "ProbkaRegolitu.hh"
 
+/*!
+ * \file
+ *
+ *  Ostatnia modyfikacja: 2022.06.15
+ */
 
 class LazikSFR : public Lazik
 {

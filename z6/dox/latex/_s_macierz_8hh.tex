@@ -1,0 +1,68 @@
+\hypertarget{_s_macierz_8hh}{}\doxysection{/home/wojciech/\+Documents/\+P\+O\+\_\+\+Obiekty\+\_\+klasy\+\_\+nieprzespane\+\_\+noce/z6/prj/inc/\+S\+Macierz.hh File Reference}
+\label{_s_macierz_8hh}\index{/home/wojciech/Documents/PO\_Obiekty\_klasy\_nieprzespane\_noce/z6/prj/inc/SMacierz.hh@{/home/wojciech/Documents/PO\_Obiekty\_klasy\_nieprzespane\_noce/z6/prj/inc/SMacierz.hh}}
+{\ttfamily \#include \char`\"{}S\+Wektor.\+hh\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for S\+Macierz.\+hh\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_macierz}{S\+Macierz$<$ typ, wymiar $>$}}
+\begin{DoxyCompactList}\small\item\em Szblon klasy Macierz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename typ , int wymiar$>$ }\\std\+::istream \& \mbox{\hyperlink{_s_macierz_8hh_a0e7d0d438d41646773903803fc5428fa}{operator$>$$>$}} (std\+::istream \&Strm, \mbox{\hyperlink{class_s_macierz}{S\+Macierz}}$<$ typ, wymiar $>$ \&Mac)
+\begin{DoxyCompactList}\small\item\em Przeciążenie wczytywania macierzy Przeciążenie wczytujące Macierz ze strumienia std\+::istream Akceptowany format prametrów macierzy to liczby zmiennoprzicnkowe Argumenty\+: \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename typ , int wymiar$>$ }\\std\+::ostream \& \mbox{\hyperlink{_s_macierz_8hh_afd05663d026e455b8e8ba8d46571ebe2}{operator$<$$<$}} (std\+::ostream \&Strm, \mbox{\hyperlink{class_s_macierz}{S\+Macierz}}$<$ typ, wymiar $>$ Mac)
+\begin{DoxyCompactList}\small\item\em Przeciążenie wypisywania Macierzy Za pomocą przeciążenie operatora przesunięcia bitowego zdefiniowne jest wypisywanie macierzy na stryumień wyjściowy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ostatnia modyfikacja\+: 2022.\+06.\+15 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_s_macierz_8hh_afd05663d026e455b8e8ba8d46571ebe2}\label{_s_macierz_8hh_afd05663d026e455b8e8ba8d46571ebe2}} 
+\index{SMacierz.hh@{SMacierz.hh}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!SMacierz.hh@{SMacierz.hh}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{Strm,  }\item[{\mbox{\hyperlink{class_s_macierz}{S\+Macierz}}$<$ typ, wymiar $>$}]{Mac }\end{DoxyParamCaption})}
+
+
+
+Przeciążenie wypisywania Macierzy Za pomocą przeciążenie operatora przesunięcia bitowego zdefiniowne jest wypisywanie macierzy na stryumień wyjściowy. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Strm} & -\/ referencja strumienia wyjściowego \\
+\hline
+ & {\em \mbox{\hyperlink{class_s_macierz}{S\+Macierz}}} & -\/ Macierz do wyświetlenia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Strm -\/ strumień wyjściowy 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_macierz_8hh_a0e7d0d438d41646773903803fc5428fa}\label{_s_macierz_8hh_a0e7d0d438d41646773903803fc5428fa}} 
+\index{SMacierz.hh@{SMacierz.hh}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!SMacierz.hh@{SMacierz.hh}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
+std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{Strm,  }\item[{\mbox{\hyperlink{class_s_macierz}{S\+Macierz}}$<$ typ, wymiar $>$ \&}]{Mac }\end{DoxyParamCaption})}
+
+
+
+Przeciążenie wczytywania macierzy Przeciążenie wczytujące Macierz ze strumienia std\+::istream Akceptowany format prametrów macierzy to liczby zmiennoprzicnkowe Argumenty\+: 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Mac} & -\/ referencja macierzy do któregej wpisujemy parametry \\
+\hline
+\mbox{\texttt{ in}}  & {\em Strm} & -\/ referencja sturmienia wejściowego Zwraca\+: \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wczytuje strumieniem std\+::istream 
+\end{DoxyReturn}

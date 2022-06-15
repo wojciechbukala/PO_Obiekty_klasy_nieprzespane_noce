@@ -1,0 +1,160 @@
+\hypertarget{class_s_macierz}{}\doxysection{S\+Macierz$<$ typ, wymiar $>$ Class Template Reference}
+\label{class_s_macierz}\index{SMacierz$<$ typ, wymiar $>$@{SMacierz$<$ typ, wymiar $>$}}
+
+
+Szblon klasy Macierz.  
+
+
+
+
+{\ttfamily \#include $<$S\+Macierz.\+hh$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ \mbox{\hyperlink{class_s_macierz_a71eebc1d37fc9d77b104152b27adbb10}{operator$\ast$}} (const \mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ Wektor2) const
+\begin{DoxyCompactList}\small\item\em Mnożenie macierzy przez wektor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ \& \mbox{\hyperlink{class_s_macierz_af775460c6043f60d2b77c57a923617df}{operator\mbox{[}$\,$\mbox{]}}} (int indeks)
+\begin{DoxyCompactList}\small\item\em Przeciążenie operatorea indeksowania macierza. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_macierz}{S\+Macierz}}$<$ typ, wymiar $>$ \mbox{\hyperlink{class_s_macierz_a689f77072bd2068ae78ecd9670eae406}{operator!}} ()
+\begin{DoxyCompactList}\small\item\em Przeciążenie transpononowania. \end{DoxyCompactList}\item 
+typ \mbox{\hyperlink{class_s_macierz_a2c8fd6800a06879633a235193ec70c0b}{operator()}} (int a, int b)
+\begin{DoxyCompactList}\small\item\em przeciązenie operatora funkcyjnego dla klasy macierz \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_macierz}{S\+Macierz}}$<$ typ, wymiar $>$ \& \mbox{\hyperlink{class_s_macierz_a61cd36e680068406fd365a2e5f55b635}{operator=}} (\mbox{\hyperlink{class_s_macierz}{S\+Macierz}}$<$ typ, wymiar $>$ \&Macierz2)
+\begin{DoxyCompactList}\small\item\em Przeciążenie operatora przypisania dla macierzy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_macierz_a7e33cecde91a2091d1133f18e5fe80fe}\label{class_s_macierz_a7e33cecde91a2091d1133f18e5fe80fe}} 
+void \mbox{\hyperlink{class_s_macierz_a7e33cecde91a2091d1133f18e5fe80fe}{transponuj}} ()
+\begin{DoxyCompactList}\small\item\em Transponowanie orginalnej macierzy. \end{DoxyCompactList}\item 
+typ \mbox{\hyperlink{class_s_macierz_a9bd17535c0f5768f99a8d8591998403a}{wyznacznik\+\_\+gauss}} ()
+\begin{DoxyCompactList}\small\item\em obliczanie wyznacznika metodą gaussa \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename typ, int wymiar$>$\newline
+class S\+Macierz$<$ typ, wymiar $>$}
+
+Szblon klasy Macierz. 
+
+Szablon klasy modelującej pojęcie macierzy. typ -\/ typ zmennych składowych macierzy (np. double, int, L\+Zespolona). wymiar -\/ rozmiar macierzy kwadratowej, liczba całkowita int.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em typ} & -\/ typ elementow macierzy (np int, double, Wektor). \\
+\hline
+\mbox{\texttt{ in}}  & {\em wymiar} & -\/ wymiar macierzy kwadratowej. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_macierz_a689f77072bd2068ae78ecd9670eae406}\label{class_s_macierz_a689f77072bd2068ae78ecd9670eae406}} 
+\index{SMacierz$<$ typ, wymiar $>$@{SMacierz$<$ typ, wymiar $>$}!operator"!@{operator"!}}
+\index{operator"!@{operator"!}!SMacierz$<$ typ, wymiar $>$@{SMacierz$<$ typ, wymiar $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!()}{operator!()}}
+{\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
+\mbox{\hyperlink{class_s_macierz}{S\+Macierz}}$<$ typ, wymiar $>$ \mbox{\hyperlink{class_s_macierz}{S\+Macierz}}$<$ typ, wymiar $>$\+::operator!}
+
+
+
+Przeciążenie transpononowania. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_s_macierz}{S\+Macierz}} -\/ transponowana macierz 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_macierz_a2c8fd6800a06879633a235193ec70c0b}\label{class_s_macierz_a2c8fd6800a06879633a235193ec70c0b}} 
+\index{SMacierz$<$ typ, wymiar $>$@{SMacierz$<$ typ, wymiar $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!SMacierz$<$ typ, wymiar $>$@{SMacierz$<$ typ, wymiar $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
+typ \mbox{\hyperlink{class_s_macierz}{S\+Macierz}}$<$ typ, wymiar $>$\+::operator() (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+przeciązenie operatora funkcyjnego dla klasy macierz 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & -\/ indeks wiersza \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & -\/ indeks kolumny \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+typ -\/ zwrócony element macierzy 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_macierz_a71eebc1d37fc9d77b104152b27adbb10}\label{class_s_macierz_a71eebc1d37fc9d77b104152b27adbb10}} 
+\index{SMacierz$<$ typ, wymiar $>$@{SMacierz$<$ typ, wymiar $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!SMacierz$<$ typ, wymiar $>$@{SMacierz$<$ typ, wymiar $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ \mbox{\hyperlink{class_s_macierz}{S\+Macierz}}$<$ typ, wymiar $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$}]{Wektor2 }\end{DoxyParamCaption}) const}
+
+
+
+Mnożenie macierzy przez wektor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_s_wektor}{S\+Wektor}}} & -\/ wektor przez który mnożymy macierz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}} -\/ wynik mnożenia macierzy przez wektor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_macierz_a61cd36e680068406fd365a2e5f55b635}\label{class_s_macierz_a61cd36e680068406fd365a2e5f55b635}} 
+\index{SMacierz$<$ typ, wymiar $>$@{SMacierz$<$ typ, wymiar $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!SMacierz$<$ typ, wymiar $>$@{SMacierz$<$ typ, wymiar $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
+\mbox{\hyperlink{class_s_macierz}{S\+Macierz}}$<$ typ, wymiar $>$ \& \mbox{\hyperlink{class_s_macierz}{S\+Macierz}}$<$ typ, wymiar $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_macierz}{S\+Macierz}}$<$ typ, wymiar $>$ \&}]{Macierz2 }\end{DoxyParamCaption})}
+
+
+
+Przeciążenie operatora przypisania dla macierzy. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Macierz2} & -\/ macierz przypisywana do innej \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+przypisana macierz 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_macierz_af775460c6043f60d2b77c57a923617df}\label{class_s_macierz_af775460c6043f60d2b77c57a923617df}} 
+\index{SMacierz$<$ typ, wymiar $>$@{SMacierz$<$ typ, wymiar $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!SMacierz$<$ typ, wymiar $>$@{SMacierz$<$ typ, wymiar $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$typ,wymiar$>$\& \mbox{\hyperlink{class_s_macierz}{S\+Macierz}}$<$ typ, wymiar $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{indeks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Przeciążenie operatorea indeksowania macierza. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em indeks} & -\/ indeks elementu, który chcemy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}} -\/ zwrócony wektor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_macierz_a9bd17535c0f5768f99a8d8591998403a}\label{class_s_macierz_a9bd17535c0f5768f99a8d8591998403a}} 
+\index{SMacierz$<$ typ, wymiar $>$@{SMacierz$<$ typ, wymiar $>$}!wyznacznik\_gauss@{wyznacznik\_gauss}}
+\index{wyznacznik\_gauss@{wyznacznik\_gauss}!SMacierz$<$ typ, wymiar $>$@{SMacierz$<$ typ, wymiar $>$}}
+\doxysubsubsection{\texorpdfstring{wyznacznik\_gauss()}{wyznacznik\_gauss()}}
+{\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
+typ \mbox{\hyperlink{class_s_macierz}{S\+Macierz}}$<$ typ, wymiar $>$\+::wyznacznik\+\_\+gauss}
+
+
+
+obliczanie wyznacznika metodą gaussa 
+
+\begin{DoxyReturn}{Returns}
+typ -\/ wyznacznik macierzy oblicznocy metodą gaussa 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/wojciech/\+Documents/\+P\+O\+\_\+\+Obiekty\+\_\+klasy\+\_\+nieprzespane\+\_\+noce/z6/prj/inc/\mbox{\hyperlink{_s_macierz_8hh}{S\+Macierz.\+hh}}\end{DoxyCompactItemize}

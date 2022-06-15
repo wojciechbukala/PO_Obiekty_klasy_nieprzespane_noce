@@ -17,6 +17,12 @@
 
 #define NAZWA_KARTOTEKI_PLIKOW_DO_RYSOWANIA    "pliki_do_rysowania"
 
+/*!
+ * \file
+ *
+ *  Ostatnia modyfikacja: 2022.06.15
+ */
+
 class Lazik; // deklarujemy tutaj aby można było użyć wskaźnika
 class ProbkaRegolitu; // deklarujemy aby móc używać w LazikSFR
 

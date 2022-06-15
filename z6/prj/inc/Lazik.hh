@@ -7,6 +7,11 @@
 #include "ObiektGeom.hh"
 #include "lacze_do_gnuplota.hh"
 
+/*!
+ * \file
+ *
+ *  Ostatnia modyfikacja: 2022.06.15
+ */
 
 /*!
  *  \brief Klasa Lazik

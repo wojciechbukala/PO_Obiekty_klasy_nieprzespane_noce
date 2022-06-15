@@ -4,6 +4,12 @@
 #include "Wektor2D.hh"
 
 /*!
+ * \file
+ *
+ *  Ostatnia modyfikacja: 2022.06.15
+ */
+
+/*!
  *  \brief Klasa ObrysXY
  *
  *  Modeluje pojęcie lazika jako 

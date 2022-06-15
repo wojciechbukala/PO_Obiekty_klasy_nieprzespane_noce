@@ -1,5 +1,11 @@
 #include "Scena.hh"
 
+/*!
+ * \file
+ *
+ *  Ostatnia modyfikacja: 2022.06.15
+ */
+
 void Scena::Inicjalizuj_Lacze()
 {
   Lacze.ZmienTrybRys(PzG::TR_3D);

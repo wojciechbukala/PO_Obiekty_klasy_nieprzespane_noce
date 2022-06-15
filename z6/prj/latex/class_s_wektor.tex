@@ -26,13 +26,18 @@ typ \mbox{\hyperlink{class_s_wektor_a5908ccc55afc93184ad0ad24e1ac7e06}{operator$
 \begin{DoxyCompactList}\small\item\em Przeciążenie operatora mnożenia przez skalar. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ \mbox{\hyperlink{class_s_wektor_a593901c9e69d42c2083b282dfbb82909}{operator/}} (\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ S\+Wektor2)
 \begin{DoxyCompactList}\small\item\em Przeciążenie operatora dzilenie dla S\+Wektorów posiada zabezpieczenie przed dzieleniem przez zero. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_wektor_a0d42121cdeae2744b105a0602d3fe878}\label{class_s_wektor_a0d42121cdeae2744b105a0602d3fe878}} 
+bool {\bfseries operator==} (\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$ S\+Wektor2)
+\item 
 typ \mbox{\hyperlink{class_s_wektor_a7c404f9709a9cb1b3161f4a5b6420544}{dlugosc}} ()
 \begin{DoxyCompactList}\small\item\em Medota obliczająca długość S\+Wektora. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_s_wektor_a0b203431c851ff880e87a78b56762498}\label{class_s_wektor_a0b203431c851ff880e87a78b56762498}} 
 \mbox{\hyperlink{class_s_wektor_a0b203431c851ff880e87a78b56762498}{S\+Wektor}} ()
 \begin{DoxyCompactList}\small\item\em Konstruktor bezparametryczny wykonuje inkrementację ilosc\+\_\+wektorow i ilosc\+\_\+aktywnych\+\_\+wektorow. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_s_wektor_a7035cb7939d6927d2103004da2341b85}{S\+Wektor}} (typ jeden, typ dwa, typ trzy)
-\begin{DoxyCompactList}\small\item\em Konstruktor parametryczny wykonuje inkrementację ilosc\+\_\+wektorw i ilosc\+\_\+aktywnych\+\_\+wektorow. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor parametryczny dla wektora 3D wykonuje inkrementację ilosc\+\_\+wektorw i ilosc\+\_\+aktywnych\+\_\+wektorow. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_wektor_a7815544f18e12c320aa02d7fb6c337c5}{S\+Wektor}} (typ jeden, typ dwa)
+\begin{DoxyCompactList}\small\item\em Konstruktor parametryczny dla wektora 2D wykonuje inkrementację ilosc\+\_\+wektorw i ilosc\+\_\+aktywnych\+\_\+wektorow. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_s_wektor_a131cc7251dbd68af2f2ba02858a9bd29}\label{class_s_wektor_a131cc7251dbd68af2f2ba02858a9bd29}} 
 \mbox{\hyperlink{class_s_wektor_a131cc7251dbd68af2f2ba02858a9bd29}{$\sim$\+S\+Wektor}} ()
 \begin{DoxyCompactList}\small\item\em destruktor wektora wykonuje dekrementację pola ilosc\+\_\+aktywnych\+\_\+wektorow \end{DoxyCompactList}\item 
@@ -68,21 +73,39 @@ Szablon klasy modelującej pojęcie wektora. Klasa ta jest szablonem i może stw
 \mbox{\Hypertarget{class_s_wektor_a7035cb7939d6927d2103004da2341b85}\label{class_s_wektor_a7035cb7939d6927d2103004da2341b85}} 
 \index{SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}!SWektor@{SWektor}}
 \index{SWektor@{SWektor}!SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}}
-\doxysubsubsection{\texorpdfstring{SWektor()}{SWektor()}}
+\doxysubsubsection{\texorpdfstring{SWektor()}{SWektor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
 \mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$\+::\mbox{\hyperlink{class_s_wektor}{S\+Wektor}} (\begin{DoxyParamCaption}\item[{typ}]{jeden,  }\item[{typ}]{dwa,  }\item[{typ}]{trzy }\end{DoxyParamCaption})}
 
 
 
-Konstruktor parametryczny wykonuje inkrementację ilosc\+\_\+wektorw i ilosc\+\_\+aktywnych\+\_\+wektorow. 
+Konstruktor parametryczny dla wektora 3D wykonuje inkrementację ilosc\+\_\+wektorw i ilosc\+\_\+aktywnych\+\_\+wektorow. 
 
 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em jeden} & -\/ pierwszy element wektora \\
 \hline
-\mbox{\texttt{ in}}  & {\em dwa} & -\/ drugie element wektora \\
+\mbox{\texttt{ in}}  & {\em dwa} & -\/ drugi element wektora \\
 \hline
 \mbox{\texttt{ in}}  & {\em trzy} & -\/ trzeci element wektora \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_wektor_a7815544f18e12c320aa02d7fb6c337c5}\label{class_s_wektor_a7815544f18e12c320aa02d7fb6c337c5}} 
+\index{SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}!SWektor@{SWektor}}
+\index{SWektor@{SWektor}!SWektor$<$ typ, wymiar $>$@{SWektor$<$ typ, wymiar $>$}}
+\doxysubsubsection{\texorpdfstring{SWektor()}{SWektor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename typ , int wymiar$>$ \\
+\mbox{\hyperlink{class_s_wektor}{S\+Wektor}}$<$ typ, wymiar $>$\+::\mbox{\hyperlink{class_s_wektor}{S\+Wektor}} (\begin{DoxyParamCaption}\item[{typ}]{jeden,  }\item[{typ}]{dwa }\end{DoxyParamCaption})}
+
+
+
+Konstruktor parametryczny dla wektora 2D wykonuje inkrementację ilosc\+\_\+wektorw i ilosc\+\_\+aktywnych\+\_\+wektorow. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em jeden} & -\/ pierwszy element wektora \\
+\hline
+\mbox{\texttt{ in}}  & {\em dwa} & -\/ drugi element wektora \\
 \hline
 \end{DoxyParams}
 
@@ -258,4 +281,4 @@ typ -\/ zwraca element wektora
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-inc/S\+Wektor.\+hh\end{DoxyCompactItemize}
+inc/\mbox{\hyperlink{_s_wektor_8hh}{S\+Wektor.\+hh}}\end{DoxyCompactItemize}

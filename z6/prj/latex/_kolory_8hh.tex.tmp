@@ -1,0 +1,28 @@
+\hypertarget{_kolory_8hh}{}\doxysection{inc/\+Kolory.hh File Reference}
+\label{_kolory_8hh}\index{inc/Kolory.hh@{inc/Kolory.hh}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_kolory_8hh_a42bef2edd1524f656445643a32d446fb}{Kolory}} \{ {\bfseries Kolor\+\_\+\+Jasno\+Niebieski} = 3, 
+{\bfseries Kolor\+\_\+\+Czerwony} = 15
+ \}
+\begin{DoxyCompactList}\small\item\em Dostępne kolory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ostatnia modyfikacja\+: 2022.\+06.\+15 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_kolory_8hh_a42bef2edd1524f656445643a32d446fb}\label{_kolory_8hh_a42bef2edd1524f656445643a32d446fb}} 
+\index{Kolory.hh@{Kolory.hh}!Kolory@{Kolory}}
+\index{Kolory@{Kolory}!Kolory.hh@{Kolory.hh}}
+\doxysubsubsection{\texorpdfstring{Kolory}{Kolory}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_kolory_8hh_a42bef2edd1524f656445643a32d446fb}{Kolory}}}
+
+
+
+Dostępne kolory. 
+
+Enum określa kolor jasno-\/niebieski jako 3. oraz kolor czerwony jako 15. 
