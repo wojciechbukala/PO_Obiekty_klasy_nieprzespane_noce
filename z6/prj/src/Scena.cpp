@@ -108,6 +108,7 @@ void Scena::obrot(PzG::LaczeDoGNUPlota  Lacze, std::ostream& StrmWyj, std::istre
             AktualnyLazik->Przelicz_i_Zapisz_Wierzcholki();
             std::this_thread::sleep_for(std::chrono::milliseconds(20));
             Lacze.Rysuj();
+            if(CzyAktywnyLazikKoliduje() == TK_Kolizja) {std::cout<<"KOLIZJA"; break;}
         }
     } else {
         for(double i = AktualnyLazik->DajKatOrientacji(); i>nowy_kat + AktualnyLazik->DajKatOrientacji(); --i)
@@ -116,6 +117,7 @@ void Scena::obrot(PzG::LaczeDoGNUPlota  Lacze, std::ostream& StrmWyj, std::istre
             AktualnyLazik->Przelicz_i_Zapisz_Wierzcholki();
             std::this_thread::sleep_for(std::chrono::milliseconds(20));
             Lacze.Rysuj();
+            if(CzyAktywnyLazikKoliduje() == TK_Kolizja) {std::cout<<"KOLIZJA"; break;}
         }
     }
     AktualnyLazik->WpiszKatOrientacji(AktualnyLazik->DajKatOrientacji()+nowy_kat);
